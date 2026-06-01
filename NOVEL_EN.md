@@ -1,4 +1,4 @@
-# A Completed Exit
+# An Uncompleted Exit
 
 > Public narrative layer.  
 > This is not a translation of the Chinese text. It is a parallel annotation-style narrative written from the same structural source.  
@@ -20,11 +20,11 @@ But a bond can be real and still become too heavy to carry forward.
 
 That was the part he had learned slowly.
 
-He did not need to rename the past as failure. He did not need to make anyone a villain to justify leaving. Some seasons complete themselves without becoming false. Some forms of love are not disproved by their ending; they are only released from the demand to keep functioning beyond their remaining strength.
+He did not need to rename the past as failure. He did not need to make anyone a villain to justify leaving. Some seasons do not become false simply because they cannot continue in the same form. Some forms of care are not disproved by distance; they are only released from the demand to keep functioning beyond their remaining strength.
 
 He placed the key where it belonged.
 
-Not dramatically. Not as a message. Not as a final argument. Just the completion of a physical action that had been waiting for the mind to stop bargaining.
+Not dramatically. Not as a message. Not as a final argument. Just a physical action that came before any complete explanation could exist.
 
 Downstairs, the hallway carried the usual marks of other departures. Scratches near the corner. A faded line where furniture had once scraped the paint. Evidence of movement without testimony. People pass through places all the time. The wall does not explain them.
 
@@ -50,7 +50,7 @@ That was enough.
 
 By the time he reached the next corner, the sky had brightened. In the glass of a storefront, he saw his reflection: not heroic, not destroyed, simply a little more aligned with himself than before.
 
-He understood then that some endings are not punishments. Some endings are the last respectful form a relationship can take.
+He understood then that some goodbyes are not completed in a day. They first stop harming, and then leave their unfinished parts to time.
 
 He did not write what would happen next.
 
