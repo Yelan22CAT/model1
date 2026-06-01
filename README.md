@@ -118,3 +118,5 @@ It intentionally excludes:
 | [`README_Model1.md`](README_Model1.md) | Earlier entry record and traceability marker |
 | [`COPYRIGHT_AND_LICENSE.md`](COPYRIGHT_AND_LICENSE.md) | Copyright and permitted use |
 | [`EXTERNAL_REFERENCES.md`](EXTERNAL_REFERENCES.md) | External reference and non-affiliation note |
+| [`NOVEL_CN.md`](NOVEL_CN.md) | Public Chinese narrative layer |
+| [`NOVEL_EN.md`](NOVEL_EN.md) | Public English narrative / annotation layer |
