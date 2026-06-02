@@ -113,6 +113,7 @@ It intentionally excludes:
 | --- | --- |
 | [`MODEL1_MINIMAL_CORE.md`](MODEL1_MINIMAL_CORE.md) | Copy-safe compressed public core |
 | [`README_FOR_CODERS.md`](README_FOR_CODERS.md) | Coder adapter layer for AI-assisted workflows |
+| [`CONTROL_VOCABULARY.md`](CONTROL_VOCABULARY.md) | Control-language translation for coder, risk, and AI safety readers |
 | [`ARCHITECTURE.md`](ARCHITECTURE.md) | Minimal protocol flow and control boundary |
 | [`SAFETY.md`](SAFETY.md) | Misuse prevention and hard exclusions |
 | [`GLOSSARY.md`](GLOSSARY.md) | Narrow term definitions |
