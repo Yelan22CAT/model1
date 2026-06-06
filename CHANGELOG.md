@@ -1,6 +1,8 @@
 # Changelog
 
-## 2026-06-06-b｜Public intro tutorial expansion
+## 2026-06-06-c 
+## 2026-06-06-b
+## 2026-06-06｜Public intro tutorial expansion
 
 ### Added / Updated
 
