@@ -98,6 +98,9 @@ Ask:
 If it cannot be stopped or rolled back, slow down.
 
 ## Signal levels
+### Green｜Continue
+### Yellow｜Slow down
+### Red｜Freeze or exit
 
 ### Green｜Continue
 
