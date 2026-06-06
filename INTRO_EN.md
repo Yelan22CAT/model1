@@ -152,7 +152,7 @@ Action:
 2. Check whether it has real-world consequences.
 3. Verify key facts from real sources.
 4. Check whether it can be stopped or rolled back.
-5. Mark the signal as Green, Yellow, or Red.
+5. Mark the signal as 🟢 Green, 🟡 Yellow, or 🔴 Red.
 6. If Yellow, verify before continuing.
 7. If Red, do not execute.
 8. The final decision must remain human-controlled.
