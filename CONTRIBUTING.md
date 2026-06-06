@@ -56,7 +56,36 @@ The following are not accepted:
 - persuasion, influence, manipulation, pressure, or negotiation tactics
 - commercial repackaging or training material without prior written permission
 
-## 5. Pull request guidance
+## 5. Preferred workflow
+
+The repository uses a lightweight review gate.
+
+Direct maintainer commits may be used for:
+
+- obvious typo fixes
+- broken links
+- formatting corrections
+- non-structural wording cleanup
+
+Pull requests should be used for:
+
+- new public files
+- README map changes
+- license or commercial-use changes
+- contribution rule changes
+- public examples or trace examples
+- methodology or teaching-material additions
+- any change that may alter public interpretation of Model 1 v1.0
+
+External contributions must use pull requests.
+
+A pull request is not merely a coding convention. In this repository, it is a public review gate:
+
+```text
+proposal → diff → review → merge / reject
+```
+
+## 6. Pull request guidance
 
 A pull request should be small, specific, and public-safe.
 
@@ -81,7 +110,7 @@ A pull request should not:
 - expand the repo into a governance platform
 ```
 
-## 6. Issues and discussion guidance
+## 7. Issues and discussion guidance
 
 Issues may be opened for:
 
@@ -100,7 +129,7 @@ Issues should not be opened for:
 - requests to analyze a specific person, relationship, company, or case
 - attempts to use the model to influence or pressure others
 
-## 7. Synthetic examples only
+## 8. Synthetic examples only
 
 If proposing examples, use synthetic or fully de-identified scenarios.
 
@@ -121,7 +150,7 @@ A human owner has not reviewed the risk.
 Expected posture: PAUSE or ASK_HUMAN.
 ```
 
-## 8. No entitlement principle
+## 9. No entitlement principle
 
 Submitting feedback does not entitle a contributor to:
 
@@ -136,13 +165,13 @@ Submitting feedback does not entitle a contributor to:
 
 The maintainer may preserve silence or close a contribution when engaging would create scope drift or safety risk.
 
-## 9. Commercial boundary
+## 10. Commercial boundary
 
 Commercial use, commercial redistribution, product integration, training use, advisory use, compliance use, risk consulting use, or enterprise workflow use requires prior written permission.
 
 See [`COPYRIGHT_AND_LICENSE.md`](COPYRIGHT_AND_LICENSE.md).
 
-## 10. Safety boundary
+## 11. Safety boundary
 
 All contributions must preserve the public v1.0 boundaries:
 
@@ -156,7 +185,7 @@ No private case exposure.
 Human Final Gate remains mandatory.
 ```
 
-## 11. Maintainer discretion
+## 12. Maintainer discretion
 
 The maintainer may reject contributions for reasons including but not limited to:
 
@@ -171,7 +200,7 @@ The maintainer may reject contributions for reasons including but not limited to
 
 No public explanation is required for every rejection.
 
-## 12. One-line summary
+## 13. One-line summary
 
 ```text
 You may help clarify the public scaffold, but you may not claim, steer, expand, operationalize, or own the model.
