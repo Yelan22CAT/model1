@@ -7,6 +7,18 @@
 * INTRO_EN.md — English public intro tutorial for Model 1 v1.0.
 * CHANGELOG.md — Public update log.
 
+Suggested entry point
+
+New readers may start here:
+
+1. INTRO_CN.md or INTRO_EN.md
+2. MODEL1_MINIMAL_CORE.md
+3. SAFETY.md
+4. GLOSSARY.md
+
+The intro tutorial is the public first layer.
+It is intentionally limited to first-person stop-loss checking and human-controlled final decisions.
+
 ## One-screen overview
 
 **Model 1 v1.0** is a minimal stop-loss guardrail protocol.
