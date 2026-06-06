@@ -16,4 +16,4 @@ This guide does not tell you what to do.
 
 It helps you notice when you should stop and check before doing more.
 
-Model 1 v1.0 is not therapy, diagnosis, coaching, legal advice, medical advice, safety
+Model 1 v1
