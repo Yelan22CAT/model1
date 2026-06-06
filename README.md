@@ -19,6 +19,10 @@ New readers may start here:
 The intro tutorial is the public first layer.
 It is intentionally limited to first-person stop-loss checking and human-controlled final decisions.
 
+- 🟢 Green = 可以继续 / Continue
+- 🟡 Yellow = 放慢 / Slow down
+- 🔴 Red = 冻结或退出 / Freeze or exit
+
 ## One-screen overview
 
 **Model 1 v1.0** is a minimal stop-loss guardrail protocol.
