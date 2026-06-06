@@ -1,6 +1,3 @@
-| [`INTRO_CN.md`](INTRO_CN.md) | Chinese public intro tutorial for Model 1 v1.0 |
-| [`INTRO_EN.md`](INTRO_EN.md) | English public intro tutorial for Model 1 v1.0 |
-| [`CHANGELOG.md`](CHANGELOG.md) | Public update log |
 # Model 1 v1.0 — Minimal Stop-Loss Guardrail Protocol
 
 > A narrow, human-controlled safety brake before the next consequential action.
