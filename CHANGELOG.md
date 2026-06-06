@@ -62,9 +62,9 @@ This update does not include:
 - autonomous execution;
 - hidden model layers.
 
-2026-06-06-c｜README entry and signal display note
+## 2026-06-06-c｜README entry and signal display note
 
-Updated
+### Updated
 
 * Added README entry points for INTRO_CN.md, INTRO_EN.md, and CHANGELOG.md.
 * Added suggested reading order for new readers.
