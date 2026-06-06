@@ -98,11 +98,8 @@ Ask:
 If it cannot be stopped or rolled back, slow down.
 
 ## Signal levels
-### Green｜Continue
-### Yellow｜Slow down
-### Red｜Freeze or exit
 
-### Green｜Continue
+### 🟢 Green｜Continue
 
 Green means:
 
@@ -113,7 +110,7 @@ Green means:
 
 You may continue, but the final check still belongs to a human.
 
-### Yellow｜Slow down
+### 🟡 Yellow｜Slow down
 
 Yellow means one or more of the following:
 
@@ -130,7 +127,7 @@ Action:
 > Verify the missing facts.  
 > Check again.
 
-### Red｜Freeze or exit
+### 🔴 Red｜Freeze or exit
 
 Red means one or more of the following:
 
