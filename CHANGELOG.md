@@ -1,8 +1,29 @@
 # Changelog
 
-## 2026-06-06-c 
-## 2026-06-06-b
-## 2026-06-06｜Public intro tutorial expansion
+## 2026-06-06-c｜README entry and signal display note
+
+### Updated
+
+- Added README entry points for `INTRO_CN.md`, `INTRO_EN.md`, and `CHANGELOG.md`.
+- Added suggested reading order for new readers.
+- Standardized Green / Yellow / Red display using GitHub-stable emoji signals:
+  - 🟢 Green
+  - 🟡 Yellow
+  - 🔴 Red
+
+### Scope
+
+This is a navigation and formatting update only.
+
+It does not add:
+
+- private archive content;
+- third-person profiling;
+- manipulation or persuasion guidance;
+- autonomous execution;
+- medical, legal, financial, or mental health advice.
+
+## 2026-06-06-b｜Public intro tutorial expansion
 
 ### Added / Updated
 
