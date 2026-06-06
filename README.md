@@ -71,6 +71,10 @@ It does **not** mean:
 - optimizing how to influence someone,
 - issuing approval for automated action.
 
+| [`INTRO_CN.md`](INTRO_CN.md) | Chinese public intro tutorial for Model 1 v1.0 |
+| [`INTRO_EN.md`](INTRO_EN.md) | English public intro tutorial for Model 1 v1.0 |
+| [`CHANGELOG.md`](CHANGELOG.md) | Public update log |
+
 ## Minimal signal output
 
 | Signal | Meaning | Permitted interpretation |
