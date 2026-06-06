@@ -85,17 +85,6 @@ This update does not include:
 - autonomous execution;
 - hidden model layers.
 
-## 2026-06-06-c｜README entry and signal display note
-
-### Updated
-
-* Added README entry points for INTRO_CN.md, INTRO_EN.md, and CHANGELOG.md.
-* Added suggested reading order for new readers.
-* Standardized Green / Yellow / Red display using GitHub-stable emoji signals:
-    * 🟢 Green
-    * 🟡 Yellow
-    * 🔴 Red
-
 Scope
 
 This is a navigation and formatting update only.
