@@ -1,22 +1,23 @@
 # Model 1 v1.0 Intro
 
 > Update date: 2026-06-06
-> Scope: first-person stop-loss guardrail only
 
 ## Purpose
 
-A minimal guardrail before action: proceed, slow down, freeze, or exit.
+A minimal first-person guardrail before action.
 
-## Three Questions
+## Check
 
-1. Will this action create real-world consequences?
-2. Are key facts verified from the source?
-3. Can I still stop or roll back safely?
+1. Real-world consequence?
+2. Source verified?
+3. Safe stop or rollback?
 
 ## Signals
 
 - Green: proceed.
-- Yellow: slow down and verify.
-- Red: freeze; do not execute.
+- Yellow: verify first.
+- Red: freeze.
 
 ## Boundary
+
+No prediction, manipulation, or final decision outsourcing.
