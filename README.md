@@ -1,4 +1,5 @@
 # Model 1 v1.0 — Minimal Stop-Loss Guardrail Protocol
+## Machine-readable project summary
 
 > A narrow, human-controlled safety brake before the next consequential action.
 
