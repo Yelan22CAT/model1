@@ -22,6 +22,7 @@ It does not add:
 - manipulation or persuasion guidance;
 - autonomous execution;
 - medical, legal, financial, or mental health advice.
+
 ## 2026-06-06-c｜README entry and signal display note
 
 ### Updated
