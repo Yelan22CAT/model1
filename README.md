@@ -36,7 +36,7 @@ flowchart TD
     A[First-person situation<br/>+ proposed next consequential step] --> B[Scope Lock]
     B --> C[Boundary Check]
     C --> D[Cost / Reversibility Check]
-    D --> E[Signal Output<br/>Green / Yellow / Red]
+    D --> E[Signal Output<br/>🟢 Green / 🟡 Yellow / 🔴 Red]
     E --> F[Human Final Gate]
     F --> G[Human decision<br/>Proceed / Slow / Freeze / Exit]
 
@@ -75,9 +75,9 @@ It does **not** mean:
 
 | Signal | Meaning | Permitted interpretation |
 | --- | --- | --- |
-| Green | No stop-loss trigger is presently identified within the stated input. | Continue observing; no guarantee is given. |
-| Yellow | Cost, ambiguity, or reduced reversibility is increasing. | Slow down, check evidence and boundaries, preserve options. |
-| Red | A hard boundary or irreversible-cost risk is present. | Freeze or exit is a reasonable option; the person decides. |
+| 🟢 Green | No stop-loss trigger is presently identified within the stated input. | Continue observing; no guarantee is given. |
+| 🟡 Yellow | Cost, ambiguity, or reduced reversibility is increasing. | Slow down, check evidence and boundaries, preserve options. |
+| 🔴 Red | A hard boundary or irreversible-cost risk is present. | Freeze or exit is a reasonable option; the person decides. |
 
 No signal authorizes an action. No signal replaces evidence, professional responsibility, or human judgment.
 
