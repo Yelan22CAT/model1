@@ -1,7 +1,27 @@
-readme-first-screen-positioning-2026-06-06
-Improve README first-screen positioning
 # Changelog
+## 2026-06-06-d｜README first-screen positioning update
 
+### Updated
+
+- Improved README first-screen project positioning.
+- Standardized README Mermaid and signal table display with 🟢 Green / 🟡 Yellow / 🔴 Red.
+- Prepared the README for machine-readable project summary and public-facing discovery improvements.
+
+### Scope
+
+This is a public-facing README clarity update only.
+
+It does not add:
+
+- private archive content;
+- private cases;
+- identifiable personal information;
+- relationship, family, medical, or financial details;
+- third-person profiling;
+- relationship prediction;
+- manipulation or persuasion guidance;
+- autonomous execution;
+- medical, legal, financial, or mental health advice.
 ## 2026-06-06-c｜README entry and signal display note
 
 ### Updated
