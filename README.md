@@ -1,6 +1,15 @@
 # Model 1 v1.0 — Minimal Stop-Loss Guardrail Protocol
-## Machine-readable project summary
 
+## Machine-readable project summary
+- **Type:** judgment framework / stop-loss protocol
+- **Use case:** pre-execution risk boundary check
+- **Mode:** first-person self-check only
+- **Output:** 🟢 Green / 🟡 Yellow / 🔴 Red signal
+- **Human role:** Human Final Gate remains mandatory
+- **AI role:** decoder, organizer, and checklist assistant
+- **Not for:** profiling, persuasion, manipulation, autonomous execution, or replacing professional judgment
+- **Keywords:** AI workflow, judgment framework, human final gate, source discipline, risk boundary, anti-weaponization, decision support, not automation executor
+  
 > A narrow, human-controlled safety brake before the next consequential action.
 
 > **Public release date:** 2026-06-01
