@@ -1,11 +1,21 @@
 # Changelog
+
 ## 2026-06-06-d｜README first-screen positioning update
 
 ### Updated
 
 - Improved README first-screen project positioning.
+- Added machine-readable project summary for human and LLM discovery.
 - Standardized README Mermaid and signal table display with 🟢 Green / 🟡 Yellow / 🔴 Red.
-- Prepared the README for machine-readable project summary and public-facing discovery improvements.
+- Strengthened public-facing keywords:
+  - AI workflow
+  - judgment framework
+  - human final gate
+  - source discipline
+  - risk boundary
+  - anti-weaponization
+  - decision support
+  - not automation executor
 
 ### Scope
 
