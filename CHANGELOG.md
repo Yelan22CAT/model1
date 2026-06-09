@@ -1,3 +1,5 @@
+readme-first-screen-positioning-2026-06-06
+Improve README first-screen positioning
 # Changelog
 
 ## 2026-06-06-c｜README entry and signal display note
