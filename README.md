@@ -1,6 +1,14 @@
 # Model 1 v1.0 — Minimal Stop-Loss Guardrail Protocol
 
+> A first-person judgment framework for pausing before consequential action.
+
+**One-line definition:**  
+Model 1 v1.0 is a human-controlled stop-loss guardrail for AI-assisted workflows, decision support, source discipline, and risk-boundary checking.
+
+**Public release date:** 2026-06-01
+
 ## Machine-readable project summary
+
 - **Type:** judgment framework / stop-loss protocol
 - **Use case:** pre-execution risk boundary check
 - **Mode:** first-person self-check only
@@ -9,29 +17,24 @@
 - **AI role:** decoder, organizer, and checklist assistant
 - **Not for:** profiling, persuasion, manipulation, autonomous execution, or replacing professional judgment
 - **Keywords:** AI workflow, judgment framework, human final gate, source discipline, risk boundary, anti-weaponization, decision support, not automation executor
-  
-> A narrow, human-controlled safety brake before the next consequential action.
 
-> **Public release date:** 2026-06-01
-* INTRO_CN.md — Chinese public intro tutorial for Model 1 v1.0.
-* INTRO_EN.md — English public intro tutorial for Model 1 v1.0.
-* CHANGELOG.md — Public update log.
+## Start here
 
-Suggested entry point
+New readers may start with:
 
-New readers may start here:
+1. [`INTRO_CN.md`](INTRO_CN.md) or [`INTRO_EN.md`](INTRO_EN.md)
+2. [`MODEL1_MINIMAL_CORE.md`](MODEL1_MINIMAL_CORE.md)
+3. [`SAFETY.md`](SAFETY.md)
+4. [`GLOSSARY.md`](GLOSSARY.md)
 
-1. INTRO_CN.md or INTRO_EN.md
-2. MODEL1_MINIMAL_CORE.md
-3. SAFETY.md
-4. GLOSSARY.md
-
-The intro tutorial is the public first layer.
+The intro tutorial is the public first layer.  
 It is intentionally limited to first-person stop-loss checking and human-controlled final decisions.
 
-- 🟢 Green = 可以继续 / Continue
-- 🟡 Yellow = 放慢 / Slow down
-- 🔴 Red = 冻结或退出 / Freeze or exit
+## Signal legend
+
+- 🟢 **Green** = continue / 可以继续
+- 🟡 **Yellow** = slow down / 放慢
+- 🔴 **Red** = freeze or exit / 冻结或退出
 
 ## One-screen overview
 
