@@ -1,14 +1,18 @@
 # Start Here
 
-This guide is the beginner entry point for Model 1 v1.0.
+This is the beginner entry point for Model 1 v1.0.
 
-Model 1 is a public-safe judgment support scaffold. It helps a person pause before taking a consequential next step, especially when a situation involves rising cost, unclear evidence, shrinking reversibility, or pressure to act too quickly.
+Model 1 is a public-safe judgment support scaffold. It helps a person pause before a consequential next step.
 
-It is not an autonomous system.  
-It is not a private engine.  
-It is not personal advice.  
-It is not a replacement for human judgment.
+It is not an autonomous system, private engine, personal diary, or professional advice.
 
-The purpose is simple:
+Use it to check:
 
-> Slow down before action. Check the boundary. Keep the
+- the next action;
+- the source;
+- the boundary;
+- whether the final decision stays human.
+
+Signal language:
+
+- 🟢 Green =
