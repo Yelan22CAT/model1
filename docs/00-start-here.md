@@ -9,6 +9,6 @@ It is not a private engine.
 It is not personal advice.  
 It is not a replacement for human judgment.
 
-The purpose of this guide is simple:
+The purpose is simple:
 
->
+> Slow down before action. Check the boundary. Keep the
