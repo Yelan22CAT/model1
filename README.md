@@ -22,10 +22,11 @@ Model 1 v1.0 is a human-controlled stop-loss guardrail for AI-assisted workflows
 
 New readers may start with:
 
-1. [`INTRO_CN.md`](INTRO_CN.md) or [`INTRO_EN.md`](INTRO_EN.md)
-2. [`MODEL1_MINIMAL_CORE.md`](MODEL1_MINIMAL_CORE.md)
-3. [`SAFETY.md`](SAFETY.md)
-4. [`GLOSSARY.md`](GLOSSARY.md)
+1. [`docs/00-start-here.md`](docs/00-start-here.md)
+2. [`INTRO_CN.md`](INTRO_CN.md) or [`INTRO_EN.md`](INTRO_EN.md)
+3. [`MODEL1_MINIMAL_CORE.md`](MODEL1_MINIMAL_CORE.md)
+4. [`SAFETY.md`](SAFETY.md)
+5. [`GLOSSARY.md`](GLOSSARY.md)
 
 The intro tutorial is the public first layer.  
 It is intentionally limited to first-person stop-loss checking and human-controlled final decisions.
