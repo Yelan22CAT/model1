@@ -11,6 +11,9 @@
 
 This is a public scaffold update only.
 
-It does not add private cases, identifiable personal material, workplace details, family details, medical details, financial details, third-person profiling, manipulation guidance, autonomous execution, or private engine logic.
+It does not add:
 
-## 202
+- private archive content;
+- private cases;
+- identifiable personal information;
+- relationship, family, medical
