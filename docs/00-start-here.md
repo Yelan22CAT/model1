@@ -6,13 +6,6 @@ Model 1 is a public-safe judgment support scaffold. It helps a person pause befo
 
 It is not an autonomous system, private engine, personal diary, or professional advice.
 
-Use it to check:
+Use it to check the next action, the source, the boundary, and whether the final decision stays human.
 
-- the next action;
-- the source;
-- the boundary;
-- whether the final decision stays human.
-
-Signal language:
-
-- 🟢 Green =
+The signal is not a command. It is a pause-and-check tool.
