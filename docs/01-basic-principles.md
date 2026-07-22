@@ -116,3 +116,17 @@ The public layer demonstrates the method without transferring the private core.
 5. Assign a Green, Yellow, or Red review signal.
 6. Apply the Human Final Gate.
 7. Proceed, slow down, freeze, or exit through human judgment.
+
+---
+
+## Practice with public examples
+
+Use the public-safe composite cases to see the sequence applied:
+
+1. [`Source Drift in a Procurement Decision`](../examples/01-source-drift-procurement.md)  
+   Demonstrates source reconciliation, master-data risk, consequence analysis, and reversible approval design.
+
+2. [`Unverified Change Before Release`](../examples/02-unverified-change-release.md)  
+   Demonstrates validation gaps, escalation, rollback analysis, release control, and the Human Final Gate.
+
+The cases are composite, anonymized, and generalized. They are demonstrations of the public method, not reproductions of private records.
