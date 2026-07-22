@@ -1,5 +1,33 @@
 # Changelog
 
+## 2026-07-22｜Job-search positioning and recruiter entry
+
+### Added
+
+- Added `FOR_RECRUITERS.md` as a recruiter-facing capability and role-relevance guide.
+- Added `docs/01-basic-principles.md` as a public-safe explanation of the framework's core principles.
+
+### Updated
+
+- Refocused the README first screen around operational risk, GRC, AI governance, decision support, source discipline, and human-in-the-loop control design.
+- Added separate recruiter and general-reader navigation paths.
+- Clarified that the repository is a portfolio documentation artifact, not a production deployment or autonomous system.
+- Standardized Green / Yellow / Red as review prompts rather than commands or permissions.
+
+### Scope
+
+This update demonstrates capability without transferring the private core.
+
+It does not add:
+
+- private archive content;
+- private cases or identifiable narratives;
+- workplace, relationship, family, medical, or financial details;
+- private calibration chains, thresholds, or runtime packs;
+- autonomous execution;
+- professional advice;
+- complete private engine logic.
+
 ## 2026-06-12｜Beginner start-here guide
 
 ### Added
