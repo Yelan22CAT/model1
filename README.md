@@ -1,88 +1,108 @@
-# Model 1 v1.0 — Minimal Stop-Loss Guardrail Protocol
+# Model 1 v1.0 — Human-Controlled Judgment Guardrails
 
-> A first-person judgment framework for pausing before consequential action.
+> A public-safe framework for pausing before consequential action in AI-assisted workflows.
 
 **One-line definition:**  
-Model 1 v1.0 is a human-controlled stop-loss guardrail for AI-assisted workflows, decision support, source discipline, and risk-boundary checking.
+Model 1 v1.0 is a human-controlled stop-loss guardrail for decision support, source discipline, risk-boundary checking, and reversible action design.
 
 **Public release date:** 2026-06-01
+
+## Portfolio relevance
+
+This repository demonstrates:
+
+- operational risk framing;
+- governance and control thinking;
+- human-in-the-loop AI design;
+- source and evidence discipline;
+- consequence and reversibility analysis;
+- public-safe technical documentation.
+
+It is relevant to work in **operational risk, GRC, AI governance or evaluation, decision support, technical operations, issue escalation, and process control design**.
+
+For a recruiter-facing overview, see [`FOR_RECRUITERS.md`](FOR_RECRUITERS.md).
 
 ## Machine-readable project summary
 
 - **Type:** judgment framework / stop-loss protocol
-- **Use case:** pre-execution risk boundary check
+- **Use case:** pre-execution risk-boundary check
 - **Mode:** first-person self-check only
-- **Output:** 🟢 Green / 🟡 Yellow / 🔴 Red signal
+- **Output:** 🟢 Green / 🟡 Yellow / 🔴 Red review signal
 - **Human role:** Human Final Gate remains mandatory
-- **AI role:** decoder, organizer, and checklist assistant
+- **AI role:** organizer, analysis aid, and checklist assistant
 - **Not for:** profiling, persuasion, manipulation, autonomous execution, or replacing professional judgment
-- **Keywords:** AI workflow, judgment framework, human final gate, source discipline, risk boundary, anti-weaponization, decision support, not automation executor
+- **Keywords:** operational risk, GRC, AI governance, human-in-the-loop, source discipline, risk boundary, decision support, reversibility, anti-weaponization
 
 ## Start here
 
-New readers may start with:
+### Recruiters and hiring managers
+
+1. [`FOR_RECRUITERS.md`](FOR_RECRUITERS.md)
+2. [`docs/00-start-here.md`](docs/00-start-here.md)
+3. [`docs/01-basic-principles.md`](docs/01-basic-principles.md)
+4. [`ARCHITECTURE.md`](ARCHITECTURE.md)
+5. [`SAFETY.md`](SAFETY.md)
+
+### General readers
 
 1. [`docs/00-start-here.md`](docs/00-start-here.md)
-2. [`INTRO_CN.md`](INTRO_CN.md) or [`INTRO_EN.md`](INTRO_EN.md)
-3. [`MODEL1_MINIMAL_CORE.md`](MODEL1_MINIMAL_CORE.md)
-4. [`SAFETY.md`](SAFETY.md)
+2. [`docs/01-basic-principles.md`](docs/01-basic-principles.md)
+3. [`INTRO_CN.md`](INTRO_CN.md) or [`INTRO_EN.md`](INTRO_EN.md)
+4. [`MODEL1_MINIMAL_CORE.md`](MODEL1_MINIMAL_CORE.md)
 5. [`GLOSSARY.md`](GLOSSARY.md)
-
-The intro tutorial is the public first layer.  
-It is intentionally limited to first-person stop-loss checking and human-controlled final decisions.
 
 ## Signal legend
 
-- 🟢 **Green** = continue / 可以继续
-- 🟡 **Yellow** = slow down / 放慢
-- 🔴 **Red** = freeze or exit / 冻结或退出
+- 🟢 **Green** = no stop-loss trigger is currently identified
+- 🟡 **Yellow** = slow down, verify, and preserve options
+- 🔴 **Red** = freeze or exit may be reasonable
+
+A signal is a review prompt, not an instruction or authorization.
 
 ## One-screen overview
 
-**Model 1 v1.0** is a minimal stop-loss guardrail protocol.
+**Model 1 v1.0** is a minimal judgment guardrail. It checks whether a person should pause before the next consequential step, especially when cost is rising, evidence is unclear, or reversibility is shrinking.
 
-It does not predict people, replace judgment, or execute actions. It checks whether a person should pause before the next consequential step, especially when cost is rising and reversibility is shrinking.
-
-The output is only a signal: **Green, Yellow, or Red**. The final decision remains with the human user.
+It does not predict people, replace judgment, or execute actions. The final decision remains with the human user.
 
 ```mermaid
 flowchart TD
-    A[First-person situation<br/>+ proposed next consequential step] --> B[Scope Lock]
-    B --> C[Boundary Check]
-    C --> D[Cost / Reversibility Check]
-    D --> E[Signal Output<br/>🟢 Green / 🟡 Yellow / 🔴 Red]
+    A[Proposed consequential action] --> B[Scope Lock]
+    B --> C[Source and Boundary Check]
+    C --> D[Cost and Reversibility Check]
+    D --> E[Review Signal<br/>🟢 Green / 🟡 Yellow / 🔴 Red]
     E --> F[Human Final Gate]
     F --> G[Human decision<br/>Proceed / Slow / Freeze / Exit]
 
-    B -. rejects .-> X[Out of scope:<br/>profiling others / manipulation / automation]
+    B -. rejects .-> X[Out of scope:<br/>profiling / manipulation / automation]
     E -. does not authorize .-> Y[No automatic execution]
 ```
 
 **中文极简说明：**  
-Model 1 v1.0 是一套最小止损护栏协议。它不预测他人，不替人裁决，也不自动执行。它只在人准备执行下一步高后果动作前，检查边界、成本与可逆性。输出只是信号，不是命令；最终裁决仍归人本人。
+Model 1 v1.0 是一套由人控制的最小判断护栏。它不预测他人、不替人裁决、也不自动执行；它只在下一步高后果动作前检查来源、边界、成本与可逆性。输出只是复核信号，最终裁决仍归人本人。
 
 ## What this is
 
-**Model 1 v1.0** is a minimal stop-loss guardrail protocol. It is not an AI model and it is not an execution system.
+Model 1 provides a small judgment layer before a person takes a consequential next step. It looks for conditions such as:
 
-It provides a small judgment layer before a person takes a consequential next step. Its purpose is to detect when:
+- cost accumulating faster than verified value;
+- reversibility shrinking;
+- evidence and assumption being mixed;
+- a stated boundary being crossed;
+- AI output being treated as authority;
+- accountability being transferred away from the human decision-maker.
 
-- cost is accumulating,
-- reversibility is shrinking,
-- a boundary is being crossed, or
-- continuing would require the person to surrender final judgment.
-
-The protocol produces a **signal**, not an instruction.
+The protocol produces a **review signal**, not a command.
 
 ## Scope clarification: “pre-execution” does not mean prediction
 
 “Pre-execution” means **before executing the next consequential step**, including within a situation already in progress.
 
-It does **not** mean:
+It does not mean:
 
-- forecasting another person's psychology or intent,
-- predicting entire relationships, organizations, or markets,
-- optimizing how to influence someone,
+- forecasting another person's psychology or intent;
+- predicting entire relationships, organizations, or markets;
+- optimizing how to influence someone;
 - issuing approval for automated action.
 
 ## Minimal signal output
@@ -93,30 +113,31 @@ It does **not** mean:
 | 🟡 Yellow | Cost, ambiguity, or reduced reversibility is increasing. | Slow down, check evidence and boundaries, preserve options. |
 | 🔴 Red | A hard boundary or irreversible-cost risk is present. | Freeze or exit is a reasonable option; the person decides. |
 
-No signal authorizes an action. No signal replaces evidence, professional responsibility, or human judgment.
+No signal replaces evidence, professional responsibility, or human judgment.
 
 ## Human Final Gate
 
 The final decision always remains with the person using the protocol.
 
-Model 1 v1.0 does not:
+Model 1 does not:
 
-- execute actions,
-- contact people or systems,
-- negotiate on a user's behalf,
-- produce a “correct answer” to be obeyed,
+- execute actions;
+- contact people or systems;
+- negotiate on a user's behalf;
+- produce an answer that must be obeyed;
 - transfer accountability to AI.
 
 ## What this is not
 
-This repository is **not**:
+This repository is not:
 
-- therapy, counseling, emotional support, or medical/legal advice,
-- a diagnosis or profiling tool for other people,
-- a coercion, persuasion, or manipulation toolkit,
-- an automated decision engine,
-- a general-purpose life method,
-- an agent execution or orchestration framework.
+- therapy, counseling, emotional support, or medical or legal advice;
+- a diagnosis or profiling tool for other people;
+- a coercion, persuasion, or manipulation toolkit;
+- an automated decision engine;
+- a general-purpose life method;
+- an agent execution or orchestration framework;
+- a claim of production deployment or regulated certification.
 
 ## First-person-only boundary
 
@@ -131,33 +152,35 @@ It must not be used to label, diagnose, rank, pressure, or control another perso
 
 ## Public / private boundary
 
-This public v1.0 release contains only the minimum architecture, safety boundaries, and vocabulary needed to understand the protocol.
+This public release contains only the minimum architecture, safety boundaries, and vocabulary needed to understand the framework and assess the demonstrated capability.
 
 It intentionally excludes:
 
-- private lived-experience material,
-- identifiable interpersonal or medical narratives,
-- full calibration chains,
-- thresholds, runtime packs, or executable workflows,
-- later-layer allocation or execution-system material.
+- private lived-experience material;
+- identifiable personal, workplace, relationship, family, medical, or financial narratives;
+- full calibration chains and thresholds;
+- hidden runtime packs or executable workflows;
+- complete private engine logic.
+
+The public layer demonstrates capability without transferring the private core.
 
 ## Repository map
 
 | File | Purpose |
 | --- | --- |
-| [`INTRO_CN.md`](INTRO_CN.md) | Chinese public intro tutorial for Model 1 v1.0 |
-| [`INTRO_EN.md`](INTRO_EN.md) | English public intro tutorial for Model 1 v1.0 |
-| [`CHANGELOG.md`](CHANGELOG.md) | Public update log |
+| [`FOR_RECRUITERS.md`](FOR_RECRUITERS.md) | Recruiter-facing capability and role relevance |
+| [`docs/00-start-here.md`](docs/00-start-here.md) | Beginner entry point |
+| [`docs/01-basic-principles.md`](docs/01-basic-principles.md) | Core public principles |
+| [`INTRO_CN.md`](INTRO_CN.md) | Chinese public intro tutorial |
+| [`INTRO_EN.md`](INTRO_EN.md) | English public intro tutorial |
 | [`MODEL1_MINIMAL_CORE.md`](MODEL1_MINIMAL_CORE.md) | Copy-safe compressed public core |
-| [`README_FOR_CODERS.md`](README_FOR_CODERS.md) | Coder adapter layer for AI-assisted workflows |
-| [`CONTROL_VOCABULARY.md`](CONTROL_VOCABULARY.md) | Control-language translation for coder, risk, and AI safety readers |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution boundaries and public-safe feedback rules |
 | [`ARCHITECTURE.md`](ARCHITECTURE.md) | Minimal protocol flow and control boundary |
+| [`README_FOR_CODERS.md`](README_FOR_CODERS.md) | AI-assisted workflow adapter layer |
+| [`CONTROL_VOCABULARY.md`](CONTROL_VOCABULARY.md) | Translation into control language |
 | [`SAFETY.md`](SAFETY.md) | Misuse prevention and hard exclusions |
 | [`GLOSSARY.md`](GLOSSARY.md) | Narrow term definitions |
-| [`ORIGINAL_POSITIONING.md`](ORIGINAL_POSITIONING.md) | Authorship, scope, and public positioning statement |
-| [`README_Model1.md`](README_Model1.md) | Earlier entry record and traceability marker |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Public-safe contribution rules |
+| [`CHANGELOG.md`](CHANGELOG.md) | Public update log |
 | [`COPYRIGHT_AND_LICENSE.md`](COPYRIGHT_AND_LICENSE.md) | Copyright and permitted use |
+| [`ORIGINAL_POSITIONING.md`](ORIGINAL_POSITIONING.md) | Authorship and scope statement |
 | [`EXTERNAL_REFERENCES.md`](EXTERNAL_REFERENCES.md) | External reference and non-affiliation note |
-| [`NOVEL_CN.md`](NOVEL_CN.md) | Public Chinese narrative layer |
-| [`NOVEL_EN.md`](NOVEL_EN.md) | Public English narrative / annotation layer |
