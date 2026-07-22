@@ -1,5 +1,33 @@
 # Changelog
 
+## 2026-07-22-b｜Public showcase cases and connected learning path
+
+### Added
+
+- Added `examples/01-source-drift-procurement.md` as a public-safe composite case demonstrating source reconciliation, master-data risk, and reversible approval design.
+- Added `examples/02-unverified-change-release.md` as a public-safe composite case demonstrating validation gaps, escalation, rollback analysis, release control, and the Human Final Gate.
+- Added `examples/README.md` as the public case index.
+
+### Updated
+
+- Connected `docs/00-start-here.md` and `docs/01-basic-principles.md` to the two public showcase cases.
+- Updated the beginner reading path from principles to practice, architecture, and safety.
+- Updated `FOR_RECRUITERS.md` with direct case links.
+
+### Scope
+
+The showcase cases are composite, anonymized, and generalized.
+
+This update does not add:
+
+- real names, organizations, dates, or equipment identifiers;
+- private cases or incident records;
+- identifiable workplace, relationship, family, medical, or financial details;
+- drawings, quantities, internal records, or proprietary thresholds;
+- private calibration chains or runtime packs;
+- autonomous execution;
+- complete private engine logic.
+
 ## 2026-07-22｜Job-search positioning and recruiter entry
 
 ### Added
