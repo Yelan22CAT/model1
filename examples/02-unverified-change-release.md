@@ -50,11 +50,23 @@ Premature release could create:
 
 The change is easier to test and revise before release. Once deployed, access becomes harder, evidence may be lost, and correction becomes more expensive.
 
-## Model 1 review
+## Judgment interface
 
-**Signal: 🔴 Red**
+**Evidence direction toward the proposed action: `-` — oppose**
+
+The available evidence does not support release without further validation. The limited static check is insufficient to represent the full operating range, while known untested conditions remain relevant.
+
+**Risk signal: 🔴 Red**
 
 A consequential action is being proposed while a hard validation gap remains and reversibility is about to shrink sharply.
+
+## Compact decision-support output
+
+- **Conclusion:** do not release the modified assembly on the limited check alone;
+- **Decisive evidence:** the full operating envelope and secondary effects have not been verified;
+- **Unknowns:** behavior across all positions, load conditions, connections, and repeated operation;
+- **Reversal condition:** documented full-range validation closes the identified gap or the accountable technical owner explicitly accepts a bounded residual risk;
+- **One safe next action:** freeze release and define the complete validation envelope.
 
 ## Recommended control response
 
@@ -72,9 +84,11 @@ The framework does not prescribe the engineering fix. It identifies that release
 ## Capability demonstrated
 
 - pre-execution risk review;
+- evidence-direction judgment;
 - technical issue escalation;
 - reversibility analysis;
 - distinction between symptom removal and root control;
+- compact decision communication;
 - human accountability design;
 - stop/release gate thinking.
 
