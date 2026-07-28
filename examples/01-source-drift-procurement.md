@@ -47,11 +47,23 @@ A wrong order could create:
 
 The decision is partially reversible before purchase approval, but much less reversible after the order is placed and received.
 
-## Model 1 review
+## Judgment interface
 
-**Signal: 🟡 Yellow**
+**Evidence direction toward the proposed action: `0` — unresolved**
+
+The current evidence does not establish that the first matching record is correct. It also does not prove that the purchase itself is impossible. The correct state is unresolved rather than forced approval or rejection.
+
+**Risk signal: 🟡 Yellow**
 
 The issue is not that the purchase is definitely wrong. The issue is that evidence and assumption are mixed while reversibility is shrinking.
+
+## Compact decision-support output
+
+- **Conclusion:** do not approve from the first matching record alone;
+- **Decisive evidence:** the source records conflict and neither is confirmed as current;
+- **Unknowns:** intended specification, authoritative source, and interchangeability;
+- **Reversal condition:** a verified drawing, specification, or accepted prior-use record establishes the correct item;
+- **One safe next action:** pause approval and reconcile the records against the authoritative source.
 
 ## Recommended control response
 
@@ -69,10 +81,12 @@ The framework does not choose the component. It identifies why approval should p
 ## Capability demonstrated
 
 - source discipline;
+- uncertainty preservation;
 - operational risk framing;
 - master-data quality awareness;
 - consequence analysis;
 - reversible decision design;
+- compact decision communication;
 - escalation without unnecessary alarm.
 
 ## Public boundary
