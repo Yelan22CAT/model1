@@ -1,161 +1,169 @@
 # Model 1 Intro Tutorial
 
-Updated: 2026-06-06  
-Scope: Model 1 v1.0 / first-person stop-loss guardrail only
+Updated: 2026-07-28  
+Scope: Model 1 v1.0 / first-person human-controlled judgment guardrail only
 
 ## What this is
 
-Model 1 v1.0 is a minimal stop-loss guardrail.
+Model 1 v1.0 is a minimal judgment and stop-loss guardrail.
 
-It does not make decisions for you.  
-It helps you pause before action and check:
+It does not make decisions for you. It helps you pause before real-world action and check:
 
-- whether the action has real-world consequences;
-- whether key facts have been verified;
-- whether the action can still be stopped, corrected, or rolled back.
+- what the next action actually is;
+- what is fact, inference, assumption, and unknown;
+- whether current evidence supports, fails to resolve, or opposes the path;
+- whether a boundary is being crossed;
+- whether the action can still be stopped, corrected, rolled back, or exited.
 
 In one sentence:
 
 > Model 1 is not an answer machine.  
-> It is a brake check before action.
+> It is a judgment interface and brake check before action.
 
 ## When to use it
 
 Use it before actions such as:
 
 - sending an important email;
-- placing an order;
-- making a payment;
-- making a work, relationship, safety, or money-related decision;
+- placing an order or making a payment;
+- approving a change;
+- publishing content or deploying code;
+- making a work, relationship, money, safety, or access decision;
 - using AI-generated content in the real world;
-- continuing under pressure, urgency, fatigue, or emotion.
+- continuing under urgency, fatigue, emotion, or incomplete information.
 
 ## When not to use it
 
 Model 1 v1.0 is not for:
 
-- analyzing, diagnosing, or judging other people;
-- persuasion, manipulation, or control;
-- predicting relationship outcomes;
-- replacing medical, legal, financial, or mental health advice;
+- analyzing, diagnosing, judging, or ranking other people;
+- persuasion, manipulation, pressure, or control;
+- predicting entire relationships, organizations, or markets;
+- replacing medical, legal, financial, safety, or mental-health advice;
 - autonomous execution by AI;
-- proving who is right or wrong.
+- proving what another person “really is.”
 
-This is a first-person self-check tool.  
-It is not a third-person judgment tool.
+This is a first-person judgment tool. It is not a third-person judge or control system.
 
-## Start with one sentence
+## Step 1: Write the next action
 
 Write down:
 
-> The next action I am about to take is: ______
+> The next real-world action I am about to take is: ______
 
 If the next action is unclear, do not continue yet.
 
-## The three core questions
+## Step 2: Separate fact, inference, and unknown
 
-### 1. Does this action have real-world consequences?
+Classify the information:
 
-It has real-world consequences if it can affect:
+- **Fact / observation:** directly seen, recorded, or verified;
+- **Inference / hypothesis:** a bounded explanation that may fit the evidence;
+- **Unknown / verification pending:** missing, conflicting, stale, or unchecked information.
 
-- money;
-- work;
-- safety;
-- relationships;
-- public communication;
-- other people’s actions;
-- outcomes that are hard to reverse.
+Do not treat AI fluency, repetition, or confidence as verification.
 
-If yes, it is not just a thought.  
-It is an action.
+## Step 3: Assign evidence direction `+ / 0 / -`
 
-### 2. Are the key facts verified from real sources?
+For the proposed action, use a bounded direction:
 
-Check whether key fields come from real sources, such as:
+- `+` — current evidence supports the path;
+- `0` — evidence is insufficient, mixed, or unresolved;
+- `-` — current evidence opposes the path.
 
-- order number;
-- quantity;
-- date;
-- amount;
-- recipient;
-- file version;
-- part number;
-- site condition;
-- original record.
+`0` is a valid result. It is not hidden approval, hidden rejection, or failure.
 
-Do not replace verification with “it should be correct.”
+Evidence direction describes the present evidence. It does not authorize action.
 
-### 3. Can this still be stopped or rolled back?
+## Step 4: Check consequence, boundary, and reversibility
 
 Ask:
 
-- Can the email be corrected after sending?
-- Can the order be cancelled?
-- Can the action be reversed?
-- Will an error create irreversible cost?
-- Who carries the real-world consequence if this is wrong?
+- What real-world effect can this action create?
+- Is a safety, authorization, contractual, privacy, consent, validation, or personal boundary being crossed?
+- Are time, money, responsibility, exposure, or safety costs rising?
+- Can the action still be withdrawn, corrected, or rolled back?
+- Who owns exceptions, maintenance, rollback, and final approval?
 
-If it cannot be stopped or rolled back, slow down.
+Evidence may be gray. A clear boundary must not be washed away by complexity.
 
-## Signal levels
+## Step 5: Assign the action-risk signal
 
-### 🟢 Green｜Continue
+### 🟢 Green｜No current stop-loss trigger
 
-Green means:
+No stop-loss condition is currently identified from the stated input.
 
-- the consequence is low;
-- the facts are verified;
-- the action can be stopped or rolled back;
-- you are not being pushed by urgency, fatigue, or emotion.
+This is not a guarantee and not permission for automatic execution.
 
-You may continue, but the final check still belongs to a human.
+### 🟡 Yellow｜Slow down and verify
 
-### 🟡 Yellow｜Slow down
-
-Yellow means one or more of the following:
+Yellow may apply when:
 
 - key facts are incomplete;
 - the source is unclear;
-- real-world consequences exist;
-- time pressure is high;
-- AI output looks fluent but has not been verified;
-- you are saying “probably,” “close enough,” or “send it first.”
+- consequence or cost is increasing;
+- reversibility is shrinking;
+- AI output is fluent but unverified;
+- responsibility or rollback is unclear.
 
 Action:
 
 > Pause.  
 > Verify the missing facts.  
-> Check again.
+> Preserve options.  
+> Review again.
 
-### 🔴 Red｜Freeze or exit
+### 🔴 Red｜Freeze, escalate, or exit
 
-Red means one or more of the following:
+Red may apply when:
 
+- a safety or authorization boundary is crossed;
+- required validation is missing;
 - key facts cannot be verified;
-- the consequence is irreversible;
-- safety risk exists;
-- responsibility is unclear;
-- someone is pushing you to skip verification;
-- AI-generated content will directly enter real-world execution;
+- consequence is highly irreversible;
+- AI output would directly trigger real-world execution;
 - the cost of being wrong is high.
 
 Action:
 
-> Do not execute.  
-> Freeze.  
-> Route to human review.  
+> Do not execute automatically.  
+> Freeze and route to human review or proper escalation.  
 > Exit if needed.
 
-## Minimal workflow
+## Do not confuse the two output axes
 
-1. Write down the next action.
-2. Check whether it has real-world consequences.
-3. Verify key facts from real sources.
-4. Check whether it can be stopped or rolled back.
-5. Mark the signal as 🟢 Green, 🟡 Yellow, or 🔴 Red.
-6. If Yellow, verify before continuing.
-7. If Red, do not execute.
-8. The final decision must remain human-controlled.
+Model 1 uses:
+
+1. **Evidence direction:** `+ / 0 / -`
+2. **Risk signal:** Green / Yellow / Red
+
+They answer different questions:
+
+- Direction: What does the current evidence say about the path?
+- Signal: How strongly should the person pause before acting?
+
+Examples:
+
+- Evidence may support a path (`+`) while the action remains Yellow because rollback is weak.
+- Evidence may remain unresolved (`0`) while a mandatory validation gap requires Red.
+- Evidence may oppose a path (`-`) without dramatic language; stopping or choosing a more reversible alternative may be enough.
+
+## Minimal output format
+
+A useful public output should normally show:
+
+```text
+Conclusion:
+Decisive evidence:
+Unknowns:
+Evidence direction: + / 0 / -
+Risk signal: Green / Yellow / Red
+Boundary status:
+Cost / reversibility status:
+What would reverse the conclusion:
+One safe next action:
+Human Final Gate: the final decision remains mine
+```
 
 ## Simple example
 
@@ -165,37 +173,53 @@ Before sending, check:
 
 - Is the order number from the original source?
 - Is the quantity verified?
-- Is the part description consistent?
+- Is the part description and version consistent?
 - Is the recipient correct?
-- Will sending this trigger purchasing, payment, or production?
+- Will sending trigger purchasing, payment, or production?
 
-If any key field is uncertain, this is not Green.
+If key fields conflict:
 
-It is at least Yellow.  
-If sending may trigger real cost and key fields are not verified, it is Red.
+```text
+Evidence direction: 0 | unresolved
+Risk signal: Yellow | pause and reconcile the source
+```
+
+If the message would trigger high-cost purchasing while required fields remain unverifiable:
+
+```text
+Evidence direction: 0 or -
+Risk signal: Red | do not send; route to human review
+```
 
 ## Final Gate
 
 AI-generated content is always a draft.
 
-Any action with real-world consequences must pass a final human-controlled check before execution.
+Any action with real-world consequences must pass a final human-controlled review before execution.
 
 The Final Gate checks:
 
-- key fields;
+- key facts and sources;
+- inferences and unknowns;
+- evidence direction;
 - recipient or execution target;
-- file version;
-- quantity, amount, and date;
+- file version, quantity, amount, and date;
+- boundary, consequence, and responsibility;
 - whether the action can still be stopped or rolled back.
 
 No Final Gate, no real-world execution.
 
-## Boundary
+## Public boundary
 
-Model 1 only provides risk signals.  
-It does not choose for you.  
-It does not carry the consequence for you.  
-It is not for controlling other people.  
-It does not replace professional judgment.
+This tutorial exposes only the minimal public judgment interface. It does not publish:
+
+- private cases or identifiable narratives;
+- private observers, thresholds, or calibration chains;
+- detailed market, interaction, allocation, or pacing models;
+- anti-poisoning implementation internals;
+- hidden runtime or autonomous execution logic;
+- the complete private engine.
+
+Model 1 does not choose for you, carry the consequence for you, or control other people.
 
 Final action must remain human-controlled.

@@ -1,5 +1,53 @@
 # Changelog
 
+## 2026-07-28｜Judgment-language interface and two-axis public output
+
+### Added
+
+- Added `docs/02-judgment-language.md` as the public-safe V1 guide for:
+  - fact / inference / unknown separation;
+  - evidence direction `+ / 0 / -`;
+  - Green / Yellow / Red action-risk signals;
+  - gray analysis and hard boundaries;
+  - canonical public states;
+  - compact decision-support output;
+  - closure awareness and Human Final Gate.
+
+### Updated
+
+- Updated `README.md` with the two-axis public architecture, current reading paths, machine-readable summary, and 2026-07-28 update date.
+- Updated `FOR_RECRUITERS.md` to demonstrate uncertainty calibration, judgment-interface design, compact decision communication, and workflow assurance.
+- Updated `docs/00-start-here.md` and `docs/01-basic-principles.md` with evidence-direction language and hard-boundary handling.
+- Updated `ARCHITECTURE.md`, `MODEL1_MINIMAL_CORE.md`, `README_FOR_CODERS.md`, and `CONTROL_VOCABULARY.md` so active public artifacts use the same source-state → direction → risk-signal → Human Final Gate sequence.
+- Updated `INTRO_CN.md` and `INTRO_EN.md` as the current bilingual public tutorials.
+- Updated `GLOSSARY.md` with canonical states, balanced ternary, two-axis output, reversal condition, and closure awareness.
+- Updated both public showcase cases and `examples/README.md` to display evidence direction separately from risk signal and to use a compact decision-support summary.
+- Updated `SAFETY.md` to clarify that neither `+ / 0 / -` nor Green / Yellow / Red creates execution, ranking, punishment, or control authority.
+
+### Public structure
+
+```text
+Proposed consequential action
+→ Fact / inference / unknown
+→ Evidence direction: + / 0 / -
+→ Boundary / consequence / reversibility
+→ Risk signal: Green / Yellow / Red
+→ Human Final Gate
+```
+
+### Scope
+
+This update publishes only the beginner-safe V1 judgment-language interface.
+
+It does not publish:
+
+- private cases or identifiable narratives;
+- private observer packs, thresholds, or calibration chains;
+- detailed market, interaction, allocation, or pacing models;
+- anti-poisoning implementation internals;
+- hidden runtime packs or autonomous execution logic;
+- the complete private engine.
+
 ## 2026-07-22-b｜Public showcase cases and connected learning path
 
 ### Added
