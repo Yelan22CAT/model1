@@ -1,5 +1,54 @@
 # Changelog
 
+## 2026-07-30｜Employer-facing work-sample expansion
+
+### Added
+
+- Added `PORTFOLIO_MAP.md` to explain the transfer path from manufacturing operations and field service into operational risk, resilience, GRC, TPRM, and AI-assisted decision support.
+- Added `WORK_SAMPLES.md` as the employer-facing index of cases, methods, and templates.
+- Added three public methods:
+  - `methods/01-operational-risk-review.md`;
+  - `methods/02-third-party-risk-intake.md`;
+  - `methods/03-ai-assisted-evidence-review.md`.
+- Added three public-safe composite cases:
+  - `examples/03-near-miss-escalation.md`;
+  - `examples/04-vendor-onboarding-control-gap.md`;
+  - `examples/05-ai-generated-summary-before-approval.md`.
+- Added three reusable work-product templates:
+  - `templates/RISK_REVIEW_TEMPLATE.md`;
+  - `templates/CONTROL_GAP_LOG.md`;
+  - `templates/ESCALATION_BRIEF_TEMPLATE.md`.
+
+### Updated
+
+- Updated `README.md` with employer-facing positioning, career direction, expanded work portfolio, methods, cases, templates, and a current repository map.
+- Updated `FOR_RECRUITERS.md` with a two-minute scan, ten-minute review, deeper technical path, role alignment, and work-product examples.
+- Updated `examples/README.md` from two to five public showcase cases and added domain coverage and supporting-method links.
+
+### Capability demonstrated
+
+- operational-risk and control-gap analysis;
+- operational-resilience, containment, restart, fallback, and closure thinking;
+- proportional vendor and third-party risk intake;
+- conditional approval, exception ownership, and monitoring triggers;
+- AI claim verification, source traceability, and consequential-use gating;
+- concise escalation and management decision support;
+- translation of hands-on technical operations into structured risk work.
+
+### Scope
+
+This update deliberately publishes more cases, analysis structure, and work products for employment review.
+
+It still does not publish:
+
+- identifiable private cases or original incident records;
+- real organizations, vendors, people, drawings, or confidential systems;
+- private observer packs, thresholds, or calibration chains;
+- detailed market, interaction, allocation, or pacing models;
+- anti-poisoning implementation internals;
+- hidden runtime packs or autonomous execution logic;
+- the complete private engine.
+
 ## 2026-07-28｜Judgment-language interface and two-axis public output
 
 ### Added
