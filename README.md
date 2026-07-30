@@ -1,215 +1,209 @@
 # Model 1 v1.0 — Human-Controlled Judgment Guardrails
 
-> A public-safe framework for pausing before consequential action in AI-assisted workflows.
+> A public portfolio for operational risk, control design, third-party risk, and AI-assisted decision support.
 
 **One-line definition:**  
-Model 1 v1.0 is a human-controlled stop-loss guardrail for decision support, source discipline, risk-boundary checking, uncertainty-aware judgment, and reversible action design.
+Model 1 v1.0 is a human-controlled judgment and stop-loss framework for source discipline, operational-risk review, uncertainty handling, reversible action design, and accountable AI-assisted workflows.
 
 **Public release date:** 2026-06-01  
-**Last public update:** 2026-07-28
+**Last public update:** 2026-07-30
 
-## Portfolio relevance
+## Employer-facing summary
 
-This repository demonstrates:
+This repository demonstrates how I translate hands-on operating experience into structured risk and control work.
 
-- operational risk framing;
-- governance and control thinking;
-- human-in-the-loop AI design;
-- source and evidence discipline;
+My background is rooted in manufacturing operations, field service support, assembly, troubleshooting, inventory checks, issue escalation, and practical work in high-variance environments.
+
+The portfolio is aligned with work in:
+
+- operational risk and controls;
+- operational resilience;
+- governance, risk, and compliance;
+- vendor and third-party risk;
+- change and release governance;
+- AI-assisted decision support;
+- AI governance, evaluation, and safety operations.
+
+### Start here for employment review
+
+1. [`PORTFOLIO_MAP.md`](PORTFOLIO_MAP.md) — career direction, transfer path, and role alignment;
+2. [`WORK_SAMPLES.md`](WORK_SAMPLES.md) — complete work-sample index;
+3. [`FOR_RECRUITERS.md`](FOR_RECRUITERS.md) — recruiter and hiring-manager guide;
+4. [`examples/README.md`](examples/README.md) — five composite cases;
+5. [`templates/RISK_REVIEW_TEMPLATE.md`](templates/RISK_REVIEW_TEMPLATE.md) — example risk-review deliverable.
+
+## What this repository demonstrates
+
+- operational-risk framing;
+- source-of-truth and evidence discipline;
+- fact / inference / unknown separation;
 - consequence and reversibility analysis;
-- uncertainty-aware judgment language;
-- compact decision-support communication;
+- control-gap identification;
+- ownership, escalation, and closure design;
+- operational-resilience thinking;
+- proportional third-party risk intake;
+- AI-output verification and Human Final Gate design;
+- compact management decision communication;
 - public-safe technical documentation.
 
-It is relevant to work in **operational risk, GRC, AI governance or evaluation, decision support, technical operations, issue escalation, and process control design**.
+## Public work portfolio
 
-For a recruiter-facing overview, see [`FOR_RECRUITERS.md`](FOR_RECRUITERS.md).
+### Methods
+
+- [`methods/01-operational-risk-review.md`](methods/01-operational-risk-review.md)
+- [`methods/02-third-party-risk-intake.md`](methods/02-third-party-risk-intake.md)
+- [`methods/03-ai-assisted-evidence-review.md`](methods/03-ai-assisted-evidence-review.md)
+
+### Cases
+
+- [`examples/01-source-drift-procurement.md`](examples/01-source-drift-procurement.md)
+- [`examples/02-unverified-change-release.md`](examples/02-unverified-change-release.md)
+- [`examples/03-near-miss-escalation.md`](examples/03-near-miss-escalation.md)
+- [`examples/04-vendor-onboarding-control-gap.md`](examples/04-vendor-onboarding-control-gap.md)
+- [`examples/05-ai-generated-summary-before-approval.md`](examples/05-ai-generated-summary-before-approval.md)
+
+### Templates
+
+- [`templates/RISK_REVIEW_TEMPLATE.md`](templates/RISK_REVIEW_TEMPLATE.md)
+- [`templates/CONTROL_GAP_LOG.md`](templates/CONTROL_GAP_LOG.md)
+- [`templates/ESCALATION_BRIEF_TEMPLATE.md`](templates/ESCALATION_BRIEF_TEMPLATE.md)
 
 ## Machine-readable project summary
 
-- **Type:** judgment framework / stop-loss protocol
-- **Use case:** pre-execution risk-boundary check
-- **Mode:** first-person self-check only
+- **Type:** judgment framework / operational-risk portfolio / stop-loss protocol
+- **Use cases:** pre-execution risk review, source review, vendor intake, control-gap analysis, escalation, AI-assisted evidence review
+- **Mode:** human-controlled decision support
 - **Evidence direction:** `+ / 0 / -` for support / unresolved / oppose
 - **Risk output:** 🟢 Green / 🟡 Yellow / 🔴 Red review signal
 - **Human role:** Human Final Gate remains mandatory
-- **AI role:** organizer, analysis aid, and checklist assistant
+- **AI role:** organizer, extraction aid, comparison aid, and draft assistant
 - **Not for:** profiling, persuasion, manipulation, autonomous execution, or replacing professional judgment
-- **Keywords:** operational risk, GRC, AI governance, human-in-the-loop, source discipline, uncertainty, risk boundary, decision support, reversibility, anti-weaponization
+- **Keywords:** operational risk, GRC, TPRM, operational resilience, AI governance, human-in-the-loop, source discipline, control gap, reversibility, escalation, decision support
 
-## Start here
-
-### Recruiters and hiring managers
-
-1. [`FOR_RECRUITERS.md`](FOR_RECRUITERS.md)
-2. [`docs/00-start-here.md`](docs/00-start-here.md)
-3. [`docs/01-basic-principles.md`](docs/01-basic-principles.md)
-4. [`docs/02-judgment-language.md`](docs/02-judgment-language.md)
-5. [`examples/README.md`](examples/README.md)
-6. [`ARCHITECTURE.md`](ARCHITECTURE.md)
-7. [`SAFETY.md`](SAFETY.md)
-
-### General readers
-
-1. [`docs/00-start-here.md`](docs/00-start-here.md)
-2. [`docs/01-basic-principles.md`](docs/01-basic-principles.md)
-3. [`docs/02-judgment-language.md`](docs/02-judgment-language.md)
-4. [`INTRO_CN.md`](INTRO_CN.md) or [`INTRO_EN.md`](INTRO_EN.md)
-5. [`MODEL1_MINIMAL_CORE.md`](MODEL1_MINIMAL_CORE.md)
-6. [`GLOSSARY.md`](GLOSSARY.md)
-
-## Public output has two axes
-
-### Evidence direction
-
-- `+` = current evidence supports the proposed path
-- `0` = evidence is insufficient, mixed, or unresolved
-- `-` = current evidence opposes the proposed path
-
-### Action-risk signal
-
-- 🟢 **Green** = no stop-loss trigger is currently identified
-- 🟡 **Yellow** = slow down, verify, and preserve options
-- 🔴 **Red** = freeze or exit may be reasonable
-
-The two axes answer different questions. Evidence may support a path while the action still deserves caution because it is difficult to reverse. Evidence may remain unresolved while a hard validation or authorization gap requires a freeze.
-
-A direction or signal is a review prompt, not an instruction or authorization.
-
-## One-screen overview
-
-**Model 1 v1.0** is a minimal judgment guardrail. It checks whether a person should pause before the next consequential step, especially when cost is rising, evidence is unclear, or reversibility is shrinking.
-
-It does not predict people, replace judgment, or execute actions. The final decision remains with the human user.
+## Public architecture
 
 ```mermaid
 flowchart TD
     A[Proposed consequential action] --> B[Scope Lock]
-    B --> C[Source and Boundary Check]
+    B --> C[Source-State Check]
     C --> D[Fact / Inference / Unknown]
     D --> E[Evidence Direction<br/>+ / 0 / -]
-    E --> F[Cost and Reversibility Check]
-    F --> G[Risk Signal<br/>🟢 Green / 🟡 Yellow / 🔴 Red]
-    G --> H[Human Final Gate]
-    H --> I[Human decision<br/>Proceed / Slow / Freeze / Exit]
+    E --> F[Boundary / Consequence / Reversibility]
+    F --> G[Risk Signal<br/>Green / Yellow / Red]
+    G --> H[Control Response<br/>Verify / Contain / Escalate / Roll Back]
+    H --> I[Human Final Gate]
+    I --> J[Human-owned decision]
 
-    B -. rejects .-> X[Out of scope:<br/>profiling / manipulation / automation]
-    G -. does not authorize .-> Y[No automatic execution]
+    B -. rejects .-> X[No profiling, manipulation, or automatic authority]
+    G -. signal only .-> Y[No automatic execution]
 ```
 
-**中文极简说明：**  
-Model 1 v1.0 是一套由人控制的最小判断护栏。它先区分事实、推断和未知，再分别表达证据方向与行动风险。它不预测他人、不替人裁决、也不自动执行；最终裁决仍归人本人。
+## Two-axis output
 
-## What this is
+### Evidence direction
 
-Model 1 provides a small judgment layer before a person takes a consequential next step. It looks for conditions such as:
+- `+` = current evidence supports the proposed path;
+- `0` = evidence is insufficient, mixed, or unresolved;
+- `-` = current evidence opposes the proposed path.
 
-- cost accumulating faster than verified value;
-- reversibility shrinking;
-- evidence and assumption being mixed;
-- uncertainty being forced into false certainty;
-- a stated boundary being crossed;
-- AI output being treated as authority;
-- accountability being transferred away from the human decision-maker.
+### Action-risk signal
 
-The protocol produces a bounded evidence direction and review signal, not a command.
+- 🟢 **Green** = no stop-loss trigger is currently identified;
+- 🟡 **Yellow** = slow down, verify, and preserve options;
+- 🔴 **Red** = freeze, escalate, or exit may be reasonable.
 
-## Scope clarification: “pre-execution” does not mean prediction
+The two axes answer different questions.
 
-“Pre-execution” means **before executing the next consequential step**, including within a situation already in progress.
+```text
+Evidence direction = What does the current evidence say?
+Risk signal = How strongly should action pause before proceeding?
+```
 
-It does not mean:
+A path may receive `+` and Yellow when it is supported but difficult to reverse. A path may receive `0` and Red when evidence remains unresolved but a mandatory control is absent.
 
-- forecasting another person's psychology or intent;
-- predicting entire relationships, organizations, or markets;
-- optimizing how to influence someone;
-- issuing approval for automated action.
+Neither axis authorizes execution.
 
-## Minimal public output
+## Compact decision-support output
 
-| Output | Meaning | Permitted interpretation |
-| --- | --- | --- |
-| `+` | Current evidence supports the proposed path. | Support is bounded by the current scope and evidence. |
-| `0` | Evidence is insufficient, mixed, or unresolved. | Preserve judgment; verify before claiming certainty. |
-| `-` | Current evidence opposes the proposed path. | Reconsider the path or choose a safer alternative. |
-| 🟢 Green | No stop-loss trigger is presently identified within the stated input. | Continue observing; no guarantee is given. |
-| 🟡 Yellow | Cost, ambiguity, or reduced reversibility is increasing. | Slow down, check evidence and boundaries, preserve options. |
-| 🔴 Red | A hard boundary or irreversible-cost risk is present. | Freeze or exit is a reasonable option; the person decides. |
+A useful output should normally show:
 
-No output replaces evidence, professional responsibility, or human judgment.
+```text
+Conclusion
+Decisive evidence
+Unknowns
+Evidence direction
+Risk signal
+Control gap
+Reversal condition
+One safe and reversible next action
+Human Final Gate owner
+```
 
 ## Human Final Gate
 
-The final decision always remains with the person using the protocol.
+The final decision remains with the accountable human owner.
 
 Model 1 does not:
 
 - execute actions;
 - contact people or systems;
-- negotiate on a user's behalf;
-- produce an answer that must be obeyed;
+- approve vendors, releases, spending, access, or employment decisions;
+- replace engineering, legal, safety, privacy, security, financial, regulatory, or management authority;
 - transfer accountability to AI.
 
-## What this is not
+## Scope clarification
 
-This repository is not:
+“Pre-execution” means before the next consequential action, including within a process already in progress.
 
-- therapy, counseling, emotional support, or medical or legal advice;
-- a diagnosis or profiling tool for other people;
-- a coercion, persuasion, or manipulation toolkit;
-- an automated decision engine;
-- a general-purpose life method;
-- an agent execution or orchestration framework;
-- a claim of production deployment or regulated certification.
+It does not mean:
 
-## First-person-only boundary
-
-Public use is restricted to first-person judgment questions such as:
-
-- Am I still within my stated boundary?
-- Is the next step reversible?
-- What is fact, inference, and unknown?
-- Does the evidence support, oppose, or fail to resolve the proposed path?
-- Is the cost rising faster than the value I can verify?
-- Should I pause before acting?
-
-It must not be used to label, diagnose, rank, pressure, or control another person.
+- predicting another person's psychology or intent;
+- scoring or ranking people;
+- manipulating behavior;
+- issuing compliance certification;
+- automatically enforcing a decision;
+- claiming production deployment.
 
 ## Public / private boundary
 
-This public release contains only the minimum architecture, safety boundaries, vocabulary, and composite examples needed to understand the framework and assess the demonstrated capability.
+This public repository contains enough structure, cases, methods, and templates for an employer to assess capability.
 
 It intentionally excludes:
 
-- private lived-experience material;
-- identifiable personal, workplace, relationship, family, medical, or financial narratives;
-- full calibration chains and thresholds;
-- private observer packs and market-extraction maps;
+- identifiable private cases and original incident records;
+- private observer packs;
+- private thresholds and calibration chains;
+- detailed market, interaction, allocation, or pacing models;
 - anti-poisoning implementation internals;
-- hidden runtime packs or executable workflows;
-- complete private engine logic.
+- hidden runtime packs;
+- autonomous execution logic;
+- complete private-engine structure.
 
-The public layer demonstrates capability without transferring the private core.
+The public layer now shows more of the **work products and method**, but it still does not transfer the unrestricted private engine.
 
 ## Repository map
 
 | File | Purpose |
 | --- | --- |
-| [`FOR_RECRUITERS.md`](FOR_RECRUITERS.md) | Recruiter-facing capability and role relevance |
-| [`docs/00-start-here.md`](docs/00-start-here.md) | Beginner entry point |
-| [`docs/01-basic-principles.md`](docs/01-basic-principles.md) | Core public principles |
-| [`docs/02-judgment-language.md`](docs/02-judgment-language.md) | Evidence direction, uncertainty, canonical states, and compact output |
-| [`examples/README.md`](examples/README.md) | Public-safe composite case index |
-| [`INTRO_CN.md`](INTRO_CN.md) | Chinese public intro tutorial |
-| [`INTRO_EN.md`](INTRO_EN.md) | English public intro tutorial |
-| [`MODEL1_MINIMAL_CORE.md`](MODEL1_MINIMAL_CORE.md) | Copy-safe compressed public core |
-| [`ARCHITECTURE.md`](ARCHITECTURE.md) | Minimal protocol flow and control boundary |
-| [`README_FOR_CODERS.md`](README_FOR_CODERS.md) | AI-assisted workflow adapter layer |
-| [`CONTROL_VOCABULARY.md`](CONTROL_VOCABULARY.md) | Translation into control language |
-| [`SAFETY.md`](SAFETY.md) | Misuse prevention and hard exclusions |
-| [`GLOSSARY.md`](GLOSSARY.md) | Narrow term definitions |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Public-safe contribution rules |
-| [`CHANGELOG.md`](CHANGELOG.md) | Public update log |
-| [`COPYRIGHT_AND_LICENSE.md`](COPYRIGHT_AND_LICENSE.md) | Copyright and permitted use |
-| [`ORIGINAL_POSITIONING.md`](ORIGINAL_POSITIONING.md) | Authorship and scope statement |
-| [`EXTERNAL_REFERENCES.md`](EXTERNAL_REFERENCES.md) | External reference and non-affiliation note |
+| [`PORTFOLIO_MAP.md`](PORTFOLIO_MAP.md) | career direction and transferable capability map |
+| [`WORK_SAMPLES.md`](WORK_SAMPLES.md) | employer-facing index of cases, methods, and templates |
+| [`FOR_RECRUITERS.md`](FOR_RECRUITERS.md) | recruiter and hiring-manager reading path |
+| [`docs/00-start-here.md`](docs/00-start-here.md) | beginner entry point |
+| [`docs/01-basic-principles.md`](docs/01-basic-principles.md) | core public principles |
+| [`docs/02-judgment-language.md`](docs/02-judgment-language.md) | evidence direction, uncertainty states, and compact output |
+| [`examples/README.md`](examples/README.md) | public composite case index |
+| [`methods/01-operational-risk-review.md`](methods/01-operational-risk-review.md) | operational-risk review method |
+| [`methods/02-third-party-risk-intake.md`](methods/02-third-party-risk-intake.md) | third-party risk intake method |
+| [`methods/03-ai-assisted-evidence-review.md`](methods/03-ai-assisted-evidence-review.md) | AI-assisted evidence-review method |
+| [`templates/RISK_REVIEW_TEMPLATE.md`](templates/RISK_REVIEW_TEMPLATE.md) | reusable risk-review format |
+| [`templates/CONTROL_GAP_LOG.md`](templates/CONTROL_GAP_LOG.md) | control-gap tracking format |
+| [`templates/ESCALATION_BRIEF_TEMPLATE.md`](templates/ESCALATION_BRIEF_TEMPLATE.md) | concise escalation and decision brief |
+| [`ARCHITECTURE.md`](ARCHITECTURE.md) | minimal public control flow |
+| [`README_FOR_CODERS.md`](README_FOR_CODERS.md) | engineering adapter layer |
+| [`CONTROL_VOCABULARY.md`](CONTROL_VOCABULARY.md) | translation into adjacent control language |
+| [`SAFETY.md`](SAFETY.md) | misuse prevention and hard exclusions |
+| [`CHANGELOG.md`](CHANGELOG.md) | public update history |
+
+## Portfolio principle
+
+> Show the work, the control discipline, and the transferable capability without publishing private source material or an unrestricted execution engine.
