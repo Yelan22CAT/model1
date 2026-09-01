@@ -1,5 +1,72 @@
 # Changelog
 
+## 2026-09-01｜Monthly public update — current-state assurance and AI decision-risk review
+
+### Added
+
+- Added `methods/04-change-triggered-reassessment.md` to show how a prior approval or assessment is refreshed after a material operating-state change without automatically repeating every historical review.
+- Added three public-safe composite cases:
+  - `examples/09-control-effectiveness-drift.md` — temporal validity, evidence currency, and targeted control retesting after a process change;
+  - `examples/10-local-ai-hidden-cloud-dependency.md` — local-vs-offline distinction, deployment-boundary review, unresolved data egress, and accountable approval gating;
+  - `examples/11-metric-decision-objective-mismatch.md` — metric usefulness vs decision-objective alignment, exception design, and limits on model authority.
+- Added `templates/CHANGE_REASSESSMENT_RECORD.md` as a reusable work product for prior decision, material-change trigger, affected evidence, current-state review, reversal condition, and Human Final Gate.
+
+### Updated
+
+- Updated `README.md` to September 2026 and added the new methods, cases, and reassessment work product while preserving the canonical v1.0 basic core.
+- Updated `PORTFOLIO_MAP.md` with temporal-validity, deployment-boundary, and metric-goal alignment evidence.
+- Updated `ROLE_EVIDENCE_MATRIX.md` with additional Risk & Controls, GRC, Technology / AI Risk, AI Governance, and AI / Model Risk evidence paths.
+- Updated `WORK_SAMPLES.md` and `examples/README.md` from eight to eleven composite cases.
+- Updated `FOR_RECRUITERS.md` with a September ten-minute review path and current-state assurance examples.
+
+### Public structure
+
+The stable public v1.0 core remains:
+
+```text
+Proposed consequential action
+→ Scope Lock
+→ Source-State Check
+→ Evidence Direction: + / 0 / -
+→ Boundary / Consequence / Reversibility
+→ Risk Signal: Green / Yellow / Red
+→ Human Final Gate
+```
+
+The September release adds a reusable outer loop:
+
+```text
+Prior decision
+→ material change
+→ identify affected evidence
+→ refresh current state
+→ rerun the same public v1.0 core
+→ Human Final Gate
+```
+
+### Capability demonstrated
+
+- temporal validity and current-state assurance;
+- change-triggered control reassessment;
+- distinction between historical assurance and current assurance;
+- AI deployment-boundary and data-egress review;
+- local-vs-offline / no-egress distinction;
+- metric-to-decision-objective alignment;
+- model-risk and decision-risk separation;
+- continued human ownership of consequential decisions.
+
+### Scope
+
+This update is a public-safe employment and work-sample expansion. It does not publish:
+
+- private formation history or identifiable case chains;
+- real employers, vendors, people, systems, or confidential deployment details;
+- private observer packs, thresholds, or calibration chains;
+- detailed market, interaction, allocation, or pacing models;
+- anti-poisoning implementation internals;
+- hidden runtime packs or autonomous execution logic;
+- the complete private engine.
+
 ## 2026-07-30｜Employer-facing work-sample expansion
 
 ### Added

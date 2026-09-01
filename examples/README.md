@@ -12,6 +12,9 @@ These public-safe composite cases demonstrate how Model 1 structures operational
 6. [`06-critical-dependency-recovery.md`](06-critical-dependency-recovery.md) — critical dependency failure, temporary containment, fallback, recovery ownership, and restart criteria.
 7. [`07-vendor-monitoring-trigger.md`](07-vendor-monitoring-trigger.md) — material-change detection, stale onboarding evidence, access expansion, and triggered reassessment.
 8. [`08-ai-evaluation-claim-trace.md`](08-ai-evaluation-claim-trace.md) — atomic claim review, stale-source detection, broken traceability, and consequential-use gating.
+9. [`09-control-effectiveness-drift.md`](09-control-effectiveness-drift.md) — prior assurance after process change, evidence currency, and targeted control reassessment.
+10. [`10-local-ai-hidden-cloud-dependency.md`](10-local-ai-hidden-cloud-dependency.md) — local-vs-offline distinction, unverified data egress, cloud dependency, and deployment approval.
+11. [`11-metric-decision-objective-mismatch.md`](11-metric-decision-objective-mismatch.md) — metric usefulness vs decision-objective alignment, exceptions, and model-authority limits.
 
 ## Domain coverage
 
@@ -25,6 +28,9 @@ These public-safe composite cases demonstrate how Model 1 structures operational
 | 6 | operational resilience | Is this restored capability or only temporary containment? |
 | 7 | continuous third-party monitoring | Has a material change invalidated the original assessment? |
 | 8 | AI evaluation | Are decision-changing claims current, supported, and clearly separated from inference? |
+| 9 | risk & controls / GRC | Does the prior control assessment still describe the current process state? |
+| 10 | AI / technology risk | Does “local” actually describe the full approved data and network boundary? |
+| 11 | AI / model risk | Does the metric rank outcomes in a way that matches the actual decision objective? |
 
 ## Common review structure
 
@@ -47,6 +53,14 @@ Direction = what the current evidence says about the proposed path
 Signal = how strongly action should pause before proceeding
 ```
 
+The newer cases also demonstrate two public extensions around the stable core:
+
+```text
+Material change → refresh affected evidence
+Deployment or model label → verify the actual operating boundary
+Metric performance → verify alignment with the real decision objective
+```
+
 ## Supporting portfolio material
 
 - [`../ROLE_EVIDENCE_MATRIX.md`](../ROLE_EVIDENCE_MATRIX.md)
@@ -54,6 +68,8 @@ Signal = how strongly action should pause before proceeding
 - [`../methods/01-operational-risk-review.md`](../methods/01-operational-risk-review.md)
 - [`../methods/02-third-party-risk-intake.md`](../methods/02-third-party-risk-intake.md)
 - [`../methods/03-ai-assisted-evidence-review.md`](../methods/03-ai-assisted-evidence-review.md)
+- [`../methods/04-change-triggered-reassessment.md`](../methods/04-change-triggered-reassessment.md)
+- [`../templates/CHANGE_REASSESSMENT_RECORD.md`](../templates/CHANGE_REASSESSMENT_RECORD.md)
 - [`../samples/MANAGEMENT_DECISION_MEMO.md`](../samples/MANAGEMENT_DECISION_MEMO.md)
 
 These cases do not disclose real identities, organizations, incident records, private calibration logic, observer packs, anti-poisoning internals, or proprietary technical information.

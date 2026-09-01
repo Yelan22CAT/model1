@@ -3,10 +3,10 @@
 > A public portfolio for operational risk, controls, resilience, third-party risk, and AI-assisted decision support.
 
 **One-line definition:**  
-Model 1 v1.0 is a human-controlled judgment and stop-loss framework for source discipline, operational-risk review, uncertainty handling, reversible action design, and accountable AI-assisted workflows.
+Model 1 v1.0 is a human-controlled judgment and stop-loss framework for source discipline, operational-risk review, uncertainty handling, reversible action design, temporal validity, and accountable AI-assisted workflows.
 
 **Public release date:** 2026-06-01  
-**Last public update:** 2026-07-30
+**Last public update:** 2026-09-01
 
 ## Employer-facing summary
 
@@ -28,7 +28,7 @@ The portfolio is aligned with:
 2. [`ROLE_EVIDENCE_MATRIX.md`](ROLE_EVIDENCE_MATRIX.md) — role responsibilities mapped to visible proof;
 3. [`WORK_SAMPLES.md`](WORK_SAMPLES.md) — complete employer-facing artifact index;
 4. [`FOR_RECRUITERS.md`](FOR_RECRUITERS.md) — two-minute and ten-minute review paths;
-5. [`examples/README.md`](examples/README.md) — eight public-safe composite cases;
+5. [`examples/README.md`](examples/README.md) — eleven public-safe composite cases;
 6. [`samples/MANAGEMENT_DECISION_MEMO.md`](samples/MANAGEMENT_DECISION_MEMO.md) — management-ready decision sample.
 
 ## What this repository demonstrates
@@ -41,7 +41,10 @@ The portfolio is aligned with:
 - ownership, escalation, containment, recovery, and closure design;
 - operational-resilience and critical-dependency thinking;
 - proportional third-party risk intake and continuous monitoring;
+- temporal validity and change-triggered reassessment;
 - AI-output grounding, claim trace, and Human Final Gate design;
+- deployment-boundary review for local / cloud / fallback behavior;
+- metric-to-decision-objective alignment review;
 - compact management decision communication;
 - public-safe technical documentation.
 
@@ -58,6 +61,7 @@ The portfolio is aligned with:
 - [`methods/01-operational-risk-review.md`](methods/01-operational-risk-review.md)
 - [`methods/02-third-party-risk-intake.md`](methods/02-third-party-risk-intake.md)
 - [`methods/03-ai-assisted-evidence-review.md`](methods/03-ai-assisted-evidence-review.md)
+- [`methods/04-change-triggered-reassessment.md`](methods/04-change-triggered-reassessment.md)
 
 ### Cases
 
@@ -69,32 +73,59 @@ The portfolio is aligned with:
 - [`examples/06-critical-dependency-recovery.md`](examples/06-critical-dependency-recovery.md)
 - [`examples/07-vendor-monitoring-trigger.md`](examples/07-vendor-monitoring-trigger.md)
 - [`examples/08-ai-evaluation-claim-trace.md`](examples/08-ai-evaluation-claim-trace.md)
+- [`examples/09-control-effectiveness-drift.md`](examples/09-control-effectiveness-drift.md)
+- [`examples/10-local-ai-hidden-cloud-dependency.md`](examples/10-local-ai-hidden-cloud-dependency.md)
+- [`examples/11-metric-decision-objective-mismatch.md`](examples/11-metric-decision-objective-mismatch.md)
 
 ### Templates and work products
 
 - [`templates/RISK_REVIEW_TEMPLATE.md`](templates/RISK_REVIEW_TEMPLATE.md)
 - [`templates/CONTROL_GAP_LOG.md`](templates/CONTROL_GAP_LOG.md)
 - [`templates/ESCALATION_BRIEF_TEMPLATE.md`](templates/ESCALATION_BRIEF_TEMPLATE.md)
+- [`templates/CHANGE_REASSESSMENT_RECORD.md`](templates/CHANGE_REASSESSMENT_RECORD.md)
 - [`samples/MANAGEMENT_DECISION_MEMO.md`](samples/MANAGEMENT_DECISION_MEMO.md)
 
-## Public architecture
+## Canonical public v1.0 architecture
+
+The basic public core remains stable:
 
 ```mermaid
 flowchart TD
     A[Proposed consequential action] --> B[Scope Lock]
     B --> C[Source-State Check]
-    C --> D[Fact / Inference / Stale / Unsupported / Unknown]
-    D --> E[Evidence Direction<br/>+ / 0 / -]
-    E --> F[Boundary / Consequence / Reversibility]
-    F --> G[Control Gap / Owner / Dependency]
-    G --> H[Risk Signal<br/>Green / Yellow / Red]
-    H --> I[Control Response<br/>Verify / Contain / Escalate / Monitor / Roll Back]
-    I --> J[Human Final Gate]
-    J --> K[Human-owned decision]
+    C --> D[Evidence Direction<br/>+ / 0 / -]
+    D --> E[Boundary / Consequence / Reversibility]
+    E --> F[Risk Signal<br/>Green / Yellow / Red]
+    F --> G[Human Final Gate]
+    G --> H[Human-owned decision]
 
     B -. rejects .-> X[No profiling, manipulation, or automatic authority]
-    H -. signal only .-> Y[No automatic execution]
+    D -. direction only .-> U[No action authorization]
+    F -. signal only .-> Y[No automatic execution]
 ```
+
+The September update does **not** replace this core. It adds public work methods around it.
+
+## Change-triggered reassessment loop
+
+A prior approval, control test, vendor review, or model evaluation describes the state that was actually assessed.
+
+```text
+Prior decision
+→ material change detected
+→ identify affected evidence
+→ mark current / stale / unsupported / unknown / opposed
+→ rerun the same public v1.0 judgment core on the current state
+→ Human Final Gate
+```
+
+```text
+Prior approval
++ material change
+≠ automatic current approval
+```
+
+The goal is targeted evidence refresh rather than silent inheritance of an old conclusion.
 
 ## Two-axis output
 
@@ -128,6 +159,7 @@ Evidence direction
 Risk signal
 Control gap and accountable owner
 Consequence and reversibility
+Current-state / change-trigger check when relevant
 Reversal condition
 One safe and reversible next action
 Human Final Gate
