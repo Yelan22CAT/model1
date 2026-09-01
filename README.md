@@ -85,25 +85,47 @@ The portfolio is aligned with:
 - [`templates/CHANGE_REASSESSMENT_RECORD.md`](templates/CHANGE_REASSESSMENT_RECORD.md)
 - [`samples/MANAGEMENT_DECISION_MEMO.md`](samples/MANAGEMENT_DECISION_MEMO.md)
 
-## Public architecture
+## Canonical public v1.0 architecture
+
+The basic public core remains stable:
 
 ```mermaid
 flowchart TD
     A[Proposed consequential action] --> B[Scope Lock]
     B --> C[Source-State Check]
-    C --> D[Fact / Inference / Stale / Unsupported / Unknown]
-    D --> E[Evidence Direction<br/>+ / 0 / -]
-    E --> F[Boundary / Consequence / Reversibility]
-    F --> G[Control Gap / Owner / Dependency]
-    G --> H[Current-State Validity / Change Trigger]
-    H --> I[Risk Signal<br/>Green / Yellow / Red]
-    I --> J[Control Response<br/>Verify / Contain / Escalate / Monitor / Reassess / Roll Back]
-    J --> K[Human Final Gate]
-    K --> L[Human-owned decision]
+    C --> D[Evidence Direction<br/>+ / 0 / -]
+    D --> E[Boundary / Consequence / Reversibility]
+    E --> F[Risk Signal<br/>Green / Yellow / Red]
+    F --> G[Human Final Gate]
+    G --> H[Human-owned decision]
 
     B -. rejects .-> X[No profiling, manipulation, or automatic authority]
-    I -. signal only .-> Y[No automatic execution]
+    D -. direction only .-> U[No action authorization]
+    F -. signal only .-> Y[No automatic execution]
 ```
+
+The September update does **not** replace this core. It adds public work methods around it.
+
+## Change-triggered reassessment loop
+
+A prior approval, control test, vendor review, or model evaluation describes the state that was actually assessed.
+
+```text
+Prior decision
+→ material change detected
+→ identify affected evidence
+→ mark current / stale / unsupported / unknown / opposed
+→ rerun the same public v1.0 judgment core on the current state
+→ Human Final Gate
+```
+
+```text
+Prior approval
++ material change
+≠ automatic current approval
+```
+
+The goal is targeted evidence refresh rather than silent inheritance of an old conclusion.
 
 ## Two-axis output
 
@@ -126,18 +148,6 @@ Risk signal = How strongly should action pause before proceeding?
 
 Neither axis authorizes execution.
 
-## Current-state rule
-
-A prior approval, control test, vendor review, or model evaluation describes the state that was actually assessed.
-
-```text
-Prior approval
-+ material change
-≠ automatic current approval
-```
-
-When a decision-changing condition changes, refresh the affected evidence rather than inheriting the old conclusion silently.
-
 ## Compact decision-support output
 
 ```text
@@ -149,7 +159,7 @@ Evidence direction
 Risk signal
 Control gap and accountable owner
 Consequence and reversibility
-Current-state / change-trigger check
+Current-state / change-trigger check when relevant
 Reversal condition
 One safe and reversible next action
 Human Final Gate
