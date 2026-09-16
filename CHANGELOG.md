@@ -1,5 +1,47 @@
 # Changelog
 
+## 2026-09-15｜Public safety companion — Human Catch-up Gate and Dual-Key Resume Lock
+
+### Added
+
+- Added `safety/HUMAN_CATCHUP_GATE.md` as a public-safe external pacing-control primitive for cases where consequential AI progression can outpace human comprehension, verification, or supervision.
+- Added `safety/DUAL_KEY_RESUME_LOCK.md` as a second lock: after freeze, resume requires both explicit human authorization and an external control-plane invariant check.
+- Added `safety/COMPREHENSION_DEBT.md` to define unresolved human-understanding debt as a qualitative risk concept rather than a validated quantitative metric.
+- Added `safety/THREAT_MODEL.md` to state bypass conditions, control-boundary limits, and what the stop/resume primitives do not solve.
+- Added `safety/DESIGN_PRINCIPLES.md` and `safety/README.md` as compact public navigation and design-rule layers.
+
+### Updated
+
+- Updated `README.md` to 2026-09-15 and added the public safety companion without replacing the canonical Model 1 v1.0 judgment core.
+
+### Public structure
+
+```text
+RUNNING
+→ Human Catch-up Gate
+→ PRE-STOP / FREEZE
+→ Snapshot + Trace
+→ Human Review
+→ Dual-Key Resume Lock
+→ Resume / Modify / Rollback / Reject
+```
+
+The second lock requires:
+
+```text
+Authorized human decision
+AND
+External control-plane invariant check
+```
+
+Neither the stopped model nor a single stale approval can self-authorize restart.
+
+### Design boundary
+
+This update does not claim to solve AI alignment or catastrophic risk as a whole and does not assign a numerical probability to catastrophic or existential AI risk.
+
+It deliberately publishes only small control primitives and public design rules. It does not publish private thresholds, observer packs, calibration chains, hidden runtime packs, anti-poisoning internals, or autonomous execution logic.
+
 ## 2026-09-01｜Monthly public update — current-state assurance and AI decision-risk review
 
 ### Added

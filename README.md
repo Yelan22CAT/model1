@@ -6,7 +6,7 @@
 Model 1 v1.0 is a human-controlled judgment and stop-loss framework for source discipline, operational-risk review, uncertainty handling, reversible action design, temporal validity, and accountable AI-assisted workflows.
 
 **Public release date:** 2026-06-01  
-**Last public update:** 2026-09-01
+**Last public update:** 2026-09-15
 
 ## Employer-facing summary
 
@@ -85,6 +85,29 @@ The portfolio is aligned with:
 - [`templates/CHANGE_REASSESSMENT_RECORD.md`](templates/CHANGE_REASSESSMENT_RECORD.md)
 - [`samples/MANAGEMENT_DECISION_MEMO.md`](samples/MANAGEMENT_DECISION_MEMO.md)
 
+### Public safety companion
+
+The canonical Model 1 v1.0 core remains a pre-execution human judgment layer. A new public-safe companion documents two small AI-control primitives without publishing private thresholds or autonomous execution logic:
+
+- [`safety/HUMAN_CATCHUP_GATE.md`](safety/HUMAN_CATCHUP_GATE.md) — pause when consequential AI progression outpaces human comprehension or supervision;
+- [`safety/DUAL_KEY_RESUME_LOCK.md`](safety/DUAL_KEY_RESUME_LOCK.md) — once frozen, resume requires both explicit human authorization and an external control-plane invariant check;
+- [`safety/COMPREHENSION_DEBT.md`](safety/COMPREHENSION_DEBT.md) — a qualitative description of unresolved human-understanding debt;
+- [`safety/THREAT_MODEL.md`](safety/THREAT_MODEL.md) — explicit limits and bypass questions;
+- [`safety/DESIGN_PRINCIPLES.md`](safety/DESIGN_PRINCIPLES.md) — compact public design rules;
+- [`safety/README.md`](safety/README.md) — directory overview.
+
+```text
+RUNNING
+→ Human Catch-up Gate
+→ PRE-STOP / FREEZE
+→ Snapshot + Trace
+→ Human Review
+→ Dual-Key Resume Lock
+→ Resume / Modify / Rollback / Reject
+```
+
+The public safety companion does **not** assign a numerical probability to catastrophic or existential AI risk. It treats low-probability, high-impact loss-of-control as a class of uncertain tail risk for which external pause, trace, rollback, and human re-entry may be valuable.
+
 ## Canonical public v1.0 architecture
 
 The basic public core remains stable:
@@ -104,7 +127,7 @@ flowchart TD
     F -. signal only .-> Y[No automatic execution]
 ```
 
-The September update does **not** replace this core. It adds public work methods around it.
+The September updates do **not** replace this core. They add public work methods and a public-safe safety companion around it.
 
 ## Change-triggered reassessment loop
 
@@ -173,7 +196,7 @@ Model 1 does not execute actions, approve vendors or releases, make employment o
 
 ## Public / private boundary
 
-This public repository contains enough structure, cases, methods, templates, and decision products for an employer to assess capability.
+This public repository contains enough structure, cases, methods, templates, decision products, and public-safe control concepts for an employer or technical reviewer to assess capability.
 
 It excludes:
 
