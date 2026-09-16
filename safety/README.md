@@ -12,6 +12,8 @@ The purpose is narrow: preserve human control when AI or agentic systems can mov
 - [`THREAT_MODEL.md`](THREAT_MODEL.md) — what these primitives can and cannot protect against;
 - [`DESIGN_PRINCIPLES.md`](DESIGN_PRINCIPLES.md) — compact design rules.
 
+Related data-governance method: [`methods/05-ai-data-lifecycle-privacy-review.md`](../methods/05-ai-data-lifecycle-privacy-review.md) — public-safe source, purpose, personal-data, repository, connector, provider-processing, retention and publication review. The checklist is not evidence of actual connector settings or a claim of legal compliance, and does not implement a runtime stop.
+
 ## Scope
 
 These notes are design patterns, not a production AI-safety system, not a complete alignment solution, and not a claim that any specific catastrophic-risk probability is correct.

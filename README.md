@@ -6,7 +6,7 @@
 Model 1 v1.0 is a human-controlled judgment and stop-loss framework for source discipline, operational-risk review, uncertainty handling, reversible action design, temporal validity, and accountable AI-assisted workflows.
 
 **Public release date:** 2026-06-01  
-**Last public update:** 2026-09-15
+**Last public update:** 2026-09-16
 
 ## Employer-facing summary
 
@@ -44,6 +44,7 @@ The portfolio is aligned with:
 - temporal validity and change-triggered reassessment;
 - AI-output grounding, claim trace, and Human Final Gate design;
 - deployment-boundary review for local / cloud / fallback behavior;
+- AI data lifecycle, connector permissions, privacy and publication-boundary review;
 - metric-to-decision-objective alignment review;
 - compact management decision communication;
 - public-safe technical documentation.
@@ -62,6 +63,7 @@ The portfolio is aligned with:
 - [`methods/02-third-party-risk-intake.md`](methods/02-third-party-risk-intake.md)
 - [`methods/03-ai-assisted-evidence-review.md`](methods/03-ai-assisted-evidence-review.md)
 - [`methods/04-change-triggered-reassessment.md`](methods/04-change-triggered-reassessment.md)
+- [`methods/05-ai-data-lifecycle-privacy-review.md`](methods/05-ai-data-lifecycle-privacy-review.md) — source / consent / connector / processing / retention / publication review; sourced, time-bounded and not an account-specific audit.
 
 ### Cases
 
@@ -87,7 +89,7 @@ The portfolio is aligned with:
 
 ### Public safety companion
 
-The canonical Model 1 v1.0 core remains a pre-execution human judgment layer. A new public-safe companion documents two small AI-control primitives without publishing private thresholds or autonomous execution logic:
+The canonical Model 1 v1.0 core remains a pre-execution human judgment layer. A public-safe companion documents small AI-control primitives without publishing private thresholds or autonomous execution logic:
 
 - [`safety/HUMAN_CATCHUP_GATE.md`](safety/HUMAN_CATCHUP_GATE.md) — pause when consequential AI progression outpaces human comprehension or supervision;
 - [`safety/DUAL_KEY_RESUME_LOCK.md`](safety/DUAL_KEY_RESUME_LOCK.md) — once frozen, resume requires both explicit human authorization and an external control-plane invariant check;
@@ -95,6 +97,8 @@ The canonical Model 1 v1.0 core remains a pre-execution human judgment layer. A 
 - [`safety/THREAT_MODEL.md`](safety/THREAT_MODEL.md) — explicit limits and bypass questions;
 - [`safety/DESIGN_PRINCIPLES.md`](safety/DESIGN_PRINCIPLES.md) — compact public design rules;
 - [`safety/README.md`](safety/README.md) — directory overview.
+
+The related [data-lifecycle privacy review method](methods/05-ai-data-lifecycle-privacy-review.md) separates repository visibility, connector grants, provider processing/training/retention and publication permission. It cites a dated Canadian regulatory report about earlier ChatGPT models and does not claim that any individual account or current product has been audited.
 
 ```text
 RUNNING
