@@ -10,7 +10,8 @@ The purpose is narrow: preserve human control when AI or agentic systems can mov
 - [`DUAL_KEY_RESUME_LOCK.md`](DUAL_KEY_RESUME_LOCK.md) — a second lock that prevents self-resume after a freeze;
 - [`COMPREHENSION_DEBT.md`](COMPREHENSION_DEBT.md) — a qualitative way to describe unresolved human-understanding debt;
 - [`THREAT_MODEL.md`](THREAT_MODEL.md) — what these primitives can and cannot protect against;
-- [`DESIGN_PRINCIPLES.md`](DESIGN_PRINCIPLES.md) — compact design rules.
+- [`DESIGN_PRINCIPLES.md`](DESIGN_PRINCIPLES.md) — compact design rules;
+- [`SINGLE_ACTION_CONTROL_REVIEW.md`](SINGLE_ACTION_CONTROL_REVIEW.md) — a public-safe comparative review of single-action controls and the decision systems behind them (2026-09-18; no implementation or audit claimed).
 
 Related data-governance method: [`methods/05-ai-data-lifecycle-privacy-review.md`](../methods/05-ai-data-lifecycle-privacy-review.md) — public-safe source, purpose, personal-data, repository, connector, provider-processing, retention and publication review. The checklist is not evidence of actual connector settings or a claim of legal compliance, and does not implement a runtime stop.
 
