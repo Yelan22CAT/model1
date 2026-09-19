@@ -11,5 +11,8 @@ This directory contains employer-readable, public-safe work methods. These are *
 | [05 — AI Data Lifecycle and Privacy Review](05-ai-data-lifecycle-privacy-review.md) | Separate source permission, connector access, provider processing and publication. |
 | [06 — Reusable and Agentic Workflow Design](06-reusable-and-agentic-workflow-design.md) | Reuse deterministic checks, bound AI proposals and retain human approval. |
 | [07 — Dual-Speed Development and Evidence-Gated Release](07-dual-speed-evidence-gated-release.md) | Review hardware/software interface changes, affected evidence and authorized release. |
+| [08 — Structured Decision Integrity](08-structured-decision-integrity.md) | Distinguish schema validity, semantic correctness, uncertainty, authorization and observed outcome. |
+| [09 — Human-First Learning Review](09-human-first-learning-review.md) | Preserve safe independent attempts, after-action evidence review and later unaided transfer. |
+| [10 — Claim and Summary Fidelity](10-claim-compression-fidelity.md) | Trace technical assertions across headlines, sources, rewrites and conclusions without inferring hidden model internals. |
 
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
