@@ -34,3 +34,12 @@ CS146S / Stanford 相关内容如被提及，仅作为外部学习参考或语�
 本仓库不复制、不分发、不再发布任何 Stanford 课程材料、讲义、作业、幻灯片、笔记、专有材料或受限制教育内容。
 
 Model 1 v1.0 是以公开笔名 **Yelan / 夜阑** 发布的独立公开协议。其范围、安全边界、术语与发布决定均由作者自行定义。
+
+
+## 2026-09-24 — Engineering reference: qybaihe/mu
+
+- Repository: https://github.com/qybaihe/mu
+- Reviewed as a public engineering example of a coding-agent harness with bounded judgment points, shadow/active/off modes, context admission, recovery checks and selective multi-agent information routing.
+- Model 1 does not depend on this repository.
+- Author-reported latency, token savings, benchmark results and production-readiness claims are not treated as independently verified.
+- The repository describes itself as early development; later revisions may materially change the design.
