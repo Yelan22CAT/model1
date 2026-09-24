@@ -14,5 +14,8 @@ This directory contains employer-readable, public-safe work methods. These are *
 | [08 — Structured Decision Integrity](08-structured-decision-integrity.md) | Distinguish schema validity, semantic correctness, uncertainty, authorization and observed outcome. |
 | [09 — Human-First Learning Review](09-human-first-learning-review.md) | Preserve safe independent attempts, after-action evidence review and later unaided transfer. |
 | [10 — Claim and Summary Fidelity](10-claim-compression-fidelity.md) | Trace technical assertions across headlines, sources, rewrites and conclusions without inferring hidden model internals. |
+| [11 — Layered Context and Memory Governance](11-layered-context-memory-governance.md) | Keep active context small while preserving provenance, conflicts and gated promotion. |
+| [12 — Bounded Judgment Middleware and Selective Agent Coordination](12-bounded-judgment-middleware-coordination.md) | Use micro-judgments, shadow activation and selective cross-agent routing. |
+| [13 — Cross-Model Evidence Reconciliation and Explanation Audit](13-cross-model-evidence-reconciliation.md) | Compare models without treating agreement as proof or disagreement as failure. |
 
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
