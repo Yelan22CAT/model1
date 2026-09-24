@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-09-24｜Weekly public update — memory governance, judgment middleware and cross-model reconciliation
+
+### Added
+
+- Added `methods/11-layered-context-memory-governance.md`.
+- Added `methods/12-bounded-judgment-middleware-coordination.md`.
+- Added `methods/13-cross-model-evidence-reconciliation.md`.
+
+### Updated
+
+- Updated the method index and public README through Method 13.
+- Added a bounded external engineering reference to `qybaihe/mu`.
+
+### Scope
+
+This is a controlled public projection. It does not publish private prompts, thresholds, person/case records, credentials, hidden runtime packs, unrestricted agent permissions, or the complete private engine. External performance claims remain source-reported unless independently reproduced.
+
 ## 2026-09-15｜Public safety companion — Human Catch-up Gate and Dual-Key Resume Lock
 
 ### Added
