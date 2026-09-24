@@ -6,7 +6,7 @@
 Model 1 v1.0 is a human-controlled judgment and stop-loss framework for source discipline, operational-risk review, uncertainty handling, reversible action design, temporal validity, and accountable AI-assisted workflows.
 
 **Public release date:** 2026-06-01  
-**Last public update:** 2026-09-16
+**Last public update:** 2026-09-24
 
 ## Employer-facing summary
 
@@ -64,6 +64,15 @@ The portfolio is aligned with:
 - [`methods/03-ai-assisted-evidence-review.md`](methods/03-ai-assisted-evidence-review.md)
 - [`methods/04-change-triggered-reassessment.md`](methods/04-change-triggered-reassessment.md)
 - [`methods/05-ai-data-lifecycle-privacy-review.md`](methods/05-ai-data-lifecycle-privacy-review.md) — source / consent / connector / processing / retention / publication review; sourced, time-bounded and not an account-specific audit.
+- [`methods/06-ai-decision-routing-cost-and-calibration.md`](methods/06-ai-decision-routing-cost-and-calibration.md)
+- [`methods/06-reusable-and-agentic-workflow-design.md`](methods/06-reusable-and-agentic-workflow-design.md)
+- [`methods/07-dual-speed-evidence-gated-release.md`](methods/07-dual-speed-evidence-gated-release.md)
+- [`methods/08-structured-decision-integrity.md`](methods/08-structured-decision-integrity.md)
+- [`methods/09-human-first-learning-review.md`](methods/09-human-first-learning-review.md)
+- [`methods/10-claim-compression-fidelity.md`](methods/10-claim-compression-fidelity.md)
+- [`methods/11-layered-context-memory-governance.md`](methods/11-layered-context-memory-governance.md)
+- [`methods/12-bounded-judgment-middleware-coordination.md`](methods/12-bounded-judgment-middleware-coordination.md)
+- [`methods/13-cross-model-evidence-reconciliation.md`](methods/13-cross-model-evidence-reconciliation.md)
 
 ### Cases
 
