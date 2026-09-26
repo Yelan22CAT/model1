@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use or discuss Model 1, please cite the canonical repository and the relevant dated version."
+title: "Model 1 v1.0 — Human-Controlled Judgment Guardrails"
+type: software
+authors:
+  - name: "Yelan22CAT"
+version: "1.0"
+date-released: "2026-06-01"
+repository-code: "https://github.com/Yelan22CAT/model1"
+url: "https://github.com/Yelan22CAT/model1"
+abstract: >-
+  A human-controlled judgment, evidence, stop-loss and autonomy-governance framework
+  covering source discipline, uncertainty, reversibility, selective intervention,
+  trajectory recoverability and accountable AI-assisted workflows.

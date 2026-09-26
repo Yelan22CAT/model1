@@ -17,5 +17,7 @@ This directory contains employer-readable, public-safe work methods. These are *
 | [11 — Layered Context and Memory Governance](11-layered-context-memory-governance.md) | Keep active context small while preserving provenance, conflicts and gated promotion. |
 | [12 — Bounded Judgment Middleware and Selective Agent Coordination](12-bounded-judgment-middleware-coordination.md) | Use micro-judgments, shadow activation and selective cross-agent routing. |
 | [13 — Cross-Model Evidence Reconciliation and Explanation Audit](13-cross-model-evidence-reconciliation.md) | Compare models without treating agreement as proof or disagreement as failure. |
+| [14 — Selective Intervention and Autonomy Governance](14-selective-intervention-autonomy-governance.md) | Let low-risk autonomous work run while a shadow control plane watches recoverability and preempts only on material boundaries. |
+| [15 — Originality and Provenance Defense](15-originality-provenance-defense.md) | Preserve dated source lineage, contribution boundaries and citation continuity without publishing the private engine or overstating novelty. |
 
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.

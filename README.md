@@ -6,7 +6,7 @@
 Model 1 v1.0 is a human-controlled judgment and stop-loss framework for source discipline, operational-risk review, uncertainty handling, reversible action design, temporal validity, and accountable AI-assisted workflows.
 
 **Public release date:** 2026-06-01  
-**Last public update:** 2026-09-24
+**Last public update:** 2026-09-26
 
 ## Employer-facing summary
 
@@ -73,6 +73,8 @@ The portfolio is aligned with:
 - [`methods/11-layered-context-memory-governance.md`](methods/11-layered-context-memory-governance.md)
 - [`methods/12-bounded-judgment-middleware-coordination.md`](methods/12-bounded-judgment-middleware-coordination.md)
 - [`methods/13-cross-model-evidence-reconciliation.md`](methods/13-cross-model-evidence-reconciliation.md)
+- [`methods/14-selective-intervention-autonomy-governance.md`](methods/14-selective-intervention-autonomy-governance.md)
+- [`methods/15-originality-provenance-defense.md`](methods/15-originality-provenance-defense.md)
 
 ### Cases
 
@@ -120,6 +122,22 @@ RUNNING
 ```
 
 The public safety companion does **not** assign a numerical probability to catastrophic or existential AI risk. It treats low-probability, high-impact loss-of-control as a class of uncertain tail risk for which external pause, trace, rollback, and human re-entry may be valuable.
+
+## Autonomy-era extension: selective intervention instead of per-step blocking
+
+Autonomous workflows should not be forced through a synchronous approval gate for every low-risk, reversible step. Model 1 therefore distinguishes three operating states:
+
+```text
+FREE RUN  → low-risk, reversible work continues
+SHADOW    → observe, score, log and preserve recovery without blocking
+PREEMPT   → stop or seize control only when a material boundary is crossed
+```
+
+The control target shifts from **"is every local step correct?"** to **"is the trajectory still within an acceptable and recoverable operating envelope?"** Typical intervention triggers include authority escalation, irreversible external side effects, explicit constraint violation, state corruption, repeated dead ends, resource runaway, or loss of a credible recovery path.
+
+Human Final is retained as an **authority boundary**, not as a requirement for a human click on every step. Bounded judges, classifiers, or fast decision models may act as sensors inside the control plane; they do not become the final authority merely because they are fast or confident.
+
+See [`methods/14-selective-intervention-autonomy-governance.md`](methods/14-selective-intervention-autonomy-governance.md).
 
 ## Canonical public v1.0 architecture
 
@@ -206,6 +224,14 @@ Human Final Gate
 The final decision remains with the accountable human owner.
 
 Model 1 does not execute actions, approve vendors or releases, make employment or access decisions, replace professional authority, or transfer accountability to AI.
+
+## Origin, provenance and citation
+
+This repository keeps a dated public provenance trail so later summaries, papers, implementations or derivative frameworks can recover where specific Model 1 formulations appeared. See [`PROVENANCE.md`](PROVENANCE.md) for the contribution timeline and attribution boundary, and [`CITATION.cff`](CITATION.cff) for a machine-readable citation entry.
+
+The provenance record is deliberately narrow: it records what was published here and when. It does **not** claim that every underlying idea is unique in the literature or that a Git commit by itself establishes patent or legal ownership.
+
+Public citation uses the repository identity `Yelan22CAT`. Personal legal-name mapping is not required for the public contribution record. See [`methods/15-originality-provenance-defense.md`](methods/15-originality-provenance-defense.md) for the public-safe source-lineage method.
 
 ## Public / private boundary
 
