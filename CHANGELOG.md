@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-09-26｜Autonomy-governance and provenance update
+
+### Added
+
+- Added `methods/14-selective-intervention-autonomy-governance.md` to move Pre-Stop from a presumed per-step choke point into a selective intervention control plane with Free Run / Shadow / Preempt states.
+- Added `PROVENANCE.md` as a dated contribution and influence ledger.
+- Added `CITATION.cff` so later users, researchers and derivative work have a canonical citation target.
+- Added `methods/15-originality-provenance-defense.md` with public priority anchors, derivation classes, citation spine, claim boundaries and supersession-without-erasure.
+- Public citation identity is the repository handle `Yelan22CAT`; personal legal-name mapping remains outside the public artifact.
+
+### Updated
+
+- Updated the public README and methods index through Method 14.
+- Reframed Human Final as an authority boundary rather than mandatory human approval of every low-risk step.
+- Added trajectory recoverability as the main control objective for autonomous workflows.
+
+### Scope
+
+This is architecture documentation, not a claim of deployed runtime enforcement. The provenance record documents dated publication and contribution boundaries; it does not assert blanket originality, patent rights or legal ownership.
+
 ## 2026-09-24｜Weekly public update — memory governance, judgment middleware and cross-model reconciliation
 
 ### Added
