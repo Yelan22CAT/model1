@@ -6,7 +6,7 @@
 Model 1 v1.0 is a human-controlled judgment and stop-loss framework for source discipline, operational-risk review, uncertainty handling, reversible action design, temporal validity, and accountable AI-assisted workflows.
 
 **Public release date:** 2026-06-01  
-**Last public update:** 2026-09-26
+**Last public update:** 2026-09-27
 
 ## Employer-facing summary
 
@@ -75,6 +75,7 @@ The portfolio is aligned with:
 - [`methods/13-cross-model-evidence-reconciliation.md`](methods/13-cross-model-evidence-reconciliation.md)
 - [`methods/14-selective-intervention-autonomy-governance.md`](methods/14-selective-intervention-autonomy-governance.md)
 - [`methods/15-originality-provenance-defense.md`](methods/15-originality-provenance-defense.md)
+- [`methods/16-dynamic-human-participation-control.md`](methods/16-dynamic-human-participation-control.md)
 
 ### Cases
 
@@ -138,6 +139,23 @@ The control target shifts from **"is every local step correct?"** to **"is the t
 Human Final is retained as an **authority boundary**, not as a requirement for a human click on every step. Bounded judges, classifiers, or fast decision models may act as sensors inside the control plane; they do not become the final authority merely because they are fast or confident.
 
 See [`methods/14-selective-intervention-autonomy-governance.md`](methods/14-selective-intervention-autonomy-governance.md).
+
+Human participation is also separated by **execution mode** and **governance layer** rather than treated as one linear escalation ladder:
+
+```text
+Human-on-the-Boundary = governance / authority limits
+
+Human Direct / AI-Assisted = human executes
+Human-in-the-Loop          = human participates inside designated steps
+Human-on-the-Loop          = autonomous execution + human supervision/takeover
+Full Auto                  = no synchronous human participation in normal execution
+```
+
+The same workflow may switch modes by phase. A low-risk reversible digital task may move directly to Full Auto; a consequential checkpoint may require Human-in-the-Loop; a continuously observable physical process may use Human-on-the-Loop when takeover is actually feasible.
+
+A new **takeover-feasibility gate** prevents nominal supervision from being mistaken for real control: detect + understand + decide + intervene must fit inside the available time-to-boundary / time-to-harm. Human-in-the-Loop is therefore not obsolete, and Human-on-the-Loop is not a mandatory intermediate mode.
+
+See [`methods/16-dynamic-human-participation-control.md`](methods/16-dynamic-human-participation-control.md).
 
 ## Canonical public v1.0 architecture
 
