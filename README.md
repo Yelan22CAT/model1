@@ -140,15 +140,22 @@ Human Final is retained as an **authority boundary**, not as a requirement for a
 
 See [`methods/14-selective-intervention-autonomy-governance.md`](methods/14-selective-intervention-autonomy-governance.md).
 
-Human participation is also separated by layer rather than treated as one linear escalation ladder:
+Human participation is also separated by **execution mode** and **governance layer** rather than treated as one linear escalation ladder:
 
 ```text
-Human-on-the-Boundary = governance and authority limits
-Human-on-the-Loop     = supervision with takeover capability
-Human-in-the-Loop     = human participation inside designated execution steps
+Human-on-the-Boundary = governance / authority limits
+
+Human Direct / AI-Assisted = human executes
+Human-in-the-Loop          = human participates inside designated steps
+Human-on-the-Loop          = autonomous execution + human supervision/takeover
+Full Auto                  = no synchronous human participation in normal execution
 ```
 
-The same system may move among AUTO, Human-on-the-Loop and Human-in-the-Loop as uncertainty, consequence, irreversibility and recoverability change. Human-in-the-Loop is therefore selectively invoked rather than assumed to disappear. See [`methods/16-dynamic-human-participation-control.md`](methods/16-dynamic-human-participation-control.md).
+The same workflow may switch modes by phase. A low-risk reversible digital task may move directly to Full Auto; a consequential checkpoint may require Human-in-the-Loop; a continuously observable physical process may use Human-on-the-Loop when takeover is actually feasible.
+
+A new **takeover-feasibility gate** prevents nominal supervision from being mistaken for real control: detect + understand + decide + intervene must fit inside the available time-to-boundary / time-to-harm. Human-in-the-Loop is therefore not obsolete, and Human-on-the-Loop is not a mandatory intermediate mode.
+
+See [`methods/16-dynamic-human-participation-control.md`](methods/16-dynamic-human-participation-control.md).
 
 ## Canonical public v1.0 architecture
 
