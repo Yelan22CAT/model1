@@ -7,11 +7,15 @@
 - Added `methods/16-dynamic-human-participation-control.md`.
 - Separated Human-in-the-Loop, Human-on-the-Loop and Human-on-the-Boundary into distinct execution and governance roles.
 - Added dynamic human re-entry based on uncertainty, consequence, irreversibility, recoverability, authority and time pressure.
+- Refined the model from three human roles into phase-specific routing across Human Direct / AI-Assisted, HITL, HOTL and Full Auto under a separate Human-on-the-Boundary governance layer.
+- Added an intervention-latency / takeover-feasibility gate so Human-on-the-Loop is used only when a human can realistically observe, understand and intervene before an irreversible boundary.
 
 ### Updated
 
 - Clarified that Human-on-the-Boundary is a governance layer, not an execution state.
 - Clarified that Human-in-the-Loop remains available as a selectively invoked control mode rather than disappearing as autonomy increases.
+- Clarified that Human-on-the-Loop is not a mandatory intermediate state and Full Auto may be appropriate for low-risk reversible work inside a bounded authority envelope.
+- Added a bounded aviation reality check: certified autoland exists and pilots are still expected to monitor automatic flight-control systems; the analogy is phase-specific, not a claim that takeoff/landing are always manual.
 - Connected the new method to Selective Intervention and Preempt / Human Final.
 
 ### Scope
