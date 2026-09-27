@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-09-27｜Dynamic human participation control
+
+### Added
+
+- Added `methods/16-dynamic-human-participation-control.md`.
+- Separated Human-in-the-Loop, Human-on-the-Loop and Human-on-the-Boundary into distinct execution and governance roles.
+- Added dynamic human re-entry based on uncertainty, consequence, irreversibility, recoverability, authority and time pressure.
+
+### Updated
+
+- Clarified that Human-on-the-Boundary is a governance layer, not an execution state.
+- Clarified that Human-in-the-Loop remains available as a selectively invoked control mode rather than disappearing as autonomy increases.
+- Connected the new method to Selective Intervention and Preempt / Human Final.
+
+### Scope
+
+This is public-safe architecture documentation. It does not publish private thresholds or claim deployed or validated control in aviation, medicine, robotics or other safety-critical systems.
+
 ## 2026-09-26｜Autonomy-governance and provenance update
 
 ### Added
