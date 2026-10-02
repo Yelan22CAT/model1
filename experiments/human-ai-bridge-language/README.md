@@ -247,3 +247,36 @@ Useful questions include:
 
 This is a zero-to-one experiment. Breaking examples are more useful than praise.
 
+
+
+---
+
+## Round 1 status
+
+The first encoding round is complete using ten public-safe patterns already present in this repository.
+
+Result:
+
+- all ten could be expressed with the current semantic categories;
+- no new glyphs were added;
+- the main gaps are grammar/IR issues rather than vocabulary size.
+
+Review:
+
+- [Round 1 — Ten Encoding Tests](ROUND1_10_CASES.md)
+- [Round 1 — Gap Ledger](ROUND1_GAP_LEDGER.md)
+- [Round 1 — Machine-readable Corpus](corpus/round1_cases.json)
+
+The most important first correction is:
+
+```text
+? value
+```
+
+rather than:
+
+```text
+■ value = ?
+```
+
+A proposition should carry one explicit epistemic state.
