@@ -711,3 +711,48 @@ See:
 - [Round 10 Result](ROUND10_HETEROGENEOUS_RESULT_v0.10.md)
 - [IR Schema v0.10](IR_SCHEMA_v0.10.json)
 - [Executable Bridge Source v0.10](executable_v0.10.bridge)
+
+
+---
+
+## Round 11 status — first verified cross-language compiler target
+
+Bridge-0 v0.11 now compiles one language-neutral semantic operation into two
+different implementation languages.
+
+Latest verified prototype result:
+
+```text
+175 tests
+175 passed
+0 failed
+```
+
+Real generated workflow:
+
+```text
+Bridge source
+├→ Python 3.12 backend  ✓
+└→ Node.js 20 backend  ✓
+          ↓
+typed semantic compare ✓
+```
+
+Canonical result digest:
+
+```text
+d4198466737cdf57b1f75243ea8d6200b4bd3e8c3e05cf8b79ac53673ca12e8a
+```
+
+The canonical Bridge source contains no Python module or JavaScript command.
+Both backend programs are generated from the same semantic operation.
+
+A deliberate mutation in one backend was correctly detected as
+`HETEROGENEOUS_BACKEND_DRIFT`.
+
+See:
+
+- [Cross-Language Compiler v0.11](CROSS_LANGUAGE_COMPILER_v0.11.md)
+- [Round 11 Result](ROUND11_CROSS_LANGUAGE_RESULT_v0.11.md)
+- [IR Schema v0.11](IR_SCHEMA_v0.11.json)
+- [Executable Bridge Source v0.11](executable_v0.11.bridge)
