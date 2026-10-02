@@ -843,3 +843,50 @@ See:
 - [Round 13 Result](ROUND13_BINARY64_RESULT_v0.13.md)
 - [IR Schema v0.13](IR_SCHEMA_v0.13.json)
 - [Executable Bridge Source v0.13](executable_v0.13.bridge)
+
+
+---
+
+## Round 14 status — Unicode text identity
+
+Bridge-0 v0.14 now defines canonical Unicode text identity above backend raw
+string representation.
+
+Latest verified prototype result:
+
+~~~text
+225 tests
+225 passed
+0 failed
+~~~
+
+Canonical source contract:
+
+~~~text
+text_model=unicode_scalar
+normalization=NFC
+identity=normalized_scalar_sequence
+~~~
+
+Real Python 3.12 and Node.js 20 backends produced the same typed semantic
+observable:
+
+~~~text
+1c0acbd4243ec0a4bba6a99350c7aa44596cd6b261b16f4f256f09e11d6d6b05
+~~~
+
+Verified canonical equivalences include composed/decomposed Latin text,
+Angstrom forms, Hangul composition, and combining-mark reordering.
+
+An intentionally unsafe raw-sequence backend skipped NFC normalization and was
+correctly rejected as HETEROGENEOUS_BACKEND_DRIFT.
+
+v0.14 also explicitly keeps normalized scalar identity separate from grapheme,
+visual, and linguistic identity.
+
+See:
+
+- [Unicode Text Identity v0.14](UNICODE_TEXT_IDENTITY_v0.14.md)
+- [Round 14 Result](ROUND14_UNICODE_RESULT_v0.14.md)
+- [IR Schema v0.14](IR_SCHEMA_v0.14.json)
+- [Executable Bridge Source v0.14](executable_v0.14.bridge)
