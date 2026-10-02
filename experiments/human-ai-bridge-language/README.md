@@ -1031,3 +1031,60 @@ See:
 - [Round 17 Result](ROUND17_MIGRATION_RESULT_v0.17.md)
 - [IR Schema v0.17](IR_SCHEMA_v0.17.json)
 - [Executable Bridge Source v0.17](executable_v0.17.bridge)
+
+
+---
+
+## Round 18 status — scoped known-loss authorization
+
+Bridge-0 v0.18 now allows a deliberately lossy migration only when the known
+loss is explicitly acknowledged and the authorization is bound to the exact
+authority, scope, artifact, provenance and validity window.
+
+Verified gates:
+
+~~~text
+cumulative regression: 298 passed
+dedicated v0.18:       23 passed
+~~~
+
+Real Python 3.12 and Node.js 20 authorization backends produced the same typed
+decision manifest:
+
+~~~text
+625a612b4c150fbb6d3e47394d423710fa05d6c1a299d005dbb97d5248352812
+~~~
+
+The exact acknowledged migration was allowed.
+
+Expired replay, wrong artifact, incomplete acknowledgement, over-broad scope
+and wrong authority were denied.
+
+An intentionally unsafe backend that treated the authority label alone as
+blanket permission produced a different digest and was rejected as
+HETEROGENEOUS_BACKEND_DRIFT.
+
+Core rule:
+
+~~~text
+acknowledgement
++
+authority
++
+scope
++
+artifact binding
++
+provenance
++
+time validity
+=
+conditional permission
+~~~
+
+See:
+
+- [Scoped Known-Loss Authorization v0.18](SCOPED_LOSS_AUTHORIZATION_v0.18.md)
+- [Round 18 Result](ROUND18_SCOPED_AUTHORIZATION_RESULT_v0.18.md)
+- [IR Schema v0.18](IR_SCHEMA_v0.18.json)
+- [Executable Bridge Source v0.18](executable_v0.18.bridge)
