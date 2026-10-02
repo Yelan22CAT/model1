@@ -804,3 +804,42 @@ See:
 - [Round 12 Result](ROUND12_EXACT_INTEGER_RESULT_v0.12.md)
 - [IR Schema v0.12](IR_SCHEMA_v0.12.json)
 - [Executable Bridge Source v0.12](executable_v0.12.bridge)
+
+
+---
+
+## Round 13 status — binary64 floating semantics
+
+Bridge-0 v0.13 now defines an explicit floating-point contract instead of inheriting backend defaults.
+
+Verified prototype result:
+
+~~~text
+207 tests
+207 passed
+0 failed
+~~~
+
+The canonical source declares:
+
+~~~text
+numeric=binary64
+rounding=ties_to_even
+~~~
+
+Real Python 3.12 and Node.js 20 generated backends produced the same typed semantic observable:
+
+~~~text
+c69af06968a78f866e35c797333f82149670d399f048b37614a9150babbfad73
+~~~
+
+An intentionally unsafe Node backend using Math.round and raw JSON floating serialization produced a different digest and was correctly rejected as HETEROGENEOUS_BACKEND_DRIFT.
+
+This round preserves NaN, both infinities, positive/negative zero, and ties-to-even half-way rounding through explicit Bridge semantics and tagged transport.
+
+See:
+
+- [Binary64 Floating Semantics v0.13](BINARY64_FLOAT_SEMANTICS_v0.13.md)
+- [Round 13 Result](ROUND13_BINARY64_RESULT_v0.13.md)
+- [IR Schema v0.13](IR_SCHEMA_v0.13.json)
+- [Executable Bridge Source v0.13](executable_v0.13.bridge)
