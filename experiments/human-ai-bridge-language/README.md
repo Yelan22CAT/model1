@@ -625,3 +625,48 @@ See:
 - [Round 8 Result](ROUND8_EXECUTABLE_SOURCE_RESULT_v0.8.md)
 - [IR Schema v0.8](IR_SCHEMA_v0.8.json)
 - [Executable Bridge Source](executable_v0.8.bridge)
+
+
+---
+
+## Round 9 status — multi-backend equivalence
+
+Bridge-0 v0.9 now measures backend drift instead of assuming all compiler
+targets preserve behavior.
+
+Latest verified prototype result:
+
+```text
+148 tests
+148 passed
+0 failed
+```
+
+The real generated workflow also passed:
+
+```text
+same Bridge source
+├→ GitHub Actions path
+└→ local deterministic runner
+          ↓
+BRIDGE_BACKEND_EQUIVALENT
+```
+
+Verified observable hash:
+
+```text
+53b7aef77cb78d64ca2518d7651b97aba18cf2d94790e3e548ef3da667f67657
+```
+
+A deliberate mismatch was also injected and correctly reported as
+`BACKEND_DRIFT`.
+
+Current evidence is implementation-path equivalence on the same Ubuntu/Python
+runtime, not yet full cross-platform equivalence.
+
+See:
+
+- [Multi-Backend Equivalence v0.9](MULTI_BACKEND_EQUIVALENCE_v0.9.md)
+- [Round 9 Result](ROUND9_MULTI_BACKEND_RESULT_v0.9.md)
+- [IR Schema v0.9](IR_SCHEMA_v0.9.json)
+- [Executable Bridge Source v0.9](executable_v0.9.bridge)
