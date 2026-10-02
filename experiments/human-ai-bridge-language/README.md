@@ -328,3 +328,37 @@ negative world-state fact
 ```
 
 The next design step is formal grammar + canonical IR, not a larger symbol alphabet.
+
+
+---
+
+## Round 3 status — authority and provenance composition
+
+Bridge-0 v0.3 now has structured records for:
+
+- permission tuples;
+- handoffs;
+- guarded state transitions;
+- provenance;
+- validity windows.
+
+Latest executed CI result:
+
+```text
+63 tests
+63 passed
+0 failed
+```
+
+The current suite includes 50 chained handoffs and 100 distinct permission tuples.
+
+Key result:
+
+```text
+handoff ≠ permission delegation
+permission(read, narrow_scope) ≠ permission(write, broad_scope)
+irreversible transition → explicit guard + authority
+derived claim → explicit provenance
+```
+
+See [Round 3 Result](ROUND3_AUTHORITY_PROVENANCE_RESULT_v0.3.md) and [Structured Semantics v0.3](STRUCTURED_SEMANTICS_v0.3.md).
