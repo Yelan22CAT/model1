@@ -145,11 +145,20 @@ def validate_document(doc: dict[str, Any]) -> dict[str, Any]:
                     )
                 )
             missing = sorted(REQUIRED_VECTORS - set(values))
+            extra = sorted(set(values) - REQUIRED_VECTORS)
             if missing:
                 errors.append(
                     issue(
                         "V099",
                         "grapheme conformance vector missing: " + ", ".join(missing),
+                        sid,
+                    )
+                )
+            if extra:
+                errors.append(
+                    issue(
+                        "V099",
+                        "bridge_uax29_subset_v1 does not define extra vector(s): " + ", ".join(extra),
                         sid,
                     )
                 )
