@@ -34,3 +34,17 @@ jobs:
       - name: Unit tests
         working-directory: experiments/human-ai-bridge-language/prototype
         run: python -m unittest -v test_parser_v0_2.py test_validator_v0_2.py
+
+
+      - name: End-to-end demo
+        working-directory: experiments/human-ai-bridge-language/prototype
+        run: |
+          python bridge_check_v0_2.py < ../demo_v0.2.bridge > /tmp/bridge0-demo.json
+          python - <<'PY'
+          import json
+          with open("/tmp/bridge0-demo.json", "r", encoding="utf-8") as f:
+              result = json.load(f)
+          assert result["stage"] == "validate"
+          assert result["validation"]["valid"] is True
+          print("Bridge-0 demo parse + validation: OK")
+          PY
