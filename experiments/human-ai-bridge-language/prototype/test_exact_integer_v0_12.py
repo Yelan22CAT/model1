@@ -17,6 +17,7 @@ from compiler_exact_integer_v0_12 import (
     compile_python,
     compile_unsafe_node_number,
 )
+from parser_v0_2 import BridgeParseError
 from parser_v0_12 import parse_document
 from renderer_v0_12 import render_document
 from validator_v0_12 import validate_document
@@ -49,10 +50,8 @@ class ExactIntegerTests(unittest.TestCase):
 
     def test_numeric_contract_is_mandatory(self):
         source = VALID.replace("numeric=exact_integer ", "")
-        result = validate_document(parse_document(source))
-        self.assertFalse(result["valid"])
-        rules = {e["rule"] for e in result["errors"]}
-        self.assertTrue("V081" in rules or "V082" in rules)
+        with self.assertRaises(BridgeParseError):
+            parse_document(source)
 
     def test_backend_default_numeric_contract_is_rejected(self):
         source = VALID.replace("numeric=exact_integer", "numeric=backend_default")
