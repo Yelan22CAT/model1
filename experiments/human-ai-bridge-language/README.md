@@ -890,3 +890,53 @@ See:
 - [Round 14 Result](ROUND14_UNICODE_RESULT_v0.14.md)
 - [IR Schema v0.14](IR_SCHEMA_v0.14.json)
 - [Executable Bridge Source v0.14](executable_v0.14.bridge)
+
+
+---
+
+## Round 15 status — pinned Unicode grapheme semantics
+
+Bridge-0 v0.15 now separates Unicode scalar identity from a bounded grapheme
+semantic layer and pins that layer to an explicit semantic Unicode version.
+
+Latest verified result:
+
+~~~text
+243 tests
+243 passed
+0 failed
+~~~
+
+Real runtime observation:
+
+~~~text
+Python 3.12 runtime Unicode = 15.0.0
+Node.js 20 runtime Unicode = 17.0
+Bridge semantic Unicode = 15.0
+~~~
+
+The first strict runtime-version implementation failed on Node because its
+runtime Unicode version had advanced to 17.0.
+
+The corrected compiler carries a bounded Bridge-owned Unicode 15.0 profile into
+both backends, so runtime Unicode data is observed but does not silently
+redefine Bridge semantics.
+
+Verified typed digest:
+
+~~~text
+29043ba727215e0bfea405d6b322206bbbed93aa261df0882bf65b7f68262004
+~~~
+
+An unsafe code-point-counting backend produced a different digest and was
+rejected as HETEROGENEOUS_BACKEND_DRIFT.
+
+The current profile is deliberately bounded and is not a complete UAX #29
+implementation.
+
+See:
+
+- [Grapheme Semantics v0.15](GRAPHEME_SEMANTICS_v0.15.md)
+- [Round 15 Result](ROUND15_GRAPHEME_RESULT_v0.15.md)
+- [IR Schema v0.15](IR_SCHEMA_v0.15.json)
+- [Executable Bridge Source v0.15](executable_v0.15.bridge)
