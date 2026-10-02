@@ -29,8 +29,8 @@ jobs:
 
       - name: Syntax check
         working-directory: experiments/human-ai-bridge-language/prototype
-        run: python -m py_compile parser_v0_2.py test_parser_v0_2.py
+        run: python -m py_compile parser_v0_2.py validator_v0_2.py bridge_check_v0_2.py test_parser_v0_2.py test_validator_v0_2.py
 
       - name: Unit tests
         working-directory: experiments/human-ai-bridge-language/prototype
-        run: python -m unittest -v test_parser_v0_2.py
+        run: python -m unittest -v test_parser_v0_2.py test_validator_v0_2.py
