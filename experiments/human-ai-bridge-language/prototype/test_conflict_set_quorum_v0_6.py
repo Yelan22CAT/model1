@@ -217,5 +217,44 @@ class ConflictSetQuorumTests(unittest.TestCase):
         self.assertEqual(len(many_way[0]["members"]), 100)
 
 
+    def test_101_voter_quorum_certificate_scales_linearly(self):
+        lines = fork(2)
+        lines += [
+            "◆ [CS1] conflict_set members=S1,S2 domain=authority status=open",
+            "→ [P1] propose conflict_set=[CS1] strategy=explicit result_hash=hm "
+            "at=2026-10-02T00:02:00Z",
+        ]
+
+        voter_names = [f"validator_{i}" for i in range(1, 102)]
+        lines.append(
+            "! [Q1] quorum voters=" + ",".join(voter_names) +
+            " threshold=67 independence_min=67"
+        )
+
+        vote_ids = []
+        for i in range(1, 68):
+            vote_ids.append(f"V{i}")
+            lines.append(
+                f"◆ [V{i}] vote voter=validator_{i} proposal=[P1] "
+                f"decision=approve independence=domain_{i} evidence_hash=ev_{i} "
+                "at=2026-10-02T00:03:00Z"
+            )
+
+        lines.append(
+            "✓ [FC1] certificate proposal=[P1] quorum=[Q1] votes=" +
+            ",".join(vote_ids) +
+            " issued_by=control_plane term=1 at=2026-10-02T00:04:00Z"
+        )
+
+        doc = parse_document("\n".join(lines))
+        result = validate_document(doc)
+        self.assertTrue(result["valid"], result["errors"])
+        certs = [
+            s for s in doc["statements"]
+            if s["kind"] == "finality_certificate"
+        ]
+        self.assertEqual(len(certs), 1)
+
+
 if __name__ == "__main__":
     unittest.main()
