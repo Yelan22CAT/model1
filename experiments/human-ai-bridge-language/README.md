@@ -570,3 +570,58 @@ See:
 - [Identity & Evidence Provenance v0.7](IDENTITY_PROVENANCE_v0.7.md)
 - [Round 7 Result](ROUND7_IDENTITY_PROVENANCE_RESULT_v0.7.md)
 - [IR Schema v0.7](IR_SCHEMA_v0.7.json)
+
+
+---
+
+## Round 8 status — executable Bridge source
+
+Bridge-0 v0.8 now has a restricted compiler path to a real GitHub Actions backend.
+
+Latest verified prototype result:
+
+```text
+136 tests
+136 passed
+0 failed
+```
+
+And the generated workflow itself executed successfully on GitHub.
+
+```text
+Bridge source
+→ Parser
+→ Canonical IR
+→ Validator
+→ Compiler
+→ GitHub Actions YAML
+→ GitHub runner
+→ real test execution
+```
+
+The compiler currently supports only an allowlisted subset:
+
+- checkout;
+- setup_python;
+- python_module.
+
+Raw shell, unsafe arguments, path traversal, unsupported runners, and arbitrary action injection are rejected.
+
+A useful failure was discovered during this round: the first generated workflow was rejected by the actual GitHub backend because the emitted command syntax was invalid. The compiler was corrected and the generated workflow then ran successfully.
+
+That failure establishes a new rule:
+
+```text
+compiler unit tests
+≠
+backend acceptance
+```
+
+The real backend must remain in the verification loop.
+
+See:
+
+- [Executable Source v0.8](EXECUTABLE_SOURCE_v0.8.md)
+- [Round 8 Result](ROUND8_EXECUTABLE_SOURCE_RESULT_v0.8.md)
+- [IR Schema v0.8](IR_SCHEMA_v0.8.json)
+- [Executable Bridge Source](executable_v0.8.bridge)
