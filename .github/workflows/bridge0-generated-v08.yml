@@ -1,0 +1,25 @@
+name: 'bridge0_v08_generated'
+
+on:
+  push:
+    branches:
+      - 'experiment/human-ai-bridge-v0.1'
+
+permissions:
+  contents: read
+
+jobs:
+  bridge_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bridge task T1 checkout
+        uses: actions/checkout@v4
+      - name: Bridge task T2 setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Bridge task T3 python module
+        working-directory: 'experiments/human-ai-bridge-language/prototype'
+        run: 'python' '-m' 'unittest' '-v' 'test_parser_v0_2.py'
+
+# Generated from Bridge-0 v0.8. Do not hand-edit this artifact.
