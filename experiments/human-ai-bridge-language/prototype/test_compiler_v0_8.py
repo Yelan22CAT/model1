@@ -30,7 +30,7 @@ class CompilerTests(unittest.TestCase):
         output = compile_github_actions(doc)
         self.assertIn("uses: actions/checkout@v4", output)
         self.assertIn("uses: actions/setup-python@v5", output)
-        self.assertIn("'python' '-m' 'unittest'", output)
+        self.assertIn("run: python -m unittest", output)
 
     def test_compilation_is_deterministic(self):
         doc = parse_document(VALID)
