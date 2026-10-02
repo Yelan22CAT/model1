@@ -984,3 +984,50 @@ See:
 - [Round 16 Result](ROUND16_SEMANTIC_COMPATIBILITY_RESULT_v0.16.md)
 - [IR Schema v0.16](IR_SCHEMA_v0.16.json)
 - [Executable Bridge Source v0.16](executable_v0.16.bridge)
+
+
+---
+
+## Round 17 status — executable semantic migration
+
+Bridge-0 v0.17 now distinguishes successful conversion from lossless semantic
+migration.
+
+Verified gates:
+
+~~~text
+cumulative regression: 275 passed
+dedicated v0.17:       16 passed
+~~~
+
+Real Python 3.12 and Node.js 20 migration backends produced the same typed
+audit manifest:
+
+~~~text
+d4c7412b49ccb2adc69fed4f2f66828f4fa7af81acb39ae2c0ab7c6a94c7b69f
+~~~
+
+The lossless v1 -> v2 route round-tripped exactly and was permitted.
+
+The compact v1 -> v3 route converted successfully but lost IDs, labels,
+verification state, provenance and notes. Its round trip failed and execution
+was denied.
+
+An intentionally unsafe backend that treated conversion success as sufficient
+permission produced a different digest and was rejected as
+HETEROGENEOUS_BACKEND_DRIFT.
+
+Core rule:
+
+~~~text
+successful conversion
+!=
+lossless migration
+~~~
+
+See:
+
+- [Semantic Migration & Loss Audit v0.17](SEMANTIC_MIGRATION_LOSS_AUDIT_v0.17.md)
+- [Round 17 Result](ROUND17_MIGRATION_RESULT_v0.17.md)
+- [IR Schema v0.17](IR_SCHEMA_v0.17.json)
+- [Executable Bridge Source v0.17](executable_v0.17.bridge)
