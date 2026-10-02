@@ -446,3 +446,66 @@ See:
 - [Split-Brain Semantics v0.5](SPLIT_BRAIN_SEMANTICS_v0.5.md)
 - [Round 5 Result](ROUND5_SPLIT_BRAIN_RESULT_v0.5.md)
 - [IR Schema v0.5](IR_SCHEMA_v0.5.json)
+
+
+---
+
+## Round 6 status — conflict sets and independent quorum evidence
+
+Bridge-0 v0.6 replaces pairwise many-way conflicts with a compact conflict-set representation and separates reconciliation from finality evidence.
+
+Latest executed test result:
+
+```text
+112 tests
+112 passed
+0 failed
+```
+
+Key path:
+
+```text
+many divergent states
+→ one conflict_set
+→ explicit reconciliation proposal
+→ quorum policy
+→ independent votes
+→ finality certificate
+→ execution
+```
+
+Stress results:
+
+```text
+100 divergent branches
+→ 1 conflict_set
+```
+
+instead of 4,950 pairwise conflicts.
+
+And:
+
+```text
+101 eligible voters
+67 required votes
+67 required independence domains
+→ certificate passed
+```
+
+The validator also blocks duplicate-voter inflation and repeated declared independence domains.
+
+Important boundary:
+
+```text
+declared independence
+≠
+verified independence
+```
+
+Bridge can preserve and validate independence labels, but an external identity/provenance attestation layer is needed to prove that two voter identities are actually independent.
+
+See:
+
+- [Conflict Set & Quorum v0.6](CONFLICT_SET_QUORUM_v0.6.md)
+- [Round 6 Result](ROUND6_CONFLICT_SET_QUORUM_RESULT_v0.6.md)
+- [IR Schema v0.6](IR_SCHEMA_v0.6.json)
