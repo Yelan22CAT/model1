@@ -34,7 +34,7 @@ jobs:
 
       - name: Syntax check
         working-directory: experiments/human-ai-bridge-language/prototype
-        run: python -m py_compile parser_v0_2.py validator_v0_2.py renderer_v0_2.py bridge_check_v0_2.py parser_v0_3.py validator_v0_3.py renderer_v0_3.py bridge_check_v0_3.py authority_engine_v0_4.py parser_v0_4.py validator_v0_4.py renderer_v0_4.py bridge_check_v0_4.py parser_v0_5.py validator_v0_5.py renderer_v0_5.py bridge_check_v0_5.py parser_v0_6.py validator_v0_6.py renderer_v0_6.py bridge_check_v0_6.py parser_v0_7.py validator_v0_7.py renderer_v0_7.py bridge_check_v0_7.py parser_v0_8.py validator_v0_8.py renderer_v0_8.py compiler_github_v0_8.py bridge_compile_v0_8.py parser_v0_9.py validator_v0_9.py renderer_v0_9.py compiler_github_v0_9.py bridge_compile_v0_9.py local_runner_v0_9.py compare_observables_v0_9.py bridge_probe_v0_9.py parser_v0_10.py validator_v0_10.py renderer_v0_10.py compiler_github_v0_10.py bridge_compile_v0_10.py backend_capture_v0_10.py compare_typed_observables_v0_10.py bridge_probe_v0_10.py parser_v0_11.py validator_v0_11.py renderer_v0_11.py compiler_crosslang_v0_11.py bridge_compile_v0_11.py parser_v0_12.py validator_v0_12.py renderer_v0_12.py compiler_exact_integer_v0_12.py bridge_compile_v0_12.py parser_v0_13.py validator_v0_13.py renderer_v0_13.py compiler_float_v0_13.py bridge_compile_v0_13.py parser_v0_14.py validator_v0_14.py renderer_v0_14.py compiler_unicode_v0_14.py bridge_compile_v0_14.py parser_v0_15.py validator_v0_15.py renderer_v0_15.py compiler_grapheme_v0_15.py bridge_compile_v0_15.py parser_v0_16.py validator_v0_16.py renderer_v0_16.py compiler_compatibility_v0_16.py bridge_compile_v0_16.py parser_v0_17.py validator_v0_17.py renderer_v0_17.py compiler_migration_v0_17.py bridge_compile_v0_17.py parser_v0_18.py validator_v0_18.py renderer_v0_18.py compiler_loss_authorization_v0_18.py bridge_compile_v0_18.py test_parser_v0_2.py test_validator_v0_2.py test_roundtrip_v0_2.py test_semantic_mutation_v0_2.py test_structured_semantics_v0_3.py test_authority_drift_v0_3.py test_authority_lifecycle_v0_4.py test_split_brain_v0_5.py test_conflict_set_quorum_v0_6.py test_identity_provenance_v0_7.py test_compiler_v0_8.py test_backend_equivalence_v0_9.py test_heterogeneous_v0_10.py test_cross_language_v0_11.py test_exact_integer_v0_12.py test_float_semantics_v0_13.py test_unicode_semantics_v0_14.py test_grapheme_semantics_v0_15.py test_semantic_compatibility_v0_16.py test_migration_v0_17.py test_loss_authorization_v0_18.py
+        run: python -m py_compile parser_v0_2.py validator_v0_2.py renderer_v0_2.py bridge_check_v0_2.py parser_v0_3.py validator_v0_3.py renderer_v0_3.py bridge_check_v0_3.py authority_engine_v0_4.py parser_v0_4.py validator_v0_4.py renderer_v0_4.py bridge_check_v0_4.py parser_v0_5.py validator_v0_5.py renderer_v0_5.py bridge_check_v0_5.py parser_v0_6.py validator_v0_6.py renderer_v0_6.py bridge_check_v0_6.py parser_v0_7.py validator_v0_7.py renderer_v0_7.py bridge_check_v0_7.py parser_v0_8.py validator_v0_8.py renderer_v0_8.py compiler_github_v0_8.py bridge_compile_v0_8.py parser_v0_9.py validator_v0_9.py renderer_v0_9.py compiler_github_v0_9.py bridge_compile_v0_9.py local_runner_v0_9.py compare_observables_v0_9.py bridge_probe_v0_9.py parser_v0_10.py validator_v0_10.py renderer_v0_10.py compiler_github_v0_10.py bridge_compile_v0_10.py backend_capture_v0_10.py compare_typed_observables_v0_10.py bridge_probe_v0_10.py parser_v0_11.py validator_v0_11.py renderer_v0_11.py compiler_crosslang_v0_11.py bridge_compile_v0_11.py parser_v0_12.py validator_v0_12.py renderer_v0_12.py compiler_exact_integer_v0_12.py bridge_compile_v0_12.py parser_v0_13.py validator_v0_13.py renderer_v0_13.py compiler_float_v0_13.py bridge_compile_v0_13.py parser_v0_14.py validator_v0_14.py renderer_v0_14.py compiler_unicode_v0_14.py bridge_compile_v0_14.py parser_v0_15.py validator_v0_15.py renderer_v0_15.py compiler_grapheme_v0_15.py bridge_compile_v0_15.py parser_v0_16.py validator_v0_16.py renderer_v0_16.py compiler_compatibility_v0_16.py bridge_compile_v0_16.py parser_v0_17.py validator_v0_17.py renderer_v0_17.py compiler_migration_v0_17.py bridge_compile_v0_17.py parser_v0_18.py validator_v0_18.py renderer_v0_18.py compiler_loss_authorization_v0_18.py bridge_compile_v0_18.py parser_v0_19.py validator_v0_19.py renderer_v0_19.py compiler_replay_v0_19.py bridge_compile_v0_19.py test_parser_v0_2.py test_validator_v0_2.py test_roundtrip_v0_2.py test_semantic_mutation_v0_2.py test_structured_semantics_v0_3.py test_authority_drift_v0_3.py test_authority_lifecycle_v0_4.py test_split_brain_v0_5.py test_conflict_set_quorum_v0_6.py test_identity_provenance_v0_7.py test_compiler_v0_8.py test_backend_equivalence_v0_9.py test_heterogeneous_v0_10.py test_cross_language_v0_11.py test_exact_integer_v0_12.py test_float_semantics_v0_13.py test_unicode_semantics_v0_14.py test_grapheme_semantics_v0_15.py test_semantic_compatibility_v0_16.py test_migration_v0_17.py test_loss_authorization_v0_18.py test_replay_v0_19.py
 
       - name: Unit tests
         working-directory: experiments/human-ai-bridge-language/prototype
@@ -419,6 +419,10 @@ jobs:
           echo "Bridge-0 v0.17 negative control: silent semantic loss detected as expected"
 
 
+      - name: Dedicated v0.19 unit suite
+        working-directory: experiments/human-ai-bridge-language/prototype
+        run: python -m unittest -v test_replay_v0_19.py
+
       - name: End-to-end v0.18 scoped loss authorization
         working-directory: experiments/human-ai-bridge-language/prototype
         run: |
@@ -449,3 +453,35 @@ jobs:
             exit 1
           fi
           echo "Bridge-0 v0.18 negative control: over-broad authority detected as expected"
+
+
+      - name: End-to-end v0.19 replay resistance
+        working-directory: experiments/human-ai-bridge-language/prototype
+        run: |
+          python bridge_compile_v0_19.py --target python312 < ../executable_v0.19.bridge > /tmp/bridge-v019.py
+          python bridge_compile_v0_19.py --target node20 < ../executable_v0.19.bridge > /tmp/bridge-v019.mjs
+          python /tmp/bridge-v019.py > /tmp/bridge-v019-python.json
+          node /tmp/bridge-v019.mjs > /tmp/bridge-v019-node.json
+          python compare_typed_observables_v0_10.py /tmp/bridge-v019-python.json /tmp/bridge-v019-node.json
+          echo "Bridge-0 v0.19 replay-resistance equivalence: OK"
+
+      - name: v0.19 stateless replay negative control
+        working-directory: experiments/human-ai-bridge-language/prototype
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from parser_v0_19 import parse_document
+          from compiler_replay_v0_19 import compile_unsafe_stateless_node
+          source = Path("../executable_v0.19.bridge").read_text(encoding="utf-8")
+          Path("/tmp/bridge-v019-unsafe.mjs").write_text(
+              compile_unsafe_stateless_node(parse_document(source)),
+              encoding="utf-8",
+          )
+          PY
+          python /tmp/bridge-v019.py > /tmp/bridge-v019-good.json
+          node /tmp/bridge-v019-unsafe.mjs > /tmp/bridge-v019-unsafe.json
+          if python compare_typed_observables_v0_10.py /tmp/bridge-v019-good.json /tmp/bridge-v019-unsafe.json; then
+            echo "Stateless backend incorrectly accepted replay/revocation cases"
+            exit 1
+          fi
+          echo "Bridge-0 v0.19 negative control: replay/revocation drift detected as expected"
