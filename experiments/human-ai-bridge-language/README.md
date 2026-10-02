@@ -509,3 +509,64 @@ See:
 - [Conflict Set & Quorum v0.6](CONFLICT_SET_QUORUM_v0.6.md)
 - [Round 6 Result](ROUND6_CONFLICT_SET_QUORUM_RESULT_v0.6.md)
 - [IR Schema v0.6](IR_SCHEMA_v0.6.json)
+
+
+---
+
+## Round 7 status — identity, lineage, and evidence provenance
+
+Bridge-0 v0.7 now tests whether multiple apparent voters are actually independent across recorded identity and evidence dimensions.
+
+Latest executed CI result:
+
+```text
+126 tests
+126 passed
+0 failed
+```
+
+New separation:
+
+```text
+voter ID
+≠ identity
+≠ control domain
+≠ model lineage
+≠ runtime origin
+≠ evidence root
+```
+
+The validator now rejects common quorum-inflation patterns such as:
+
+- a voter name that does not match its identity;
+- a fake independence label;
+- multiple voters sharing one model lineage;
+- multiple voters sharing one runtime origin;
+- multiple votes copied from one evidence root;
+- expired or revoked identity attestations.
+
+Stress:
+
+```text
+67 voters
+67 control domains
+67 model lineages
+67 runtime origins
+67 evidence roots
+→ valid certificate
+```
+
+Important boundary:
+
+```text
+semantic attestation
+≠ cryptographic attestation
+```
+
+The current prototype validates the declared trust chain but does not yet prove the issuer cryptographically.
+
+See:
+
+- [Identity & Evidence Provenance v0.7](IDENTITY_PROVENANCE_v0.7.md)
+- [Round 7 Result](ROUND7_IDENTITY_PROVENANCE_RESULT_v0.7.md)
+- [IR Schema v0.7](IR_SCHEMA_v0.7.json)
