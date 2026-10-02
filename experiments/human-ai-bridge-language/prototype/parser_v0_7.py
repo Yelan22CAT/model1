@@ -65,6 +65,7 @@ class ParserV07(ParserV06):
                 "attestation",
                 "origin",
                 "parent",
+                "at",
             }
             missing = sorted(required - set(fields))
             if missing:
