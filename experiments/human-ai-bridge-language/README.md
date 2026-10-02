@@ -362,3 +362,49 @@ derived claim → explicit provenance
 ```
 
 See [Round 3 Result](ROUND3_AUTHORITY_PROVENANCE_RESULT_v0.3.md) and [Structured Semantics v0.3](STRUCTURED_SEMANTICS_v0.3.md).
+
+
+---
+
+## Round 4 status — delegation, revocation, expiry, replay
+
+Bridge-0 v0.4 now tests authority as a lifecycle rather than a static permission.
+
+```text
+grant
+→ delegate
+→ narrow
+→ expire / revoke
+→ replay attempt
+```
+
+Latest executed lifecycle-enabled CI result:
+
+```text
+78 tests
+78 passed
+0 failed
+```
+
+Key tested invariants:
+
+```text
+delegation cannot broaden parent authority
+root revocation invalidates descendants
+child revocation does not revoke parent
+expired authority cannot be replayed
+new grant after revocation gets a new ID
+stale replay epoch is rejected
+```
+
+The main Round-4 discovery is a runtime boundary:
+
+> A stale document cannot detect a newer revocation that is completely absent from that document.
+
+Therefore execution-time authority checks need an external current-authority epoch/state source.
+
+See:
+
+- [Authority Lifecycle v0.4](AUTHORITY_LIFECYCLE_v0.4.md)
+- [Round 4 Result](ROUND4_AUTHORITY_LIFECYCLE_RESULT_v0.4.md)
+- [IR Schema v0.4](IR_SCHEMA_v0.4.json)
