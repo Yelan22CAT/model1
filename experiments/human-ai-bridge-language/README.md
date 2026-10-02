@@ -90,14 +90,14 @@ These symbols are **provisional surface notation**. Their semantics matter more 
 
 ```text
 ○ Person-A
-■ age = ?
-◆ evidence = none
+? [C1] Person-A.age
 ```
 
 Bridge rule:
 
 ```text
-? + no ◆  →  × assert-as-fact
+? [C1] + no sufficient ◆
+→ × promote [C1] to ■
 ```
 
 Meaning:
@@ -280,3 +280,51 @@ rather than:
 ```
 
 A proposition should carry one explicit epistemic state.
+
+
+---
+
+## Round 2 status
+
+Round 2 stress-tested harder structures:
+
+- attributed / nested claims;
+- conflicting evidence;
+- numerical uncertainty;
+- multi-agent handoff;
+- partial permissions;
+- tool failure;
+- source version replacement;
+- reversible vs irreversible action;
+- association vs causation;
+- cross-language rendering.
+
+Result:
+
+- still no new glyphs;
+- the language now clearly needs a stricter semantic grammar and canonical IR;
+- stable IDs, meta-claim separation, typed relations, guarded actions, and label/identity separation are now mandatory.
+
+Review:
+
+- [Round 2 — Stress Tests](ROUND2_STRESS_TESTS.md)
+- [Round 2 — Gap Ledger](ROUND2_GAP_LEDGER.md)
+- [Round 2 — Machine-readable Corpus](corpus/round2_cases.json)
+
+A key new invariant is:
+
+```text
+"A says X"
+≠
+"X is true"
+```
+
+and another:
+
+```text
+tool failure / no result
+≠
+negative world-state fact
+```
+
+The next design step is formal grammar + canonical IR, not a larger symbol alphabet.
