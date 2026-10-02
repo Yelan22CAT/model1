@@ -756,3 +756,51 @@ See:
 - [Round 11 Result](ROUND11_CROSS_LANGUAGE_RESULT_v0.11.md)
 - [IR Schema v0.11](IR_SCHEMA_v0.11.json)
 - [Executable Bridge Source v0.11](executable_v0.11.bridge)
+
+
+---
+
+## Round 12 status — exact integer semantics above backend defaults
+
+Bridge-0 v0.12 now defines an explicit canonical numeric contract:
+
+```text
+numeric=exact_integer
+```
+
+Latest verified prototype result:
+
+```text
+190 tests
+190 passed
+0 failed
+```
+
+Real generated backends:
+
+```text
+Bridge exact_integer
+├→ Python arbitrary-precision int  ✓
+└→ Node.js BigInt                  ✓
+          ↓
+typed semantic compare             ✓
+```
+
+Canonical digest:
+
+```text
+959d04824492588a4ab0258e593c863d42ba9b98d809afcefc2c7762c2960d69
+```
+
+A deliberate Node implementation using ordinary JavaScript `Number` produced
+a different digest and was correctly rejected as `HETEROGENEOUS_BACKEND_DRIFT`.
+
+This is the first round where Bridge explicitly overrides a backend-language
+default to preserve canonical semantics.
+
+See:
+
+- [Exact Integer Semantics v0.12](EXACT_INTEGER_SEMANTICS_v0.12.md)
+- [Round 12 Result](ROUND12_EXACT_INTEGER_RESULT_v0.12.md)
+- [IR Schema v0.12](IR_SCHEMA_v0.12.json)
+- [Executable Bridge Source v0.12](executable_v0.12.bridge)
