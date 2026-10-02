@@ -45,6 +45,7 @@ def render_statement(s: dict[str, Any]) -> str:
             ("attestation", s.get("attestation")),
             ("origin", s.get("origin")),
             ("parent", s.get("parent")),
+            ("at", s.get("at")),
         ]
         return f"◆ {qid} evidence_provenance {render_kv(ordered)}"
 
