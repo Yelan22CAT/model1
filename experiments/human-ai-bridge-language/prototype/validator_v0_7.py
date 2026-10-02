@@ -273,7 +273,9 @@ def validate_document(
             if vote_id in by_id and by_id[vote_id].get("kind") == "vote"
         ]
 
-        identity_groups: set[tuple[str, str, str]] = set()
+        control_domains: set[str] = set()
+        model_lineages: set[str] = set()
+        runtime_origins: set[str] = set()
         evidence_roots: set[tuple[str, str]] = set()
 
         for vote in selected_votes:
@@ -283,7 +285,9 @@ def validate_document(
             identity_id = ref_id(vote.get("identity"))
             identity = by_id.get(identity_id) if identity_id else None
             if isinstance(identity, dict) and identity.get("kind") == "identity":
-                identity_groups.add(identity_key(identity))
+                control_domains.add(str(identity.get("control_domain", "")))
+                model_lineages.add(str(identity.get("model_lineage", "")))
+                runtime_origins.add(str(identity.get("runtime_origin", "")))
 
             provenance_id = ref_id(vote.get("provenance"))
             if provenance_id:
@@ -297,12 +301,16 @@ def validate_document(
         if (
             isinstance(independence_min, int)
             and not isinstance(independence_min, bool)
-            and len(identity_groups) < independence_min
+            and (
+                len(control_domains) < independence_min
+                or len(model_lineages) < independence_min
+                or len(runtime_origins) < independence_min
+            )
         ):
             errors.append(
                 issue(
                     "V063",
-                    "certificate does not meet attested identity-independence threshold",
+                    "certificate does not meet attested control/model/runtime independence threshold",
                     sid,
                 )
             )
