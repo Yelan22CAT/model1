@@ -89,7 +89,7 @@ def validate_document(doc: dict[str, Any]) -> dict[str, Any]:
                     sid,
                 )
             )
-        if program.get("unicode_version") != PINNED_UNICODE_VERSION:
+        if str(program.get("unicode_version")) != PINNED_UNICODE_VERSION:
             errors.append(
                 issue(
                     "V096",
