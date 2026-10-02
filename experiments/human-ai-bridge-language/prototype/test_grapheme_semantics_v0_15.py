@@ -217,12 +217,8 @@ class GraphemeSemanticTests(unittest.TestCase):
             equal, _ = compare([py_out, unsafe_out])
             self.assertFalse(equal)
 
-    def test_python_runtime_unicode_attestation_fails_closed(self):
-        code = compile_python(parse_document(VALID)).replace(
-            "PINNED_UNICODE_VERSION = '15.0'",
-            "PINNED_UNICODE_VERSION = '99.0'",
-            1,
-        )
+    def test_python_runtime_version_is_observed_not_authoritative(self):
+        code = compile_python(parse_document(VALID))
         with tempfile.TemporaryDirectory() as tmp:
             path = pathlib.Path(tmp) / "program.py"
             path.write_text(code, encoding="utf-8")
@@ -230,19 +226,14 @@ class GraphemeSemanticTests(unittest.TestCase):
                 [sys.executable, str(path)],
                 text=True,
                 capture_output=True,
-                check=False,
+                check=True,
             )
-            self.assertNotEqual(result.returncode, 0)
-            self.assertIn("Unicode data version mismatch", result.stderr)
+            self.assertIn("semantic=15.0 mode=pinned_subset", result.stderr)
 
-    def test_node_runtime_unicode_attestation_fails_closed(self):
+    def test_node_runtime_version_is_observed_not_authoritative(self):
         if shutil.which("node") is None:
             self.skipTest("node executable unavailable")
-        code = compile_node(parse_document(VALID)).replace(
-            "const PINNED_UNICODE_VERSION = '15.0';",
-            "const PINNED_UNICODE_VERSION = '99.0';",
-            1,
-        )
+        code = compile_node(parse_document(VALID))
         with tempfile.TemporaryDirectory() as tmp:
             path = pathlib.Path(tmp) / "program.mjs"
             path.write_text(code, encoding="utf-8")
@@ -250,10 +241,9 @@ class GraphemeSemanticTests(unittest.TestCase):
                 ["node", str(path)],
                 text=True,
                 capture_output=True,
-                check=False,
+                check=True,
             )
-            self.assertNotEqual(result.returncode, 0)
-            self.assertIn("Unicode data version mismatch", result.stderr)
+            self.assertIn("semantic=15.0 mode=pinned_subset", result.stderr)
 
     def test_source_is_backend_independent(self):
         task = next(
@@ -269,6 +259,15 @@ class GraphemeSemanticTests(unittest.TestCase):
         source = VALID.replace(
             ",1F468+200D+1F469+200D+1F467+200D+1F466",
             "",
+        )
+        result = validate_document(parse_document(source))
+        self.assertFalse(result["valid"])
+        self.assertTrue(any(e["rule"] == "V099" for e in result["errors"]))
+
+    def test_extra_undefined_vector_is_rejected(self):
+        source = VALID.replace(
+            " observe=json_value",
+            ",0061 observe=json_value",
         )
         result = validate_document(parse_document(source))
         self.assertFalse(result["valid"])
