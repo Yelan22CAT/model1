@@ -38,7 +38,7 @@ jobs:
 
       - name: Unit tests
         working-directory: experiments/human-ai-bridge-language/prototype
-        run: python -m unittest -v test_parser_v0_2.py test_validator_v0_2.py test_roundtrip_v0_2.py test_semantic_mutation_v0_2.py test_structured_semantics_v0_3.py test_authority_drift_v0_3.py test_authority_lifecycle_v0_4.py test_split_brain_v0_5.py test_conflict_set_quorum_v0_6.py test_identity_provenance_v0_7.py test_compiler_v0_8.py test_backend_equivalence_v0_9.py test_heterogeneous_v0_10.py test_cross_language_v0_11.py test_exact_integer_v0_12.py test_float_semantics_v0_13.py
+        run: python -m unittest -v test_parser_v0_2.py test_validator_v0_2.py test_roundtrip_v0_2.py test_semantic_mutation_v0_2.py test_structured_semantics_v0_3.py test_authority_drift_v0_3.py test_authority_lifecycle_v0_4.py test_split_brain_v0_5.py test_conflict_set_quorum_v0_6.py test_identity_provenance_v0_7.py test_compiler_v0_8.py test_backend_equivalence_v0_9.py test_heterogeneous_v0_10.py test_cross_language_v0_11.py test_exact_integer_v0_12.py test_float_semantics_v0_13.py test_unicode_semantics_v0_14.py
 
 
       - name: End-to-end demo
