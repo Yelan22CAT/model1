@@ -408,3 +408,41 @@ See:
 - [Authority Lifecycle v0.4](AUTHORITY_LIFECYCLE_v0.4.md)
 - [Round 4 Result](ROUND4_AUTHORITY_LIFECYCLE_RESULT_v0.4.md)
 - [IR Schema v0.4](IR_SCHEMA_v0.4.json)
+
+
+---
+
+## Round 5 status — split-brain and reconciliation
+
+Bridge-0 v0.5 now tests concurrent state divergence.
+
+Latest executed CI result:
+
+```text
+93 tests
+93 passed
+0 failed
+```
+
+The enforced path is now:
+
+```text
+concurrent snapshots
+→ explicit divergence
+→ explicit conflict
+→ explicit merge
+→ trusted finality
+→ execution
+```
+
+Automatic `last_writer` merge is rejected.
+
+A divergent branch cannot finalize itself, and execution must reference finality for the exact state being executed.
+
+A 12-way divergent fork stress test produced 66 pairwise conflicts and passed. This also exposed an O(n²) scaling weakness in the current pairwise conflict representation.
+
+See:
+
+- [Split-Brain Semantics v0.5](SPLIT_BRAIN_SEMANTICS_v0.5.md)
+- [Round 5 Result](ROUND5_SPLIT_BRAIN_RESULT_v0.5.md)
+- [IR Schema v0.5](IR_SCHEMA_v0.5.json)
