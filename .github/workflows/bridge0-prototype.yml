@@ -144,3 +144,15 @@ jobs:
           python local_runner_v0_9.py ../executable_v0.9.bridge
           python compare_observables_v0_9.py .bridge-local-T3.stdout .bridge-local-T3.stdout
           echo "Bridge-0 v0.9 multi-backend compile/local check: OK"
+
+
+      - name: v0.9 backend drift negative control
+        working-directory: experiments/human-ai-bridge-language/prototype
+        run: |
+          printf 'backend-A\n' > /tmp/bridge-backend-a.txt
+          printf 'backend-B\n' > /tmp/bridge-backend-b.txt
+          if python compare_observables_v0_9.py /tmp/bridge-backend-a.txt /tmp/bridge-backend-b.txt; then
+            echo "Comparator failed to detect backend drift"
+            exit 1
+          fi
+          echo "Bridge-0 v0.9 negative control: backend drift detected as expected"
