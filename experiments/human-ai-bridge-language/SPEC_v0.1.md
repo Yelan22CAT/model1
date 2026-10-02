@@ -81,10 +81,18 @@ A proposition that may be useful for reasoning but is not asserted as fact.
 
 ### 2.6 Unknown — `?`
 
-Represents missing, unresolved, or unavailable information.
+Represents a proposition or field whose value is missing, unresolved, or unavailable.
 
 ```text
-■ delivery_date = ?
+? delivery_date
+```
+
+Round-1 rule: **one proposition carries one epistemic marker**. Avoid forms such as `■ delivery_date = ?`, because they mix a fact marker with an unknown value.
+
+If an estimate exists, represent it as a hypothesis instead:
+
+```text
+△ delivery_date ≈ 2026-10-15
 ```
 
 Unknown is not an error state.
@@ -159,11 +167,12 @@ A hypothesis or unknown may become a fact claim only through an explicit state t
 ### R2 — Unknown remains explicit
 
 ```text
-? + no sufficient ◆
-→ × factual_assertion
+? claim
++ no sufficient ◆
+→ × promote_to_fact
 ```
 
-The runtime must not silently fill an unknown field merely because a probable completion exists.
+The runtime must not silently fill an unknown field merely because a probable completion exists. A transition from `?` or `△` to `■` must be explicit and auditable.
 
 ### R3 — Evidence and claim are distinct objects
 
@@ -350,3 +359,26 @@ validation engines
 6. Can spatial / 2D layout carry formal semantics without harming parser determinism?
 7. What is the smallest teachable symbol set?
 8. Can multiple AI models round-trip the same Bridge expression without state loss?
+
+
+---
+
+## 10. Round-1 refinement note
+
+Ten public-safe repository patterns were encoded with the current primitives.
+
+Round 1 found that the current alphabet is sufficient at the category level, but the grammar/IR needs:
+
+- stable claim IDs;
+- exactly one epistemic marker per proposition;
+- typed relation semantics;
+- explicit scope/time binding;
+- guarded state transitions.
+
+No new glyph is added by Round 1.
+
+See:
+
+- [ROUND1_10_CASES.md](ROUND1_10_CASES.md)
+- [ROUND1_GAP_LEDGER.md](ROUND1_GAP_LEDGER.md)
+- [corpus/round1_cases.json](corpus/round1_cases.json)
