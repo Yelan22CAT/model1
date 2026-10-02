@@ -34,11 +34,31 @@ The first round-trip-enabled CI run completed successfully.
 
 ### Test count
 
+Initial round-trip run:
+
 ```text
 31 tests
 31 passed
 0 failed
 ```
+
+Extended semantic-mutation run:
+
+```text
+39 tests
+39 passed
+0 failed
+```
+
+The extended suite additionally checks:
+- hypothesis → fact mutation remains detectable;
+- association → causation mutation remains detectable;
+- evidence-target mutation remains detectable;
+- missing references are rejected;
+- localized labels do not change canonical surface semantics;
+- conflict state survives round-trip;
+- meta-claims do not promote embedded claims;
+- a deterministic 100-claim batch survives parse → render → parse without semantic change.
 
 The tested invariants include:
 
@@ -81,3 +101,14 @@ meta-claim preservation
 ```
 
 The purpose is to verify that meaning-changing mutations remain visible while presentation-only changes do not.
+
+
+## Current interpretation
+
+The current evidence supports only a bounded claim:
+
+> The restricted v0.2 implementation preserves the tested semantic distinctions under deterministic parse/render cycles and detects the tested meaning-changing mutations.
+
+This is stronger than the initial syntax-only result, but it is still not evidence of complete language correctness or general hallucination elimination.
+
+Next test layer should target structured scope, permissions, handoff records, and state-transition semantics.
