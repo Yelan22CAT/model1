@@ -343,6 +343,10 @@ jobs:
           echo "Bridge-0 v0.15 negative control: grapheme drift detected as expected"
 
 
+      - name: Dedicated v0.16 unit suite
+        working-directory: experiments/human-ai-bridge-language/prototype
+        run: python -m unittest -v test_semantic_compatibility_v0_16.py
+
       - name: End-to-end v0.16 semantic compatibility
         working-directory: experiments/human-ai-bridge-language/prototype
         run: |
