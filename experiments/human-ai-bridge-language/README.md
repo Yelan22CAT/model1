@@ -940,3 +940,47 @@ See:
 - [Round 15 Result](ROUND15_GRAPHEME_RESULT_v0.15.md)
 - [IR Schema v0.15](IR_SCHEMA_v0.15.json)
 - [Executable Bridge Source v0.15](executable_v0.15.bridge)
+
+
+---
+
+## Round 16 status — semantic profile evolution
+
+Bridge-0 v0.16 now treats semantic-version compatibility as an executable
+handshake rather than trusting version labels.
+
+Verified gates:
+
+~~~text
+cumulative regression: 243 passed
+dedicated v0.16:       16 passed
+~~~
+
+Real Python 3.12 and Node.js 20 compatibility backends produced the same typed
+manifest:
+
+~~~text
+20fd68bc27a33a3ad2ae3390e1d0f396712c2e0aafcd21029064a5a45f09f072
+~~~
+
+A safe v1 -> v2 extension was accepted.
+
+A synthetic same-major v1 -> v3 breaking change was rejected because an
+existing behavior changed, despite the version labels looking semver-compatible.
+
+An intentionally unsafe semver-major-only backend produced a different digest
+and was rejected as HETEROGENEOUS_BACKEND_DRIFT.
+
+Core rule:
+
+~~~text
+version label
+!= proof of semantic compatibility
+~~~
+
+See:
+
+- [Semantic Profile Evolution v0.16](SEMANTIC_PROFILE_EVOLUTION_v0.16.md)
+- [Round 16 Result](ROUND16_SEMANTIC_COMPATIBILITY_RESULT_v0.16.md)
+- [IR Schema v0.16](IR_SCHEMA_v0.16.json)
+- [Executable Bridge Source v0.16](executable_v0.16.bridge)
