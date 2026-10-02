@@ -382,3 +382,125 @@ See:
 - [ROUND1_10_CASES.md](ROUND1_10_CASES.md)
 - [ROUND1_GAP_LEDGER.md](ROUND1_GAP_LEDGER.md)
 - [corpus/round1_cases.json](corpus/round1_cases.json)
+
+
+---
+
+## 11. Round-2 mandatory invariants
+
+Round 2 stress tests make the following rules mandatory for the next grammar revision.
+
+### R7 — Attributed claim is not adopted truth
+
+```text
+■ [C2] actor asserted [C1]
+≠
+■ [C1]
+```
+
+A claim about another claim does not inherit the embedded claim's truth status.
+
+### R8 — Conflicting evidence remains unresolved
+
+```text
+◆ [E1] supports [C1]
+◆ [E2] opposes [C1]
+```
+
+does not authorize automatic promotion or rejection of `[C1]`.
+
+A reconciliation rule must be explicit and auditable.
+
+### R9 — Numerical uncertainty, confidence, and epistemic state are distinct
+
+```text
+measurement uncertainty
+≠ confidence
+≠ ■ / △ / ?
+```
+
+These belong in typed attributes or distributions, not in the epistemic marker itself.
+
+### R10 — Handoff preserves provenance
+
+A handoff must preserve at least:
+
+```text
+source_agent
+target_agent
+claim_or_artifact_id
+scope
+time
+allowed_transform
+```
+
+Restatement does not reset uncertainty.
+
+### R11 — Permission is scoped
+
+Permission must be interpreted as a tuple:
+
+```text
+(actor, action, resource, scope, conditions, time)
+```
+
+Permission for one tuple does not imply permission for another.
+
+### R12 — Tool failure is not a negative world-state fact
+
+```text
+tool_failed
+or
+no_result
+≠
+target_absent
+```
+
+The world state remains `?` unless supported by separate evidence.
+
+### R13 — Superseded is not erased
+
+A superseded source may remain historically valid while losing current authority.
+
+### R14 — Irreversible actions require explicit guards
+
+Guard conditions must be first-class for consequential transitions.
+
+### R15 — Association is not causation
+
+A descriptive association relation must not be promoted into a causal relation without additional evidence and an explicit transition.
+
+### R16 — Semantic identity is independent of localized label
+
+```text
+semantic_id = invariant
+localized_label = renderable
+```
+
+Chinese, English, or other labels may differ without changing the underlying object.
+
+---
+
+## 12. Provisional reference syntax after Round 2
+
+This syntax is experimental and not frozen.
+
+```text
+■ [C1] subject.field = value
+△ [C2] subject relation object
+? [C3] subject.field
+
+◆ [E1] source supports [C1]
+! [G1] action requires condition
+⏱ [T1] valid_from = timestamp
+```
+
+Bracketed identifiers are language-neutral references for claims, evidence, guards, goals, and time bindings.
+
+Round 2 still does not justify any new glyph.
+
+See:
+
+- [ROUND2_STRESS_TESTS.md](ROUND2_STRESS_TESTS.md)
+- [ROUND2_GAP_LEDGER.md](ROUND2_GAP_LEDGER.md)
+- [corpus/round2_cases.json](corpus/round2_cases.json)
