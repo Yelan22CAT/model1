@@ -95,7 +95,7 @@ def compile_github_actions(doc: dict[str, Any]) -> str:
             raw_args = task.get("args", "")
             if raw_args:
                 command.extend(str(raw_args).split(","))
-            lines.append("        run: " + " ".join(yaml_quote(part) for part in command))
+            lines.append("        run: " + " ".join(command))
 
         else:
             raise BridgeCompileError(f"Unsupported task after validation: {opcode}")
