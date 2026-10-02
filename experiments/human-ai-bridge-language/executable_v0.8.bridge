@@ -1,0 +1,6 @@
+# Bridge-0 v0.8 executable-source experiment
+
+⊙ [W1] workflow name=bridge0_v08_generated runner=ubuntu-latest trigger=push branch=experiment/human-ai-bridge-v0.1
+→ [T1] task kind=checkout
+→ [T2] task kind=setup_python version=3.12
+→ [T3] task kind=python_module module=unittest cwd=experiments/human-ai-bridge-language/prototype args=-v,test_parser_v0_2.py
