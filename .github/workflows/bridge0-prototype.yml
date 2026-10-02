@@ -29,11 +29,11 @@ jobs:
 
       - name: Syntax check
         working-directory: experiments/human-ai-bridge-language/prototype
-        run: python -m py_compile parser_v0_2.py validator_v0_2.py renderer_v0_2.py bridge_check_v0_2.py test_parser_v0_2.py test_validator_v0_2.py test_roundtrip_v0_2.py test_semantic_mutation_v0_2.py
+        run: python -m py_compile parser_v0_2.py validator_v0_2.py renderer_v0_2.py bridge_check_v0_2.py parser_v0_3.py validator_v0_3.py renderer_v0_3.py bridge_check_v0_3.py test_parser_v0_2.py test_validator_v0_2.py test_roundtrip_v0_2.py test_semantic_mutation_v0_2.py test_structured_semantics_v0_3.py
 
       - name: Unit tests
         working-directory: experiments/human-ai-bridge-language/prototype
-        run: python -m unittest -v test_parser_v0_2.py test_validator_v0_2.py test_roundtrip_v0_2.py test_semantic_mutation_v0_2.py
+        run: python -m unittest -v test_parser_v0_2.py test_validator_v0_2.py test_roundtrip_v0_2.py test_semantic_mutation_v0_2.py test_structured_semantics_v0_3.py
 
 
       - name: End-to-end demo
@@ -47,4 +47,23 @@ jobs:
           assert result["stage"] == "validate"
           assert result["validation"]["valid"] is True
           print("Bridge-0 demo parse + validation: OK")
+          PY
+
+
+      - name: End-to-end v0.3 composed workflow
+        working-directory: experiments/human-ai-bridge-language/prototype
+        run: |
+          python bridge_check_v0_3.py < ../demo_v0.3.bridge > /tmp/bridge0-v03-demo.json
+          python - <<'PY'
+          import json
+          with open("/tmp/bridge0-v03-demo.json", "r", encoding="utf-8") as f:
+              result = json.load(f)
+          assert result["stage"] == "validate"
+          assert result["validation"]["valid"] is True
+          kinds = [s["kind"] for s in result["ir"]["statements"]]
+          assert "permission" in kinds
+          assert "handoff" in kinds
+          assert "provenance" in kinds
+          assert "state_transition" in kinds
+          print("Bridge-0 v0.3 composed authority/provenance demo: OK")
           PY
