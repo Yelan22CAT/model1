@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/bridge-0/ir-v0.6.schema.json",
+  "title": "Bridge-0 Canonical IR v0.6",
+  "type": "object",
+  "required": ["language", "version", "statements"],
+  "properties": {
+    "language": {"const": "Bridge-0"},
+    "version": {"const": "0.6"},
+    "source_language": {"type": ["string", "null"]},
+    "labels": {"type": "object"},
+    "statements": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/statement"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "ref": {
+      "type": "object",
+      "required": ["ref"],
+      "properties": {"ref": {"type": "string", "minLength": 1}},
+      "additionalProperties": false
+    },
+    "statement": {
+      "oneOf": [
+        {"$ref": "#/$defs/conflict_set"},
+        {"$ref": "#/$defs/quorum"},
+        {"$ref": "#/$defs/proposal"},
+        {"$ref": "#/$defs/vote"},
+        {"$ref": "#/$defs/certificate"},
+        {"type": "object", "required": ["id", "kind"], "additionalProperties": true}
+      ]
+    },
+    "conflict_set": {
+      "type": "object",
+      "required": ["id", "kind", "members", "domain", "status"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "conflict_set"},
+        "members": {"type": "string"},
+        "domain": {"type": "string"},
+        "status": {"const": "open"}
+      },
+      "additionalProperties": false
+    },
+    "quorum": {
+      "type": "object",
+      "required": ["id", "kind", "voters", "threshold", "independence_min"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "quorum_policy"},
+        "voters": {"type": "string"},
+        "threshold": {"type": "integer", "minimum": 1},
+        "independence_min": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "proposal": {
+      "type": "object",
+      "required": ["id", "kind", "conflict_set", "strategy", "result_hash", "at"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "reconciliation_proposal"},
+        "conflict_set": {"$ref": "#/$defs/ref"},
+        "strategy": {"const": "explicit"},
+        "result_hash": {"type": "string"},
+        "at": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": false
+    },
+    "vote": {
+      "type": "object",
+      "required": [
+        "id", "kind", "voter", "proposal", "decision",
+        "independence", "evidence_hash", "at"
+      ],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "vote"},
+        "voter": {"type": "string"},
+        "proposal": {"$ref": "#/$defs/ref"},
+        "decision": {"enum": ["approve", "reject", "abstain"]},
+        "independence": {"type": "string"},
+        "evidence_hash": {"type": "string"},
+        "at": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": false
+    },
+    "certificate": {
+      "type": "object",
+      "required": [
+        "id", "kind", "proposal", "quorum", "votes",
+        "issued_by", "term", "at"
+      ],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "finality_certificate"},
+        "proposal": {"$ref": "#/$defs/ref"},
+        "quorum": {"$ref": "#/$defs/ref"},
+        "votes": {"type": "string"},
+        "issued_by": {"type": "string"},
+        "term": {"type": "integer", "minimum": 1},
+        "at": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": false
+    }
+  }
+}
