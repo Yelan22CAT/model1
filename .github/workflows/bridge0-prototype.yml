@@ -1,0 +1,36 @@
+name: Bridge-0 prototype checks
+
+on:
+  push:
+    branches:
+      - experiment/human-ai-bridge-v0.1
+    paths:
+      - "experiments/human-ai-bridge-language/**"
+      - ".github/workflows/bridge0-prototype.yml"
+  pull_request:
+    paths:
+      - "experiments/human-ai-bridge-language/**"
+      - ".github/workflows/bridge0-prototype.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  parser-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Syntax check
+        working-directory: experiments/human-ai-bridge-language/prototype
+        run: python -m py_compile parser_v0_2.py test_parser_v0_2.py
+
+      - name: Unit tests
+        working-directory: experiments/human-ai-bridge-language/prototype
+        run: python -m unittest -v test_parser_v0_2.py
