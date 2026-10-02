@@ -670,3 +670,44 @@ See:
 - [Round 9 Result](ROUND9_MULTI_BACKEND_RESULT_v0.9.md)
 - [IR Schema v0.9](IR_SCHEMA_v0.9.json)
 - [Executable Bridge Source v0.9](executable_v0.9.bridge)
+
+
+---
+
+## Round 10 status — heterogeneous runtime typed equivalence
+
+Bridge-0 v0.10 now tests the same Bridge source across three different operating-system runners using a typed JSON semantic observable.
+
+Latest verified prototype result:
+
+```text
+161 tests
+161 passed
+0 failed
+```
+
+Real generated workflow:
+
+```text
+Ubuntu   ✓
+Windows  ✓
+macOS    ✓
+compare  ✓
+```
+
+Canonical semantic digest:
+
+```text
+d2bd73193dfdf95314fb1b2c53e53690ec14d97aef21b9e8f671b94e063159d5
+```
+
+The comparator ignores incidental JSON formatting differences and compares the typed value instead.
+
+A deliberate semantic mutation was also detected as `HETEROGENEOUS_BACKEND_DRIFT`.
+
+See:
+
+- [Heterogeneous Runtime v0.10](HETEROGENEOUS_RUNTIME_v0.10.md)
+- [Round 10 Result](ROUND10_HETEROGENEOUS_RESULT_v0.10.md)
+- [IR Schema v0.10](IR_SCHEMA_v0.10.json)
+- [Executable Bridge Source v0.10](executable_v0.10.bridge)
