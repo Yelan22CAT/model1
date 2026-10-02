@@ -15,8 +15,7 @@ import json
 from datetime import datetime, timezone
 from typing import Any
 
-from validator_v0_17 import EXPECTED_LOSS
-from validator_v0_18 import EXPECTED_DIGEST, validate_document
+from validator_v0_18 import EXPECTED_DIGEST, EXPECTED_LOSS, validate_document
 from compiler_migration_v0_17 import SOURCE_ARTIFACT
 
 
