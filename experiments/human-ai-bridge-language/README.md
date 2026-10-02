@@ -1088,3 +1088,47 @@ See:
 - [Round 18 Result](ROUND18_SCOPED_AUTHORIZATION_RESULT_v0.18.md)
 - [IR Schema v0.18](IR_SCHEMA_v0.18.json)
 - [Executable Bridge Source v0.18](executable_v0.18.bridge)
+
+
+---
+
+## Round 19 status — revocation and replay resistance
+
+Bridge-0 v0.19 now treats scoped authorization as a stateful, single-use transition rather than a reusable label.
+
+~~~text
+cumulative regression: 322 passed
+dedicated v0.19:       24 passed
+~~~
+
+Python 3.12 and Node.js 20 produced the same typed result:
+
+~~~text
+a1f1665730eff44b91546842afd1d16c82491c724bac88822fc4176e26487389
+~~~
+
+Verified behavior:
+
+~~~text
+first use              -> allow
+same-token replay      -> deny
+revoked token          -> deny
+stale revocation epoch -> deny
+tampered nonce         -> deny
+expired token          -> deny
+~~~
+
+A deliberately stateless backend ignored consumption and revocation state, produced a different digest, and was rejected as semantic drift.
+
+Core rule:
+
+~~~text
+valid once != valid forever
+~~~
+
+See:
+
+- [Revocation & Replay Resistance v0.19](REVOCATION_REPLAY_RESISTANCE_v0.19.md)
+- [Round 19 Result](ROUND19_REPLAY_RESULT_v0.19.md)
+- [IR Schema v0.19](IR_SCHEMA_v0.19.json)
+- [Executable Bridge Source v0.19](executable_v0.19.bridge)
