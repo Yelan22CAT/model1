@@ -93,7 +93,7 @@ def validate_document(doc: dict[str, Any]) -> dict[str, Any]:
 
         elif opcode == "setup_python":
             version = task.get("version")
-            if version not in {"3.12"}:
+            if str(version) != "3.12":
                 errors.append(issue("V067", "setup_python version is not allowlisted", sid))
 
         elif opcode == "python_module":
