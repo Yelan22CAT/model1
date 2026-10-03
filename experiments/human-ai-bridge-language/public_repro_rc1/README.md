@@ -45,3 +45,21 @@ This kit demonstrates public reproducibility for a bounded, public-safe semantic
 It does **not** publish the full private adversarial corpus, sensitive attack fixtures, production thresholds, or unrestricted execution logic.
 
 The larger 20,000-case qualification result remains a separate internal/campaign result. External reviewers should treat this public kit as an independently rerunnable subset, not as access to the entire internal test corpus.
+
+
+## Environment drift
+
+The semantic anchors are the generated corpus digest and validator output digest. Runtime/OS/action versions are supporting environment evidence.
+
+See:
+
+- [ENVIRONMENT_MANIFEST.json](ENVIRONMENT_MANIFEST.json)
+- [verify_environment.py](verify_environment.py)
+
+Interpretation:
+
+- environment changed + semantic digests unchanged -> `REPRODUCTION_ENVIRONMENT_DRIFT`, not automatically a Bridge semantic regression;
+- corpus/output digest changed -> semantic drift requiring review;
+- CI fails before a semantic result exists -> unverifiable/infrastructure failure, never fail-open.
+
+The reference observed environment was Python 3.13.5, Node 22.16.0, and Ruby 3.3.8. Future patch-version changes are allowed to reproduce the same semantic digests; they are recorded rather than silently treated as identical environments.
