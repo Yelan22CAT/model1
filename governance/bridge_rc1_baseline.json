@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 11,
-  "previous_metadata_blob_sha": "7a3c9275a3a53aaf9139a08f627fcd6a61aa53cf",
+  "metadata_revision": 12,
+  "previous_metadata_blob_sha": "0ebad158a8d13577cc298623edd09b0d9e5d5e63",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -90,13 +90,13 @@
     "implementation_refactor_allowed_only_after_separate_main_reanchor": true
   },
   "last_anchor_update": {
-    "reason": "Normalize governance schema key to match Material Projection v1 derivation contract",
-    "changed_anchor": "governance.baseline_change_requires_separate_main_pull_request",
+    "reason": "Introduce Material Projection v2 with governance claim-scope coverage and unknown-field fail-closed validation",
+    "changed_anchor": "governance/verify_bridge_rc1_projection_v2.py",
     "semantic_generation_changed": false,
-    "evidence_revision_changed": false,
-    "material_metadata_revision_changed": false
+    "evidence_revision_changed": true,
+    "material_metadata_revision_changed": true
   },
-  "evidence_revision": 2,
+  "evidence_revision": 3,
   "evidence_blob_anchors": {
     "generate_corpus.py": "d3858130eb46ab96a5ad335599ca3477494de399",
     "validator.py": "1f2fe69f9c83b9f14b4b008e77dd695949caf783",
@@ -109,7 +109,8 @@
     "verify_profile_digest.py": "e37c17b3713e74aae3c21ca3fe0ea324c8b8d92f",
     "verify_workflow_manifest.py": "9b3b8e7e81a1d63e812da9fea3245024ba56c396",
     "verify_public_docs.py": "2eb3ae46508bad2a2633f6904d6989981840a367",
-    "governance/verify_bridge_rc1_projection_derivation.py": "5b0ddc005003d84e406eefb12c0285c84b64c1ef"
+    "governance/verify_bridge_rc1_projection_derivation.py": "5b0ddc005003d84e406eefb12c0285c84b64c1ef",
+    "governance/verify_bridge_rc1_projection_v2.py": "f3f896d61f223ea9ffa93ed3e56a906729eaf7fa"
   },
   "evidence_policy": {
     "evidence_implementation_identity_is_protected": true,
@@ -205,32 +206,23 @@
     }
   },
   "legacy_metadata_revision": 8,
-  "material_metadata_revision": 7,
+  "material_metadata_revision": 8,
   "material_projection": {
-    "version": "bridge-material-v1",
+    "version": "bridge-material-v2",
+    "previous_version": "bridge-material-v1",
     "canonicalization": "UTF-8 JSON with recursively sorted object keys; arrays preserve order",
-    "included_sections": [
-      "rc",
-      "baseline_generation",
-      "semantic_generation",
-      "material_metadata_revision",
-      "evidence_revision",
-      "semantic_anchors",
-      "git_blob_anchors",
-      "governance core and required ruleset properties",
-      "lineage_policy",
-      "currentness_policy",
-      "anchor_scope",
-      "evidence_blob_anchors",
-      "evidence_policy"
+    "claim_scope_fields_added": [
+      "ci_pass_is_not_independent_certification",
+      "independent_principal_approval",
+      "required_approving_review_count_observed",
+      "third_party_certification",
+      "claim_scope"
     ],
-    "excluded_sections": [
-      "external witness records",
-      "witness provider timestamps and object identifiers",
-      "witness backlink commit provenance",
-      "witness_index_revision",
-      "legacy metadata revision counters"
+    "unknown_top_level_fields": "fail-closed unless explicitly listed as material or excluded",
+    "unknown_governance_fields": "fail-closed unless explicitly listed as material or observational",
+    "observational_governance_fields_excluded": [
+      "ruleset_updated_at_observed"
     ],
-    "material_state_sha256": "e5a22e0d8ee24fa21ae8c099821f35c4eabdfddd06caa9cd3b48e664d294e123"
+    "material_state_sha256": "767b163047da3ff4d13d207b98356f8eed41c5ea3051ab40d760da5408f294aa"
   }
 }
