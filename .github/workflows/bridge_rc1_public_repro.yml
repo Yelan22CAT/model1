@@ -6,10 +6,18 @@ on:
       - experiment/human-ai-bridge-v0.1
     paths:
       - 'experiments/human-ai-bridge-language/public_repro_rc1/**'
+      - 'experiments/human-ai-bridge-language/SPEC_v1.0-rc1.md'
+      - 'experiments/human-ai-bridge-language/COMPATIBILITY_v1.0-rc1.md'
+      - 'experiments/human-ai-bridge-language/INVARIANTS_RC1.json'
+      - 'experiments/human-ai-bridge-language/RC_QUALIFICATION_v1.0-rc1.md'
       - '.github/workflows/bridge_rc1_public_repro.yml'
   pull_request:
     paths:
       - 'experiments/human-ai-bridge-language/public_repro_rc1/**'
+      - 'experiments/human-ai-bridge-language/SPEC_v1.0-rc1.md'
+      - 'experiments/human-ai-bridge-language/COMPATIBILITY_v1.0-rc1.md'
+      - 'experiments/human-ai-bridge-language/INVARIANTS_RC1.json'
+      - 'experiments/human-ai-bridge-language/RC_QUALIFICATION_v1.0-rc1.md'
       - '.github/workflows/bridge_rc1_public_repro.yml'
 
 jobs:
