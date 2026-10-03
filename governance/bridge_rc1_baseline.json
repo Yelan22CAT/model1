@@ -28,7 +28,19 @@
     "independent_principal_approval": false,
     "required_approving_review_count_observed": 0,
     "third_party_certification": false,
-    "claim_scope": "Protected-main history/process separation; not independent human, organizational, or third-party endorsement."
+    "claim_scope": "Protected-main history/process separation; not independent human, organizational, or third-party endorsement.",
+    "ruleset_id": 17630488,
+    "ruleset_name": "Protect main",
+    "ruleset_updated_at_observed": "2026-06-12T22:38:19.961-04:00",
+    "required_ruleset_properties": {
+      "enforcement": "active",
+      "deletion_rule_required": true,
+      "non_fast_forward_rule_required": true,
+      "pull_request_rule_required": true,
+      "required_approving_review_count_observed": 0,
+      "no_bypass_actors_observed": true
+    },
+    "ruleset_currentness_required": true
   },
   "baseline_generation": 1,
   "previous_baseline_blob_sha": null,
@@ -50,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 2,
-  "previous_metadata_blob_sha": "803ac8392a9c4e495e7ddd05145bd60598a13b4f",
+  "metadata_revision": 3,
+  "previous_metadata_blob_sha": "7266bf8ad363ebbb11e0c9177c90fedb3d18fd0e",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
