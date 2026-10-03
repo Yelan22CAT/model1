@@ -1,0 +1,26 @@
+{
+  "name": "Bridge-0 RC1 Public Reproduction Environment Manifest",
+  "status": "Experimental / Not Production Ready",
+  "semantic_anchor": {
+    "seed": 20261002,
+    "cases": 256,
+    "corpus_sha256": "0dcf5bf318fc8e1988a03267c3b35ba9764130a3e5e8104f7ef1593d0ef35fa5",
+    "output_sha256": "8a3d911a24fd018ef791314d5bba06d2b0fe85e7f30fb6e2dc117fcc40f1bcab"
+  },
+  "reference_observed_environment": {
+    "python": "3.13.5",
+    "node": "22.16.0",
+    "ruby": "3.3.8",
+    "os": "linux/x86_64 reference environment"
+  },
+  "classification": {
+    "environment_drift": "runtime/action/OS identity changed but canonical semantic output digest remains unchanged",
+    "semantic_drift": "canonical corpus or semantic output digest changes",
+    "infrastructure_failure": "CI/tooling fails before semantic result is produced"
+  },
+  "policy": {
+    "environment_drift_is_not_automatically_semantic_regression": true,
+    "semantic_digest_change_requires_review": true,
+    "ci_failure_without_semantic_output_is_unverifiable_not_fail_open": true
+  }
+}
