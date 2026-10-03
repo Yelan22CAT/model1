@@ -43,6 +43,10 @@ jobs:
         with:
           ruby-version: '3.3.8'
 
+      - name: Verify public documentation anchors
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 verify_public_docs.py
+
       - name: Verify workflow pins against environment manifest
         working-directory: experiments/human-ai-bridge-language/public_repro_rc1
         run: python3 verify_workflow_manifest.py
