@@ -81,3 +81,16 @@ It uses a fixed seed, a specified SHA-256 counter PRNG, and 256 public-safe case
 `6e91757ca0921a94ac4300fcee1918f85d862039354da1b542560536083136bf`
 
 The public kit is intentionally smaller than the private/internal 20,000-case qualification corpus. It exists so external reviewers can independently rerun representative RC semantics without publishing sensitive attack fixtures or private thresholds.
+
+## Current external-witness / material-projection state
+
+- current projection: `bridge-material-v2`;
+- current material-state SHA-256: `767b163047da3ff4d13d207b98356f8eed41c5ea3051ab40d760da5408f294aa`;
+- current witness generation: **5**;
+- historical v1 witnesses remain historical and MUST NOT be reused as current v2 proof;
+- baseline→projection derivation is separately verified from the projection's own digest;
+- Material Projection v2 includes governance claim-scope fields and rejects unknown material/governance fields by default;
+- Drive + Gmail are redundant service surfaces in one Google/account trust domain, not two independent principals;
+- `SECOND_EXTERNAL_TRUST_DOMAIN_REQUIRED` is the fail-closed state if the entire current external witness domain is unavailable/untrusted.
+
+Public contact/review remains on GitHub. Private witness-account identifiers are not reviewer contact information.
