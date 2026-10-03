@@ -166,7 +166,8 @@
           "timestamp_observed": "2026-10-03T04:25:56"
         }
       },
-      "status": "historical"
+      "status": "historical",
+      "previous_witness_payload_sha256": "b4dd87e99634d94ff587ca82b253032b64a83de49a07d60f526121fe2746cb2a"
     },
     {
       "witness_generation": 4,
@@ -183,7 +184,8 @@
           "timestamp_observed": "2026-10-03T04:42:56"
         }
       },
-      "status": "historical"
+      "status": "historical",
+      "previous_witness_payload_sha256": "b0d69e22d2bede068a8584406a7720fe64a7c25a7e9c1250e978bc8dfd29dfb4"
     },
     {
       "witness_generation": 5,
@@ -200,7 +202,8 @@
           "timestamp_observed": "2026-10-03T04:48:16"
         }
       },
-      "status": "historical"
+      "status": "historical",
+      "previous_witness_payload_sha256": "74314ab40ca4af49e9bd8d8fcb004df387c69b16ac6a52087e20678736f9da8b"
     },
     {
       "witness_generation": 6,
@@ -217,7 +220,8 @@
           "timestamp_observed": "2026-10-03T04:56:50"
         }
       },
-      "status": "historical"
+      "status": "historical",
+      "previous_witness_payload_sha256": "c280cd8110b6f23866841873df4ce0dd3ab14050622a404e5e3fc66f8375ca3f"
     },
     {
       "witness_generation": 7,
@@ -231,7 +235,8 @@
         }
       },
       "provider_status": "DEGRADED_SINGLE_SURFACE",
-      "status": "historical"
+      "status": "historical",
+      "previous_witness_payload_sha256": "04b5204ceb9a8232924f5bce9d74ab86f85d7cc5a48668fd319e93e70edc7f1b"
     },
     {
       "witness_generation": 8,
@@ -245,7 +250,8 @@
         }
       },
       "provider_status": "DEGRADED_SINGLE_SURFACE",
-      "status": "historical"
+      "status": "historical",
+      "previous_witness_payload_sha256": "15caf9152eb5a399fb7d6ae8a6b1206bb39043eeaf7a8a66917c9f2f4cd1e1e1"
     },
     {
       "witness_generation": 9,
@@ -259,7 +265,8 @@
         }
       },
       "provider_status": "DEGRADED_SINGLE_SURFACE",
-      "status": "historical"
+      "status": "historical",
+      "previous_witness_payload_sha256": "341c05917df48cd34e5238e5dcb5fed138706282638832a9a12eef9abf56a14a"
     },
     {
       "witness_generation": 10,
@@ -273,7 +280,8 @@
         }
       },
       "provider_status": "DEGRADED_SINGLE_SURFACE",
-      "status": "historical"
+      "status": "historical",
+      "previous_witness_payload_sha256": "e2bf38d50d5cae22e54eee346951cd63250de4e10159a4b99d6215adecea61f9"
     }
   ],
   "external_witness_policy": {
@@ -295,7 +303,7 @@
       "degraded_single_surface_does_not_create_multi_principal_independence": true
     }
   },
-  "witness_index_revision": 13,
+  "witness_index_revision": 14,
   "current_external_witness": {
     "witness_generation": 11,
     "previous_witness_payload_sha256": "a89f928b2637b9f44d9565e1dee864eb72b54378321dd03f301f495a8eade919",
@@ -339,5 +347,11 @@
     "heuristic_field_selection_forbidden": true,
     "duplicate_normative_current_fields_fail_closed": true,
     "legacy_external_repository_witness_is_historical_only": true
+  },
+  "witness_lineage_policy": {
+    "every_generation_after_1_requires_exact_previous_witness_payload_sha256": true,
+    "generation_numbers_must_be_contiguous": true,
+    "duplicate_generation_digests_must_match": true,
+    "lineage_is_reconstructable_from_public_governance_metadata": true
   }
 }
