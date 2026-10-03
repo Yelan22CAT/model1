@@ -21,13 +21,13 @@ cmp python.out ruby.out
 Expected output digest:
 
 ```text
-8a3d911a24fd018ef791314d5bba06d2b0fe85e7f30fb6e2dc117fcc40f1bcab
+6e91757ca0921a94ac4300fcee1918f85d862039354da1b542560536083136bf
 ```
 
 Deterministic generated corpus digest for Python 3.13 reference generation:
 
 ```text
-0dcf5bf318fc8e1988a03267c3b35ba9764130a3e5e8104f7ef1593d0ef35fa5
+f9d47a0dd93bc7d8bc5171dab1465fa11cf1d18794d66f8ffc56c4102ac75f04
 ```
 
 Parameters:
@@ -108,12 +108,32 @@ Expected digests:
 
 ```text
 verdict:
-2a5d53488d65973c46f9d0415c042a0a56c221f50b5a085755b38c5d9a5223ca
+be6cb05ecb2ca40f7b3fbc7b8421ce76141a0b6ad628ed90bd5415e197f52569
 
 diagnostic:
-8a3d911a24fd018ef791314d5bba06d2b0fe85e7f30fb6e2dc117fcc40f1bcab
+6e91757ca0921a94ac4300fcee1918f85d862039354da1b542560536083136bf
 ```
 
 A gate reordering can preserve every PASS/FAIL verdict while changing the first reported failure reason. Such a change is **diagnostic drift**, not automatically verdict drift.
 
 `SameVerdict != SameDiagnostic`
+
+
+## Stable generator algorithm
+
+The public corpus no longer depends on Python `random.Random` implementation details.
+
+It uses a specified SHA-256 counter PRNG:
+
+```text
+u64_i = first 8 bytes of SHA256(UTF8(seed + ":" + counter))
+below(n) = u64_i mod n
+```
+
+Case-count selection uses fixed integer thresholds, and mutation selection uses deterministic pop-without-replacement indexing.
+
+Therefore:
+
+`Seed != CorpusIdentity`
+
+The corpus identity is the combination of the generator algorithm specification, seed, case count, mutation table, and resulting corpus digest.
