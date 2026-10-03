@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 15,
-  "previous_metadata_blob_sha": "a9593d1f1fb9b690000201650f91ab9566c6e89d",
+  "metadata_revision": 16,
+  "previous_metadata_blob_sha": "c3630d56555297499fee4e1fd8474690f1e83e33",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -90,13 +90,13 @@
     "implementation_refactor_allowed_only_after_separate_main_reanchor": true
   },
   "last_anchor_update": {
-    "reason": "Introduce Material Projection v3 with NFC-normalized canonicalization and post-NFC key-collision rejection",
-    "changed_anchor": "governance/verify_bridge_rc1_projection_v3.py",
+    "reason": "Introduce Material Projection v4 with ASCII-only text profile to remove Unicode normalization-database drift",
+    "changed_anchor": "governance/verify_bridge_rc1_projection_v4.py",
     "semantic_generation_changed": false,
     "evidence_revision_changed": true,
     "material_metadata_revision_changed": true
   },
-  "evidence_revision": 4,
+  "evidence_revision": 5,
   "evidence_blob_anchors": {
     "generate_corpus.py": "d3858130eb46ab96a5ad335599ca3477494de399",
     "validator.py": "1f2fe69f9c83b9f14b4b008e77dd695949caf783",
@@ -111,7 +111,8 @@
     "verify_public_docs.py": "2eb3ae46508bad2a2633f6904d6989981840a367",
     "governance/verify_bridge_rc1_projection_derivation.py": "5b0ddc005003d84e406eefb12c0285c84b64c1ef",
     "governance/verify_bridge_rc1_projection_v2.py": "f3f896d61f223ea9ffa93ed3e56a906729eaf7fa",
-    "governance/verify_bridge_rc1_projection_v3.py": "8b9ca4dc86f8fea969311aed565be3c7468a4033"
+    "governance/verify_bridge_rc1_projection_v3.py": "8b9ca4dc86f8fea969311aed565be3c7468a4033",
+    "governance/verify_bridge_rc1_projection_v4.py": "1606d2006aaa26151bc17bd5a87ea7a49969d1c3"
   },
   "evidence_policy": {
     "evidence_implementation_identity_is_protected": true,
@@ -241,16 +242,18 @@
     }
   },
   "legacy_metadata_revision": 8,
-  "material_metadata_revision": 9,
+  "material_metadata_revision": 10,
   "material_projection": {
-    "version": "bridge-material-v3",
-    "previous_version": "bridge-material-v2",
-    "canonicalization": "Normalize all string values and object keys to Unicode NFC; reject post-NFC key collisions; recursively sort object keys; arrays preserve order; UTF-8 JSON",
+    "version": "bridge-material-v4",
+    "previous_version": "bridge-material-v3",
+    "text_profile": "ascii-v1",
+    "canonicalization": "Reject non-ASCII material string values and object keys; recursively sort object keys; arrays preserve order; serialize ASCII JSON",
+    "rationale": "External governance witness layer uses a version-independent ASCII profile. Bridge language semantics remain multilingual outside this projection.",
     "unknown_top_level_fields": "fail-closed unless explicitly listed as material or excluded",
     "unknown_governance_fields": "fail-closed unless explicitly listed as material or observational",
     "observational_governance_fields_excluded": [
       "ruleset_updated_at_observed"
     ],
-    "material_state_sha256": "1eaea2d0e7c106c973b78ab7209f33937bad12bbea78fb04303c151458a4ca93"
+    "material_state_sha256": "1d85f947637eb1621fb27292a490470a4d6501bb0e949c9a5f5cfa886471c4be"
   }
 }
