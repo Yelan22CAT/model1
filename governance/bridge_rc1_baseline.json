@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 23,
-  "previous_metadata_blob_sha": "a4f4faeaac7b1fa6933d289dc498f66d4a33072e",
+  "metadata_revision": 24,
+  "previous_metadata_blob_sha": "61dc547b9019e5b294fef2f1bd078cbaf31dc06e",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -90,13 +90,13 @@
     "implementation_refactor_allowed_only_after_separate_main_reanchor": true
   },
   "last_anchor_update": {
-    "reason": "Introduce Material Projection v7 with printable-ASCII human-review profile",
-    "changed_anchor": "governance/verify_bridge_rc1_projection_v7.py",
+    "reason": "Introduce Material Projection v8 with field-specific typed governance schema",
+    "changed_anchor": "governance/verify_bridge_rc1_projection_v8.py",
     "semantic_generation_changed": false,
     "evidence_revision_changed": true,
     "material_metadata_revision_changed": true
   },
-  "evidence_revision": 8,
+  "evidence_revision": 9,
   "evidence_blob_anchors": {
     "generate_corpus.py": "d3858130eb46ab96a5ad335599ca3477494de399",
     "validator.py": "1f2fe69f9c83b9f14b4b008e77dd695949caf783",
@@ -115,7 +115,8 @@
     "governance/verify_bridge_rc1_projection_v4.py": "1606d2006aaa26151bc17bd5a87ea7a49969d1c3",
     "governance/verify_bridge_rc1_projection_v5.py": "9adf8095f2e3bcda33222632d02df71459e12848",
     "governance/verify_bridge_rc1_projection_v6.py": "144145e8623f4e529da17a5a84e2d0a4d0b3db14",
-    "governance/verify_bridge_rc1_projection_v7.py": "aeac183f46d43de60b7ba43d36be299349dda279"
+    "governance/verify_bridge_rc1_projection_v7.py": "aeac183f46d43de60b7ba43d36be299349dda279",
+    "governance/verify_bridge_rc1_projection_v8.py": "a4cfdf7761ab6d113e437004a06dee37bdce6902"
   },
   "evidence_policy": {
     "evidence_implementation_identity_is_protected": true,
@@ -304,15 +305,15 @@
     }
   },
   "legacy_metadata_revision": 8,
-  "material_metadata_revision": 13,
+  "material_metadata_revision": 14,
   "material_projection": {
-    "version": "bridge-material-v7",
-    "previous_version": "bridge-material-v6",
+    "version": "bridge-material-v8",
+    "previous_version": "bridge-material-v7",
     "text_profile": "printable-ascii-v1",
     "number_profile": "safe-integer-v1",
     "parser_profile": "duplicate-key-reject-v1",
-    "canonicalization": "Reject control/non-printable ASCII material strings and keys; reject duplicate JSON keys; reject floats/exponents and integers outside ±(2^53−1); recursively sort keys; arrays preserve order; serialize ASCII JSON.",
-    "rationale": "Authenticated governance text must also be unambiguous on ordinary human review/log surfaces.",
-    "material_state_sha256": "9aebc992f2780ef84705ec20e728c18ee2cc1f99266a44d582c0d6f54c518d86"
+    "schema_profile": "typed-governance-v1",
+    "canonicalization": "Field-specific schema types; printable ASCII; duplicate-key rejection; exact safe integers only; null rejected unless explicitly typed; sorted object keys; array order preserved.",
+    "material_state_sha256": "6444b9e7a7bd423a497ef0e73e59749165df109008c8414fdfa62a5c9e99036f"
   }
 }
