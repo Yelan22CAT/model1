@@ -116,5 +116,5 @@
       "hardcoded_or_self_modified_verifier_cannot_self_authorize_new_evidence_identity": true
     }
   },
-  "material_state_sha256": "22c5f96fbb254fb00a5098c43a846ca3c6d01e61d2f4745b5ec5ec38b1b9bca1"
+  "material_state_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
 }
