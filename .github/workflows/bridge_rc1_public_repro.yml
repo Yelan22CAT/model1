@@ -66,6 +66,12 @@ jobs:
           cmp python.out ruby.out
           cmp python.out oracle.out
 
+      - name: Verify verdict-only digest
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: |
+          cut -d'|' -f1-2 python.out > verdict.out
+          test "$(sha256sum verdict.out | cut -d' ' -f1)" = "2a5d53488d65973c46f9d0415c042a0a56c221f50b5a085755b38c5d9a5223ca"
+
       - name: Verify semantic anchors and record environment
         working-directory: experiments/human-ai-bridge-language/public_repro_rc1
         run: python3 verify_environment.py
