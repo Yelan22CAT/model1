@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 24,
-  "previous_metadata_blob_sha": "61dc547b9019e5b294fef2f1bd078cbaf31dc06e",
+  "metadata_revision": 25,
+  "previous_metadata_blob_sha": "2c8e72785c62eaf7ef306d7f063bdbf6255e3649",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -258,12 +258,26 @@
       },
       "provider_status": "DEGRADED_SINGLE_SURFACE",
       "status": "historical"
+    },
+    {
+      "witness_generation": 10,
+      "witness_payload_sha256": "a89f928b2637b9f44d9565e1dee864eb72b54378321dd03f301f495a8eade919",
+      "witnessed_material_state_sha256": "9aebc992f2780ef84705ec20e728c18ee2cc1f99266a44d582c0d6f54c518d86",
+      "projection_version": "bridge-material-v7",
+      "providers": {
+        "google_drive": {
+          "file_id_sha256": "20255cf98adff468d83d53482291384be0f0489649439fec6486df05070e7d3c",
+          "created_at_observed": "2026-10-03T05:14:46.318Z"
+        }
+      },
+      "provider_status": "DEGRADED_SINGLE_SURFACE",
+      "status": "historical"
     }
   ],
   "external_witness_policy": {
     "scope": "material_state_digest",
-    "projection_version": "bridge-material-v7",
-    "material_state_sha256": "9aebc992f2780ef84705ec20e728c18ee2cc1f99266a44d582c0d6f54c518d86",
+    "projection_version": "bridge-material-v8",
+    "material_state_sha256": "6444b9e7a7bd423a497ef0e73e59749165df109008c8414fdfa62a5c9e99036f",
     "witness_backlink_excluded_from_material_digest": true,
     "witness_index_revision_separate": true,
     "material_change_requires_new_external_witness": true,
@@ -279,26 +293,27 @@
       "degraded_single_surface_does_not_create_multi_principal_independence": true
     }
   },
-  "witness_index_revision": 11,
+  "witness_index_revision": 12,
   "current_external_witness": {
-    "witness_generation": 10,
-    "previous_witness_payload_sha256": "e2bf38d50d5cae22e54eee346951cd63250de4e10159a4b99d6215adecea61f9",
-    "witness_payload_sha256": "a89f928b2637b9f44d9565e1dee864eb72b54378321dd03f301f495a8eade919",
-    "projection_version": "bridge-material-v7",
+    "witness_generation": 11,
+    "previous_witness_payload_sha256": "a89f928b2637b9f44d9565e1dee864eb72b54378321dd03f301f495a8eade919",
+    "witness_payload_sha256": "d0d212721dd3d1af4549fdadb9e0a193a170e3d0a43edf81cefd22a65d535cd1",
+    "projection_version": "bridge-material-v8",
     "text_profile": "printable-ascii-v1",
     "number_profile": "safe-integer-v1",
     "parser_profile": "duplicate-key-reject-v1",
-    "witnessed_material_state_sha256": "9aebc992f2780ef84705ec20e728c18ee2cc1f99266a44d582c0d6f54c518d86",
-    "observed_github_main_commit": "31b8de0341e5345c21b8a7a0dc26af2198c7c93d",
+    "schema_profile": "typed-governance-v1",
+    "witnessed_material_state_sha256": "6444b9e7a7bd423a497ef0e73e59749165df109008c8414fdfa62a5c9e99036f",
+    "observed_github_main_commit": "6b4e1727710205722f5fcd2510496b6723477429",
     "provider_status": "DEGRADED_SINGLE_SURFACE",
     "providers": {
       "google_drive": {
-        "file_id_sha256": "20255cf98adff468d83d53482291384be0f0489649439fec6486df05070e7d3c",
-        "created_at_observed": "2026-10-03T05:14:46.318Z"
+        "file_id_sha256": "72501cefca4c08fb09f53fd42bd282d3525fcd1e1059105d074c05f6940de232",
+        "created_at_observed": "2026-10-03T05:18:29.756Z"
       }
     },
     "trust_domain_note": "Current witness has one surviving Google/account service surface. This is degraded redundancy, not independent multi-provider trust.",
-    "claim_scope": "Off-GitHub Drive witness of Material Projection v7 in degraded single-surface mode.",
+    "claim_scope": "Off-GitHub Drive witness of Material Projection v8 in degraded single-surface mode.",
     "provider_roles": {
       "google_drive": "versioned timestamped current degraded surface",
       "gmail": "unavailable for this witness generation"
