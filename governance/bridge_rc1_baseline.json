@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 26,
-  "previous_metadata_blob_sha": "56228fdf4a23090febb6ce0edb5b3d312198353c",
+  "metadata_revision": 27,
+  "previous_metadata_blob_sha": "b525ee7d4d5ada84604d600667dbec39d18f112f",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -133,7 +133,7 @@
     "witness_format": "Bridge-0 External Repository Witness v2",
     "witness_generation": 2,
     "previous_witness_payload_sha256": "ae54d4ceb19d2a9a787abd25324375bb7686007db9c6d4d80d6b4c85f1361c47",
-    "witness_title": "Bridge-0 External Repository Witness v2 — 2026-10-03",
+    "witness_title": "Bridge-0 External Repository Witness v2 - 2026-10-03",
     "witness_file_id_sha256": "b79a726efb88987c471fa1c03f42c5e0d9d2d91b0a010c273b75b6b096ee079a",
     "witness_created_at_observed": "2026-10-03T04:19:13.982Z",
     "witness_payload_sha256": "b4dd87e99634d94ff587ca82b253032b64a83de49a07d60f526121fe2746cb2a",
