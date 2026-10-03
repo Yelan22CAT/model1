@@ -46,12 +46,21 @@ jobs:
         working-directory: experiments/human-ai-bridge-language/public_repro_rc1
         run: ruby validator.rb corpus.json > ruby.out
 
+      - name: Run declarative oracle
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 oracle.py DECISION_PROFILE_RC1.json corpus.json > oracle.out
+
+      - name: Mutation-test public decision gates
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 mutation_test.py
+
       - name: Compare outputs
         working-directory: experiments/human-ai-bridge-language/public_repro_rc1
         run: |
           test "$(sha256sum python.out | cut -d' ' -f1)" = "8a3d911a24fd018ef791314d5bba06d2b0fe85e7f30fb6e2dc117fcc40f1bcab"
           cmp python.out node.out
           cmp python.out ruby.out
+          cmp python.out oracle.out
 
       - name: Verify semantic anchors and record environment
         working-directory: experiments/human-ai-bridge-language/public_repro_rc1
