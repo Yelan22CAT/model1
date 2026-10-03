@@ -46,6 +46,10 @@ jobs:
         working-directory: experiments/human-ai-bridge-language/public_repro_rc1
         run: ruby validator.rb corpus.json > ruby.out
 
+      - name: Verify canonical decision-profile digest
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 verify_profile_digest.py
+
       - name: Run declarative oracle
         working-directory: experiments/human-ai-bridge-language/public_repro_rc1
         run: python3 oracle.py DECISION_PROFILE_RC1.json corpus.json > oracle.out
