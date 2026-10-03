@@ -139,7 +139,9 @@
     "evidence_revision_witnessed": 1,
     "freshness_policy": "If current GitHub baseline materially advances beyond this witnessed state, status becomes EXTERNAL_WITNESS_REFRESH_REQUIRED until a new witness generation is created.",
     "claim_scope": "Off-GitHub timestamped witness of the exact GitHub state named here; not third-party certification and not proof against compromise of both GitHub and Google Drive.",
-    "append_only_policy": "Future witness generations create new Drive records; prior witness records remain historical and are not reused as current proof."
+    "append_only_policy": "Future witness generations create new Drive records; prior witness records remain historical and are not reused as current proof.",
+    "status": "DEPRECATED_HISTORICAL_ONLY",
+    "normative_current_source": false
   },
   "external_repository_witness_history": [
     {
@@ -293,7 +295,7 @@
       "degraded_single_surface_does_not_create_multi_principal_independence": true
     }
   },
-  "witness_index_revision": 12,
+  "witness_index_revision": 13,
   "current_external_witness": {
     "witness_generation": 11,
     "previous_witness_payload_sha256": "a89f928b2637b9f44d9565e1dee864eb72b54378321dd03f301f495a8eade919",
@@ -330,5 +332,12 @@
     "schema_profile": "typed-governance-v1",
     "canonicalization": "Field-specific schema types; printable ASCII; duplicate-key rejection; exact safe integers only; null rejected unless explicitly typed; sorted object keys; array order preserved.",
     "material_state_sha256": "6444b9e7a7bd423a497ef0e73e59749165df109008c8414fdfa62a5c9e99036f"
+  },
+  "current_witness_selector": {
+    "schema_version": "current-witness-selector-v1",
+    "normative_field": "current_external_witness",
+    "heuristic_field_selection_forbidden": true,
+    "duplicate_normative_current_fields_fail_closed": true,
+    "legacy_external_repository_witness_is_historical_only": true
   }
 }
