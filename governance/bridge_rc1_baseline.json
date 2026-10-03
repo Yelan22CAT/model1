@@ -62,13 +62,40 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 3,
-  "previous_metadata_blob_sha": "7266bf8ad363ebbb11e0c9177c90fedb3d18fd0e",
+  "metadata_revision": 4,
+  "previous_metadata_blob_sha": "a2a6defdcd57d3bb3e3bdbaffb3b348e1b3bbd3a",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
     "metadata_revision_must_increase_monotonically": true,
     "previous_metadata_blob_sha_must_match_prior_current_baseline_blob": true,
     "metadata_revision_does_not_imply_new_semantic_generation": true
+  },
+  "anchor_scope": {
+    "protected_exact_blob_anchors": [
+      "SPEC_v1.0-rc1.md",
+      "COMPATIBILITY_v1.0-rc1.md",
+      "INVARIANTS_RC1.json",
+      "DECISION_PROFILE_RC1.json",
+      "CORPUS_PROFILE_RC1.json",
+      "ENVIRONMENT_MANIFEST.json",
+      "bridge_rc1_public_repro.yml"
+    ],
+    "implementation_files_not_exactly_frozen": [
+      "generate_corpus.py",
+      "validator.py",
+      "validator.js",
+      "validator.rb",
+      "oracle.py",
+      "mutation_test.py",
+      "verify_corpus_profile.py",
+      "verify_environment.py",
+      "verify_profile_digest.py",
+      "verify_workflow_manifest.py"
+    ],
+    "implementation_refactor_allowed_only_if_anchored_semantic_digests_remain_unchanged": true,
+    "implementation_change_that_changes_corpus_or_output_digest_requires_revalidation": true,
+    "readme_is_informative_not_normative": true,
+    "unanchored_implementation_identity_is_not_part_of_the_protected_baseline_claim": true
   }
 }
