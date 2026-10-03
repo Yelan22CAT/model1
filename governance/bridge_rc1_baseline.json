@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 9,
-  "previous_metadata_blob_sha": "d10b458f74f53f8016e4a3fdc574ee0cd95d53c1",
+  "metadata_revision": 10,
+  "previous_metadata_blob_sha": "dc5a5f3ce3f35abf85c312ade9d9ece5e466cdac",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -142,12 +142,28 @@
       "witness_created_at_observed": "2026-10-03T04:16:47.538Z",
       "github_main_commit_witnessed": "cec406c90a219d4489c1c8741695048bca22394c",
       "status": "historical"
+    },
+    {
+      "witness_generation": 3,
+      "witness_payload_sha256": "b0d69e22d2bede068a8584406a7720fe64a7c25a7e9c1250e978bc8dfd29dfb4",
+      "witnessed_material_state_sha256": "e5a22e0d8ee24fa21ae8c099821f35c4eabdfddd06caa9cd3b48e664d294e123",
+      "providers": {
+        "google_drive": {
+          "file_id_sha256": "f7649eb101a266fcd3b5fecc8f61d87e6fd76773398b583f34d7a89d26a9171a",
+          "created_at_observed": "2026-10-03T04:25:42.616Z"
+        },
+        "gmail": {
+          "message_id_sha256": "ad741145f698009d753ab3bf5d9cd15f986fa1b3a455e7538f0a71a795c3f846",
+          "timestamp_observed": "2026-10-03T04:25:56"
+        }
+      },
+      "status": "historical"
     }
   ],
   "external_witness_policy": {
     "scope": "material_state_digest",
     "projection_version": "bridge-material-v1",
-    "material_state_sha256": "e5a22e0d8ee24fa21ae8c099821f35c4eabdfddd06caa9cd3b48e664d294e123",
+    "material_state_sha256": "4e72c0436ea77cb8d9887113f4a5ba55089e496f171c31bec35a22f84019fd25",
     "witness_backlink_excluded_from_material_digest": true,
     "witness_index_revision_separate": true,
     "material_change_requires_new_external_witness": true,
@@ -163,22 +179,22 @@
       "degraded_single_surface_does_not_create_multi_principal_independence": true
     }
   },
-  "witness_index_revision": 4,
+  "witness_index_revision": 5,
   "current_external_witness": {
-    "witness_generation": 3,
-    "previous_witness_payload_sha256": "b4dd87e99634d94ff587ca82b253032b64a83de49a07d60f526121fe2746cb2a",
-    "witness_payload_sha256": "b0d69e22d2bede068a8584406a7720fe64a7c25a7e9c1250e978bc8dfd29dfb4",
+    "witness_generation": 4,
+    "previous_witness_payload_sha256": "b0d69e22d2bede068a8584406a7720fe64a7c25a7e9c1250e978bc8dfd29dfb4",
+    "witness_payload_sha256": "74314ab40ca4af49e9bd8d8fcb004df387c69b16ac6a52087e20678736f9da8b",
     "projection_version": "bridge-material-v1",
-    "witnessed_material_state_sha256": "e5a22e0d8ee24fa21ae8c099821f35c4eabdfddd06caa9cd3b48e664d294e123",
-    "observed_github_main_commit": "3c7b9504cf8ce01ce6951548e16cc1df3a3daa4c",
+    "witnessed_material_state_sha256": "4e72c0436ea77cb8d9887113f4a5ba55089e496f171c31bec35a22f84019fd25",
+    "observed_github_main_commit": "ae3ec8447c8acad63b9d1c68fd0229d38b7fbc43",
     "providers": {
       "google_drive": {
-        "file_id_sha256": "f7649eb101a266fcd3b5fecc8f61d87e6fd76773398b583f34d7a89d26a9171a",
-        "created_at_observed": "2026-10-03T04:25:42.616Z"
+        "file_id_sha256": "664af6db3ce4f0989fdeeb937e1c8f07c8a5d01492ae2eeb48277e409d059700",
+        "created_at_observed": "2026-10-03T04:42:42.235Z"
       },
       "gmail": {
-        "message_id_sha256": "ad741145f698009d753ab3bf5d9cd15f986fa1b3a455e7538f0a71a795c3f846",
-        "timestamp_observed": "2026-10-03T04:25:56"
+        "message_id_sha256": "bac66ca737ac5d81325b4dbbed7429f674345e6b7d3d9dc7d06451d76905579c",
+        "timestamp_observed": "2026-10-03T04:42:56"
       }
     },
     "trust_domain_note": "Google Drive and Gmail are two service surfaces in one broader Google/account trust domain.",
