@@ -1,0 +1,61 @@
+name: Bridge Strong Content Digest Audit
+
+on:
+  push:
+    branches:
+      - bridge-strong-digest-audit
+
+permissions:
+  contents: read
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Compute SHA-256 content anchors
+        shell: python
+        run: |
+          import hashlib, json, pathlib, subprocess
+          experiment="origin/experiment/human-ai-bridge-v0.1"
+          subprocess.run(["git","fetch","origin","experiment/human-ai-bridge-v0.1"],check=True)
+
+          protected={
+            "SPEC_v1.0-rc1.md":"experiments/human-ai-bridge-language/SPEC_v1.0-rc1.md",
+            "COMPATIBILITY_v1.0-rc1.md":"experiments/human-ai-bridge-language/COMPATIBILITY_v1.0-rc1.md",
+            "INVARIANTS_RC1.json":"experiments/human-ai-bridge-language/INVARIANTS_RC1.json",
+            "DECISION_PROFILE_RC1.json":"experiments/human-ai-bridge-language/public_repro_rc1/DECISION_PROFILE_RC1.json",
+            "CORPUS_PROFILE_RC1.json":"experiments/human-ai-bridge-language/public_repro_rc1/CORPUS_PROFILE_RC1.json",
+            "ENVIRONMENT_MANIFEST.json":"experiments/human-ai-bridge-language/public_repro_rc1/ENVIRONMENT_MANIFEST.json",
+            "bridge_rc1_public_repro.yml":".github/workflows/bridge_rc1_public_repro.yml"
+          }
+          evidence={
+            "generate_corpus.py":"experiments/human-ai-bridge-language/public_repro_rc1/generate_corpus.py",
+            "validator.py":"experiments/human-ai-bridge-language/public_repro_rc1/validator.py",
+            "validator.js":"experiments/human-ai-bridge-language/public_repro_rc1/validator.js",
+            "validator.rb":"experiments/human-ai-bridge-language/public_repro_rc1/validator.rb",
+            "oracle.py":"experiments/human-ai-bridge-language/public_repro_rc1/oracle.py",
+            "mutation_test.py":"experiments/human-ai-bridge-language/public_repro_rc1/mutation_test.py",
+            "verify_corpus_profile.py":"experiments/human-ai-bridge-language/public_repro_rc1/verify_corpus_profile.py",
+            "verify_environment.py":"experiments/human-ai-bridge-language/public_repro_rc1/verify_environment.py",
+            "verify_profile_digest.py":"experiments/human-ai-bridge-language/public_repro_rc1/verify_profile_digest.py",
+            "verify_workflow_manifest.py":"experiments/human-ai-bridge-language/public_repro_rc1/verify_workflow_manifest.py",
+            "verify_public_docs.py":"experiments/human-ai-bridge-language/public_repro_rc1/verify_public_docs.py"
+          }
+
+          def git_bytes(ref,path):
+            return subprocess.check_output(["git","show",f"{ref}:{path}"])
+
+          out={"algorithm":"sha256-file-content-v1","protected":{},"evidence":{}}
+          for name,path in protected.items():
+            out["protected"][name]=hashlib.sha256(git_bytes(experiment,path)).hexdigest()
+          for name,path in evidence.items():
+            out["evidence"][name]=hashlib.sha256(git_bytes(experiment,path)).hexdigest()
+          for path in sorted(pathlib.Path("governance").glob("verify_bridge_rc1_projection*.py")):
+            key=str(path)
+            out["evidence"][key]=hashlib.sha256(path.read_bytes()).hexdigest()
+          print("BRIDGE_STRONG_DIGEST_MAP="+json.dumps(out,sort_keys=True,separators=(",",":")))
