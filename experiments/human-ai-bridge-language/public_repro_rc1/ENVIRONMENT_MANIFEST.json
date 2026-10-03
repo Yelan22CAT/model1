@@ -15,7 +15,9 @@
       "diagnostic": "id|0_or_1|first_failure_reason, one line per case"
     },
     "generator_algorithm": "SHA-256 counter PRNG v1",
-    "generator_algorithm_spec": "u64_i = first 8 bytes of SHA256(UTF8(seed + ':' + counter)); below(n)=u64_i mod n; fixed thresholds and pop-without-replacement mutation selection"
+    "generator_algorithm_spec": "u64_i = first 8 bytes of SHA256(UTF8(seed + ':' + counter)); below(n)=u64_i mod n; fixed thresholds and pop-without-replacement mutation selection",
+    "corpus_profile_canonical_sha256": "4fb956e92acc20d6f54fee1a6b4805d23402a36e12856a6684d122ec2f275f38",
+    "corpus_profile_digest_semantics": "canonical JSON: UTF-8, sorted keys, separators=(',',':'), parsed semantic object"
   },
   "reference_observed_environment": {
     "python": "3.13.5",
