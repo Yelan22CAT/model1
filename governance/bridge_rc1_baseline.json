@@ -43,5 +43,15 @@
     "historical_main_commits_are_not_current": true,
     "unmerged_branches_are_not_current": true,
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
+  },
+  "semantic_generation": 1,
+  "metadata_revision": 1,
+  "previous_metadata_blob_sha": "78e23777add78ab7afd59f37e1c55661305d4741",
+  "revision_policy": {
+    "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
+    "metadata_revision_changes_for_governance_metadata_only_updates": true,
+    "metadata_revision_must_increase_monotonically": true,
+    "previous_metadata_blob_sha_must_match_prior_current_baseline_blob": true,
+    "metadata_revision_does_not_imply_new_semantic_generation": true
   }
 }
