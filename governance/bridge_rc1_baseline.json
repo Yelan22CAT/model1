@@ -22,7 +22,6 @@
   "governance": {
     "authoritative_location": "protected main",
     "experiment_branch_may_not_self-authorize_baseline_changes": true,
-    "baseline_change_requires_separate_main pull request": true,
     "ci_pass_is_not_independent_certification": true,
     "protected_history_process_separation": true,
     "independent_principal_approval": false,
@@ -40,7 +39,8 @@
       "required_approving_review_count_observed": 0,
       "no_bypass_actors_observed": true
     },
-    "ruleset_currentness_required": true
+    "ruleset_currentness_required": true,
+    "baseline_change_requires_separate_main_pull_request": true
   },
   "baseline_generation": 1,
   "previous_baseline_blob_sha": null,
@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 10,
-  "previous_metadata_blob_sha": "dc5a5f3ce3f35abf85c312ade9d9ece5e466cdac",
+  "metadata_revision": 11,
+  "previous_metadata_blob_sha": "7a3c9275a3a53aaf9139a08f627fcd6a61aa53cf",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -90,11 +90,11 @@
     "implementation_refactor_allowed_only_after_separate_main_reanchor": true
   },
   "last_anchor_update": {
-    "reason": "Add deterministic current-baseline to Material Projection v1 derivation verifier",
-    "changed_anchor": "governance/verify_bridge_rc1_projection_derivation.py",
+    "reason": "Normalize governance schema key to match Material Projection v1 derivation contract",
+    "changed_anchor": "governance.baseline_change_requires_separate_main_pull_request",
     "semantic_generation_changed": false,
-    "evidence_revision_changed": true,
-    "material_metadata_revision_changed": true
+    "evidence_revision_changed": false,
+    "material_metadata_revision_changed": false
   },
   "evidence_revision": 2,
   "evidence_blob_anchors": {
