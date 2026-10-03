@@ -63,3 +63,22 @@ Interpretation:
 - CI fails before a semantic result exists -> unverifiable/infrastructure failure, never fail-open.
 
 The reference observed environment was Python 3.13.5, Node 22.16.0, and Ruby 3.3.8. Future patch-version changes are allowed to reproduce the same semantic digests; they are recorded rather than silently treated as identical environments.
+
+
+## Independent decision oracle
+
+Cross-runtime equality is not treated as semantic correctness by itself.
+
+The public kit therefore also includes:
+
+- [DECISION_PROFILE_RC1.json](DECISION_PROFILE_RC1.json) — declarative ordered decision gates;
+- [oracle.py](oracle.py) — an interpreter for the declarative profile;
+- [mutation_test.py](mutation_test.py) — gate-omission mutation tests.
+
+Current decision-profile SHA-256:
+
+`7d4a208387828fca13edce21eda492f96707e0503bdbcada2a29eefc1ed08c8c`
+
+CI requires Python, Node.js, Ruby, and the declarative oracle to produce identical public-subset results. Mutation tests must kill all one-gate-omission mutants.
+
+This separates **three implementations** from the **public normative subset definition**; it still does not claim universal correctness beyond that declared profile.
