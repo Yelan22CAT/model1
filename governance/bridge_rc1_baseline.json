@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 8,
-  "previous_metadata_blob_sha": "2dbc055a9c1d87fc06cc40ce8eb69cf8c9da6771",
+  "metadata_revision": 9,
+  "previous_metadata_blob_sha": "d10b458f74f53f8016e4a3fdc574ee0cd95d53c1",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -90,11 +90,13 @@
     "implementation_refactor_allowed_only_after_separate_main_reanchor": true
   },
   "last_anchor_update": {
-    "reason": "Add public documentation consistency gate to RC1 reproduction workflow",
-    "changed_anchor": "bridge_rc1_public_repro.yml",
-    "semantic_generation_changed": false
+    "reason": "Add deterministic current-baseline to Material Projection v1 derivation verifier",
+    "changed_anchor": "governance/verify_bridge_rc1_projection_derivation.py",
+    "semantic_generation_changed": false,
+    "evidence_revision_changed": true,
+    "material_metadata_revision_changed": true
   },
-  "evidence_revision": 1,
+  "evidence_revision": 2,
   "evidence_blob_anchors": {
     "generate_corpus.py": "d3858130eb46ab96a5ad335599ca3477494de399",
     "validator.py": "1f2fe69f9c83b9f14b4b008e77dd695949caf783",
@@ -106,7 +108,8 @@
     "verify_environment.py": "829a50af413667503d7247a9efbcc8017ca21f55",
     "verify_profile_digest.py": "e37c17b3713e74aae3c21ca3fe0ea324c8b8d92f",
     "verify_workflow_manifest.py": "9b3b8e7e81a1d63e812da9fea3245024ba56c396",
-    "verify_public_docs.py": "2eb3ae46508bad2a2633f6904d6989981840a367"
+    "verify_public_docs.py": "2eb3ae46508bad2a2633f6904d6989981840a367",
+    "governance/verify_bridge_rc1_projection_derivation.py": "5b0ddc005003d84e406eefb12c0285c84b64c1ef"
   },
   "evidence_policy": {
     "evidence_implementation_identity_is_protected": true,
@@ -186,7 +189,7 @@
     }
   },
   "legacy_metadata_revision": 8,
-  "material_metadata_revision": 6,
+  "material_metadata_revision": 7,
   "material_projection": {
     "version": "bridge-material-v1",
     "canonicalization": "UTF-8 JSON with recursively sorted object keys; arrays preserve order",
