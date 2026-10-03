@@ -17,7 +17,7 @@
     "DECISION_PROFILE_RC1.json": "f3175ae4e0baef34f361d92bde91ff202177e4b8",
     "CORPUS_PROFILE_RC1.json": "e8ca855183eb37f7994b6d34c0c9102436f7a285",
     "ENVIRONMENT_MANIFEST.json": "6a4d9d5b87afeab7a40eaa4d5c77c97762456a7b",
-    "bridge_rc1_public_repro.yml": "3541d2d7d1c258c25d4c2e723d1bfa88fd573869"
+    "bridge_rc1_public_repro.yml": "07e558eec4b127d1f113c5384bd63622ee7c1a74"
   },
   "governance": {
     "authoritative_location": "protected main",
@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 4,
-  "previous_metadata_blob_sha": "a2a6defdcd57d3bb3e3bdbaffb3b348e1b3bbd3a",
+  "metadata_revision": 5,
+  "previous_metadata_blob_sha": "a326d28dea3dc7b07bea6ce00f720a44111891fc",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -97,5 +97,10 @@
     "implementation_change_that_changes_corpus_or_output_digest_requires_revalidation": true,
     "readme_is_informative_not_normative": true,
     "unanchored_implementation_identity_is_not_part_of_the_protected_baseline_claim": true
+  },
+  "last_anchor_update": {
+    "reason": "Add public documentation consistency gate to RC1 reproduction workflow",
+    "changed_anchor": "bridge_rc1_public_repro.yml",
+    "semantic_generation_changed": false
   }
 }
