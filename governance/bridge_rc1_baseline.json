@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 29,
-  "previous_metadata_blob_sha": "93fe45c1e3b08acc50387d6f1293584b3d27b3e7",
+  "metadata_revision": 30,
+  "previous_metadata_blob_sha": "d9bf5d4e26261b193b4e998211e16b4d69721e4d",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -90,13 +90,13 @@
     "implementation_refactor_allowed_only_after_separate_main_reanchor": true
   },
   "last_anchor_update": {
-    "reason": "Deploy constrained workflow step parser and fail-propagating execution matching",
-    "changed_anchor": "governance/verify_bridge_rc1_execution_profile.py",
+    "reason": "Extend protected-main governance trigger coverage to all protected RC/public-reproduction paths",
+    "changed_anchor": ".github/workflows/bridge_rc1_governance_verify.yml",
     "semantic_generation_changed": false,
     "evidence_revision_changed": true,
     "material_metadata_revision_changed": true
   },
-  "evidence_revision": 11,
+  "evidence_revision": 12,
   "evidence_blob_anchors": {
     "generate_corpus.py": "d3858130eb46ab96a5ad335599ca3477494de399",
     "validator.py": "1f2fe69f9c83b9f14b4b008e77dd695949caf783",
@@ -117,11 +117,12 @@
     "governance/verify_bridge_rc1_projection_v6.py": "144145e8623f4e529da17a5a84e2d0a4d0b3db14",
     "governance/verify_bridge_rc1_projection_v7.py": "aeac183f46d43de60b7ba43d36be299349dda279",
     "governance/verify_bridge_rc1_projection_v8.py": "a4cfdf7761ab6d113e437004a06dee37bdce6902",
-    "governance/bridge_rc1_verification_execution_profile.json": "031fc9980dfa686e3bb423714197bb8d5f9bcb5b",
+    "governance/bridge_rc1_verification_execution_profile.json": "cbe9981dae0ed2ff6cd6e8dd1124501cb54ea54b",
     "governance/verify_bridge_rc1_execution_profile.py": "85aee4e12b58541ea23071650f1bd6016d4f39fb",
     "governance/verify_bridge_rc1_projection_v9.py": "7319cbd88187d932fce29f31a516fbf9f974bf94",
-    ".github/workflows/bridge_rc1_governance_verify.yml": "69864dfd8a1b7cda000a1b531490f01e377705ba",
-    "governance/verify_bridge_rc1_projection_v10.py": "f2a282c1759205938110f0f61a04fa29511cb84f"
+    ".github/workflows/bridge_rc1_governance_verify.yml": "ccd48de2ceccb129ca4ed8be3415e712bd4ee0ec",
+    "governance/verify_bridge_rc1_projection_v10.py": "f2a282c1759205938110f0f61a04fa29511cb84f",
+    "governance/verify_bridge_rc1_projection_v11.py": "2f86a6c4dc95e1eecf7f52e71a588f1c01080c51"
   },
   "evidence_policy": {
     "evidence_implementation_identity_is_protected": true,
@@ -336,7 +337,7 @@
     "status": "STALE_EXTERNAL_WITNESS_REFRESH_REQUIRED"
   },
   "legacy_metadata_revision": 8,
-  "material_metadata_revision": 16,
+  "material_metadata_revision": 17,
   "material_projection": {
     "version": "bridge-material-v10",
     "previous_version": "bridge-material-v9",
@@ -360,5 +361,5 @@
     "duplicate_generation_digests_must_match": true,
     "lineage_is_reconstructable_from_public_governance_metadata": true
   },
-  "verification_execution_profile_blob_sha": "031fc9980dfa686e3bb423714197bb8d5f9bcb5b"
+  "verification_execution_profile_blob_sha": "cbe9981dae0ed2ff6cd6e8dd1124501cb54ea54b"
 }
