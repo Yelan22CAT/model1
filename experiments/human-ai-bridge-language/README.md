@@ -1132,3 +1132,41 @@ See:
 - [Round 19 Result](ROUND19_REPLAY_RESULT_v0.19.md)
 - [IR Schema v0.19](IR_SCHEMA_v0.19.json)
 - [Executable Bridge Source v0.19](executable_v0.19.bridge)
+
+
+---
+
+## v0.20–v0.50 assurance consolidation
+
+Bridge-0 has completed a second experimental phase beyond the original v0.1–v0.19 language/runtime work.
+
+The later campaign tests whether evidence, trust, authorization, confidence, review, planning, execution, recovery, and restore state remain coherent under adversarial composition.
+
+The v0.50 consolidation introduces a first-class **Assurance Context**:
+
+```text
+per-layer validity
++ exact dependency graph
++ one coherent assurance context
++ current execution-context recheck
+= candidate end-to-end PASS
+```
+
+Core rule:
+
+```text
+All layers individually valid != End-to-end valid
+```
+
+Public consolidation documents:
+
+- [Assurance Architecture v0.50](ASSURANCE_ARCHITECTURE_v0.50.md)
+- [Verification Status v0.20–v0.50](VERIFICATION_STATUS_v0.50.md)
+
+Current maturity remains:
+
+```text
+Experimental / v0.x / Not Production Ready
+```
+
+The next phase is convergence testing rather than declaring v1.0 by version count alone.
