@@ -168,5 +168,34 @@
       }
     },
     "claim_scope": "Two Google service surfaces outside GitHub witness the same bounded payload; this is not independent third-party certification and does not protect against compromise of both Google account/services and GitHub."
+  },
+  "legacy_metadata_revision": 8,
+  "material_metadata_revision": 6,
+  "material_projection": {
+    "version": "bridge-material-v1",
+    "canonicalization": "UTF-8 JSON with recursively sorted object keys; arrays preserve order",
+    "included_sections": [
+      "rc",
+      "baseline_generation",
+      "semantic_generation",
+      "material_metadata_revision",
+      "evidence_revision",
+      "semantic_anchors",
+      "git_blob_anchors",
+      "governance core and required ruleset properties",
+      "lineage_policy",
+      "currentness_policy",
+      "anchor_scope",
+      "evidence_blob_anchors",
+      "evidence_policy"
+    ],
+    "excluded_sections": [
+      "external witness records",
+      "witness provider timestamps and object identifiers",
+      "witness backlink commit provenance",
+      "witness_index_revision",
+      "legacy metadata revision counters"
+    ],
+    "material_state_sha256": "e5a22e0d8ee24fa21ae8c099821f35c4eabdfddd06caa9cd3b48e664d294e123"
   }
 }
