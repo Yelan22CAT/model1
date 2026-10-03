@@ -137,3 +137,23 @@ Therefore:
 `Seed != CorpusIdentity`
 
 The corpus identity is the combination of the generator algorithm specification, seed, case count, mutation table, and resulting corpus digest.
+
+
+## Corpus semantic profile
+
+The generator reads [CORPUS_PROFILE_RC1.json](CORPUS_PROFILE_RC1.json), which freezes:
+
+- generator algorithm identifier;
+- seed;
+- case count;
+- mutation-count thresholds;
+- base state;
+- ordered mutation table.
+
+Canonical corpus-profile SHA-256:
+
+`4fb956e92acc20d6f54fee1a6b4805d23402a36e12856a6684d122ec2f275f38`
+
+This prevents a silent mutation-table or base-state change from being described as "the same generator" merely because the seed and PRNG algorithm are unchanged.
+
+`SameAlgorithm + SameSeed != SameCorpusSemantics`
