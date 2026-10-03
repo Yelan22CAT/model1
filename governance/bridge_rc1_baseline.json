@@ -1,0 +1,28 @@
+{
+  "name": "Bridge-0 RC1 Protected Baseline Candidate",
+  "status": "Candidate baseline anchor; becomes authoritative only after merge to protected main",
+  "rc": "v1.0-rc1",
+  "semantic_anchors": {
+    "public_corpus_sha256": "f9d47a0dd93bc7d8bc5171dab1465fa11cf1d18794d66f8ffc56c4102ac75f04",
+    "diagnostic_output_sha256": "6e91757ca0921a94ac4300fcee1918f85d862039354da1b542560536083136bf",
+    "verdict_output_sha256": "be6cb05ecb2ca40f7b3fbc7b8421ce76141a0b6ad628ed90bd5415e197f52569",
+    "decision_profile_canonical_sha256": "9631290649bcd4af41cd565074051f0b145771d9ec77b8397091f14861a59a1a",
+    "corpus_profile_canonical_sha256": "26801a1b17d0ad9291bddd00cdc9d902bf286ab8657b193d12a7a2e274543abc",
+    "invariant_registry_digest": "aa1cfd6c0b4903bbadec015b69b1124667b5ea78a4da8ec672f67fd8c483a292"
+  },
+  "git_blob_anchors": {
+    "SPEC_v1.0-rc1.md": "b351695d5b7c9435b8dc8e619d5b912ef5a763b0",
+    "COMPATIBILITY_v1.0-rc1.md": "ba23756a60d5a60ca5801106487c3019cd4797a5",
+    "INVARIANTS_RC1.json": "26a13d69e1a89c812d3cd6b0433957c7efb9a664",
+    "DECISION_PROFILE_RC1.json": "f3175ae4e0baef34f361d92bde91ff202177e4b8",
+    "CORPUS_PROFILE_RC1.json": "e8ca855183eb37f7994b6d34c0c9102436f7a285",
+    "ENVIRONMENT_MANIFEST.json": "6a4d9d5b87afeab7a40eaa4d5c77c97762456a7b",
+    "bridge_rc1_public_repro.yml": "3541d2d7d1c258c25d4c2e723d1bfa88fd573869"
+  },
+  "governance": {
+    "authoritative_location": "protected main",
+    "experiment_branch_may_not_self-authorize_baseline_changes": true,
+    "baseline_change_requires_separate_main pull request": true,
+    "ci_pass_is_not_independent_certification": true
+  }
+}
