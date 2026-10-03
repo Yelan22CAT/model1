@@ -1232,13 +1232,18 @@ The experiment remains **v1.0-rc1 Candidate / Experimental / Not Production Read
 Current governance and reproducibility state:
 
 - protected `main` carries the authoritative RC governance baseline;
-- **Material Projection v2** (`bridge-material-v2`) is the current externally witnessed material projection;
-- Material Projection v1 remains frozen for historical witness interpretation;
-- current material-state SHA-256: `767b163047da3ff4d13d207b98356f8eed41c5ea3051ab40d760da5408f294aa`;
-- current external witness generation: **5**;
+- **Material Projection v3** (`bridge-material-v3`) is the current externally witnessed material projection;
+- Material Projection v1 and v2 remain frozen for historical witness interpretation;
+- current material-state SHA-256: `1eaea2d0e7c106c973b78ab7209f33937bad12bbea78fb04303c151458a4ca93`;
+- current external witness generation: **6**;
 - off-GitHub witness surfaces currently use Google Drive + Gmail as two service surfaces inside one broader Google/account trust domain;
 - private email addresses and raw provider object IDs are not public contact metadata;
 - the public feedback path remains GitHub PR comments, inline reviews, and Issues;
 - if the whole Google/account witness domain is unavailable or untrusted, the explicit boundary is `SECOND_EXTERNAL_TRUST_DOMAIN_REQUIRED`; GitHub alone does not recreate independent witness continuity.
 
-Material Projection v2 additionally binds governance claim-scope fields and fails closed on unknown top-level or governance fields unless explicitly classified.
+Material Projection v3 additionally binds governance claim-scope fields and fails closed on unknown top-level or governance fields unless explicitly classified.
+
+
+### Material Projection v3 canonicalization
+
+Material Projection v3 NFC-normalizes all string values and object keys before canonical key sorting, rejects post-NFC key collisions, preserves array order, and serializes UTF-8 JSON. Historical v1/v2 witness semantics are not redefined.
