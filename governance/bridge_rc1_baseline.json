@@ -23,7 +23,12 @@
     "authoritative_location": "protected main",
     "experiment_branch_may_not_self-authorize_baseline_changes": true,
     "baseline_change_requires_separate_main pull request": true,
-    "ci_pass_is_not_independent_certification": true
+    "ci_pass_is_not_independent_certification": true,
+    "protected_history_process_separation": true,
+    "independent_principal_approval": false,
+    "required_approving_review_count_observed": 0,
+    "third_party_certification": false,
+    "claim_scope": "Protected-main history/process separation; not independent human, organizational, or third-party endorsement."
   },
   "baseline_generation": 1,
   "previous_baseline_blob_sha": null,
@@ -45,8 +50,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 1,
-  "previous_metadata_blob_sha": "78e23777add78ab7afd59f37e1c55661305d4741",
+  "metadata_revision": 2,
+  "previous_metadata_blob_sha": "803ac8392a9c4e495e7ddd05145bd60598a13b4f",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
