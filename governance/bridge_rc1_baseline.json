@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 14,
-  "previous_metadata_blob_sha": "f003eaf696aa5d60f34f878e659b70d0b2abd4d4",
+  "metadata_revision": 15,
+  "previous_metadata_blob_sha": "a9593d1f1fb9b690000201650f91ab9566c6e89d",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -177,12 +177,29 @@
         }
       },
       "status": "historical"
+    },
+    {
+      "witness_generation": 5,
+      "witness_payload_sha256": "c280cd8110b6f23866841873df4ce0dd3ab14050622a404e5e3fc66f8375ca3f",
+      "witnessed_material_state_sha256": "767b163047da3ff4d13d207b98356f8eed41c5ea3051ab40d760da5408f294aa",
+      "projection_version": "bridge-material-v2",
+      "providers": {
+        "google_drive": {
+          "file_id_sha256": "44cac0dad72f64b6a98fd6d4bd3a95de6e141728549d79a123f9af3edda64378",
+          "created_at_observed": "2026-10-03T04:47:49.780Z"
+        },
+        "gmail": {
+          "message_id_sha256": "76e56dd571a4274ea83f92d104a67f7052f00e1158025f817d2554ca2fb3b4e4",
+          "timestamp_observed": "2026-10-03T04:48:16"
+        }
+      },
+      "status": "historical"
     }
   ],
   "external_witness_policy": {
     "scope": "material_state_digest",
-    "projection_version": "bridge-material-v2",
-    "material_state_sha256": "767b163047da3ff4d13d207b98356f8eed41c5ea3051ab40d760da5408f294aa",
+    "projection_version": "bridge-material-v3",
+    "material_state_sha256": "1eaea2d0e7c106c973b78ab7209f33937bad12bbea78fb04303c151458a4ca93",
     "witness_backlink_excluded_from_material_digest": true,
     "witness_index_revision_separate": true,
     "material_change_requires_new_external_witness": true,
@@ -198,26 +215,26 @@
       "degraded_single_surface_does_not_create_multi_principal_independence": true
     }
   },
-  "witness_index_revision": 6,
+  "witness_index_revision": 7,
   "current_external_witness": {
-    "witness_generation": 5,
-    "previous_witness_payload_sha256": "74314ab40ca4af49e9bd8d8fcb004df387c69b16ac6a52087e20678736f9da8b",
-    "witness_payload_sha256": "c280cd8110b6f23866841873df4ce0dd3ab14050622a404e5e3fc66f8375ca3f",
-    "projection_version": "bridge-material-v2",
-    "witnessed_material_state_sha256": "767b163047da3ff4d13d207b98356f8eed41c5ea3051ab40d760da5408f294aa",
-    "observed_github_main_commit": "6f620e9b9ac845dada9d62e1bce6525c5344b018",
+    "witness_generation": 6,
+    "previous_witness_payload_sha256": "c280cd8110b6f23866841873df4ce0dd3ab14050622a404e5e3fc66f8375ca3f",
+    "witness_payload_sha256": "04b5204ceb9a8232924f5bce9d74ab86f85d7cc5a48668fd319e93e70edc7f1b",
+    "projection_version": "bridge-material-v3",
+    "witnessed_material_state_sha256": "1eaea2d0e7c106c973b78ab7209f33937bad12bbea78fb04303c151458a4ca93",
+    "observed_github_main_commit": "681c7087d141c27f8311fcfe0253aeb6dce203e6",
     "providers": {
       "google_drive": {
-        "file_id_sha256": "44cac0dad72f64b6a98fd6d4bd3a95de6e141728549d79a123f9af3edda64378",
-        "created_at_observed": "2026-10-03T04:47:49.780Z"
+        "file_id_sha256": "88b6f4f509b9801feb2b55e74e4876947e8cca7fe2171623ce06c14ab489c814",
+        "created_at_observed": "2026-10-03T04:56:39.911Z"
       },
       "gmail": {
-        "message_id_sha256": "76e56dd571a4274ea83f92d104a67f7052f00e1158025f817d2554ca2fb3b4e4",
-        "timestamp_observed": "2026-10-03T04:48:16"
+        "message_id_sha256": "9d152d2d2fdce00043e6f9811ae8dff7d09bee624b534f57eae68bf2e29ac982",
+        "timestamp_observed": "2026-10-03T04:56:50"
       }
     },
     "trust_domain_note": "Google Drive and Gmail are two service surfaces in one broader Google/account trust domain.",
-    "claim_scope": "Off-GitHub witness of Material Projection v2; not independent third-party certification.",
+    "claim_scope": "Off-GitHub witness of Material Projection v3; not independent third-party certification.",
     "provider_roles": {
       "gmail": "primary timestamp surface",
       "google_drive": "versioned auxiliary copy"
