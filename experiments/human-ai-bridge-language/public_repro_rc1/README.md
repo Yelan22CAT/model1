@@ -77,7 +77,7 @@ The public kit therefore also includes:
 
 Current decision-profile SHA-256:
 
-`7d4a208387828fca13edce21eda492f96707e0503bdbcada2a29eefc1ed08c8c`
+`9631290649bcd4af41cd565074051f0b145771d9ec77b8397091f14861a59a1a`
 
 CI requires Python, Node.js, Ruby, and the declarative oracle to produce identical public-subset results. Mutation tests must kill all one-gate-omission mutants.
 
@@ -152,7 +152,7 @@ The generator reads [CORPUS_PROFILE_RC1.json](CORPUS_PROFILE_RC1.json), which fr
 
 Canonical corpus-profile SHA-256:
 
-`4fb956e92acc20d6f54fee1a6b4805d23402a36e12856a6684d122ec2f275f38`
+`26801a1b17d0ad9291bddd00cdc9d902bf286ab8657b193d12a7a2e274543abc`
 
 This prevents a silent mutation-table or base-state change from being described as "the same generator" merely because the seed and PRNG algorithm are unchanged.
 
