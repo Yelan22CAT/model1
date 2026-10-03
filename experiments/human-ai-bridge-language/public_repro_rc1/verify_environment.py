@@ -1,8 +1,8 @@
 import hashlib, json, platform, subprocess, sys
 from pathlib import Path
 
-EXPECTED_CORPUS="0dcf5bf318fc8e1988a03267c3b35ba9764130a3e5e8104f7ef1593d0ef35fa5"
-EXPECTED_OUTPUT="8a3d911a24fd018ef791314d5bba06d2b0fe85e7f30fb6e2dc117fcc40f1bcab"
+EXPECTED_CORPUS="f9d47a0dd93bc7d8bc5171dab1465fa11cf1d18794d66f8ffc56c4102ac75f04"
+EXPECTED_OUTPUT="6e91757ca0921a94ac4300fcee1918f85d862039354da1b542560536083136bf"
 
 def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
