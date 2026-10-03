@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 13,
-  "previous_metadata_blob_sha": "439157f7fa740672aaf1471703d1757a5cc86051",
+  "metadata_revision": 14,
+  "previous_metadata_blob_sha": "f003eaf696aa5d60f34f878e659b70d0b2abd4d4",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -90,13 +90,13 @@
     "implementation_refactor_allowed_only_after_separate_main_reanchor": true
   },
   "last_anchor_update": {
-    "reason": "Introduce Material Projection v2 with governance claim-scope coverage and unknown-field fail-closed validation",
-    "changed_anchor": "governance/verify_bridge_rc1_projection_v2.py",
+    "reason": "Introduce Material Projection v3 with NFC-normalized canonicalization and post-NFC key-collision rejection",
+    "changed_anchor": "governance/verify_bridge_rc1_projection_v3.py",
     "semantic_generation_changed": false,
     "evidence_revision_changed": true,
     "material_metadata_revision_changed": true
   },
-  "evidence_revision": 3,
+  "evidence_revision": 4,
   "evidence_blob_anchors": {
     "generate_corpus.py": "d3858130eb46ab96a5ad335599ca3477494de399",
     "validator.py": "1f2fe69f9c83b9f14b4b008e77dd695949caf783",
@@ -110,7 +110,8 @@
     "verify_workflow_manifest.py": "9b3b8e7e81a1d63e812da9fea3245024ba56c396",
     "verify_public_docs.py": "2eb3ae46508bad2a2633f6904d6989981840a367",
     "governance/verify_bridge_rc1_projection_derivation.py": "5b0ddc005003d84e406eefb12c0285c84b64c1ef",
-    "governance/verify_bridge_rc1_projection_v2.py": "f3f896d61f223ea9ffa93ed3e56a906729eaf7fa"
+    "governance/verify_bridge_rc1_projection_v2.py": "f3f896d61f223ea9ffa93ed3e56a906729eaf7fa",
+    "governance/verify_bridge_rc1_projection_v3.py": "8b9ca4dc86f8fea969311aed565be3c7468a4033"
   },
   "evidence_policy": {
     "evidence_implementation_identity_is_protected": true,
@@ -223,23 +224,16 @@
     }
   },
   "legacy_metadata_revision": 8,
-  "material_metadata_revision": 8,
+  "material_metadata_revision": 9,
   "material_projection": {
-    "version": "bridge-material-v2",
-    "previous_version": "bridge-material-v1",
-    "canonicalization": "UTF-8 JSON with recursively sorted object keys; arrays preserve order",
-    "claim_scope_fields_added": [
-      "ci_pass_is_not_independent_certification",
-      "independent_principal_approval",
-      "required_approving_review_count_observed",
-      "third_party_certification",
-      "claim_scope"
-    ],
+    "version": "bridge-material-v3",
+    "previous_version": "bridge-material-v2",
+    "canonicalization": "Normalize all string values and object keys to Unicode NFC; reject post-NFC key collisions; recursively sort object keys; arrays preserve order; UTF-8 JSON",
     "unknown_top_level_fields": "fail-closed unless explicitly listed as material or excluded",
     "unknown_governance_fields": "fail-closed unless explicitly listed as material or observational",
     "observational_governance_fields_excluded": [
       "ruleset_updated_at_observed"
     ],
-    "material_state_sha256": "767b163047da3ff4d13d207b98356f8eed41c5ea3051ab40d760da5408f294aa"
+    "material_state_sha256": "1eaea2d0e7c106c973b78ab7209f33937bad12bbea78fb04303c151458a4ca93"
   }
 }
