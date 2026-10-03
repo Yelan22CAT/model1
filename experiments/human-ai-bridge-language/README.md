@@ -1199,3 +1199,27 @@ Not Production Ready
 ```
 
 The v0.56 terminal boundary is normative: total loss of all independent trust anchors enters `EXTERNAL_TRUST_BOOTSTRAP_REQUIRED`; Bridge does not invent a new internal trust root.
+
+---
+
+## Feedback and external review
+
+Feedback is welcome through GitHub so that technical discussion stays attached to the public experiment.
+
+Preferred channels:
+
+- comment on [draft PR #22](https://github.com/Yelan22CAT/model1/pull/22);
+- leave inline review comments on specific changed lines/files;
+- open a GitHub Issue for a reproducible ambiguity, counterexample, security concern, compatibility break, or independent reproduction result.
+
+Please include, when possible:
+
+- the exact file/spec section;
+- a minimal breaking example or counterexample;
+- expected vs observed behavior;
+- runtime/version information for reproduction;
+- whether the issue affects semantics, trust, authorization, planning, execution, recovery, or compatibility.
+
+Breaking examples and independent reproductions are more useful than general praise.
+
+No private email address is required for review; GitHub notifications can deliver repository feedback according to each account's notification settings.
