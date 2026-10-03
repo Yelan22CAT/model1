@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/bridge-0/ir-v0.16.schema.json",
+  "title": "Bridge-0 Canonical IR v0.16",
+  "type": "object",
+  "required": ["language", "version", "statements"],
+  "properties": {
+    "language": {"const": "Bridge-0"},
+    "version": {"const": "0.16"},
+    "source_language": {"type": ["string", "null"]},
+    "labels": {"type": "object"},
+    "statements": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/statement"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "statement": {
+      "oneOf": [
+        {"$ref": "#/$defs/program"},
+        {"$ref": "#/$defs/semantic_compatibility"}
+      ]
+    },
+    "program": {
+      "type": "object",
+      "required": ["id", "kind", "name", "targets"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "program"},
+        "name": {"type": "string"},
+        "targets": {"const": "python312,node20"}
+      },
+      "additionalProperties": false
+    },
+    "semantic_compatibility": {
+      "type": "object",
+      "required": [
+        "id", "kind", "domain", "profiles", "policy", "migration", "observe"
+      ],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "semantic_compatibility"},
+        "domain": {"const": "grapheme"},
+        "profiles": {
+          "const": "grapheme_v1,grapheme_v2,grapheme_v3_breaking"
+        },
+        "policy": {"const": "behavioral_manifest"},
+        "migration": {"const": "explicit"},
+        "observe": {"const": "json_value"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

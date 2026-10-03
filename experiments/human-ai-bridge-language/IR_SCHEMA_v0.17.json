@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/bridge-0/ir-v0.17.schema.json",
+  "title": "Bridge-0 Canonical IR v0.17",
+  "type": "object",
+  "required": ["language", "version", "statements"],
+  "properties": {
+    "language": {"const": "Bridge-0"},
+    "version": {"const": "0.17"},
+    "source_language": {"type": ["string", "null"]},
+    "labels": {"type": "object"},
+    "statements": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/statement"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "statement": {
+      "oneOf": [
+        {"$ref": "#/$defs/program"},
+        {"$ref": "#/$defs/semantic_migration"}
+      ]
+    },
+    "program": {
+      "type": "object",
+      "required": ["id", "kind", "name", "targets"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "program"},
+        "name": {"type": "string"},
+        "targets": {"const": "python312,node20"}
+      },
+      "additionalProperties": false
+    },
+    "semantic_migration": {
+      "type": "object",
+      "required": [
+        "id", "kind", "domain", "artifact", "routes", "loss_policy",
+        "roundtrip", "execution", "observe"
+      ],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "semantic_migration"},
+        "domain": {"const": "grapheme"},
+        "artifact": {"const": "fixture_v1"},
+        "routes": {"const": "v1_to_v2,v1_to_v3_compact"},
+        "loss_policy": {"const": "reject_unacknowledged"},
+        "roundtrip": {"const": "audit"},
+        "execution": {"const": "gate_on_audit"},
+        "observe": {"const": "json_value"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

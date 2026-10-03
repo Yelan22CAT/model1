@@ -1,0 +1,31 @@
+name: 'bridge0_v09_backend_equivalence'
+
+on:
+  push:
+    branches:
+      - 'experiment/human-ai-bridge-v0.1'
+
+permissions:
+  contents: read
+
+jobs:
+  bridge_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bridge task T1 checkout
+        uses: actions/checkout@v4
+      - name: Bridge task T2 setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Bridge task T3 python module
+        working-directory: 'experiments/human-ai-bridge-language/prototype'
+        run: python -m bridge_probe_v0_9 > .bridge-github-T3.stdout
+      - name: Bridge local backend
+        working-directory: experiments/human-ai-bridge-language/prototype
+        run: python local_runner_v0_9.py ../executable_v0.9.bridge
+      - name: Compare backend observable T3
+        working-directory: 'experiments/human-ai-bridge-language/prototype'
+        run: python compare_observables_v0_9.py .bridge-github-T3.stdout .bridge-local-T3.stdout
+
+# Generated from Bridge-0 v0.9. Do not hand-edit this artifact.

@@ -1,0 +1,69 @@
+name: bridge0_v013_float_constitution
+
+on:
+  push:
+    branches:
+      - experiment/human-ai-bridge-v0.1
+
+permissions:
+  contents: read
+
+jobs:
+  python_backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run binary64 Python backend
+        run: python experiments/human-ai-bridge-language/generated/generated_v0_13.py > bridge-v013-python.json
+      - name: Upload Python observable
+        uses: actions/upload-artifact@v4
+        with:
+          name: bridge-v013-python
+          path: bridge-v013-python.json
+          if-no-files-found: error
+
+  node_backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run binary64 Node backend
+        run: node experiments/human-ai-bridge-language/generated/generated_v0_13.mjs > bridge-v013-node.json
+      - name: Upload Node observable
+        uses: actions/upload-artifact@v4
+        with:
+          name: bridge-v013-node
+          path: bridge-v013-node.json
+          if-no-files-found: error
+
+  compare_backends:
+    needs: [python_backend, node_backend]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download Python observable
+        uses: actions/download-artifact@v4
+        with:
+          name: bridge-v013-python
+          path: artifacts/python
+      - name: Download Node observable
+        uses: actions/download-artifact@v4
+        with:
+          name: bridge-v013-node
+          path: artifacts/node
+      - name: Compare binary64 semantic observable
+        run: python experiments/human-ai-bridge-language/prototype/compare_typed_observables_v0_10.py artifacts/python/bridge-v013-python.json artifacts/node/bridge-v013-node.json

@@ -1,0 +1,224 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/bridge-0/ir-v0.3.schema.json",
+  "title": "Bridge-0 Canonical IR v0.3",
+  "type": "object",
+  "required": ["language", "version", "statements"],
+  "properties": {
+    "language": {"const": "Bridge-0"},
+    "version": {"const": "0.3"},
+    "source_language": {"type": ["string", "null"]},
+    "labels": {"type": "object"},
+    "statements": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/statement"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "ref": {
+      "type": "object",
+      "required": ["ref"],
+      "properties": {"ref": {"type": "string", "minLength": 1}},
+      "additionalProperties": false
+    },
+    "statement": {
+      "oneOf": [
+        {"$ref": "#/$defs/entity"},
+        {"$ref": "#/$defs/claim"},
+        {"$ref": "#/$defs/unknown"},
+        {"$ref": "#/$defs/evidence"},
+        {"$ref": "#/$defs/guard"},
+        {"$ref": "#/$defs/goal"},
+        {"$ref": "#/$defs/action"},
+        {"$ref": "#/$defs/verification"},
+        {"$ref": "#/$defs/prohibition"},
+        {"$ref": "#/$defs/time_binding"},
+        {"$ref": "#/$defs/permission"},
+        {"$ref": "#/$defs/handoff"},
+        {"$ref": "#/$defs/state_transition"},
+        {"$ref": "#/$defs/provenance"}
+      ]
+    },
+    "entity": {
+      "type": "object",
+      "required": ["id", "kind", "name"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "entity"},
+        "name": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "claim": {
+      "type": "object",
+      "required": ["id", "kind", "epistemic_state"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "claim"},
+        "epistemic_state": {"enum": ["fact", "hypothesis"]},
+        "path": {"type": "string"},
+        "operator": {"type": "string"},
+        "value": {},
+        "unit": {"type": ["string", "null"]},
+        "subject": {},
+        "predicate": {"type": "string"},
+        "object": {},
+        "relation_class": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "unknown": {
+      "type": "object",
+      "required": ["id", "kind", "path"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "unknown"},
+        "path": {"type": "string"}
+      },
+      "not": {"required": ["value"]},
+      "additionalProperties": true
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["id", "kind", "source", "relation", "target"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "evidence"},
+        "source": {"type": "string"},
+        "relation": {"enum": ["supports", "opposes", "derived_from"]},
+        "relation_class": {"const": "evidential"},
+        "target": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "guard": {
+      "type": "object",
+      "required": ["id", "kind", "action", "relation", "condition"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "guard"},
+        "action": {"type": "string"},
+        "relation": {"enum": ["requires", "allows", "forbids"]},
+        "condition": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "goal": {
+      "type": "object",
+      "required": ["id", "kind", "expression"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "goal"},
+        "expression": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "action": {
+      "type": "object",
+      "required": ["id", "kind", "actor", "action"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "action"},
+        "actor": {"type": "string"},
+        "action": {"type": "string"},
+        "object": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "verification": {
+      "type": "object",
+      "required": ["id", "kind", "target", "method"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "verification"},
+        "target": {"type": "string"},
+        "method": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "prohibition": {
+      "type": "object",
+      "required": ["id", "kind", "expression"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "prohibition"},
+        "expression": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "time_binding": {
+      "type": "object",
+      "required": ["id", "kind", "path", "timestamp"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "time_binding"},
+        "path": {"type": "string"},
+        "timestamp": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": true
+    },
+    "permission": {
+      "type": "object",
+      "required": ["id", "kind", "actor", "action", "resource", "scope"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "permission"},
+        "actor": {"type": "string"},
+        "action": {"type": "string"},
+        "resource": {"type": "string"},
+        "scope": {"type": "string"},
+        "condition": {"type": "string"},
+        "valid_from": {"type": "string", "format": "date-time"},
+        "valid_until": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": false
+    },
+    "handoff": {
+      "type": "object",
+      "required": ["id", "kind", "from", "to", "artifact", "scope", "state", "provenance"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "handoff"},
+        "from": {"type": "string"},
+        "to": {"type": "string"},
+        "artifact": {"$ref": "#/$defs/ref"},
+        "scope": {"type": "string"},
+        "state": {"const": "preserve"},
+        "provenance": {"const": "preserve"},
+        "transform": {"type": "string"},
+        "time": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": false
+    },
+    "state_transition": {
+      "type": "object",
+      "required": ["id", "kind", "subject", "from", "to", "irreversible"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "state_transition"},
+        "subject": {"type": "string"},
+        "from": {},
+        "to": {},
+        "irreversible": {"type": "boolean"},
+        "when": {"$ref": "#/$defs/ref"},
+        "authority": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["id", "kind", "artifact", "parent", "actor", "transform"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "provenance"},
+        "artifact": {"$ref": "#/$defs/ref"},
+        "parent": {"$ref": "#/$defs/ref"},
+        "actor": {"type": "string"},
+        "transform": {"type": "string"},
+        "time": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

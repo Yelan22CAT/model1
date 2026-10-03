@@ -1,0 +1,102 @@
+name: Bridge RC1 Public Reproduction
+
+on:
+  push:
+    branches:
+      - experiment/human-ai-bridge-v0.1
+    paths:
+      - 'experiments/human-ai-bridge-language/public_repro_rc1/**'
+      - 'experiments/human-ai-bridge-language/SPEC_v1.0-rc1.md'
+      - 'experiments/human-ai-bridge-language/COMPATIBILITY_v1.0-rc1.md'
+      - 'experiments/human-ai-bridge-language/INVARIANTS_RC1.json'
+      - 'experiments/human-ai-bridge-language/RC_QUALIFICATION_v1.0-rc1.md'
+      - '.github/workflows/bridge_rc1_public_repro.yml'
+  pull_request:
+    paths:
+      - 'experiments/human-ai-bridge-language/public_repro_rc1/**'
+      - 'experiments/human-ai-bridge-language/SPEC_v1.0-rc1.md'
+      - 'experiments/human-ai-bridge-language/COMPATIBILITY_v1.0-rc1.md'
+      - 'experiments/human-ai-bridge-language/INVARIANTS_RC1.json'
+      - 'experiments/human-ai-bridge-language/RC_QUALIFICATION_v1.0-rc1.md'
+      - '.github/workflows/bridge_rc1_public_repro.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.13.5'
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22.16.0'
+
+      - uses: ruby/setup-ruby@14594264cd68ce8a2345dd349bc3d138a4ef85c8 # v1 branch observed 2026-09-25
+        with:
+          ruby-version: '3.3.8'
+
+      - name: Verify public documentation anchors
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 verify_public_docs.py
+
+      - name: Verify workflow pins against environment manifest
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 verify_workflow_manifest.py
+
+      - name: Verify canonical corpus-profile digest
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 verify_corpus_profile.py
+
+      - name: Generate deterministic public corpus
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 generate_corpus.py corpus.json
+
+      - name: Run Python validator
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 validator.py corpus.json > python.out
+
+      - name: Run Node validator
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: node validator.js corpus.json > node.out
+
+      - name: Run Ruby validator
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: ruby validator.rb corpus.json > ruby.out
+
+      - name: Verify canonical decision-profile digest
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 verify_profile_digest.py
+
+      - name: Run declarative oracle
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 oracle.py DECISION_PROFILE_RC1.json corpus.json > oracle.out
+
+      - name: Mutation-test public decision gates
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 mutation_test.py
+
+      - name: Compare outputs
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: |
+          test "$(sha256sum python.out | cut -d' ' -f1)" = "6e91757ca0921a94ac4300fcee1918f85d862039354da1b542560536083136bf"
+          cmp python.out node.out
+          cmp python.out ruby.out
+          cmp python.out oracle.out
+
+      - name: Verify verdict-only digest
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: |
+          cut -d'|' -f1-2 python.out > verdict.out
+          test "$(sha256sum verdict.out | cut -d' ' -f1)" = "be6cb05ecb2ca40f7b3fbc7b8421ce76141a0b6ad628ed90bd5415e197f52569"
+
+      - name: Verify semantic anchors and record environment
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 verify_environment.py

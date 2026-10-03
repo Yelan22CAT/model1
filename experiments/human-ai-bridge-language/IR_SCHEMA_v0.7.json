@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/bridge-0/ir-v0.7.schema.json",
+  "title": "Bridge-0 Canonical IR v0.7",
+  "type": "object",
+  "required": ["language", "version", "statements"],
+  "properties": {
+    "language": {"const": "Bridge-0"},
+    "version": {"const": "0.7"},
+    "source_language": {"type": ["string", "null"]},
+    "labels": {"type": "object"},
+    "statements": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/statement"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "ref": {
+      "type": "object",
+      "required": ["ref"],
+      "properties": {"ref": {"type": "string", "minLength": 1}},
+      "additionalProperties": false
+    },
+    "statement": {
+      "oneOf": [
+        {"$ref": "#/$defs/identity"},
+        {"$ref": "#/$defs/attestation"},
+        {"$ref": "#/$defs/attestation_revocation"},
+        {"$ref": "#/$defs/evidence_provenance"},
+        {"type": "object", "required": ["id", "kind"], "additionalProperties": true}
+      ]
+    },
+    "identity": {
+      "type": "object",
+      "required": [
+        "id", "kind", "subject", "control_domain",
+        "model_lineage", "runtime_origin"
+      ],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "identity"},
+        "subject": {"type": "string"},
+        "control_domain": {"type": "string"},
+        "model_lineage": {"type": "string"},
+        "runtime_origin": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "attestation": {
+      "type": "object",
+      "required": [
+        "id", "kind", "identity", "issuer", "status",
+        "valid_from", "valid_until"
+      ],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "identity_attestation"},
+        "identity": {"$ref": "#/$defs/ref"},
+        "issuer": {"type": "string"},
+        "status": {"const": "valid"},
+        "valid_from": {"type": "string", "format": "date-time"},
+        "valid_until": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": false
+    },
+    "attestation_revocation": {
+      "type": "object",
+      "required": ["id", "kind", "target", "by", "at"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "attestation_revocation"},
+        "target": {"$ref": "#/$defs/ref"},
+        "by": {"type": "string"},
+        "at": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": false
+    },
+    "evidence_provenance": {
+      "type": "object",
+      "required": [
+        "id", "kind", "evidence_hash", "source_identity",
+        "attestation", "origin", "parent", "at"
+      ],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "evidence_provenance"},
+        "evidence_hash": {"type": "string"},
+        "source_identity": {"$ref": "#/$defs/ref"},
+        "attestation": {"$ref": "#/$defs/ref"},
+        "origin": {"type": "string"},
+        "parent": {
+          "oneOf": [
+            {"const": "none"},
+            {"$ref": "#/$defs/ref"}
+          ]
+        },
+        "at": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": false
+    }
+  }
+}
