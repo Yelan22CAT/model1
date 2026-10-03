@@ -10,7 +10,7 @@
     "semantic_generation": 1,
     "material_metadata_revision": 15,
     "evidence_revision": 10,
-    "verification_execution_profile_blob_sha": "6eba88723e42deb1ae2271bdffadccd49071256e",
+    "verification_execution_profile_blob_sha": "3f78fe673f6ecf8e27117aa5bb2aa9f630d3ef05",
     "semantic_anchors": {
       "public_corpus_sha256": "f9d47a0dd93bc7d8bc5171dab1465fa11cf1d18794d66f8ffc56c4102ac75f04",
       "diagnostic_output_sha256": "6e91757ca0921a94ac4300fcee1918f85d862039354da1b542560536083136bf",
@@ -102,7 +102,7 @@
       "governance/verify_bridge_rc1_projection_v6.py": "144145e8623f4e529da17a5a84e2d0a4d0b3db14",
       "governance/verify_bridge_rc1_projection_v7.py": "aeac183f46d43de60b7ba43d36be299349dda279",
       "governance/verify_bridge_rc1_projection_v8.py": "a4cfdf7761ab6d113e437004a06dee37bdce6902",
-      "governance/bridge_rc1_verification_execution_profile.json": "6eba88723e42deb1ae2271bdffadccd49071256e",
+      "governance/bridge_rc1_verification_execution_profile.json": "3f78fe673f6ecf8e27117aa5bb2aa9f630d3ef05",
       "governance/verify_bridge_rc1_execution_profile.py": "185d6e1e7c67d24d7e2e4059cdcf5d6d8fb1bcd9",
       "governance/verify_bridge_rc1_projection_v9.py": "7319cbd88187d932fce29f31a516fbf9f974bf94",
       ".github/workflows/bridge_rc1_governance_verify.yml": "b8e500f0c671fc1d2fa6d04061c802844ae7ccbf"
@@ -114,5 +114,5 @@
       "hardcoded_or_self_modified_verifier_cannot_self_authorize_new_evidence_identity": true
     }
   },
-  "material_state_sha256": "c5bc0dc1a832d9d11578e5989f0d593ddc1167410909dc58937149184aab5bd2"
+  "material_state_sha256": "6dea299763b7f094d10b53f73a9581a15f08ceac1e7de41db1be965837da47f1"
 }
