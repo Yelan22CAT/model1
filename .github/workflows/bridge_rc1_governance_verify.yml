@@ -11,6 +11,12 @@ on:
     paths:
       - 'governance/**'
       - '.github/workflows/bridge_rc1_governance_verify.yml'
+      - 'experiments/human-ai-bridge-language/SPEC_v1.0-rc1.md'
+      - 'experiments/human-ai-bridge-language/COMPATIBILITY_v1.0-rc1.md'
+      - 'experiments/human-ai-bridge-language/INVARIANTS_RC1.json'
+      - 'experiments/human-ai-bridge-language/RC_QUALIFICATION_v1.0-rc1.md'
+      - 'experiments/human-ai-bridge-language/public_repro_rc1/**'
+      - '.github/workflows/bridge_rc1_public_repro.yml'
 
 permissions:
   contents: read
@@ -28,7 +34,7 @@ jobs:
           python-version: '3.13.5'
 
       - name: Verify current material projection
-        run: python3 governance/verify_bridge_rc1_projection_v10.py
+        run: python3 governance/verify_bridge_rc1_projection_v11.py
 
       - name: Verify evidence execution profile
         env:
