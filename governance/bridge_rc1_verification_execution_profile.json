@@ -38,7 +38,9 @@
     "workflow_ref": "main",
     "required_evidence": [
       "governance/verify_bridge_rc1_projection_v9.py",
-      "governance/verify_bridge_rc1_execution_profile.py"
+      "governance/verify_bridge_rc1_execution_profile.py",
+      "governance/bridge_rc1_verification_execution_profile.json",
+      ".github/workflows/bridge_rc1_governance_verify.yml"
     ],
     "required_commands": [
       "python3 governance/verify_bridge_rc1_projection_v9.py",
