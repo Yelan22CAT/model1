@@ -52,3 +52,7 @@ jobs:
           test "$(sha256sum python.out | cut -d' ' -f1)" = "8a3d911a24fd018ef791314d5bba06d2b0fe85e7f30fb6e2dc117fcc40f1bcab"
           cmp python.out node.out
           cmp python.out ruby.out
+
+      - name: Verify semantic anchors and record environment
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 verify_environment.py
