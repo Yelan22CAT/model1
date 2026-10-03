@@ -1,0 +1,35 @@
+{
+  "name": "Bridge-0 RC1 Public State Schema",
+  "max_safe_integer": 9007199254740991,
+  "item_required_fields": [
+    "id",
+    "state"
+  ],
+  "state_required_fields": {
+    "transport_valid": "boolean",
+    "canonical_valid": "boolean",
+    "schema_supported": "boolean",
+    "spec_generation": "string",
+    "signature_valid": "boolean",
+    "trust_anchor_current": "boolean",
+    "claim_state": "string",
+    "independent_clusters": "nonnegative_safe_integer_value",
+    "required_independent_clusters": "nonnegative_safe_integer_value",
+    "confidence_status": "string",
+    "risk_policy_current": "boolean",
+    "decision": "string",
+    "review_current": "boolean",
+    "authorization_current": "boolean",
+    "assurance_context_match": "boolean",
+    "dependency_graph_match": "boolean",
+    "plan_valid": "boolean",
+    "runtime_attested": "boolean",
+    "broker_behavior_conformant": "boolean",
+    "effect_surface_mediated": "boolean",
+    "replay_fresh": "boolean",
+    "restore_generation_coherent": "boolean",
+    "trust_terminal_state": "string"
+  },
+  "additional_item_fields_allowed": false,
+  "additional_state_fields_allowed": false
+}

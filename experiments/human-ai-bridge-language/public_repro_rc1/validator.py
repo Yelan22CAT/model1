@@ -1,4 +1,19 @@
 import json,sys
+from pathlib import Path
+SCHEMA=json.loads(Path(__file__).with_name('STATE_SCHEMA_RC1.json').read_text())
+REQ=set(SCHEMA['state_required_fields']); ITEM_REQ=set(SCHEMA['item_required_fields']); MAX=SCHEMA['max_safe_integer']
+def t_ok(v,t):
+ if t=='boolean': return type(v) is bool
+ if t=='string': return type(v) is str
+ if t=='nonnegative_safe_integer_value':
+  return type(v) in (int,float) and v==v and v not in (float('inf'),float('-inf')) and float(v).is_integer() and 0<=v<=MAX
+ return False
+def shape_ok(x):
+ if type(x) is not dict or set(x)!=ITEM_REQ: return False
+ if type(x['id']) is not int or not (0<=x['id']<=MAX): return False
+ s=x['state']
+ if type(s) is not dict or set(s)!=REQ: return False
+ return all(t_ok(s[k],t) for k,t in SCHEMA['state_required_fields'].items())
 def val(s):
  if not s['transport_valid']: return False,'transport'
  if not s['canonical_valid']: return False,'canonical'
@@ -23,6 +38,10 @@ def val(s):
  if not s['restore_generation_coherent']: return False,'restore'
  if s['trust_terminal_state']!='NORMAL': return False,'trust-terminal'
  return True,'ok'
-for x in json.load(open(sys.argv[1])):
- ok,reason=val(x['state'])
- print(f"{x['id']}|{1 if ok else 0}|{reason}")
+rows=json.load(open(sys.argv[1]))
+if type(rows) is not list: raise SystemExit(2)
+for x in rows:
+ if not shape_ok(x):
+  ident=x.get('id','?') if type(x) is dict else '?'
+  print(f'{ident}|0|schema'); continue
+ ok,reason=val(x['state']); print(f"{x['id']}|{1 if ok else 0}|{reason}")

@@ -71,6 +71,10 @@ jobs:
         working-directory: experiments/human-ai-bridge-language/public_repro_rc1
         run: ruby validator.rb corpus.json > ruby.out
 
+      - name: Run strict state-schema adversarial regression
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 schema_adversarial_test.py
+
       - name: Verify canonical decision-profile digest
         working-directory: experiments/human-ai-bridge-language/public_repro_rc1
         run: python3 verify_profile_digest.py
