@@ -149,9 +149,18 @@
     "witness_index_revision_separate": true,
     "material_change_requires_new_external_witness": true,
     "witness_metadata_change_does_not_require_new_external_witness": true,
-    "stale_witness_state": "EXTERNAL_WITNESS_REFRESH_REQUIRED"
+    "stale_witness_state": "EXTERNAL_WITNESS_REFRESH_REQUIRED",
+    "provider_semantics": {
+      "google_drive": "versioned mutable auxiliary surface",
+      "gmail": "sent-message primary timestamp surface; deletion possible but no in-place content edit in the current connector model",
+      "broader_trust_domain": "Google/account",
+      "independent_principal_count": 1,
+      "conflict_state": "WITNESS_SURFACE_CONFLICT",
+      "degraded_single_surface_allowed": true,
+      "degraded_single_surface_does_not_create_multi_principal_independence": true
+    }
   },
-  "witness_index_revision": 3,
+  "witness_index_revision": 4,
   "current_external_witness": {
     "witness_generation": 3,
     "previous_witness_payload_sha256": "b4dd87e99634d94ff587ca82b253032b64a83de49a07d60f526121fe2746cb2a",
@@ -170,7 +179,11 @@
       }
     },
     "trust_domain_note": "Google Drive and Gmail are two service surfaces in one broader Google/account trust domain.",
-    "claim_scope": "Off-GitHub witness of Material Projection v1; not independent third-party certification."
+    "claim_scope": "Off-GitHub witness of Material Projection v1; not independent third-party certification.",
+    "provider_roles": {
+      "gmail": "primary timestamp surface",
+      "google_drive": "versioned auxiliary copy"
+    }
   },
   "legacy_metadata_revision": 8,
   "material_metadata_revision": 6,
