@@ -30,6 +30,10 @@ jobs:
         with:
           ruby-version: '3.3.8'
 
+      - name: Verify canonical corpus-profile digest
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 verify_corpus_profile.py
+
       - name: Generate deterministic public corpus
         working-directory: experiments/human-ai-bridge-language/public_repro_rc1
         run: python3 generate_corpus.py corpus.json
