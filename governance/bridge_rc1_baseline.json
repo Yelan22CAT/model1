@@ -1,6 +1,6 @@
 {
   "name": "Bridge-0 RC1 Protected Baseline Candidate",
-  "status": "Candidate baseline anchor; becomes authoritative only after merge to protected main",
+  "status": "Authoritative protected-main baseline",
   "rc": "v1.0-rc1",
   "semantic_anchors": {
     "public_corpus_sha256": "f9d47a0dd93bc7d8bc5171dab1465fa11cf1d18794d66f8ffc56c4102ac75f04",
@@ -23,6 +23,8 @@
     "authoritative_location": "protected main",
     "experiment_branch_may_not_self-authorize_baseline_changes": true,
     "baseline_change_requires_separate_main pull request": true,
-    "ci_pass_is_not_independent_certification": true
+    "ci_pass_is_not_independent_certification": true,
+    "baseline_check_workflow": "Bridge RC1 Protected Baseline Check",
+    "untrusted_pr_code_executed_by_baseline_check": false
   }
 }
