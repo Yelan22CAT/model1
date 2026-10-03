@@ -1,0 +1,112 @@
+{
+  "projection": {
+    "projection_version": "bridge-material-v8",
+    "text_profile": "printable-ascii-v1",
+    "number_profile": "safe-integer-v1",
+    "parser_profile": "duplicate-key-reject-v1",
+    "schema_profile": "typed-governance-v1",
+    "rc": "v1.0-rc1",
+    "baseline_generation": 1,
+    "semantic_generation": 1,
+    "material_metadata_revision": 14,
+    "evidence_revision": 9,
+    "semantic_anchors": {
+      "public_corpus_sha256": "f9d47a0dd93bc7d8bc5171dab1465fa11cf1d18794d66f8ffc56c4102ac75f04",
+      "diagnostic_output_sha256": "6e91757ca0921a94ac4300fcee1918f85d862039354da1b542560536083136bf",
+      "verdict_output_sha256": "be6cb05ecb2ca40f7b3fbc7b8421ce76141a0b6ad628ed90bd5415e197f52569",
+      "decision_profile_canonical_sha256": "9631290649bcd4af41cd565074051f0b145771d9ec77b8397091f14861a59a1a",
+      "corpus_profile_canonical_sha256": "26801a1b17d0ad9291bddd00cdc9d902bf286ab8657b193d12a7a2e274543abc",
+      "invariant_registry_digest": "aa1cfd6c0b4903bbadec015b69b1124667b5ea78a4da8ec672f67fd8c483a292"
+    },
+    "git_blob_anchors": {
+      "SPEC_v1.0-rc1.md": "b351695d5b7c9435b8dc8e619d5b912ef5a763b0",
+      "COMPATIBILITY_v1.0-rc1.md": "ba23756a60d5a60ca5801106487c3019cd4797a5",
+      "INVARIANTS_RC1.json": "26a13d69e1a89c812d3cd6b0433957c7efb9a664",
+      "DECISION_PROFILE_RC1.json": "f3175ae4e0baef34f361d92bde91ff202177e4b8",
+      "CORPUS_PROFILE_RC1.json": "e8ca855183eb37f7994b6d34c0c9102436f7a285",
+      "ENVIRONMENT_MANIFEST.json": "6a4d9d5b87afeab7a40eaa4d5c77c97762456a7b",
+      "bridge_rc1_public_repro.yml": "07e558eec4b127d1f113c5384bd63622ee7c1a74"
+    },
+    "governance": {
+      "authoritative_location": "protected main",
+      "baseline_change_requires_separate_main_pull_request": true,
+      "ci_pass_is_not_independent_certification": true,
+      "claim_scope": "Protected-main history/process separation; not independent human, organizational, or third-party endorsement.",
+      "independent_principal_approval": false,
+      "protected_history_process_separation": true,
+      "required_approving_review_count_observed": 0,
+      "required_ruleset_properties": {
+        "enforcement": "active",
+        "deletion_rule_required": true,
+        "non_fast_forward_rule_required": true,
+        "pull_request_rule_required": true,
+        "required_approving_review_count_observed": 0,
+        "no_bypass_actors_observed": true
+      },
+      "ruleset_currentness_required": true,
+      "ruleset_id": 17630488,
+      "ruleset_name": "Protect main",
+      "third_party_certification": false
+    },
+    "lineage_policy": {
+      "generation_must_increase_monotonically": true,
+      "predecessor_digest_required_after_generation_1": true,
+      "silent_rewrite_forbidden": true,
+      "rollback_to_older_generation_forbidden": true,
+      "currentness_derived_from_protected_main_head": true
+    },
+    "currentness_policy": {
+      "canonical_baseline_is_file_at_current_protected_main_head": true,
+      "effective_commit_is_derived_from_current_main_head": true,
+      "historical_main_commits_are_not_current": true,
+      "unmerged_branches_are_not_current": true,
+      "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
+    },
+    "anchor_scope": {
+      "protected_exact_blob_anchors": [
+        "SPEC_v1.0-rc1.md",
+        "COMPATIBILITY_v1.0-rc1.md",
+        "INVARIANTS_RC1.json",
+        "DECISION_PROFILE_RC1.json",
+        "CORPUS_PROFILE_RC1.json",
+        "ENVIRONMENT_MANIFEST.json",
+        "bridge_rc1_public_repro.yml"
+      ],
+      "implementation_files_not_exactly_frozen": [],
+      "implementation_refactor_allowed_only_if_anchored_semantic_digests_remain_unchanged": true,
+      "implementation_change_that_changes_corpus_or_output_digest_requires_revalidation": true,
+      "readme_is_informative_not_normative": true,
+      "unanchored_implementation_identity_is_not_part_of_the_protected_baseline_claim": true,
+      "evidence_implementation_exactly_anchored": true,
+      "implementation_refactor_allowed_only_after_separate_main_reanchor": true
+    },
+    "evidence_blob_anchors": {
+      "generate_corpus.py": "d3858130eb46ab96a5ad335599ca3477494de399",
+      "validator.py": "1f2fe69f9c83b9f14b4b008e77dd695949caf783",
+      "validator.js": "a3a33b69a4faafc0e9e54fbe37843e26d5e6475a",
+      "validator.rb": "0abb88e855ec9fc946373238f73377b2779d2235",
+      "oracle.py": "3db4bcfaad89b6d84088bcf4c3573653caa9761e",
+      "mutation_test.py": "466aa0392764160d684e33ebf530e7eadfc18778",
+      "verify_corpus_profile.py": "5a00150ff422f5b195a6656af2fe05351fc2ba20",
+      "verify_environment.py": "829a50af413667503d7247a9efbcc8017ca21f55",
+      "verify_profile_digest.py": "e37c17b3713e74aae3c21ca3fe0ea324c8b8d92f",
+      "verify_workflow_manifest.py": "9b3b8e7e81a1d63e812da9fea3245024ba56c396",
+      "verify_public_docs.py": "2eb3ae46508bad2a2633f6904d6989981840a367",
+      "governance/verify_bridge_rc1_projection_derivation.py": "5b0ddc005003d84e406eefb12c0285c84b64c1ef",
+      "governance/verify_bridge_rc1_projection_v2.py": "f3f896d61f223ea9ffa93ed3e56a906729eaf7fa",
+      "governance/verify_bridge_rc1_projection_v3.py": "8b9ca4dc86f8fea969311aed565be3c7468a4033",
+      "governance/verify_bridge_rc1_projection_v4.py": "1606d2006aaa26151bc17bd5a87ea7a49969d1c3",
+      "governance/verify_bridge_rc1_projection_v5.py": "9adf8095f2e3bcda33222632d02df71459e12848",
+      "governance/verify_bridge_rc1_projection_v6.py": "144145e8623f4e529da17a5a84e2d0a4d0b3db14",
+      "governance/verify_bridge_rc1_projection_v7.py": "aeac183f46d43de60b7ba43d36be299349dda279",
+      "governance/verify_bridge_rc1_projection_v8.py": "a4cfdf7761ab6d113e437004a06dee37bdce6902"
+    },
+    "evidence_policy": {
+      "evidence_implementation_identity_is_protected": true,
+      "evidence_refactor_requires_separate_main_reanchor": true,
+      "evidence_refactor_does_not_require_semantic_generation_change_when_all_semantic_digests_remain_unchanged": true,
+      "hardcoded_or_self_modified_verifier_cannot_self_authorize_new_evidence_identity": true
+    }
+  },
+  "material_state_sha256": "6444b9e7a7bd423a497ef0e73e59749165df109008c8414fdfa62a5c9e99036f"
+}
