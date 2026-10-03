@@ -4,16 +4,18 @@
   "semantic_anchor": {
     "seed": 20261002,
     "cases": 256,
-    "corpus_sha256": "0dcf5bf318fc8e1988a03267c3b35ba9764130a3e5e8104f7ef1593d0ef35fa5",
-    "output_sha256": "8a3d911a24fd018ef791314d5bba06d2b0fe85e7f30fb6e2dc117fcc40f1bcab",
+    "corpus_sha256": "f9d47a0dd93bc7d8bc5171dab1465fa11cf1d18794d66f8ffc56c4102ac75f04",
+    "output_sha256": "6e91757ca0921a94ac4300fcee1918f85d862039354da1b542560536083136bf",
     "decision_profile_canonical_sha256": "9631290649bcd4af41cd565074051f0b145771d9ec77b8397091f14861a59a1a",
     "decision_profile_digest_semantics": "canonical JSON: UTF-8, sorted keys, separators=(',',':'), parsed semantic object",
-    "verdict_output_sha256": "2a5d53488d65973c46f9d0415c042a0a56c221f50b5a085755b38c5d9a5223ca",
-    "diagnostic_output_sha256": "8a3d911a24fd018ef791314d5bba06d2b0fe85e7f30fb6e2dc117fcc40f1bcab",
+    "verdict_output_sha256": "be6cb05ecb2ca40f7b3fbc7b8421ce76141a0b6ad628ed90bd5415e197f52569",
+    "diagnostic_output_sha256": "6e91757ca0921a94ac4300fcee1918f85d862039354da1b542560536083136bf",
     "output_digest_semantics": {
       "verdict": "id|0_or_1, one line per case",
       "diagnostic": "id|0_or_1|first_failure_reason, one line per case"
-    }
+    },
+    "generator_algorithm": "SHA-256 counter PRNG v1",
+    "generator_algorithm_spec": "u64_i = first 8 bytes of SHA256(UTF8(seed + ':' + counter)); below(n)=u64_i mod n; fixed thresholds and pop-without-replacement mutation selection"
   },
   "reference_observed_environment": {
     "python": "3.13.5",
