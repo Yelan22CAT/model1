@@ -1170,3 +1170,32 @@ Experimental / v0.x / Not Production Ready
 ```
 
 The next phase is convergence testing rather than declaring v1.0 by version count alone.
+
+---
+
+## v1.0-rc1 candidate
+
+Bridge-0 has entered release-candidate qualification after the v0.20–v0.65 adversarial assurance campaign.
+
+Qualification evidence:
+
+- five consecutive orthogonal convergence passes with no new structural SPEC revision;
+- v0.66 cumulative assurance regression;
+- v0.67 exact Python/Node/Ruby RC-corpus reproduction;
+- v0.68 specification/compatibility freeze audit.
+
+Public RC documents:
+
+- [Specification v1.0-rc1 Candidate](SPEC_v1.0-rc1.md)
+- [Compatibility Contract v1.0-rc1 Candidate](COMPATIBILITY_v1.0-rc1.md)
+- [RC Qualification v1.0-rc1](RC_QUALIFICATION_v1.0-rc1.md)
+
+Current status remains:
+
+```text
+v1.0-rc1 Candidate
+Experimental
+Not Production Ready
+```
+
+The v0.56 terminal boundary is normative: total loss of all independent trust anchors enters `EXTERNAL_TRUST_BOOTSTRAP_REQUIRED`; Bridge does not invent a new internal trust root.
