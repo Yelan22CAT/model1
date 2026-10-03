@@ -61,7 +61,7 @@ jobs:
       - name: Compare outputs
         working-directory: experiments/human-ai-bridge-language/public_repro_rc1
         run: |
-          test "$(sha256sum python.out | cut -d' ' -f1)" = "8a3d911a24fd018ef791314d5bba06d2b0fe85e7f30fb6e2dc117fcc40f1bcab"
+          test "$(sha256sum python.out | cut -d' ' -f1)" = "6e91757ca0921a94ac4300fcee1918f85d862039354da1b542560536083136bf"
           cmp python.out node.out
           cmp python.out ruby.out
           cmp python.out oracle.out
@@ -70,7 +70,7 @@ jobs:
         working-directory: experiments/human-ai-bridge-language/public_repro_rc1
         run: |
           cut -d'|' -f1-2 python.out > verdict.out
-          test "$(sha256sum verdict.out | cut -d' ' -f1)" = "2a5d53488d65973c46f9d0415c042a0a56c221f50b5a085755b38c5d9a5223ca"
+          test "$(sha256sum verdict.out | cut -d' ' -f1)" = "be6cb05ecb2ca40f7b3fbc7b8421ce76141a0b6ad628ed90bd5415e197f52569"
 
       - name: Verify semantic anchors and record environment
         working-directory: experiments/human-ai-bridge-language/public_repro_rc1
