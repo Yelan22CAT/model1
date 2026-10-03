@@ -54,3 +54,15 @@ registry digest: aa1cfd6c0b4903bbadec015b69b1124667b5ea78a4da8ec672f67fd8c483a29
 ## Important boundary
 
 These are corpus and model verification results, not a universal security proof. The candidate remains Experimental / Not Production Ready.
+
+## Public reproduction kit
+
+A bounded public-safe deterministic reproduction kit is available at:
+
+- [public_repro_rc1](public_repro_rc1/README.md)
+
+It uses a fixed seed and 256 public-safe cases across Python, Node.js, and Ruby, with expected output digest:
+
+`8a3d911a24fd018ef791314d5bba06d2b0fe85e7f30fb6e2dc117fcc40f1bcab`
+
+The public kit is intentionally smaller than the private/internal 20,000-case qualification corpus. It exists so external reviewers can independently rerun representative RC semantics without publishing sensitive attack fixtures or private thresholds.
