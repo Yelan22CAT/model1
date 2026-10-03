@@ -157,3 +157,20 @@ Canonical corpus-profile SHA-256:
 This prevents a silent mutation-table or base-state change from being described as "the same generator" merely because the seed and PRNG algorithm are unchanged.
 
 `SameAlgorithm + SameSeed != SameCorpusSemantics`
+
+
+## CI claim boundary
+
+A successful GitHub Actions run proves only that the **current commit** reproduces the declared public profile and expected semantic digests in the recorded CI environment.
+
+It does **not** constitute:
+
+- independent third-party certification;
+- an external security audit;
+- an independent trust anchor;
+- proof of correctness beyond the declared public profile;
+- proof that private/internal qualification evidence has been reproduced externally.
+
+`CI_PASS != IndependentCertification`
+
+`SelfConsistentCommit != IndependentlyTrustedCommit`
