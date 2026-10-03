@@ -95,3 +95,25 @@ The decision-profile digest is computed over canonical JSON semantics, not raw f
 - hash the canonical bytes with SHA-256.
 
 Formatting-only changes to the JSON file therefore do not create semantic drift.
+
+
+## Verdict vs diagnostic semantics
+
+The public reproduction exposes two distinct semantic anchors:
+
+- **verdict digest** — proves the PASS/FAIL outcome for each case;
+- **diagnostic digest** — additionally proves the first failure reason and therefore the normative gate-priority order.
+
+Expected digests:
+
+```text
+verdict:
+2a5d53488d65973c46f9d0415c042a0a56c221f50b5a085755b38c5d9a5223ca
+
+diagnostic:
+8a3d911a24fd018ef791314d5bba06d2b0fe85e7f30fb6e2dc117fcc40f1bcab
+```
+
+A gate reordering can preserve every PASS/FAIL verdict while changing the first reported failure reason. Such a change is **diagnostic drift**, not automatically verdict drift.
+
+`SameVerdict != SameDiagnostic`
