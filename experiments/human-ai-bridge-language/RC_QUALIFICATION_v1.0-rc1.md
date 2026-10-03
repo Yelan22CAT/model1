@@ -84,12 +84,12 @@ The public kit is intentionally smaller than the private/internal 20,000-case qu
 
 ## Current external-witness / material-projection state
 
-- current projection: `bridge-material-v2`;
-- current material-state SHA-256: `767b163047da3ff4d13d207b98356f8eed41c5ea3051ab40d760da5408f294aa`;
-- current witness generation: **5**;
-- historical v1 witnesses remain historical and MUST NOT be reused as current v2 proof;
+- current projection: `bridge-material-v3`;
+- current material-state SHA-256: `1eaea2d0e7c106c973b78ab7209f33937bad12bbea78fb04303c151458a4ca93`;
+- current witness generation: **6**;
+- historical v1/v2 witnesses remain historical and MUST NOT be reused as current v3 proof;
 - baseline→projection derivation is separately verified from the projection's own digest;
-- Material Projection v2 includes governance claim-scope fields and rejects unknown material/governance fields by default;
+- Material Projection v3 retains governance claim-scope coverage and unknown-field fail-closed rules, and adds NFC-normalized canonicalization with post-NFC key-collision rejection;
 - Drive + Gmail are redundant service surfaces in one Google/account trust domain, not two independent principals;
 - `SECOND_EXTERNAL_TRUST_DOMAIN_REQUIRED` is the fail-closed state if the entire current external witness domain is unavailable/untrusted.
 
