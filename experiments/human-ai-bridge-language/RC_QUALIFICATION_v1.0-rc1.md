@@ -51,6 +51,21 @@ freeze audit: PASS
 registry digest: aa1cfd6c0b4903bbadec015b69b1124667b5ea78a4da8ec672f67fd8c483a292
 ```
 
+
+## Evidence visibility
+
+Bridge-0 separates **qualification evidence** from **publicly reproducible evidence**.
+
+| Evidence | Visibility | What an external reviewer can do |
+|---|---|---|
+| v0.61–v0.65 convergence results | Public summary | Review the stated invariant/failure classes and public consolidation |
+| v0.66 41-family / 250,000-case cumulative regression | Internal qualification evidence; summarized publicly | Review the result summary, but not the complete private adversarial corpus |
+| v0.67 20,000-case Python/Node/Ruby corpus | Internal qualification evidence; summarized publicly | Review the reported digest/runtime result, but not the complete private corpus |
+| v0.68 invariant registry / freeze contract | Public | Inspect `INVARIANTS_RC1.json`, the RC specification, and compatibility contract |
+| RC1 256-case deterministic reproduction kit | Publicly reproducible | Regenerate the public corpus, run Python/Node/Ruby validators, compare the published digest, and inspect GitHub Actions |
+
+The larger internal campaigns are intentionally not represented as fully public reproductions. Public reviewers should use the RC1 reproduction kit for independent reruns and treat the larger counts as scoped qualification evidence.
+
 ## Important boundary
 
 These are corpus and model verification results, not a universal security proof. The candidate remains Experimental / Not Production Ready.
