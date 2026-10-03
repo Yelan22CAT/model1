@@ -1,0 +1,54 @@
+name: Bridge RC1 Public Reproduction
+
+on:
+  push:
+    branches:
+      - experiment/human-ai-bridge-v0.1
+    paths:
+      - 'experiments/human-ai-bridge-language/public_repro_rc1/**'
+      - '.github/workflows/bridge_rc1_public_repro.yml'
+  pull_request:
+    paths:
+      - 'experiments/human-ai-bridge-language/public_repro_rc1/**'
+      - '.github/workflows/bridge_rc1_public_repro.yml'
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - name: Generate deterministic public corpus
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 generate_corpus.py corpus.json
+
+      - name: Run Python validator
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: python3 validator.py corpus.json > python.out
+
+      - name: Run Node validator
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: node validator.js corpus.json > node.out
+
+      - name: Run Ruby validator
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: ruby validator.rb corpus.json > ruby.out
+
+      - name: Compare outputs
+        working-directory: experiments/human-ai-bridge-language/public_repro_rc1
+        run: |
+          test "$(sha256sum python.out | cut -d' ' -f1)" = "8a3d911a24fd018ef791314d5bba06d2b0fe85e7f30fb6e2dc117fcc40f1bcab"
+          cmp python.out node.out
+          cmp python.out ruby.out
