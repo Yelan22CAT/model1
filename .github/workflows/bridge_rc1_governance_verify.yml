@@ -28,7 +28,7 @@ jobs:
           python-version: '3.13.5'
 
       - name: Verify current material projection
-        run: python3 governance/verify_bridge_rc1_projection_v9.py
+        run: python3 governance/verify_bridge_rc1_projection_v10.py
 
       - name: Verify evidence execution profile
         env:
