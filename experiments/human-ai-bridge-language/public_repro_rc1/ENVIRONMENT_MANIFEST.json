@@ -7,7 +7,13 @@
     "corpus_sha256": "0dcf5bf318fc8e1988a03267c3b35ba9764130a3e5e8104f7ef1593d0ef35fa5",
     "output_sha256": "8a3d911a24fd018ef791314d5bba06d2b0fe85e7f30fb6e2dc117fcc40f1bcab",
     "decision_profile_canonical_sha256": "9631290649bcd4af41cd565074051f0b145771d9ec77b8397091f14861a59a1a",
-    "decision_profile_digest_semantics": "canonical JSON: UTF-8, sorted keys, separators=(',',':'), parsed semantic object"
+    "decision_profile_digest_semantics": "canonical JSON: UTF-8, sorted keys, separators=(',',':'), parsed semantic object",
+    "verdict_output_sha256": "2a5d53488d65973c46f9d0415c042a0a56c221f50b5a085755b38c5d9a5223ca",
+    "diagnostic_output_sha256": "8a3d911a24fd018ef791314d5bba06d2b0fe85e7f30fb6e2dc117fcc40f1bcab",
+    "output_digest_semantics": {
+      "verdict": "id|0_or_1, one line per case",
+      "diagnostic": "id|0_or_1|first_failure_reason, one line per case"
+    }
   },
   "reference_observed_environment": {
     "python": "3.13.5",
