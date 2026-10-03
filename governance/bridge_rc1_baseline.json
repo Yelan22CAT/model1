@@ -29,11 +29,19 @@
   "previous_baseline_blob_sha": null,
   "predecessor_baseline_blob_sha": "62bb236da865c517412743c3aba145db871cb1a3",
   "created_from_pr": 24,
-  "effective_main_commit": "e365b581b8dd84df9fdf903ed195bbb5b7f36b7e",
   "lineage_policy": {
     "generation_must_increase_monotonically": true,
     "predecessor_digest_required_after_generation_1": true,
     "silent_rewrite_forbidden": true,
-    "rollback_to_older_generation_forbidden": true
+    "rollback_to_older_generation_forbidden": true,
+    "currentness_derived_from_protected_main_head": true
+  },
+  "proposed_against_main_commit": "e365b581b8dd84df9fdf903ed195bbb5b7f36b7e",
+  "currentness_policy": {
+    "canonical_baseline_is_file_at_current_protected_main_head": true,
+    "effective_commit_is_derived_from_current_main_head": true,
+    "historical_main_commits_are_not_current": true,
+    "unmerged_branches_are_not_current": true,
+    "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   }
 }
