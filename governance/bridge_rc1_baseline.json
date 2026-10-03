@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 30,
-  "previous_metadata_blob_sha": "d9bf5d4e26261b193b4e998211e16b4d69721e4d",
+  "metadata_revision": 31,
+  "previous_metadata_blob_sha": "018b87cf9da828a3a3802f11376285b2f9aa20f6",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -292,8 +292,8 @@
   ],
   "external_witness_policy": {
     "scope": "material_state_digest",
-    "projection_version": "bridge-material-v10",
-    "material_state_sha256": "e4561df7f94f6e402e9e35ec2ffd468ebf032657de5b5c982528a87918316a69",
+    "projection_version": "bridge-material-v11",
+    "material_state_sha256": "22c5f96fbb254fb00a5098c43a846ca3c6d01e61d2f4745b5ec5ec38b1b9bca1",
     "witness_backlink_excluded_from_material_digest": true,
     "witness_index_revision_separate": true,
     "material_change_requires_new_external_witness": true,
@@ -309,7 +309,7 @@
       "degraded_single_surface_does_not_create_multi_principal_independence": true
     }
   },
-  "witness_index_revision": 15,
+  "witness_index_revision": 16,
   "current_external_witness": {
     "witness_generation": 11,
     "previous_witness_payload_sha256": "a89f928b2637b9f44d9565e1dee864eb72b54378321dd03f301f495a8eade919",
@@ -339,14 +339,14 @@
   "legacy_metadata_revision": 8,
   "material_metadata_revision": 17,
   "material_projection": {
-    "version": "bridge-material-v10",
-    "previous_version": "bridge-material-v9",
+    "version": "bridge-material-v11",
+    "previous_version": "bridge-material-v10",
     "text_profile": "printable-ascii-v1",
     "number_profile": "safe-integer-v1",
     "parser_profile": "duplicate-key-reject-v1",
     "schema_profile": "typed-governance-v1",
     "canonicalization": "Field-specific schema types; printable ASCII; duplicate-key rejection; exact safe integers only; null rejected unless explicitly typed; sorted object keys; array order preserved.",
-    "material_state_sha256": "e4561df7f94f6e402e9e35ec2ffd468ebf032657de5b5c982528a87918316a69"
+    "material_state_sha256": "22c5f96fbb254fb00a5098c43a846ca3c6d01e61d2f4745b5ec5ec38b1b9bca1"
   },
   "current_witness_selector": {
     "schema_version": "current-witness-selector-v1",
