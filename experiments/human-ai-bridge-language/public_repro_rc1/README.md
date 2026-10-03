@@ -82,3 +82,16 @@ Current decision-profile SHA-256:
 CI requires Python, Node.js, Ruby, and the declarative oracle to produce identical public-subset results. Mutation tests must kill all one-gate-omission mutants.
 
 This separates **three implementations** from the **public normative subset definition**; it still does not claim universal correctness beyond that declared profile.
+
+
+### Decision-profile digest semantics
+
+The decision-profile digest is computed over canonical JSON semantics, not raw file bytes:
+
+- parse JSON;
+- serialize as UTF-8;
+- sort object keys;
+- use compact separators `(',', ':')`;
+- hash the canonical bytes with SHA-256.
+
+Formatting-only changes to the JSON file therefore do not create semantic drift.
