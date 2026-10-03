@@ -1,0 +1,29 @@
+name: Bridge RC1 Protected Baseline Check
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'experiments/human-ai-bridge-language/SPEC_v1.0-rc1.md'
+      - 'experiments/human-ai-bridge-language/COMPATIBILITY_v1.0-rc1.md'
+      - 'experiments/human-ai-bridge-language/INVARIANTS_RC1.json'
+      - 'experiments/human-ai-bridge-language/public_repro_rc1/**'
+      - '.github/workflows/bridge_rc1_public_repro.yml'
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  protected-baseline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          persist-credentials: false
+
+      - name: Compare PR head with protected RC1 baseline
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 governance/verify_bridge_rc1_baseline.py
