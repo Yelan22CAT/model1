@@ -1189,6 +1189,7 @@ Public RC documents:
 - [Specification v1.0-rc1 Candidate](SPEC_v1.0-rc1.md)
 - [Compatibility Contract v1.0-rc1 Candidate](COMPATIBILITY_v1.0-rc1.md)
 - [RC Qualification v1.0-rc1](RC_QUALIFICATION_v1.0-rc1.md)
+- [Public RC1 Reproduction Kit](public_repro_rc1/README.md)
 
 Current status remains:
 
