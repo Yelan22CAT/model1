@@ -22,5 +22,16 @@
     "environment_drift_is_not_automatically_semantic_regression": true,
     "semantic_digest_change_requires_review": true,
     "ci_failure_without_semantic_output_is_unverifiable_not_fail_open": true
+  },
+  "github_actions": {
+    "actions/checkout": "11d5960a326750d5838078e36cf38b85af677262",
+    "actions/setup-python": "a26af69be951a213d495a4c3e4e4022e16d87065",
+    "actions/setup-node": "49933ea5288caeca8642d1e84afbd3f7d6820020",
+    "ruby/setup-ruby": "14594264cd68ce8a2345dd349bc3d138a4ef85c8"
+  },
+  "reference_requested_versions": {
+    "python": "3.13.5",
+    "node": "22.16.0",
+    "ruby": "3.3.8"
   }
 }
