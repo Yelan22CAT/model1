@@ -1,5 +1,5 @@
 {
-  "profile_id": "bridge-rc1-verification-execution-v6",
+  "profile_id": "bridge-rc1-verification-execution-v7",
   "public_reproduction": {
     "workflow_path": ".github/workflows/bridge_rc1_public_repro.yml",
     "workflow_ref": "experiment/human-ai-bridge-v0.1",
@@ -34,7 +34,9 @@
       "cmp python.out node.out",
       "cmp python.out ruby.out",
       "cmp python.out oracle.out"
-    ]
+    ],
+    "repository_full_name": "Yelan22CAT/model1",
+    "evidence_root": "experiments/human-ai-bridge-language/public_repro_rc1"
   },
   "governance_material": {
     "workflow_path": ".github/workflows/bridge_rc1_governance_verify.yml",
