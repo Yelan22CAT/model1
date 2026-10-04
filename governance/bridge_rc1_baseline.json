@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 33,
-  "previous_metadata_blob_sha": "ae6b71424800956162bf7f029b7788440fff6603",
+  "metadata_revision": 34,
+  "previous_metadata_blob_sha": "47fe992f0ac83b2f20a506eb26171a09a813ad7b",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -90,19 +90,19 @@
     "implementation_refactor_allowed_only_after_separate_main_reanchor": true
   },
   "last_anchor_update": {
-    "reason": "Make governance check always emitted on main PRs and protect current public schema regression evidence",
-    "changed_anchor": ".github/workflows/bridge_rc1_governance_verify.yml",
+    "reason": "Bind exact remote public evidence blobs to protected expectations",
+    "changed_anchor": "governance/verify_bridge_rc1_execution_profile.py",
     "semantic_generation_changed": false,
     "evidence_revision_changed": true,
     "material_metadata_revision_changed": true
   },
-  "evidence_revision": 14,
+  "evidence_revision": 15,
   "evidence_blob_anchors": {
     "generate_corpus.py": "d3858130eb46ab96a5ad335599ca3477494de399",
-    "validator.py": "1f2fe69f9c83b9f14b4b008e77dd695949caf783",
-    "validator.js": "a3a33b69a4faafc0e9e54fbe37843e26d5e6475a",
-    "validator.rb": "0abb88e855ec9fc946373238f73377b2779d2235",
-    "oracle.py": "3db4bcfaad89b6d84088bcf4c3573653caa9761e",
+    "validator.py": "95e731930021750cc993d13746249ba22ed2591b",
+    "validator.js": "77f4c74e5cb1d19d5566c8550c4cc2a058dd3fab",
+    "validator.rb": "4568ffc9819377cae5830fa733f6225b5f087285",
+    "oracle.py": "28b8fea0b924aabb33aafd1d7631f70041e62b21",
     "mutation_test.py": "466aa0392764160d684e33ebf530e7eadfc18778",
     "verify_corpus_profile.py": "5a00150ff422f5b195a6656af2fe05351fc2ba20",
     "verify_environment.py": "829a50af413667503d7247a9efbcc8017ca21f55",
@@ -117,16 +117,17 @@
     "governance/verify_bridge_rc1_projection_v6.py": "144145e8623f4e529da17a5a84e2d0a4d0b3db14",
     "governance/verify_bridge_rc1_projection_v7.py": "aeac183f46d43de60b7ba43d36be299349dda279",
     "governance/verify_bridge_rc1_projection_v8.py": "a4cfdf7761ab6d113e437004a06dee37bdce6902",
-    "governance/bridge_rc1_verification_execution_profile.json": "841f288d88ff880bb7c08622f83d1ee01e122773",
-    "governance/verify_bridge_rc1_execution_profile.py": "85aee4e12b58541ea23071650f1bd6016d4f39fb",
+    "governance/bridge_rc1_verification_execution_profile.json": "cb4ca4cce082c8de285702759c1db1c93afc1e13",
+    "governance/verify_bridge_rc1_execution_profile.py": "0b7f97a3c52efd73b011e22cc039968c3b66d16f",
     "governance/verify_bridge_rc1_projection_v9.py": "7319cbd88187d932fce29f31a516fbf9f974bf94",
-    ".github/workflows/bridge_rc1_governance_verify.yml": "60410a11d74f88689345242eb1c6e3b8240b765a",
+    ".github/workflows/bridge_rc1_governance_verify.yml": "06e5af34f3c1ca51b916b5c73b9019d4441b2791",
     "governance/verify_bridge_rc1_projection_v10.py": "f2a282c1759205938110f0f61a04fa29511cb84f",
     "governance/verify_bridge_rc1_projection_v11.py": "2f86a6c4dc95e1eecf7f52e71a588f1c01080c51",
     "governance/verify_bridge_rc1_projection_v12.py": "5d72b0fcc2f59109d3c3e86cd1006e9c92a46fa5",
     "governance/verify_bridge_rc1_projection_v13.py": "d146bedaa2d71999745256c8717ba8882fb6c70b",
     "schema_adversarial_test.py": "ccd5471aea5660d6d853982fb34f91052d6625d1",
-    "STATE_SCHEMA_RC1.json": "c4add2da8d941b73c0dc8d841012e97a1bab721b"
+    "STATE_SCHEMA_RC1.json": "c4add2da8d941b73c0dc8d841012e97a1bab721b",
+    "governance/verify_bridge_rc1_projection_v14.py": "aed7a8778fa3fb9e7e3e215d902b4fc7817c39a3"
   },
   "evidence_policy": {
     "evidence_implementation_identity_is_protected": true,
@@ -296,8 +297,8 @@
   ],
   "external_witness_policy": {
     "scope": "material_state_digest",
-    "projection_version": "bridge-material-v13",
-    "material_state_sha256": "aa97220d665353ba5ff0b9e6eccadc59d131d0cd53e639342696d7bd5dbbd910",
+    "projection_version": "bridge-material-v14",
+    "material_state_sha256": "772eac6de48a5b7c0fb9c57220fa07a876913f28f66cfa4915440150a62c9ce8",
     "witness_backlink_excluded_from_material_digest": true,
     "witness_index_revision_separate": true,
     "material_change_requires_new_external_witness": true,
@@ -313,7 +314,7 @@
       "degraded_single_surface_does_not_create_multi_principal_independence": true
     }
   },
-  "witness_index_revision": 18,
+  "witness_index_revision": 19,
   "current_external_witness": {
     "witness_generation": 11,
     "previous_witness_payload_sha256": "a89f928b2637b9f44d9565e1dee864eb72b54378321dd03f301f495a8eade919",
@@ -341,16 +342,16 @@
     "status": "STALE_EXTERNAL_WITNESS_REFRESH_REQUIRED"
   },
   "legacy_metadata_revision": 8,
-  "material_metadata_revision": 19,
+  "material_metadata_revision": 20,
   "material_projection": {
-    "version": "bridge-material-v13",
-    "previous_version": "bridge-material-v12",
+    "version": "bridge-material-v14",
+    "previous_version": "bridge-material-v13",
     "text_profile": "printable-ascii-v1",
     "number_profile": "safe-integer-v1",
     "parser_profile": "duplicate-key-reject-v1",
     "schema_profile": "typed-governance-v1",
     "canonicalization": "Field-specific schema types; printable ASCII; duplicate-key rejection; exact safe integers only; null rejected unless explicitly typed; sorted object keys; array order preserved.",
-    "material_state_sha256": "aa97220d665353ba5ff0b9e6eccadc59d131d0cd53e639342696d7bd5dbbd910"
+    "material_state_sha256": "772eac6de48a5b7c0fb9c57220fa07a876913f28f66cfa4915440150a62c9ce8"
   },
   "current_witness_selector": {
     "schema_version": "current-witness-selector-v1",
@@ -365,5 +366,5 @@
     "duplicate_generation_digests_must_match": true,
     "lineage_is_reconstructable_from_public_governance_metadata": true
   },
-  "verification_execution_profile_blob_sha": "841f288d88ff880bb7c08622f83d1ee01e122773"
+  "verification_execution_profile_blob_sha": "cb4ca4cce082c8de285702759c1db1c93afc1e13"
 }
