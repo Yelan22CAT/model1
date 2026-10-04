@@ -1,5 +1,5 @@
 {
-  "profile_id": "bridge-rc1-verification-execution-v4",
+  "profile_id": "bridge-rc1-verification-execution-v5",
   "public_reproduction": {
     "workflow_path": ".github/workflows/bridge_rc1_public_repro.yml",
     "workflow_ref": "experiment/human-ai-bridge-v0.1",
@@ -14,7 +14,9 @@
       "verify_profile_digest.py",
       "oracle.py",
       "mutation_test.py",
-      "verify_environment.py"
+      "verify_environment.py",
+      "schema_adversarial_test.py",
+      "STATE_SCHEMA_RC1.json"
     ],
     "required_commands": [
       "python3 verify_public_docs.py",
@@ -25,6 +27,7 @@
       "node validator.js corpus.json > node.out",
       "ruby validator.rb corpus.json > ruby.out",
       "python3 verify_profile_digest.py",
+      "python3 schema_adversarial_test.py",
       "python3 oracle.py DECISION_PROFILE_RC1.json corpus.json > oracle.out",
       "python3 mutation_test.py",
       "python3 verify_environment.py",
