@@ -232,6 +232,33 @@ This public experiment intentionally publishes:
 
 It does **not** publish private case data, hidden thresholds, proprietary runtime logic, or unrestricted execution authority.
 
+
+---
+
+## License
+
+Bridge-0 public materials in this directory are licensed under the **Apache License 2.0** unless a specific file states otherwise.
+
+Why Apache-2.0 rather than MIT for this experiment:
+
+- it remains permissive for research, commercial use, modification, and redistribution;
+- it includes an explicit patent-license grant and patent-termination mechanism;
+- it requires preservation of relevant notices and prominent notice of modified files;
+- it does not impose copyleft or require derivative projects to publish their source code.
+
+For a semantic protocol/compiler/runtime experiment intended for cross-implementation and possible enterprise adoption, those explicit patent and attribution terms are preferable to MIT's shorter but less explicit treatment.
+
+Scope boundary:
+
+- the license applies to material actually published in `experiments/human-ai-bridge-language/` under this repository;
+- it does **not** grant rights to unpublished Model Root material, private datasets, customer or employer data, hidden thresholds, private runtime packs, or other material not included in the licensed work;
+- third-party components retain their own licenses and notices;
+- no trademark, personal-identity, customer-data, or private-system rights are granted by the Apache-2.0 license.
+
+See [LICENSE](LICENSE).
+
+License choice is separate from claims of novelty, inventorship, patentability, or ownership of unpublished material.
+
 ---
 
 ## Feedback wanted
