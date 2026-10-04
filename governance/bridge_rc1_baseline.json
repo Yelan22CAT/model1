@@ -17,7 +17,7 @@
     "DECISION_PROFILE_RC1.json": "f3175ae4e0baef34f361d92bde91ff202177e4b8",
     "CORPUS_PROFILE_RC1.json": "e8ca855183eb37f7994b6d34c0c9102436f7a285",
     "ENVIRONMENT_MANIFEST.json": "6a4d9d5b87afeab7a40eaa4d5c77c97762456a7b",
-    "bridge_rc1_public_repro.yml": "07e558eec4b127d1f113c5384bd63622ee7c1a74"
+    "bridge_rc1_public_repro.yml": "bc6ed3ff14a323ed4802052ba6450587e9c373a2"
   },
   "governance": {
     "authoritative_location": "protected main",
@@ -62,8 +62,8 @@
     "same_generation_forks_are_noncanonical_until_merged_to_protected_main": true
   },
   "semantic_generation": 1,
-  "metadata_revision": 32,
-  "previous_metadata_blob_sha": "1f313f13ebb66ead84d83ddf4f04fa33c0a11b00",
+  "metadata_revision": 33,
+  "previous_metadata_blob_sha": "ae6b71424800956162bf7f029b7788440fff6603",
   "revision_policy": {
     "semantic_generation_changes_only_when_rc_semantic_or_normative_anchors_change": true,
     "metadata_revision_changes_for_governance_metadata_only_updates": true,
@@ -90,13 +90,13 @@
     "implementation_refactor_allowed_only_after_separate_main_reanchor": true
   },
   "last_anchor_update": {
-    "reason": "Mirror protected RC/public-reproduction paths into post-merge main verification",
+    "reason": "Make governance check always emitted on main PRs and protect current public schema regression evidence",
     "changed_anchor": ".github/workflows/bridge_rc1_governance_verify.yml",
     "semantic_generation_changed": false,
     "evidence_revision_changed": true,
     "material_metadata_revision_changed": true
   },
-  "evidence_revision": 13,
+  "evidence_revision": 14,
   "evidence_blob_anchors": {
     "generate_corpus.py": "d3858130eb46ab96a5ad335599ca3477494de399",
     "validator.py": "1f2fe69f9c83b9f14b4b008e77dd695949caf783",
@@ -117,13 +117,16 @@
     "governance/verify_bridge_rc1_projection_v6.py": "144145e8623f4e529da17a5a84e2d0a4d0b3db14",
     "governance/verify_bridge_rc1_projection_v7.py": "aeac183f46d43de60b7ba43d36be299349dda279",
     "governance/verify_bridge_rc1_projection_v8.py": "a4cfdf7761ab6d113e437004a06dee37bdce6902",
-    "governance/bridge_rc1_verification_execution_profile.json": "a44bd0ee763bec2d20e8c74ddade45a361c819e5",
+    "governance/bridge_rc1_verification_execution_profile.json": "841f288d88ff880bb7c08622f83d1ee01e122773",
     "governance/verify_bridge_rc1_execution_profile.py": "85aee4e12b58541ea23071650f1bd6016d4f39fb",
     "governance/verify_bridge_rc1_projection_v9.py": "7319cbd88187d932fce29f31a516fbf9f974bf94",
-    ".github/workflows/bridge_rc1_governance_verify.yml": "5de0113c47efbeb76da16e094b532228d6736567",
+    ".github/workflows/bridge_rc1_governance_verify.yml": "60410a11d74f88689345242eb1c6e3b8240b765a",
     "governance/verify_bridge_rc1_projection_v10.py": "f2a282c1759205938110f0f61a04fa29511cb84f",
     "governance/verify_bridge_rc1_projection_v11.py": "2f86a6c4dc95e1eecf7f52e71a588f1c01080c51",
-    "governance/verify_bridge_rc1_projection_v12.py": "5d72b0fcc2f59109d3c3e86cd1006e9c92a46fa5"
+    "governance/verify_bridge_rc1_projection_v12.py": "5d72b0fcc2f59109d3c3e86cd1006e9c92a46fa5",
+    "governance/verify_bridge_rc1_projection_v13.py": "d146bedaa2d71999745256c8717ba8882fb6c70b",
+    "schema_adversarial_test.py": "ccd5471aea5660d6d853982fb34f91052d6625d1",
+    "STATE_SCHEMA_RC1.json": "c4add2da8d941b73c0dc8d841012e97a1bab721b"
   },
   "evidence_policy": {
     "evidence_implementation_identity_is_protected": true,
@@ -293,8 +296,8 @@
   ],
   "external_witness_policy": {
     "scope": "material_state_digest",
-    "projection_version": "bridge-material-v12",
-    "material_state_sha256": "858ffcaa34d255a114bf84d3b6e759df2a604b8629090ff7c83c825e3c38bb8d",
+    "projection_version": "bridge-material-v13",
+    "material_state_sha256": "aa97220d665353ba5ff0b9e6eccadc59d131d0cd53e639342696d7bd5dbbd910",
     "witness_backlink_excluded_from_material_digest": true,
     "witness_index_revision_separate": true,
     "material_change_requires_new_external_witness": true,
@@ -310,7 +313,7 @@
       "degraded_single_surface_does_not_create_multi_principal_independence": true
     }
   },
-  "witness_index_revision": 17,
+  "witness_index_revision": 18,
   "current_external_witness": {
     "witness_generation": 11,
     "previous_witness_payload_sha256": "a89f928b2637b9f44d9565e1dee864eb72b54378321dd03f301f495a8eade919",
@@ -338,16 +341,16 @@
     "status": "STALE_EXTERNAL_WITNESS_REFRESH_REQUIRED"
   },
   "legacy_metadata_revision": 8,
-  "material_metadata_revision": 18,
+  "material_metadata_revision": 19,
   "material_projection": {
-    "version": "bridge-material-v12",
-    "previous_version": "bridge-material-v11",
+    "version": "bridge-material-v13",
+    "previous_version": "bridge-material-v12",
     "text_profile": "printable-ascii-v1",
     "number_profile": "safe-integer-v1",
     "parser_profile": "duplicate-key-reject-v1",
     "schema_profile": "typed-governance-v1",
     "canonicalization": "Field-specific schema types; printable ASCII; duplicate-key rejection; exact safe integers only; null rejected unless explicitly typed; sorted object keys; array order preserved.",
-    "material_state_sha256": "858ffcaa34d255a114bf84d3b6e759df2a604b8629090ff7c83c825e3c38bb8d"
+    "material_state_sha256": "aa97220d665353ba5ff0b9e6eccadc59d131d0cd53e639342696d7bd5dbbd910"
   },
   "current_witness_selector": {
     "schema_version": "current-witness-selector-v1",
@@ -362,5 +365,5 @@
     "duplicate_generation_digests_must_match": true,
     "lineage_is_reconstructable_from_public_governance_metadata": true
   },
-  "verification_execution_profile_blob_sha": "a44bd0ee763bec2d20e8c74ddade45a361c819e5"
+  "verification_execution_profile_blob_sha": "841f288d88ff880bb7c08622f83d1ee01e122773"
 }
