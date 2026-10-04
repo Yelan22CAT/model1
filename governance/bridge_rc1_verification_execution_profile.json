@@ -1,5 +1,5 @@
 {
-  "profile_id": "bridge-rc1-verification-execution-v3",
+  "profile_id": "bridge-rc1-verification-execution-v9",
   "public_reproduction": {
     "workflow_path": ".github/workflows/bridge_rc1_public_repro.yml",
     "workflow_ref": "experiment/human-ai-bridge-v0.1",
@@ -14,7 +14,9 @@
       "verify_profile_digest.py",
       "oracle.py",
       "mutation_test.py",
-      "verify_environment.py"
+      "verify_environment.py",
+      "schema_adversarial_test.py",
+      "STATE_SCHEMA_RC1.json"
     ],
     "required_commands": [
       "python3 verify_public_docs.py",
@@ -25,25 +27,28 @@
       "node validator.js corpus.json > node.out",
       "ruby validator.rb corpus.json > ruby.out",
       "python3 verify_profile_digest.py",
+      "python3 schema_adversarial_test.py",
       "python3 oracle.py DECISION_PROFILE_RC1.json corpus.json > oracle.out",
       "python3 mutation_test.py",
       "python3 verify_environment.py",
       "cmp python.out node.out",
       "cmp python.out ruby.out",
       "cmp python.out oracle.out"
-    ]
+    ],
+    "repository_full_name": "Yelan22CAT/model1",
+    "evidence_root": "experiments/human-ai-bridge-language/public_repro_rc1"
   },
   "governance_material": {
     "workflow_path": ".github/workflows/bridge_rc1_governance_verify.yml",
     "workflow_ref": "main",
     "required_evidence": [
-      "governance/verify_bridge_rc1_projection_v11.py",
+      "governance/verify_bridge_rc1_projection_v15.py",
       "governance/verify_bridge_rc1_execution_profile.py",
       "governance/bridge_rc1_verification_execution_profile.json",
       ".github/workflows/bridge_rc1_governance_verify.yml"
     ],
     "required_commands": [
-      "python3 governance/verify_bridge_rc1_projection_v11.py",
+      "python3 governance/verify_bridge_rc1_projection_v15.py",
       "python3 governance/verify_bridge_rc1_execution_profile.py"
     ]
   },
@@ -57,7 +62,11 @@
     "governance/verify_bridge_rc1_projection_v7.py",
     "governance/verify_bridge_rc1_projection_v8.py",
     "governance/verify_bridge_rc1_projection_v9.py",
-    "governance/verify_bridge_rc1_projection_v10.py"
+    "governance/verify_bridge_rc1_projection_v10.py",
+    "governance/verify_bridge_rc1_projection_v11.py",
+    "governance/verify_bridge_rc1_projection_v12.py",
+    "governance/verify_bridge_rc1_projection_v13.py",
+    "governance/verify_bridge_rc1_projection_v14.py"
   ],
   "policy": {
     "protected_evidence_must_be_classified_as_current_or_historical": true,

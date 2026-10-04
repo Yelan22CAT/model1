@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import base64, hashlib, json, os, re, sys, urllib.request
+import base64, hashlib, json, os, re, sys, urllib.request, urllib.parse
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent.parent
@@ -10,12 +10,38 @@ BASELINE_PATH=GOV/"bridge_rc1_baseline.json"
 def fail(msg):
     print(json.dumps({"match":False,"reason":msg},indent=2)); sys.exit(2)
 
-def git_blob_sha(path):
-    data=path.read_bytes()
+def git_blob_sha_bytes(data):
     h=hashlib.sha1()
     h.update(f"blob {len(data)}\0".encode())
     h.update(data)
     return h.hexdigest()
+
+def git_blob_sha(path):
+    return git_blob_sha_bytes(path.read_bytes())
+
+def fetch_github_file_meta(repo,ref,path,token):
+    qpath=urllib.parse.quote(path,safe="/")
+    qref=urllib.parse.quote(ref,safe="")
+    url=f"https://api.github.com/repos/{repo}/contents/{qpath}?ref={qref}"
+    headers={"Accept":"application/vnd.github+json","User-Agent":"bridge-rc1-execution-profile"}
+    if token: headers["Authorization"]="Bearer "+token
+    try:
+        req=urllib.request.Request(url,headers=headers)
+        with urllib.request.urlopen(req,timeout=30) as r:
+            meta=json.load(r)
+    except Exception as e:
+        fail("remote evidence fetch failed: "+path+": "+type(e).__name__)
+    if not isinstance(meta,dict) or meta.get("type")!="file":
+        fail("remote evidence is not a regular file: "+path)
+    if meta.get("path")!=path:
+        fail("remote evidence path mismatch: "+path)
+    if meta.get("encoding")!="base64" or not isinstance(meta.get("content"),str):
+        fail("remote evidence content unavailable: "+path)
+    try:
+        raw=base64.b64decode("".join(meta["content"].split()),validate=True)
+    except Exception:
+        fail("remote evidence invalid base64: "+path)
+    return meta,raw
 
 def parse_named_steps(text):
     lines=text.splitlines()
@@ -91,23 +117,31 @@ if anchors.get(gov_wf_rel)!=git_blob_sha(ROOT/gov_wf_rel):
 gov_text=(ROOT/gov_wf_rel).read_text()
 require_enforced_commands(gov_text,profile["governance_material"]["required_commands"],"governance")
 
-repo=os.environ.get("GITHUB_REPOSITORY","Yelan22CAT/model1")
 token=os.environ.get("GITHUB_TOKEN","")
-ref=profile["public_reproduction"]["workflow_ref"]
-path=profile["public_reproduction"]["workflow_path"]
-url=f"https://api.github.com/repos/{repo}/contents/{path}?ref={ref}"
-headers={"Accept":"application/vnd.github+json","User-Agent":"bridge-rc1-execution-profile"}
-if token: headers["Authorization"]="Bearer "+token
-req=urllib.request.Request(url,headers=headers)
-with urllib.request.urlopen(req) as r:
-    meta=json.load(r)
-if meta.get("sha")!=baseline["git_blob_anchors"]["bridge_rc1_public_repro.yml"]:
-    fail("public reproduction workflow blob mismatch")
-public_text=base64.b64decode(meta["content"]).decode()
-require_enforced_commands(public_text,profile["public_reproduction"]["required_commands"],"public")
+public_cfg=profile["public_reproduction"]
+repo=public_cfg["repository_full_name"]
+ref=public_cfg["workflow_ref"]
+path=public_cfg["workflow_path"]
 
-for rel in profile["public_reproduction"]["required_evidence"]:
+meta,raw=fetch_github_file_meta(repo,ref,path,token)
+expected_workflow=baseline["git_blob_anchors"]["bridge_rc1_public_repro.yml"]
+if meta.get("sha")!=expected_workflow or git_blob_sha_bytes(raw)!=expected_workflow:
+    fail("public reproduction workflow blob mismatch")
+public_text=raw.decode("utf-8")
+require_enforced_commands(public_text,public_cfg["required_commands"],"public")
+
+root=public_cfg["evidence_root"].rstrip("/")
+for rel in public_cfg["required_evidence"]:
     if rel not in anchors: fail("public required evidence not protected: "+rel)
+    if "/" in rel or rel in (".",".."):
+        fail("public evidence name must be a single path component: "+rel)
+    remote_path=root+"/"+rel
+    emeta,eraw=fetch_github_file_meta(repo,ref,remote_path,token)
+    expected=anchors[rel]
+    if emeta.get("sha")!=expected:
+        fail("public remote evidence metadata blob mismatch: "+rel)
+    if git_blob_sha_bytes(eraw)!=expected:
+        fail("public remote evidence content blob mismatch: "+rel)
 for rel in profile["governance_material"]["required_evidence"]:
     if rel not in anchors: fail("governance required evidence not protected: "+rel)
 
