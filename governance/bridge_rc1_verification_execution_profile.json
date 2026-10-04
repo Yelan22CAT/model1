@@ -1,5 +1,5 @@
 {
-  "profile_id": "bridge-rc1-verification-execution-v7",
+  "profile_id": "bridge-rc1-verification-execution-v8",
   "public_reproduction": {
     "workflow_path": ".github/workflows/bridge_rc1_public_repro.yml",
     "workflow_ref": "experiment/human-ai-bridge-v0.1",
@@ -42,13 +42,13 @@
     "workflow_path": ".github/workflows/bridge_rc1_governance_verify.yml",
     "workflow_ref": "main",
     "required_evidence": [
-      "governance/verify_bridge_rc1_projection_v13.py",
+      "governance/verify_bridge_rc1_projection_v14.py",
       "governance/verify_bridge_rc1_execution_profile.py",
       "governance/bridge_rc1_verification_execution_profile.json",
       ".github/workflows/bridge_rc1_governance_verify.yml"
     ],
     "required_commands": [
-      "python3 governance/verify_bridge_rc1_projection_v13.py",
+      "python3 governance/verify_bridge_rc1_projection_v14.py",
       "python3 governance/verify_bridge_rc1_execution_profile.py"
     ]
   },
@@ -64,7 +64,8 @@
     "governance/verify_bridge_rc1_projection_v9.py",
     "governance/verify_bridge_rc1_projection_v10.py",
     "governance/verify_bridge_rc1_projection_v11.py",
-    "governance/verify_bridge_rc1_projection_v12.py"
+    "governance/verify_bridge_rc1_projection_v12.py",
+    "governance/verify_bridge_rc1_projection_v13.py"
   ],
   "policy": {
     "protected_evidence_must_be_classified_as_current_or_historical": true,
