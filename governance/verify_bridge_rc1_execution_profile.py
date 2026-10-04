@@ -38,7 +38,7 @@ def fetch_github_file_meta(repo,ref,path,token):
     if meta.get("encoding")!="base64" or not isinstance(meta.get("content"),str):
         fail("remote evidence content unavailable: "+path)
     try:
-        raw=base64.b64decode(meta["content"],validate=True)
+        raw=base64.b64decode("".join(meta["content"].split()),validate=True)
     except Exception:
         fail("remote evidence invalid base64: "+path)
     return meta,raw
