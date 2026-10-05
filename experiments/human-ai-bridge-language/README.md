@@ -65,6 +65,29 @@ Chinese, English, or another natural language may be used as the display layer. 
 
 ---
 
+## Surface language design principle
+
+Bridge-0 now treats the surface language as a three-party contract:
+
+```text
+Human-readable
+× AI-generatable
+× Machine-verifiable
+= viable Bridge surface
+```
+
+The governing rule is:
+
+> **Expose what affects correctness; hide what only affects implementation.**
+
+This is a forward constraint and an audit rule for existing syntax, not a mandate to rewrite the language from scratch. Existing constructs remain when they satisfy the contract; failing constructs are revised, migrated, or deprecated explicitly.
+
+Automated tests may establish parseability, canonical equivalence, deterministic validation, and declared AI-generation conformance. They do **not** by themselves prove human comprehension; human-readability claims require separate human evidence.
+
+See [Surface Language Design Principles](SURFACE_LANGUAGE_PRINCIPLES.md).
+
+---
+
 ## v0.1 semantic primitives
 
 | Symbol | Canonical meaning | 中文 |
