@@ -291,6 +291,7 @@ License choice is separate from claims of novelty, inventorship, patentability, 
 - [Semantic-First AI Programming Assurance](RFC_SEMANTIC_FIRST_AI_PROGRAMMING_ASSURANCE.md) — keeps AI-generated code subordinate to explicit semantics, verification capacity, traceability, reversibility, observability, independent review, bounded change scope, and production-readiness gates.
 - [Adaptive Deliberation Policy](RFC_ADAPTIVE_DELIBERATION_POLICY.md) — routes among direct, sequential, sampled, search/backtrack, and critique/refine strategies while keeping sample count separate from evidence independence and reasoning strategy separate from authority.
 - [State-Bound Planning, Replanning & Reality Checkpoints](RFC_STATE_BOUND_PLANNING_REPLAN.md) — treats plans as versioned dependency graphs bound to current state, capabilities, authority and runtime reality; material drift triggers revalidation or replanning.
+- [Tool Capability Binding, Dynamic Registry & Safe Invocation](RFC_TOOL_CAPABILITY_BINDING_DYNAMIC_REGISTRY_SAFE_INVOCATION.md) — treats tools as typed, versioned capability contracts; separates discovery from current binding, schema validity from semantic safety, functional fit from least privilege, and tool-call construction from authorized external effect.
 
 ## v0.200 verification milestone
 
