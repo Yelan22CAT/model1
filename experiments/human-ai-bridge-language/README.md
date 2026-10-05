@@ -1253,6 +1253,11 @@ The v0.56 terminal boundary is normative: total loss of all independent trust an
 
 ---
 
+
+### Experimental architecture RFCs
+
+- [Multi-Interface Execution & Verifiable Task Factory](RFC_MULTI_INTERFACE_EXECUTION_TASK_FACTORY.md) — interface-neutral task semantics, GUI/code/MCP/API route selection, cross-interface state-equivalence checks, trajectory evidence, and verifiable hybrid-task generation.
+
 ## Feedback and external review
 
 Feedback is welcome through GitHub so that technical discussion stays attached to the public experiment.
