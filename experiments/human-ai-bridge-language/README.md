@@ -287,6 +287,7 @@ License choice is separate from claims of novelty, inventorship, patentability, 
 ## Experimental architecture RFCs
 
 - [Adaptive Workload Routing, Reasoning Budget & Structural Distillation](RFC_ADAPTIVE_WORKLOAD_ROUTING_REASONING_BUDGET.md) — routes by workload/capability/trust constraints, keeps reasoning budget separate from authority, and treats popularity as adoption evidence rather than capability proof.
+- [Reality-Final Verification, Requirement/Model Gaps & Assurance Revision](RFC_REALITY_FINAL_VERIFIER_TWO_GAPS_ASSURANCE_REVISION.md) — treats requirements, world models and evaluators as fallible proxies; deployment evidence can invalidate prior acceptance, so assurance is revisionary rather than permanent closure.
 
 ## v0.200 verification milestone
 
