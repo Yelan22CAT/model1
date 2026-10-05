@@ -1255,6 +1255,7 @@ The v0.56 terminal boundary is normative: total loss of all independent trust an
 
 
 ### Experimental architecture RFCs
+- [Agentic Containment Integrity, External Observability & Defensive Forensics](RFC_AGENTIC_CONTAINMENT_OBSERVABILITY_DEFENSIVE_FORENSICS.md) — treats shared substrates as potential side channels, peer messages as non-authoritative, safe exit as first-class, external telemetry as audit truth, and defensive forensics as a distinct policy plane.
 - [Policy-Plane Separation & Non-Elevating Safety Exceptions](RFC_POLICY_PLANE_SEPARATION_SAFETY_EXCEPTION.md) — separates safety/wellbeing handling from eligibility, identity, authorization and tool capability; safety support must not become a privilege-escalation path.
 
 - [Multi-Interface Execution & Verifiable Task Factory](RFC_MULTI_INTERFACE_EXECUTION_TASK_FACTORY.md) — interface-neutral task semantics, GUI/code/MCP/API route selection, cross-interface state-equivalence checks, trajectory evidence, and verifiable hybrid-task generation.
