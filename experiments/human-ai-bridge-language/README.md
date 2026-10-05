@@ -288,6 +288,7 @@ License choice is separate from claims of novelty, inventorship, patentability, 
 
 - [Adaptive Workload Routing, Reasoning Budget & Structural Distillation](RFC_ADAPTIVE_WORKLOAD_ROUTING_REASONING_BUDGET.md) — routes by workload/capability/trust constraints, keeps reasoning budget separate from authority, and treats popularity as adoption evidence rather than capability proof.
 - [Reality-Final Verification, Requirement/Model Gaps & Assurance Revision](RFC_REALITY_FINAL_VERIFIER_TWO_GAPS_ASSURANCE_REVISION.md) — treats requirements, world models and evaluators as fallible proxies; deployment evidence can invalidate prior acceptance, so assurance is revisionary rather than permanent closure.
+- [Semantic-First AI Programming Assurance](RFC_SEMANTIC_FIRST_AI_PROGRAMMING_ASSURANCE.md) — keeps AI-generated code subordinate to explicit semantics, verification capacity, traceability, reversibility, observability, independent review, bounded change scope, and production-readiness gates.
 
 ## v0.200 verification milestone
 
