@@ -1255,6 +1255,7 @@ The v0.56 terminal boundary is normative: total loss of all independent trust an
 
 
 ### Experimental architecture RFCs
+- [Policy-Plane Separation & Non-Elevating Safety Exceptions](RFC_POLICY_PLANE_SEPARATION_SAFETY_EXCEPTION.md) — separates safety/wellbeing handling from eligibility, identity, authorization and tool capability; safety support must not become a privilege-escalation path.
 
 - [Multi-Interface Execution & Verifiable Task Factory](RFC_MULTI_INTERFACE_EXECUTION_TASK_FACTORY.md) — interface-neutral task semantics, GUI/code/MCP/API route selection, cross-interface state-equivalence checks, trajectory evidence, and verifiable hybrid-task generation.
 
