@@ -1,0 +1,4 @@
+# Bridge-0 v0.13 explicit binary64 floating semantics experiment
+
+⊙ [P1] program name=bridge0_v013_float_constitution targets=python312,node20
+→ [C1] compute op=float_profile numeric=binary64 rounding=ties_to_even values=nan,+inf,-inf,-0,+0,2.5,3.5,-2.5,-3.5 observe=json_value

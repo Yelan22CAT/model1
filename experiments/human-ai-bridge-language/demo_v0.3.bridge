@@ -1,0 +1,15 @@
+# Bridge-0 v0.3 composed authority/provenance demo
+
+△ [C1] component.safe = true
+◆ [V1] limited_test supports [C1]
+
+! [P1] permission actor=executor action=read resource=repo scope=/tests/**
+
+→ [H1] handoff from=executor to=analyst artifact=[C1] scope=analysis state=preserve provenance=preserve transform=analyze
+
+△ [C2] component.release_ready = true
+◆ [PV1] provenance artifact=[C2] parent=[C1] actor=analyst transform=derive time=2026-10-02T00:00:00Z
+
+! [G1] release requires human_owner.approval
+
+→ [S1] transition subject=release.state from=pending to=released irreversible=true when=[G1] authority=human_owner

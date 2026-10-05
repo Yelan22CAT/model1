@@ -1,0 +1,28 @@
+{
+  "name": "Bridge-0 RC1 Public Decision Profile",
+  "spec_generation": "spec-rc1",
+  "ordered_gates": [
+    {"field":"transport_valid","op":"eq","value":true,"reason":"transport"},
+    {"field":"canonical_valid","op":"eq","value":true,"reason":"canonical"},
+    {"field":"schema_supported","op":"eq","value":true,"reason":"schema"},
+    {"field":"spec_generation","op":"eq","value":"spec-rc1","reason":"spec-generation"},
+    {"field":"signature_valid","op":"eq","value":true,"reason":"signature"},
+    {"field":"trust_anchor_current","op":"eq","value":true,"reason":"trust-anchor"},
+    {"field":"claim_state","op":"eq","value":"SUPPORTED","reason":"claim"},
+    {"field":"independent_clusters","op":"gte_field","value":"required_independent_clusters","reason":"independence"},
+    {"field":"confidence_status","op":"eq","value":"CALIBRATED","reason":"confidence"},
+    {"field":"risk_policy_current","op":"eq","value":true,"reason":"risk-policy"},
+    {"field":"decision","op":"eq","value":"ACT","reason":"decision"},
+    {"field":"review_current","op":"eq","value":true,"reason":"review"},
+    {"field":"authorization_current","op":"eq","value":true,"reason":"authorization"},
+    {"field":"assurance_context_match","op":"eq","value":true,"reason":"assurance-context"},
+    {"field":"dependency_graph_match","op":"eq","value":true,"reason":"dependency-graph"},
+    {"field":"plan_valid","op":"eq","value":true,"reason":"plan"},
+    {"field":"runtime_attested","op":"eq","value":true,"reason":"runtime"},
+    {"field":"broker_behavior_conformant","op":"eq","value":true,"reason":"broker"},
+    {"field":"effect_surface_mediated","op":"eq","value":true,"reason":"effect-mediation"},
+    {"field":"replay_fresh","op":"eq","value":true,"reason":"replay"},
+    {"field":"restore_generation_coherent","op":"eq","value":true,"reason":"restore"},
+    {"field":"trust_terminal_state","op":"eq","value":"NORMAL","reason":"trust-terminal"}
+  ]
+}

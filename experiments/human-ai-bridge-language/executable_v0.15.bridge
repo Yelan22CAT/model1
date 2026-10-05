@@ -1,0 +1,4 @@
+# Bridge-0 v0.15 pinned-Unicode grapheme semantics experiment
+
+⊙ [P1] program name=bridge0_v015_grapheme_identity targets=python312,node20 unicode_version=15.0
+→ [C1] compute op=grapheme_profile text_model=unicode_scalar normalization=NFC segmentation=extended_grapheme_cluster profile=bridge_uax29_subset_v1 values=0065+0301,1F44D+1F3FD,1F469+200D+1F4BB,1F1E8+1F1E6,0061+0308+0062,1F468+200D+1F469+200D+1F467+200D+1F466,000D+000A+0061,2764+FE0F observe=json_value

@@ -1,0 +1,94 @@
+name: 'bridge0_v010_typed_equivalence'
+
+on:
+  push:
+    branches:
+      - 'experiment/human-ai-bridge-v0.1'
+
+permissions:
+  contents: read
+
+jobs:
+  backend_ubuntu_latest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bridge task T1 checkout
+        uses: actions/checkout@v4
+      - name: Bridge task T2 setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Bridge task T3 python module
+        run: python experiments/human-ai-bridge-language/prototype/backend_capture_v0_10.py --module bridge_probe_v0_10 --output bridge-v010-T3.json --cwd experiments/human-ai-bridge-language/prototype
+      - name: Upload Bridge observables for ubuntu-latest
+        uses: actions/upload-artifact@v4
+        with:
+          name: 'bridge-v010-ubuntu-latest'
+          path: |
+            bridge-v010-T3.json
+          if-no-files-found: error
+  backend_windows_latest:
+    runs-on: windows-latest
+    steps:
+      - name: Bridge task T1 checkout
+        uses: actions/checkout@v4
+      - name: Bridge task T2 setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Bridge task T3 python module
+        run: python experiments/human-ai-bridge-language/prototype/backend_capture_v0_10.py --module bridge_probe_v0_10 --output bridge-v010-T3.json --cwd experiments/human-ai-bridge-language/prototype
+      - name: Upload Bridge observables for windows-latest
+        uses: actions/upload-artifact@v4
+        with:
+          name: 'bridge-v010-windows-latest'
+          path: |
+            bridge-v010-T3.json
+          if-no-files-found: error
+  backend_macos_latest:
+    runs-on: macos-latest
+    steps:
+      - name: Bridge task T1 checkout
+        uses: actions/checkout@v4
+      - name: Bridge task T2 setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Bridge task T3 python module
+        run: python experiments/human-ai-bridge-language/prototype/backend_capture_v0_10.py --module bridge_probe_v0_10 --output bridge-v010-T3.json --cwd experiments/human-ai-bridge-language/prototype
+      - name: Upload Bridge observables for macos-latest
+        uses: actions/upload-artifact@v4
+        with:
+          name: 'bridge-v010-macos-latest'
+          path: |
+            bridge-v010-T3.json
+          if-no-files-found: error
+  compare_backends:
+    needs: [backend_ubuntu_latest, backend_windows_latest, backend_macos_latest]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download observables from ubuntu-latest
+        uses: actions/download-artifact@v4
+        with:
+          name: 'bridge-v010-ubuntu-latest'
+          path: 'artifacts/ubuntu-latest'
+      - name: Download observables from windows-latest
+        uses: actions/download-artifact@v4
+        with:
+          name: 'bridge-v010-windows-latest'
+          path: 'artifacts/windows-latest'
+      - name: Download observables from macos-latest
+        uses: actions/download-artifact@v4
+        with:
+          name: 'bridge-v010-macos-latest'
+          path: 'artifacts/macos-latest'
+      - name: Compare typed observable T3
+        run: python experiments/human-ai-bridge-language/prototype/compare_typed_observables_v0_10.py artifacts/ubuntu-latest/bridge-v010-T3.json artifacts/windows-latest/bridge-v010-T3.json artifacts/macos-latest/bridge-v010-T3.json
+
+# Generated from Bridge-0 v0.10. Do not hand-edit this artifact.
