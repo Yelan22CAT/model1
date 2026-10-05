@@ -284,6 +284,14 @@ License choice is separate from claims of novelty, inventorship, patentability, 
 
 ---
 
+## v0.200 verification milestone
+
+The post-v0.50 adversarial campaign has reached a new public checkpoint at **v0.200**. The milestone summarizes structural work on surface/IR separation, heterogeneous execution, multi-interface agents, task factories, policy-plane anti-bypass rules, agent containment, external observability, Byzantine/collusion resistance, and trust recovery.
+
+See [Verification Status — v0.200](VERIFICATION_STATUS_v0.200.md).
+
+The v0.200 result remains **Experimental / Local Synthetic Test Only / Not Production Ready**.
+
 ## Feedback wanted
 
 Useful questions include:
