@@ -6,6 +6,21 @@
 
 Bridge-0 is a shared semantic and assurance layer for human–AI workflows. It does not replace execution languages, operating systems, cryptographic libraries, organizational governance, or human judgment.
 
+
+## Surface-language contract
+
+The Bridge surface language MUST be designed for three simultaneous properties:
+
+- human readability;
+- AI generatability;
+- deterministic machine verifiability.
+
+A surface construct is not mature solely because it parses or executes. Correctness-affecting semantics MUST be explicit at the Bridge layer; implementation-only detail SHOULD remain in lowering/backend layers unless it changes semantic validity.
+
+This rule is applied incrementally: compatible existing constructs are retained, and incompatible constructs require explicit revision, migration, or deprecation rather than an unconditional from-scratch rewrite.
+
+Automated verification MAY establish machine properties and declared AI-generation behavior, but MUST NOT be described as proof of human comprehension. Human-comprehension claims require separate human evidence.
+
 ## Normative rule
 
 **Each layer proves only the claim it owns.**
