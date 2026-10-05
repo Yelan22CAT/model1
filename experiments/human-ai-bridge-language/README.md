@@ -298,6 +298,32 @@ See [Verification Status — v0.200](VERIFICATION_STATUS_v0.200.md).
 
 The v0.200 result remains **Experimental / Local Synthetic Test Only / Not Production Ready**.
 
+## v0.250 verification milestone
+
+Bridge-0 has reached the next consolidated local-adversarial checkpoint at **v0.250**.
+
+The post-v0.200 campaign adds structural coverage for trust-assumption invalidation, approval/effect binding, causal and rollback-resistant execution history, reasoning-budget non-elevation, context provenance, constrained model routing, means-constrained agency, requirement/model/evaluation gaps, verification capacity, comprehension debt, and adaptive deliberation strategies.
+
+The v0.250 selected milestone regression used 25 representative material invariants across 100,000 synthetic cases:
+
+```text
+attack cases:                    80,090
+weak 23/25-enough false accepts: 66,796
+strict all-material false accepts:     0
+strict all-material false rejects:     0
+```
+
+See [Verification Status — v0.250](VERIFICATION_STATUS_v0.250.md).
+
+Boundary:
+
+```text
+selected milestone regression != every historical bundle re-executed
+local simulation != closure
+```
+
+The v0.250 milestone does **not** advance the separate remote-verification high-water by itself.
+
 ## Feedback wanted
 
 Useful questions include:
