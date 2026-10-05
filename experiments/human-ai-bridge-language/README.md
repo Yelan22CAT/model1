@@ -284,6 +284,10 @@ License choice is separate from claims of novelty, inventorship, patentability, 
 
 ---
 
+## Experimental architecture RFCs
+
+- [Adaptive Workload Routing, Reasoning Budget & Structural Distillation](RFC_ADAPTIVE_WORKLOAD_ROUTING_REASONING_BUDGET.md) — routes by workload/capability/trust constraints, keeps reasoning budget separate from authority, and treats popularity as adoption evidence rather than capability proof.
+
 ## v0.200 verification milestone
 
 The post-v0.50 adversarial campaign has reached a new public checkpoint at **v0.200**. The milestone summarizes structural work on surface/IR separation, heterogeneous execution, multi-interface agents, task factories, policy-plane anti-bypass rules, agent containment, external observability, Byzantine/collusion resistance, and trust recovery.
