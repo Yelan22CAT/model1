@@ -284,6 +284,11 @@ License choice is separate from claims of novelty, inventorship, patentability, 
 
 ---
 
+## ADD-MAE Stage 3: scoped engineering evidence (2026-10-08)
+
+- [Decision Discipline & Trustworthy Effect Recovery RFC](RFC_ADDMAE_DECISION_DISCIPLINE_TRUSTED_EFFECTS.md) — candidate action/stop/recovery semantics, including the required authenticated-witness gate.
+- [Stage 3 public evidence status](ADDMAE_STAGE3_PUBLIC_STATUS_2026-10-08.md) — local synthetic results and a **blocking negative result**: a forged mock receipt was accepted. This is not a production or formal Bridge-0 release.
+
 ## Experimental architecture RFCs
 
 - [Adaptive Workload Routing, Reasoning Budget & Structural Distillation](RFC_ADAPTIVE_WORKLOAD_ROUTING_REASONING_BUDGET.md) — routes by workload/capability/trust constraints, keeps reasoning budget separate from authority, and treats popularity as adoption evidence rather than capability proof.
