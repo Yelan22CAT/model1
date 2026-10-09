@@ -3,6 +3,11 @@
 > **Experimental / v0.1 / Not production-ready**  
 > Provisional name. This is a semantic-language experiment, not a finished programming language.
 
+> **Positioning confirmed 2026-10-08:** Human and AI meet in the middle — preserve meaning, expose uncertainty, verify what can be verified.  
+> **定位确认：** 人类与 AI 各向中间走一步——保留原意，显露不确定性，验证能够验证的部分。  
+> Bridge is a **bidirectional mutual-understanding layer**, not compulsory human-to-machine translation or an Agent workflow language. Natural conversation stays natural; structured notation is optional when useful.  
+> **[Read the bilingual positioning statement / 中英双语核心定位](POSITIONING_SHARED_UNDERSTANDING.md).**
+
 ## One-line purpose
 
 Create a shared semantic layer that humans can learn with low effort and AI systems can parse with low ambiguity.
@@ -42,26 +47,24 @@ The first target is **communication integrity**, especially:
 
 ## Core idea
 
-Human natural language and machine execution languages remain useful.
-
-Bridge-0 sits **above** them:
+Human natural language and machine execution languages remain useful. Bridge-0 does not require every utterance to be compiled into formal instructions.
 
 ```text
-Human language / voice / UI
-            ↓
-     Semantic compiler
-            ↓
-        Bridge-0
-    shared semantic layer
-            ↓
-  canonical graph / AST / IR
-            ↓
-AI model / agent / tool / runtime
-            ↓
-      verification
+Human expression <----> AI interpretation
+              shared meaning
+        (intent, claims, evidence,
+         ambiguity, constraints, unknowns)
+                   |
+         clarification / calibration
+                   |
+          scoped verification
+                   |
+    answer / optional structured form
+                   |
+     optional Agent / Graph / runtime
 ```
 
-Chinese, English, or another natural language may be used as the display layer. The semantic core should not depend on one natural language.
+The lower layers (canonical IR, formal validation, tool/runtime execution and recovery) remain available when a use case genuinely requires them. They are **not a compulsory pathway for ordinary conversation**. Chinese, English and other natural languages may be used freely as the human-facing expression layer.
 
 ---
 
