@@ -49,6 +49,10 @@ The portfolio is aligned with:
 - compact management decision communication;
 - public-safe technical documentation.
 
+## October 2026 method updates (review branch)
+
+A review-only, public-safe package adds change-throughput assurance, human prediction boundaries, training/demo provenance, and agent necessity/runtime placement. See [October 2026 method updates](OCTOBER_2026_METHOD_UPDATES.md). The corresponding private source records remain outside this repository; this Draft PR does not claim merged or deployed implementation.
+
 ## Public work portfolio
 
 ### Role evidence
