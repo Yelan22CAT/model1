@@ -233,6 +233,10 @@ The provenance record is deliberately narrow: it records what was published here
 
 Public citation uses the repository identity `Yelan22CAT`. Personal legal-name mapping is not required for the public contribution record. See [`methods/15-originality-provenance-defense.md`](methods/15-originality-provenance-defense.md) for the public-safe source-lineage method.
 
+## Human-reviewed reality feedback and rework (October 2026 — Draft)
+
+The proposed [HRRFG method](methods/20-human-reality-feedback-rework.md) sets out a versioned cycle of artifact generation, independent acceptance checks, human review, bounded rework, regression verification and evidence of real-world outcomes. See the [October update note](OCTOBER_2026_HRRFG_UPDATE.md). This is a public-safe **method proposal in a Draft PR**, not a deployed system, a safety certification or a claim of measured improvement over ordinary GPT.
+
 ## Public / private boundary
 
 This public repository contains enough structure, cases, methods, templates, decision products, and public-safe control concepts for an employer or technical reviewer to assess capability.
