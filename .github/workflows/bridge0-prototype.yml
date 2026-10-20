@@ -485,3 +485,7 @@ jobs:
             exit 1
           fi
           echo "Bridge-0 v0.19 negative control: replay/revocation drift detected as expected"
+
+      - name: SPCSG candidate evidence-attribution profile
+        working-directory: experiments/human-ai-bridge-language/prototype
+        run: python -m unittest -v test_policy_claim_audit_candidate.py
