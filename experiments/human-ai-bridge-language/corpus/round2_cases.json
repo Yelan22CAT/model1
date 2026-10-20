@@ -1,0 +1,64 @@
+{
+  "language": "Bridge-0",
+  "version": "0.1-round2",
+  "status": "experimental",
+  "stress_dimensions": [
+    "nested_claims",
+    "conflicting_evidence",
+    "numerical_uncertainty",
+    "multi_agent_handoff",
+    "partial_permissions",
+    "tool_failure",
+    "source_version_replacement",
+    "reversibility",
+    "causal_claims",
+    "cross_language_rendering"
+  ],
+  "invariants": [
+    {
+      "id": "I11",
+      "rule": "attributed_claim_does_not_adopt_embedded_claim"
+    },
+    {
+      "id": "I12",
+      "rule": "conflicting_evidence_remains_unresolved_until_explicit_reconciliation"
+    },
+    {
+      "id": "I13",
+      "rule": "numerical_uncertainty_confidence_and_epistemic_state_are_distinct"
+    },
+    {
+      "id": "I14",
+      "rule": "handoff_preserves_provenance_and_epistemic_state"
+    },
+    {
+      "id": "I15",
+      "rule": "permission_is_typed_by_actor_action_resource_scope_condition_and_time"
+    },
+    {
+      "id": "I16",
+      "rule": "tool_failure_or_empty_result_is_not_negative_world_state"
+    },
+    {
+      "id": "I17",
+      "rule": "superseded_is_not_erased"
+    },
+    {
+      "id": "I18",
+      "rule": "irreversible_actions_require_explicit_guards"
+    },
+    {
+      "id": "I19",
+      "rule": "association_does_not_imply_causation"
+    },
+    {
+      "id": "I20",
+      "rule": "localized_labels_do_not_define_semantic_identity"
+    }
+  ],
+  "result": {
+    "add_new_glyphs": false,
+    "next_step": "formal_grammar_and_canonical_ir_schema",
+    "parser_ready": false
+  }
+}

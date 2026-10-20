@@ -1,0 +1,107 @@
+{
+  "language": "Bridge-0",
+  "version": "0.1-round1",
+  "status": "experimental",
+  "cases": [
+    {
+      "id": "R1-01",
+      "name": "conflicting procurement records",
+      "must_preserve": [
+        "current_spec=unknown",
+        "no approval while unresolved",
+        "record_A match is hypothesis"
+      ]
+    },
+    {
+      "id": "R1-02",
+      "name": "unverified engineering release",
+      "must_preserve": [
+        "local_check=passed",
+        "full_range_validation=unknown",
+        "release forbidden until validation"
+      ]
+    },
+    {
+      "id": "R1-03",
+      "name": "AI summary claim drift",
+      "must_preserve": [
+        "unsupported material claim remains unknown",
+        "draft evidence does not become verified result",
+        "final distribution gated"
+      ]
+    },
+    {
+      "id": "R1-04",
+      "name": "temporary workaround",
+      "must_preserve": [
+        "workaround exists",
+        "full validation unknown",
+        "containment != restored normal operation"
+      ]
+    },
+    {
+      "id": "R1-05",
+      "name": "stale evidence",
+      "must_preserve": [
+        "historical claim may remain true",
+        "current validity unresolved",
+        "stale source cannot silently authorize current approval"
+      ]
+    },
+    {
+      "id": "R1-06",
+      "name": "local versus offline",
+      "must_preserve": [
+        "local execution fact",
+        "egress/fallback unknown",
+        "local != offline"
+      ]
+    },
+    {
+      "id": "R1-07",
+      "name": "metric-objective mismatch",
+      "must_preserve": [
+        "score valid for old objective",
+        "alignment to new objective unknown",
+        "authority expansion gated"
+      ]
+    },
+    {
+      "id": "R1-08",
+      "name": "agent authority boundary",
+      "must_preserve": [
+        "agent may prepare",
+        "human owns approval",
+        "no self-approve/self-merge"
+      ]
+    },
+    {
+      "id": "R1-09",
+      "name": "selective intervention",
+      "must_preserve": [
+        "free_run is state",
+        "observation may be parallel",
+        "preempt requires material boundary"
+      ]
+    },
+    {
+      "id": "R1-10",
+      "name": "human catch-up gate",
+      "must_preserve": [
+        "freeze preserves trace",
+        "resume requires external authorization",
+        "system cannot self-resume"
+      ]
+    }
+  ],
+  "round1_findings": {
+    "add_new_glyphs": false,
+    "priorities": [
+      "stable_claim_ids",
+      "single_epistemic_marker",
+      "typed_relations",
+      "scope_and_time_binding",
+      "guarded_state_transitions"
+    ]
+  }
+}

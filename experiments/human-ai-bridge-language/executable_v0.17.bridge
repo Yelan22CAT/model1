@@ -1,0 +1,4 @@
+# Bridge-0 v0.17 executable semantic migration experiment
+
+⊙ [P1] program name=bridge0_v017_semantic_migration targets=python312,node20
+→ [M1] migrate domain=grapheme artifact=fixture_v1 routes=v1_to_v2,v1_to_v3_compact loss_policy=reject_unacknowledged roundtrip=audit execution=gate_on_audit observe=json_value

@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/bridge-0/ir-v0.4.schema.json",
+  "title": "Bridge-0 Canonical IR v0.4",
+  "type": "object",
+  "required": ["language", "version", "statements"],
+  "properties": {
+    "language": {"const": "Bridge-0"},
+    "version": {"const": "0.4"},
+    "source_language": {"type": ["string", "null"]},
+    "labels": {"type": "object"},
+    "statements": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/statement"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "ref": {
+      "type": "object",
+      "required": ["ref"],
+      "properties": {"ref": {"type": "string", "minLength": 1}},
+      "additionalProperties": false
+    },
+    "statement": {
+      "oneOf": [
+        {"$ref": "#/$defs/grant"},
+        {"$ref": "#/$defs/delegation"},
+        {"$ref": "#/$defs/revocation"},
+        {"$ref": "#/$defs/replay"},
+        {"type": "object", "required": ["id", "kind"], "additionalProperties": true}
+      ]
+    },
+    "grant": {
+      "type": "object",
+      "required": [
+        "id", "kind", "grantor", "actor", "action",
+        "resource", "scope", "at", "epoch"
+      ],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "grant"},
+        "grantor": {"type": "string"},
+        "actor": {"type": "string"},
+        "action": {"type": "string"},
+        "resource": {"type": "string"},
+        "scope": {"type": "string"},
+        "at": {"type": "string", "format": "date-time"},
+        "epoch": {"type": "integer", "minimum": 1},
+        "valid_from": {"type": "string", "format": "date-time"},
+        "valid_until": {"type": "string", "format": "date-time"},
+        "condition": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "delegation": {
+      "type": "object",
+      "required": [
+        "id", "kind", "parent", "from", "to", "action",
+        "resource", "scope", "at", "epoch"
+      ],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "delegation"},
+        "parent": {"$ref": "#/$defs/ref"},
+        "from": {"type": "string"},
+        "to": {"type": "string"},
+        "action": {"type": "string"},
+        "resource": {"type": "string"},
+        "scope": {"type": "string"},
+        "at": {"type": "string", "format": "date-time"},
+        "epoch": {"type": "integer", "minimum": 1},
+        "valid_until": {"type": "string", "format": "date-time"},
+        "condition": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "revocation": {
+      "type": "object",
+      "required": ["id", "kind", "target", "by", "at", "epoch"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "revocation"},
+        "target": {"$ref": "#/$defs/ref"},
+        "by": {"type": "string"},
+        "at": {"type": "string", "format": "date-time"},
+        "epoch": {"type": "integer", "minimum": 1},
+        "reason": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "replay": {
+      "type": "object",
+      "required": ["id", "kind", "target", "authority", "at", "epoch"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "replay"},
+        "target": {"$ref": "#/$defs/ref"},
+        "authority": {"$ref": "#/$defs/ref"},
+        "at": {"type": "string", "format": "date-time"},
+        "epoch": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    }
+  }
+}

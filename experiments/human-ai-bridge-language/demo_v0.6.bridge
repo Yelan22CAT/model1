@@ -1,0 +1,16 @@
+# Bridge-0 v0.6 many-way conflict + independent quorum demo
+
+○ [S0] snapshot branch=root parent=none seq=0 domain=authority state_hash=h0 at=2026-10-02T00:00:00Z
+○ [S1] snapshot branch=a parent=[S0] seq=1 domain=authority state_hash=h1 at=2026-10-02T00:01:00Z
+○ [S2] snapshot branch=b parent=[S0] seq=1 domain=authority state_hash=h2 at=2026-10-02T00:01:00Z
+○ [S3] snapshot branch=c parent=[S0] seq=1 domain=authority state_hash=h3 at=2026-10-02T00:01:00Z
+○ [S4] snapshot branch=d parent=[S0] seq=1 domain=authority state_hash=h4 at=2026-10-02T00:01:00Z
+○ [S5] snapshot branch=e parent=[S0] seq=1 domain=authority state_hash=h5 at=2026-10-02T00:01:00Z
+◆ [CS1] conflict_set members=S1,S2,S3,S4,S5 domain=authority status=open
+→ [P1] propose conflict_set=[CS1] strategy=explicit result_hash=hm at=2026-10-02T00:02:00Z
+! [Q1] quorum voters=validator_a,validator_b,validator_c,validator_d,validator_e threshold=3 independence_min=3
+◆ [V1] vote voter=validator_a proposal=[P1] decision=approve independence=model_family_a evidence_hash=ev1 at=2026-10-02T00:03:00Z
+◆ [V2] vote voter=validator_b proposal=[P1] decision=approve independence=model_family_b evidence_hash=ev2 at=2026-10-02T00:03:01Z
+◆ [V3] vote voter=validator_c proposal=[P1] decision=approve independence=human_review evidence_hash=ev3 at=2026-10-02T00:03:02Z
+✓ [FC1] certificate proposal=[P1] quorum=[Q1] votes=V1,V2,V3 issued_by=control_plane term=1 at=2026-10-02T00:04:00Z
+→ [X1] execute actor=agent_a action=deploy state=[P1] finality=[FC1] at=2026-10-02T00:05:00Z

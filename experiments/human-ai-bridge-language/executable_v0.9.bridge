@@ -1,0 +1,6 @@
+# Bridge-0 v0.9 multi-backend equivalence experiment
+
+⊙ [W1] workflow name=bridge0_v09_backend_equivalence runner=ubuntu-latest trigger=push branch=experiment/human-ai-bridge-v0.1
+→ [T1] task kind=checkout
+→ [T2] task kind=setup_python version=3.12
+→ [T3] task kind=python_module module=bridge_probe_v0_9 cwd=experiments/human-ai-bridge-language/prototype observe=stdout

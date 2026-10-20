@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/bridge-0/ir-v0.14.schema.json",
+  "title": "Bridge-0 Canonical IR v0.14",
+  "type": "object",
+  "required": ["language", "version", "statements"],
+  "properties": {
+    "language": {"const": "Bridge-0"},
+    "version": {"const": "0.14"},
+    "source_language": {"type": ["string", "null"]},
+    "labels": {"type": "object"},
+    "statements": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/statement"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "statement": {
+      "oneOf": [
+        {"$ref": "#/$defs/program"},
+        {"$ref": "#/$defs/semantic_compute"}
+      ]
+    },
+    "program": {
+      "type": "object",
+      "required": ["id", "kind", "name", "targets"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "program"},
+        "name": {"type": "string"},
+        "targets": {"const": "python312,node20"}
+      },
+      "additionalProperties": false
+    },
+    "semantic_compute": {
+      "type": "object",
+      "required": [
+        "id", "kind", "op", "text_model", "normalization",
+        "identity", "values", "observe"
+      ],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "semantic_compute"},
+        "op": {"const": "text_profile"},
+        "text_model": {"const": "unicode_scalar"},
+        "normalization": {"const": "NFC"},
+        "identity": {"const": "normalized_scalar_sequence"},
+        "values": {"type": "string"},
+        "observe": {"const": "json_value"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/bridge-0/ir-v0.2.schema.json",
+  "title": "Bridge-0 Canonical IR v0.2",
+  "description": "Experimental canonical intermediate representation for the restricted Bridge-0 v0.2 grammar.",
+  "type": "object",
+  "required": ["language", "version", "statements"],
+  "properties": {
+    "language": {
+      "const": "Bridge-0"
+    },
+    "version": {
+      "const": "0.2"
+    },
+    "source_language": {
+      "type": ["string", "null"]
+    },
+    "labels": {
+      "description": "Optional localized rendering metadata. Labels never define semantic identity.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      }
+    },
+    "statements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/statement"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "statement": {
+      "oneOf": [
+        {"$ref": "#/$defs/entity"},
+        {"$ref": "#/$defs/claim"},
+        {"$ref": "#/$defs/unknown"},
+        {"$ref": "#/$defs/evidence"},
+        {"$ref": "#/$defs/guard"},
+        {"$ref": "#/$defs/goal"},
+        {"$ref": "#/$defs/action"},
+        {"$ref": "#/$defs/verification"},
+        {"$ref": "#/$defs/prohibition"},
+        {"$ref": "#/$defs/time_binding"}
+      ]
+    },
+    "base": {
+      "type": "object",
+      "required": ["id", "kind"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string"
+        },
+        "scope": {
+          "type": ["object", "null"]
+        },
+        "metadata": {
+          "type": "object"
+        }
+      }
+    },
+    "entity": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "type": "object",
+          "required": ["kind", "name"],
+          "properties": {
+            "kind": {"const": "entity"},
+            "name": {"type": "string", "minLength": 1}
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "claim": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "type": "object",
+          "required": ["kind", "epistemic_state"],
+          "properties": {
+            "kind": {"const": "claim"},
+            "epistemic_state": {
+              "enum": ["fact", "hypothesis"]
+            },
+            "subject": {"type": ["string", "null"]},
+            "path": {"type": ["string", "null"]},
+            "operator": {"type": ["string", "null"]},
+            "value": {},
+            "unit": {"type": ["string", "null"]},
+            "predicate": {"type": ["string", "null"]},
+            "object": {},
+            "relation_class": {
+              "enum": [
+                "evidential",
+                "temporal",
+                "causal",
+                "descriptive",
+                "authority",
+                "normative",
+                null
+              ]
+            }
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "unknown": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "type": "object",
+          "required": ["kind", "path"],
+          "properties": {
+            "kind": {"const": "unknown"},
+            "path": {"type": "string", "minLength": 1}
+          },
+          "not": {
+            "required": ["value"]
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "evidence": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "type": "object",
+          "required": ["kind", "source", "relation", "target"],
+          "properties": {
+            "kind": {"const": "evidence"},
+            "source": {"type": "string"},
+            "relation": {
+              "enum": ["supports", "opposes", "derived_from"]
+            },
+            "relation_class": {"const": "evidential"},
+            "target": {"type": "string"}
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "guard": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "type": "object",
+          "required": ["kind", "action", "relation", "condition"],
+          "properties": {
+            "kind": {"const": "guard"},
+            "action": {"type": "string"},
+            "relation": {
+              "enum": ["requires", "allows", "forbids"]
+            },
+            "relation_class": {"const": "normative"},
+            "condition": {"type": "string"}
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "goal": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "type": "object",
+          "required": ["kind", "expression"],
+          "properties": {
+            "kind": {"const": "goal"},
+            "expression": {"type": "string"}
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "action": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "type": "object",
+          "required": ["kind", "actor", "action"],
+          "properties": {
+            "kind": {"const": "action"},
+            "actor": {"type": "string"},
+            "action": {"type": "string"},
+            "object": {"type": ["string", "null"]}
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "verification": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "type": "object",
+          "required": ["kind", "target", "method"],
+          "properties": {
+            "kind": {"const": "verification"},
+            "target": {"type": "string"},
+            "method": {"type": "string"}
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "prohibition": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "type": "object",
+          "required": ["kind", "expression"],
+          "properties": {
+            "kind": {"const": "prohibition"},
+            "expression": {"type": "string"}
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "time_binding": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {
+          "type": "object",
+          "required": ["kind", "path", "timestamp"],
+          "properties": {
+            "kind": {"const": "time_binding"},
+            "path": {"type": "string"},
+            "timestamp": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "additionalProperties": true
+        }
+      ]
+    }
+  }
+}

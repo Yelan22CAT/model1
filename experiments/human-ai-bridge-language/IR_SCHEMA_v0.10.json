@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/bridge-0/ir-v0.10.schema.json",
+  "title": "Bridge-0 Canonical IR v0.10",
+  "type": "object",
+  "required": ["language", "version", "statements"],
+  "properties": {
+    "language": {"const": "Bridge-0"},
+    "version": {"const": "0.10"},
+    "source_language": {"type": ["string", "null"]},
+    "labels": {"type": "object"},
+    "statements": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/statement"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "statement": {
+      "oneOf": [
+        {"$ref": "#/$defs/workflow"},
+        {"$ref": "#/$defs/workflow_task"},
+        {"type": "object", "required": ["id", "kind"], "additionalProperties": true}
+      ]
+    },
+    "workflow": {
+      "type": "object",
+      "required": ["id", "kind", "name", "runner", "trigger", "targets"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "workflow"},
+        "name": {"type": "string"},
+        "runner": {"const": "ubuntu-latest"},
+        "trigger": {"enum": ["push", "workflow_dispatch"]},
+        "branch": {"type": "string"},
+        "targets": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "workflow_task": {
+      "type": "object",
+      "required": ["id", "kind", "task_kind"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "workflow_task"},
+        "task_kind": {"enum": ["checkout", "setup_python", "python_module"]},
+        "version": {},
+        "module": {"type": "string"},
+        "cwd": {"type": "string"},
+        "args": {"type": "string"},
+        "observe": {"enum": ["json_value"]}
+      },
+      "additionalProperties": false
+    }
+  }
+}

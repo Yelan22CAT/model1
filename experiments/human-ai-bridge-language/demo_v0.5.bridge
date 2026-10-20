@@ -1,0 +1,9 @@
+# Bridge-0 v0.5 split-brain reconciliation demo
+
+○ [S0] snapshot branch=root parent=none seq=0 domain=authority state_hash=h0 at=2026-10-02T00:00:00Z
+○ [SA] snapshot branch=A parent=[S0] seq=1 domain=authority state_hash=ha at=2026-10-02T00:01:00Z
+○ [SB] snapshot branch=B parent=[S0] seq=1 domain=authority state_hash=hb at=2026-10-02T00:01:00Z
+◆ [CF1] conflict left=[SA] right=[SB] domain=authority status=open
+→ [M1] merge left=[SA] right=[SB] conflict=[CF1] strategy=explicit result_hash=hm at=2026-10-02T00:02:00Z
+✓ [F1] final target=[M1] by=control_plane term=1 at=2026-10-02T00:03:00Z
+→ [X1] execute actor=agent_a action=deploy state=[M1] finality=[F1] at=2026-10-02T00:04:00Z

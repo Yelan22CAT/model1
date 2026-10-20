@@ -1,0 +1,18 @@
+# Bridge-0 v0.2 end-to-end demo
+
+○ [E1] agent
+○ [E2] human_owner
+○ [E3] component
+
+⊙ [O1] prepare_reviewable_change
+
+△ [C1] component.safe = true
+◆ [V1] limited_test supports [C1]
+
+? [C2] full_range_validation
+
+→ [A1] agent prepare_change component
+! [G1] release requires human_owner.approval
+! [G2] release requires full_range_validation
+
+× [F1] agent self_approve

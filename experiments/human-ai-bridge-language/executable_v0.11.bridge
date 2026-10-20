@@ -1,0 +1,4 @@
+# Bridge-0 v0.11 cross-language semantic compiler experiment
+
+⊙ [P1] program name=bridge0_v011_cross_language targets=python312,node20
+→ [C1] compute op=stats values=2,3,5,7,11,13 observe=json_value

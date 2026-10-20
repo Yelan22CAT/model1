@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/bridge-0/ir-v0.5.schema.json",
+  "title": "Bridge-0 Canonical IR v0.5",
+  "type": "object",
+  "required": ["language", "version", "statements"],
+  "properties": {
+    "language": {"const": "Bridge-0"},
+    "version": {"const": "0.5"},
+    "source_language": {"type": ["string", "null"]},
+    "labels": {"type": "object"},
+    "statements": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/statement"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "ref": {
+      "type": "object",
+      "required": ["ref"],
+      "properties": {"ref": {"type": "string", "minLength": 1}},
+      "additionalProperties": false
+    },
+    "statement": {
+      "oneOf": [
+        {"$ref": "#/$defs/snapshot"},
+        {"$ref": "#/$defs/conflict"},
+        {"$ref": "#/$defs/merge"},
+        {"$ref": "#/$defs/finality"},
+        {"$ref": "#/$defs/execution"},
+        {"type": "object", "required": ["id", "kind"], "additionalProperties": true}
+      ]
+    },
+    "snapshot": {
+      "type": "object",
+      "required": ["id", "kind", "branch", "parent", "seq", "domain", "state_hash", "at"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "snapshot"},
+        "branch": {"type": "string"},
+        "parent": {
+          "oneOf": [
+            {"const": "none"},
+            {"$ref": "#/$defs/ref"}
+          ]
+        },
+        "seq": {"type": "integer", "minimum": 0},
+        "domain": {"type": "string"},
+        "state_hash": {"type": "string"},
+        "at": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": false
+    },
+    "conflict": {
+      "type": "object",
+      "required": ["id", "kind", "left", "right", "domain", "status"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "split_brain_conflict"},
+        "left": {"$ref": "#/$defs/ref"},
+        "right": {"$ref": "#/$defs/ref"},
+        "domain": {"type": "string"},
+        "status": {"const": "open"}
+      },
+      "additionalProperties": false
+    },
+    "merge": {
+      "type": "object",
+      "required": ["id", "kind", "left", "right", "conflict", "strategy", "result_hash", "at"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "merge"},
+        "left": {"$ref": "#/$defs/ref"},
+        "right": {"$ref": "#/$defs/ref"},
+        "conflict": {"$ref": "#/$defs/ref"},
+        "strategy": {"const": "explicit"},
+        "result_hash": {"type": "string"},
+        "at": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": false
+    },
+    "finality": {
+      "type": "object",
+      "required": ["id", "kind", "target", "by", "term", "at"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "finality"},
+        "target": {"$ref": "#/$defs/ref"},
+        "by": {"type": "string"},
+        "term": {"type": "integer", "minimum": 1},
+        "at": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": false
+    },
+    "execution": {
+      "type": "object",
+      "required": ["id", "kind", "actor", "action", "state", "finality", "at"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "execution"},
+        "actor": {"type": "string"},
+        "action": {"type": "string"},
+        "state": {"$ref": "#/$defs/ref"},
+        "finality": {"$ref": "#/$defs/ref"},
+        "at": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

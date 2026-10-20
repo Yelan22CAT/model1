@@ -1,0 +1,4 @@
+# Bridge-0 v0.14 explicit Unicode text-identity semantics experiment
+
+⊙ [P1] program name=bridge0_v014_unicode_identity targets=python312,node20
+→ [C1] compute op=text_profile text_model=unicode_scalar normalization=NFC identity=normalized_scalar_sequence values=00E9,0065+0301,00C5,0041+030A,212B,AC00,1100+1161,0065+0323+0301,0065+0301+0323,1F600,1F469+200D+1F4BB observe=json_value

@@ -1,0 +1,8 @@
+# Bridge-0 v0.4 authority lifecycle demo
+
+! [P1] grant grantor=human_owner actor=agent_a action=read resource=repo scope=/docs/** at=2026-10-02T00:00:00Z epoch=1
+→ [D1] delegate parent=[P1] from=agent_a to=agent_b action=read resource=repo scope=/docs/team/** at=2026-10-02T00:10:00Z epoch=2
+△ [C1] finding = true
+→ [H1] handoff from=agent_b to=analyst artifact=[C1] scope=review state=preserve provenance=preserve
+→ [Y1] replay target=[H1] authority=[D1] at=2026-10-02T00:30:00Z epoch=2
+× [R1] revoke target=[P1] by=human_owner at=2026-10-02T01:00:00Z epoch=3

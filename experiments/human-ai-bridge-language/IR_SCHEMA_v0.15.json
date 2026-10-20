@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/bridge-0/ir-v0.15.schema.json",
+  "title": "Bridge-0 Canonical IR v0.15",
+  "type": "object",
+  "required": ["language", "version", "statements"],
+  "properties": {
+    "language": {"const": "Bridge-0"},
+    "version": {"const": "0.15"},
+    "source_language": {"type": ["string", "null"]},
+    "labels": {"type": "object"},
+    "statements": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/statement"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "statement": {
+      "oneOf": [
+        {"$ref": "#/$defs/program"},
+        {"$ref": "#/$defs/semantic_compute"}
+      ]
+    },
+    "program": {
+      "type": "object",
+      "required": ["id", "kind", "name", "targets", "unicode_version"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "program"},
+        "name": {"type": "string"},
+        "targets": {"const": "python312,node20"},
+        "unicode_version": {}
+      },
+      "additionalProperties": false
+    },
+    "semantic_compute": {
+      "type": "object",
+      "required": [
+        "id", "kind", "op", "text_model", "normalization",
+        "segmentation", "profile", "values", "observe"
+      ],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "semantic_compute"},
+        "op": {"const": "grapheme_profile"},
+        "text_model": {"const": "unicode_scalar"},
+        "normalization": {"const": "NFC"},
+        "segmentation": {"const": "extended_grapheme_cluster"},
+        "profile": {"const": "bridge_uax29_subset_v1"},
+        "values": {"type": "string"},
+        "observe": {"const": "json_value"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

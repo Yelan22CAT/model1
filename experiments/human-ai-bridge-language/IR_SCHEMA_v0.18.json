@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/bridge-0/ir-v0.18.schema.json",
+  "title": "Bridge-0 Canonical IR v0.18",
+  "type": "object",
+  "required": ["language", "version", "statements"],
+  "properties": {
+    "language": {"const": "Bridge-0"},
+    "version": {"const": "0.18"},
+    "source_language": {"type": ["string", "null"]},
+    "labels": {"type": "object"},
+    "statements": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/statement"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "statement": {
+      "oneOf": [
+        {"$ref": "#/$defs/program"},
+        {"$ref": "#/$defs/loss_authorization"}
+      ]
+    },
+    "program": {
+      "type": "object",
+      "required": ["id", "kind", "name", "targets"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "program"},
+        "name": {"type": "string"},
+        "targets": {"const": "python312,node20"}
+      },
+      "additionalProperties": false
+    },
+    "loss_authorization": {
+      "type": "object",
+      "required": [
+        "id", "kind", "domain", "artifact", "route", "loss_ack",
+        "authority", "scope", "artifact_digest", "provenance",
+        "issued_at", "expires_at", "evaluate_at", "observe"
+      ],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"const": "loss_authorization"},
+        "domain": {"const": "grapheme"},
+        "artifact": {"const": "fixture_v1"},
+        "route": {"const": "v1_to_v3_compact"},
+        "loss_ack": {
+          "const": "$.units[*].id|$.units[*].label|$.units[*].confidence|$.provenance|$.notes"
+        },
+        "authority": {"const": "fixture_owner"},
+        "scope": {"const": "exact_loss_manifest"},
+        "artifact_digest": {
+          "const": "07b88b41d6be837f8b370c27523053bf84b214eef0bc1d074633e1250db2db92"
+        },
+        "provenance": {"const": "fixture_authority_record"},
+        "issued_at": {"const": "2026-10-02T12:00:00Z"},
+        "expires_at": {"const": "2026-10-02T13:00:00Z"},
+        "evaluate_at": {"const": "2026-10-02T12:30:00Z"},
+        "observe": {"const": "json_value"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

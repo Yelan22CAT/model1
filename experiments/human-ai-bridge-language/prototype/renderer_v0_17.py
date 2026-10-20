@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+"""Bridge-0 canonical renderer prototype v0.17."""
+
+from __future__ import annotations
+
+import json
+import sys
+from typing import Any
+
+from renderer_v0_2 import BridgeRenderError
+from renderer_v0_3 import render_kv
+
+
+def render_statement(s: dict[str, Any]) -> str:
+    sid = s.get("id")
+    if not isinstance(sid, str) or not sid:
+        raise BridgeRenderError("v0.17 statement missing id")
+    qid = f"[{sid}]"
+
+    if s.get("kind") == "program":
+        return (
+            f"⊙ {qid} program "
+            + render_kv([
+                ("name", s.get("name")),
+                ("targets", s.get("targets")),
+            ])
+        )
+
+    if s.get("kind") == "semantic_migration":
+        return (
+            f"→ {qid} migrate "
+            + render_kv([
+                ("domain", s.get("domain")),
+                ("artifact", s.get("artifact")),
+                ("routes", s.get("routes")),
+                ("loss_policy", s.get("loss_policy")),
+                ("roundtrip", s.get("roundtrip")),
+                ("execution", s.get("execution")),
+                ("observe", s.get("observe")),
+            ])
+        )
+
+    raise BridgeRenderError(f"Unsupported v0.17 statement kind: {s.get('kind')!r}")
+
+
+def render_document(doc: dict[str, Any]) -> str:
+    if doc.get("language") != "Bridge-0":
+        raise BridgeRenderError("Document language must be Bridge-0")
+    statements = doc.get("statements")
+    if not isinstance(statements, list):
+        raise BridgeRenderError("Document statements must be a list")
+    lines = [render_statement(s) for s in statements]
+    return "\n".join(lines) + ("\n" if lines else "")
+
+
+def main() -> int:
+    try:
+        doc = json.load(sys.stdin)
+        out = render_document(doc)
+    except (json.JSONDecodeError, BridgeRenderError) as exc:
+        print(f"BridgeRenderError: {exc}", file=sys.stderr)
+        return 2
+    sys.stdout.write(out)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

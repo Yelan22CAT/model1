@@ -1,0 +1,79 @@
+name: bridge0_v016_semantic_compatibility
+
+on:
+  push:
+    branches:
+      - experiment/human-ai-bridge-v0.1
+
+permissions:
+  contents: read
+
+jobs:
+  python_backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile Bridge Python backend
+        working-directory: experiments/human-ai-bridge-language/prototype
+        run: python bridge_compile_v0_16.py --target python312 < ../executable_v0.16.bridge > /tmp/bridge-v016.py
+      - name: Run Bridge Python backend
+        run: python /tmp/bridge-v016.py > bridge-v016-python.json
+      - name: Upload Python observable
+        uses: actions/upload-artifact@v4
+        with:
+          name: bridge-v016-python
+          path: bridge-v016-python.json
+          if-no-files-found: error
+
+  node_backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python compiler
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Compile Bridge Node backend
+        working-directory: experiments/human-ai-bridge-language/prototype
+        run: python bridge_compile_v0_16.py --target node20 < ../executable_v0.16.bridge > /tmp/bridge-v016.mjs
+      - name: Run Bridge Node backend
+        run: node /tmp/bridge-v016.mjs > bridge-v016-node.json
+      - name: Upload Node observable
+        uses: actions/upload-artifact@v4
+        with:
+          name: bridge-v016-node
+          path: bridge-v016-node.json
+          if-no-files-found: error
+
+  compare_backends:
+    needs: [python_backend, node_backend]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download Python observable
+        uses: actions/download-artifact@v4
+        with:
+          name: bridge-v016-python
+          path: artifacts/python
+      - name: Download Node observable
+        uses: actions/download-artifact@v4
+        with:
+          name: bridge-v016-node
+          path: artifacts/node
+      - name: Compare semantic compatibility observable
+        run: python experiments/human-ai-bridge-language/prototype/compare_typed_observables_v0_10.py artifacts/python/bridge-v016-python.json artifacts/node/bridge-v016-node.json

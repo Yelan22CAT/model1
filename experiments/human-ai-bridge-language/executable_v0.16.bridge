@@ -1,0 +1,4 @@
+# Bridge-0 v0.16 semantic-profile evolution experiment
+
+⊙ [P1] program name=bridge0_v016_semantic_compatibility targets=python312,node20
+→ [C1] compatibility domain=grapheme profiles=grapheme_v1,grapheme_v2,grapheme_v3_breaking policy=behavioral_manifest migration=explicit observe=json_value

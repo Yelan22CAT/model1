@@ -1,0 +1,4 @@
+# Bridge-0 v0.12 explicit exact-integer semantics experiment
+
+⊙ [P1] program name=bridge0_v012_exact_integer targets=python312,node20
+→ [C1] compute op=stats numeric=exact_integer values=9007199254740991,9007199254740993,-9007199254740995,18446744073709551617 observe=json_value
