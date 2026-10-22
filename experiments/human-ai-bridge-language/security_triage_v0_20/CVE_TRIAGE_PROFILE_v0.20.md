@@ -34,7 +34,7 @@ Experimental, read-only triage sidecar. No HTTP, registry, CA-store, network, pa
 
 ## Validation plan
 
-Run `python3 -m unittest -v test_security_triage_v0_20.py` and compile candidate Python. Synthetic negative tests cover malformed or duplicate fields, invalid CVE, mixed CVEs, unsupported schema, confused source state, stale/untrusted host context, recalled trust root, tampered IR, matrix of 27 typed state combinations, and no execution/safety-claim authority. CI is restricted to candidate paths. Existing RC1 signed/frozen baseline intentionally untouched, and old v0.19 regression **not re-run** in this candidate package.
+Run `python3 -m unittest -v test_security_triage_v0_20 test_security_triage_v0_20_extended` and compile candidate Python. The first module has five public smoke tests; the second has sixteen extended negative/consistency test methods including a matrix of 27 typed-state combinations. The PR workflow pins SHA-256 digests for the hardened runtime and extended tests, and checks both before executing them. Synthetic negative tests cover malformed or duplicate fields, invalid CVE, mixed CVEs, unsupported schema, confused source state, stale/untrusted host context, recalled trust root, tampered IR, matrix of 27 typed state combinations, and no execution/safety-claim authority. CI is restricted to candidate paths. Existing RC1 signed/frozen baseline intentionally untouched. The existing prototype CI passed on this branch; this does **not** amount to complete independent RC1 or v0.19 security qualification.
 
 ## Scope caveats
 
