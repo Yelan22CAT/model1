@@ -19,10 +19,15 @@ jobs:
           python-version: '3.13.5'
       - name: Check Python syntax
         working-directory: experiments/human-ai-bridge-language/security_triage_v0_20
-        run: python -m py_compile security_triage_v0_20.py test_security_triage_v0_20.py
+        run: python -m py_compile security_triage_v0_20.py test_security_triage_v0_20.py test_security_triage_v0_20_extended.py
+      - name: Verify exact locally tested source digests
+        working-directory: experiments/human-ai-bridge-language/security_triage_v0_20
+        run: |
+          test "$(sha256sum security_triage_v0_20.py | cut -d ' ' -f1)" = "a9ee8c7cfbca47cfad60dc1f3178ebbbcf66395b2e1afa0fd2d4fe612fc85ab6"
+          test "$(sha256sum test_security_triage_v0_20_extended.py | cut -d ' ' -f1)" = "30bf85064f63614bdacb35fa226c9fd5aac6f8e04d06c103edaca762bbb28222"
       - name: Run deterministic/negative tests
         working-directory: experiments/human-ai-bridge-language/security_triage_v0_20
-        run: python -m unittest -v test_security_triage_v0_20.py
+        run: python -m unittest -v test_security_triage_v0_20 test_security_triage_v0_20_extended
       - name: Check fail-closed demo
         working-directory: experiments/human-ai-bridge-language/security_triage_v0_20
         run: |
