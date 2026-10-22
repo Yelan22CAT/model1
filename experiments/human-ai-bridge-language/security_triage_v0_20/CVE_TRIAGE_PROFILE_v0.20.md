@@ -24,7 +24,7 @@ The UTF-8 symbols are inherited from the original Bridge vocabulary. The `securi
 - `source_state`: `claimed | verified | unknown`, a declarative source statement; `verified` is not trusted by itself.
 - `affected`, `reachable`: `yes | no | unknown`. Unknown remains unresolved.
 - `trust`: `current | revoked | unknown`. `revoked` blocks positive disposition.
-- `trusted_context`: separately supplied inventory/source match plus host-declared freshness; **this candidate cannot authenticate the host**. Do not describe it as a cryptographic trust proof.
+- `trusted_context`: separately supplied inventory/source match plus independent affected/reachability/trust state and host-declared freshness; **this candidate cannot authenticate the host**. Do not describe it as a cryptographic trust proof.
 - Statuses: `hold_unknown_or_untrusted`, `affected_escalate_to_human`, `bounded_reachability_review`, `bounded_no_exposure_candidate`. The last is **not a verified claim of safety**.
 - Always: `execution_allowed=false`, `may_publish_safe_claim=false`, `human_final_required=true`.
 
