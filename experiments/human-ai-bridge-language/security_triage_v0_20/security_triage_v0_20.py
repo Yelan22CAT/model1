@@ -99,6 +99,9 @@ def evaluate(doc:dict[str,Any],trusted_context:dict[str,Any]|None) -> dict[str,A
             and trusted_context.get('asset_id')==asset['asset_id']
             and trusted_context.get('component')==asset['component']
             and trusted_context.get('version')==asset['version']
+            and trusted_context.get('affected')==asset['affected']
+            and trusted_context.get('reachable')==asset['reachable']
+            and trusted_context.get('trust')==asset['trust']
             and trusted_context.get('trusted') is True
             and trusted_context.get('inventory_fresh') is True
             and trusted_context.get('source_fresh') is True)
@@ -109,7 +112,7 @@ def evaluate(doc:dict[str,Any],trusted_context:dict[str,Any]|None) -> dict[str,A
     if asset['reachable']=='unknown': gaps.append('reachability_unknown')
     if asset['trust']=='unknown': gaps.append('trust_root_unknown')
     if asset['trust']=='revoked': gaps.append('trust_revoked')
-    if not gaps and asset['affected']=='no':
+    if not gaps and asset['affected']=='no' and asset['reachable']=='no':
         disposition='bounded_no_exposure_candidate'
     elif not gaps and asset['affected']=='yes' and asset['reachable']=='yes':
         disposition='affected_escalate_to_human'
