@@ -1,0 +1,5 @@
+# Synthetic example; not a report about any real person's systems.
+⊙ [P1] security_triage profile=v0_20
+◆ [E1] advisory cve=CVE-2026-111943 source_ref=go_official_sample source_state=verified
+○ [A1] asset asset_id=fixture_go component=go version=1.26.9 cve=CVE-2026-111943 affected=unknown reachable=unknown trust=unknown
+! [G1] gate action=release requires=human_final
