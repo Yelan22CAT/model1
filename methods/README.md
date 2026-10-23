@@ -20,4 +20,9 @@ This directory contains employer-readable, public-safe work methods. These are *
 | [14 — Selective Intervention and Autonomy Governance](14-selective-intervention-autonomy-governance.md) | Let low-risk autonomous work run while a shadow control plane watches recoverability and preempts only on material boundaries. |
 | [15 — Originality and Provenance Defense](15-originality-provenance-defense.md) | Preserve dated source lineage, contribution boundaries and citation continuity without publishing the private engine or overstating novelty. |
 
+| [16 — Security, Procurement and Competition Separation](16-security-procurement-competition-separation.md) | Distinguish legal scope, stated risks, competition effects and inferred motives. |
+| [17 — Task-Authentic and Risk-Proportional Validation](17-task-authentic-risk-proportional-validation.md) | Align evaluations with real goals, legitimate multiple paths, and verification scaled to consequence. |
+| [18 — Historical-Case Regression and Closure Scope](18-historical-case-regression-closure-scope.md) | Re-run pinned archived tests, distinguish decision closure from external effects and retain known blockers. |
+| [19 — Heterogeneous Backend Portability](19-heterogeneous-backend-portability-evidence.md) | Stage evidence from API compatibility to semantics, workload, operations and authorized rollout. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
