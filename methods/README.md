@@ -24,5 +24,6 @@ This directory contains employer-readable, public-safe work methods. These are *
 | [17 — Task-Authentic and Risk-Proportional Validation](17-task-authentic-risk-proportional-validation.md) | Align evaluations with real goals, legitimate multiple paths, and verification scaled to consequence. |
 | [18 — Historical-Case Regression and Closure Scope](18-historical-case-regression-closure-scope.md) | Re-run pinned archived tests, distinguish decision closure from external effects and retain known blockers. |
 | [19 — Heterogeneous Backend Portability](19-heterogeneous-backend-portability-evidence.md) | Stage evidence from API compatibility to semantics, workload, operations and authorized rollout. |
+| [20 — Healthcare Data Engineering and Governed Interoperability](20-healthcare-data-engineering-governed-interoperability.md) | Version source mappings and permissions; distinguish data engineering, clinical validation and authorized action. |
 
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
