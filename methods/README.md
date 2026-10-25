@@ -26,4 +26,6 @@ This directory contains employer-readable, public-safe work methods. These are *
 | [19 — Heterogeneous Backend Portability](19-heterogeneous-backend-portability-evidence.md) | Stage evidence from API compatibility to semantics, workload, operations and authorized rollout. |
 | [20 — Healthcare Data Engineering and Governed Interoperability](20-healthcare-data-engineering-governed-interoperability.md) | Version source mappings and permissions; distinguish data engineering, clinical validation and authorized action. |
 
+| [21 — Human-Pace Consequence and Evidence-First Disagreement](21-human-pace-consequence-and-evidence-first-disagreement.md) | Gate consequential AI actions to human review capacity, and require evidence-based rather than flattering or reflexively contrary judgments. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
