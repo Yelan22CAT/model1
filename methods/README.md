@@ -27,3 +27,5 @@ This directory contains employer-readable, public-safe work methods. These are *
 | [20 — Healthcare Data Engineering and Governed Interoperability](20-healthcare-data-engineering-governed-interoperability.md) | Version source mappings and permissions; distinguish data engineering, clinical validation and authorized action. |
 
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
+
+Experimental companion: [Voice-transcript ambiguity and human authority boundary](bridge-voice-transcript-and-authority-boundary-2026-10-27.md). This is a public-safe Draft method with fictional examples, not ASR validation, a new grammar, or permission for autonomous action.
