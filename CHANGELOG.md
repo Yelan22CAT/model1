@@ -1,3 +1,10 @@
+## 2026-10-29 — Block-diffusion candidate/commit boundary (public method 22)
+
+- Added [Method 22](methods/22-block-diffusion-candidate-commit-benchmark-provenance.md): a public-safe method separating iterative generated candidates, evidence-backed claims, separate authorization, and observed external effects.
+- The motivating Clover-35B-A3B-Preview open-weight model's specifications are attributed to official developer sources. Performance and ranking numbers are developer-reported, **not independently reproduced**.
+- Method-level Full-Push / Not Frozen is a governance decision, not a released production runtime, an endorsement, an AI benchmark certification or a new authority grant.
+- Private source analysis, test details and dated main-anchor records remain in the separately controlled private archive; unrelated Draft PRs remain unchanged.
+
 # Changelog
 
 ## 2026-09-26｜Autonomy-governance and provenance update

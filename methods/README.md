@@ -26,4 +26,6 @@ This directory contains employer-readable, public-safe work methods. These are *
 | [19 — Heterogeneous Backend Portability](19-heterogeneous-backend-portability-evidence.md) | Stage evidence from API compatibility to semantics, workload, operations and authorized rollout. |
 | [20 — Healthcare Data Engineering and Governed Interoperability](20-healthcare-data-engineering-governed-interoperability.md) | Version source mappings and permissions; distinguish data engineering, clinical validation and authorized action. |
 
+| [22 — Block-Diffusion Candidate–Commit and Benchmark Provenance](22-block-diffusion-candidate-commit-benchmark-provenance.md) | Separate provisional parallel generation from authorized effects; audit comparability and source provenance before trusting benchmark claims. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
