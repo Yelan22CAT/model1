@@ -29,3 +29,5 @@ This directory contains employer-readable, public-safe work methods. These are *
 | [22 — Block-Diffusion Candidate–Commit and Benchmark Provenance](22-block-diffusion-candidate-commit-benchmark-provenance.md) | Separate provisional parallel generation from authorized effects; audit comparability and source provenance before trusting benchmark claims. |
 
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
+
+Experimental companion: [Voice-transcript ambiguity and human authority boundary](bridge-voice-transcript-and-authority-boundary-2026-10-27.md). This is a public-safe Draft method with fictional examples, not ASR validation, a new grammar, or permission for autonomous action.
