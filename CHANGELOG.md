@@ -1,3 +1,12 @@
+## 2026-11-08 — Evidence-gated agent governance and multimodal review (public methods 23–26)
+
+- Added [Method 23](methods/23-claim-evidence-effect-deployment-gate.md) on claim/evidence/effect/deployment separation for agent governance, failure-mode screening, scope coverage, and scenario-level testing.
+- Added [Method 24](methods/24-speaker-identity-context-meaning-gate.md) on speaker/capture identity, ambiguous multilingual meaning, and consent-aware real-time correction.
+- Added [Method 25](methods/25-realtime-multimodal-production-provenance.md) for media-input provenance, image/video reference continuity, preview-vs-final release, asynchronous effects, and comparable cost/quality evidence.
+- Added [Method 26](methods/26-human-readable-review-and-experience-evidence.md) on visual-review interfaces, authorized implementation, and source-to-experience mapping.
+- All additions are method-level **Full-Push / Not Frozen**; vendor slides, latency/quality/cost ratios, claimed model IDs, and anecdotal application limitations remain observed or unverified, not production certifications.
+- This is a public-safe extract of a richer private Model Root delta, with no personal records, event photos, participant identifiers, private architecture internals, model weights, deployment or security-control bypass.
+
 ## 2026-10-29 — Block-diffusion candidate/commit boundary (public method 22)
 
 - Added [Method 22](methods/22-block-diffusion-candidate-commit-benchmark-provenance.md): a public-safe method separating iterative generated candidates, evidence-backed claims, separate authorization, and observed external effects.

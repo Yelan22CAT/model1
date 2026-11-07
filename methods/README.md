@@ -28,4 +28,10 @@ This directory contains employer-readable, public-safe work methods. These are *
 
 | [22 — Block-Diffusion Candidate–Commit and Benchmark Provenance](22-block-diffusion-candidate-commit-benchmark-provenance.md) | Separate provisional parallel generation from authorized effects; audit comparability and source provenance before trusting benchmark claims. |
 
+
+| [23 — Claim–Evidence–Effect–Deployment Gate](23-claim-evidence-effect-deployment-gate.md) | Separate presented claims, configuration, effective behavior, tested mitigation and actual deployment with explicit residual risk. |
+| [24 — Speaker–Identity–Context–Meaning Gate](24-speaker-identity-context-meaning-gate.md) | Keep captured speech, diarization, person binding, pragmatic meaning and appropriate translation separately verifiable. |
+| [25 — Real-Time Multimodal Production and Provenance](25-realtime-multimodal-production-provenance.md) | Test audio/video, translation, image and video pipelines under different cost, latency, rights and release boundaries. |
+| [26 — Human-Readable Review and Experience-Evidence Boundaries](26-human-readable-review-and-experience-evidence.md) | Distinguish accessible configuration from correctness and source/field observation from verified real-world experience. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
