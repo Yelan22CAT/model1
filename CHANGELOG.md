@@ -1,3 +1,10 @@
+## 2026-11-08 — Human claim–reality separation (public method 27)
+
+- Added [Method 27](methods/27-human-claim-reality-separation-gate.md) to distinguish human-originated unsupported claims from AI-originated unsupported generation; correct understanding does not make a speaker's statement verified fact.
+- Preserves uncertainty about motives, source independence, attribution, temporal scope, real-world evidence and independent action authorization. Unverified does not mean deliberately deceptive.
+- **Method Full-Push / Not Frozen** only. Evaluation cases are designed, not executed; there is no zero-hallucination, lie-detection, grammar/runtime, production or independent trust-root claim.
+- Public-safe summary only; detailed audit and main-anchor increment remain in the private archive.
+
 ## 2026-11-08 — Evidence-gated agent governance and multimodal review (public methods 23–26)
 
 - Added [Method 23](methods/23-claim-evidence-effect-deployment-gate.md) on claim/evidence/effect/deployment separation for agent governance, failure-mode screening, scope coverage, and scenario-level testing.
