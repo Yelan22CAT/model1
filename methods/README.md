@@ -34,4 +34,6 @@ This directory contains employer-readable, public-safe work methods. These are *
 | [25 — Real-Time Multimodal Production and Provenance](25-realtime-multimodal-production-provenance.md) | Test audio/video, translation, image and video pipelines under different cost, latency, rights and release boundaries. |
 | [26 — Human-Readable Review and Experience-Evidence Boundaries](26-human-readable-review-and-experience-evidence.md) | Distinguish accessible configuration from correctness and source/field observation from verified real-world experience. |
 
+| [27 — Human Claim–Reality Separation Gate](27-human-claim-reality-separation-gate.md) | Distinguish accurately interpreted human statements from verified facts, intent hypotheses, permissions and observed outcomes. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
