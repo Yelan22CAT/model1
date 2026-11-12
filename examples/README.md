@@ -15,6 +15,9 @@ These public-safe composite cases demonstrate how Model 1 structures operational
 9. [`09-control-effectiveness-drift.md`](09-control-effectiveness-drift.md) — prior assurance after process change, evidence currency, and targeted control reassessment.
 10. [`10-local-ai-hidden-cloud-dependency.md`](10-local-ai-hidden-cloud-dependency.md) — local-vs-offline distinction, unverified data egress, cloud dependency, and deployment approval.
 11. [`11-metric-decision-objective-mismatch.md`](11-metric-decision-objective-mismatch.md) — metric usefulness vs decision-objective alignment, exceptions, and model-authority limits.
+12. [`12-drawing-to-physical-state-mismatch.md`](12-drawing-to-physical-state-mismatch.md) — a drawing and simulation agree while actual build evidence does not; no physical sign-off by inference.
+13. [`13-visual-location-candidate-correction.md`](13-visual-location-candidate-correction.md) — strong-looking visual candidate is contradicted; failed candidates are retired without auto-promoting another location.
+14. [`14-same-name-record-identity-collision.md`](14-same-name-record-identity-collision.md) — similar nicknames do not justify joining distinct account records.
 
 ## Domain coverage
 
@@ -31,6 +34,9 @@ These public-safe composite cases demonstrate how Model 1 structures operational
 | 9 | risk & controls / GRC | Does the prior control assessment still describe the current process state? |
 | 10 | AI / technology risk | Does “local” actually describe the full approved data and network boundary? |
 | 11 | AI / model risk | Does the metric rank outcomes in a way that matches the actual decision objective? |
+| 12 | manufacturing / field reality | Do matching documents actually describe the observed physical state? |
+| 13 | visual evidence / publication integrity | Should a contradicted location candidate still be presented as a fact? |
+| 14 | record identity / privacy | Is a same-name join supported by actual identity evidence? |
 
 ## Common review structure
 
@@ -71,5 +77,7 @@ Metric performance → verify alignment with the real decision objective
 - [`../methods/04-change-triggered-reassessment.md`](../methods/04-change-triggered-reassessment.md)
 - [`../templates/CHANGE_REASSESSMENT_RECORD.md`](../templates/CHANGE_REASSESSMENT_RECORD.md)
 - [`../samples/MANAGEMENT_DECISION_MEMO.md`](../samples/MANAGEMENT_DECISION_MEMO.md)
+
+**Cases 12–14 are newly added synthetic case patterns, not published transcripts of historical incidents, and have no independent field validation or executed code tests.** They illustrate judgments and possible acceptance checks only.
 
 These cases do not disclose real identities, organizations, incident records, private calibration logic, observer packs, anti-poisoning internals, or proprietary technical information.
