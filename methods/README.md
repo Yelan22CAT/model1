@@ -36,4 +36,6 @@ This directory contains employer-readable, public-safe work methods. These are *
 
 | [27 — Human Claim–Reality Separation Gate](27-human-claim-reality-separation-gate.md) | Distinguish accurately interpreted human statements from verified facts, intent hypotheses, permissions and observed outcomes. |
 
+| [28 — Operational Change Absorption & Assurance](28-operational-change-absorption-assurance.md) | Gate AI-driven change throughput by verified review, safe deployment, realistic recovery evidence, and operational feedback; distinguish security rollback risks, data semantics and architectural assumptions. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
