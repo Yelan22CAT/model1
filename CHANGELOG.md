@@ -1,3 +1,10 @@
+## 2026-11-13 — Operational change absorption & assurance (public method 28)
+
+- Added [Method 28](methods/28-operational-change-absorption-assurance.md): faster AI discovery and patch generation are not equivalent to independently verified, safely delivered changes.
+- New operational checks cover candidate-finding triage, review capacity/backpressure, security-hardening rollback trade-offs, realistic-load incident recovery, semantic definition versus query implementation, and operational knowledge feedback.
+- **Method Full-Push / Not Frozen** only. Negative cases are **designed, not executed**. No production runtime/Bridge grammar, verified vendor outage cause, model weights, release or trust-root hold is changed.
+- Public-safe generalized method only; detailed provenance and case statements stay private.
+
 ## 2026-11-08 — Human claim–reality separation (public method 27)
 
 - Added [Method 27](methods/27-human-claim-reality-separation-gate.md) to distinguish human-originated unsupported claims from AI-originated unsupported generation; correct understanding does not make a speaker's statement verified fact.
