@@ -1,3 +1,10 @@
+## 2026-11-14 — Proposal–Execution–Reality Verification Gap (public method 29)
+
+- Added [Method 29](methods/29-proposal-execution-reality-verification.md) to distinguish a generated/diagrammed proposal, instrumented physical feasibility, attempted field trial, independent replication, safe function, and repeatable economical production.
+- Field-observed engineering difficulty does not verify commercial motives or prove universal manufacturing limits.
+- **Method Full-Push / Not Frozen** only. Anonymous case is illustrative; negative cases are **DESIGN ONLY**, not live manufacturing/safety tests. Private details remain outside public GitHub.
+- No Bridge-0 grammar/runtime, production deployment, new version-bridge confirmation, model weights, or previous provenance/security HOLD is changed.
+
 ## 2026-11-13 — Operational change absorption & assurance (public method 28)
 
 - Added [Method 28](methods/28-operational-change-absorption-assurance.md): faster AI discovery and patch generation are not equivalent to independently verified, safely delivered changes.
