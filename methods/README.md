@@ -40,4 +40,6 @@ This directory contains employer-readable, public-safe work methods. These are *
 
 | [29 — Proposal–Execution–Reality Verification Gap](29-proposal-execution-reality-verification.md) | Separate plausible designs and intent stories from field evidence, independently qualified manufacturing, safety and economic outcomes. |
 
+| [30 — Latent Constraint Reconstruction and Minimum-Input Verified Solutions](30-latent-constraint-minimum-input-verified-solutions.md) | Find decision-critical unknowns from sparse goals, propose discriminating probes, and require executable, independently verifiable solutions. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
