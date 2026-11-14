@@ -42,4 +42,6 @@ This directory contains employer-readable, public-safe work methods. These are *
 
 | [30 — Latent Constraint Reconstruction and Minimum-Input Verified Solutions](30-latent-constraint-minimum-input-verified-solutions.md) | Find decision-critical unknowns from sparse goals, propose discriminating probes, and require executable, independently verifiable solutions. |
 
+| [31 — Archived Bridge Regression and Evidence-Bounded Integration](31-bridge-archived-regression-evidence-gates.md) | Re-run pinned candidate suites, keep typed evidence/authority/effect boundaries separate, and preserve production-blocking negative findings. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.

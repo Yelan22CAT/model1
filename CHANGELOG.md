@@ -1,3 +1,10 @@
+## 2026-11-14 — Bridge archived regression and sparse-input evidence boundary (public method 31)
+
+- Added [Method 31](methods/31-bridge-archived-regression-evidence-gates.md) as a **method-level Full-Push / Not Frozen** for source-pinned local Bridge-0 candidate regressions, LCR/MISA typed-claim boundaries and negative-evidence preservation.
+- Preserved distinct test categories: 221 directed and 59,200 synthetic/grammar cases were observed in scoped archival reruns; neither establishes independent production safety or authentic end-to-end solution success.
+- **Security blockers remain OPEN:** historical candidate witness forgery, absent independent issuer/effect authentication, and intermittent timeout instability. **Training Hold / Production FAIL unchanged.**
+- Public-safe methodological description only; private artifacts and attack details remain in private Library; no Bridge-0 grammar/runtime, GPT weights, or new version bridge confirmation changed.
+
 ## 2026-11-14 — Hidden-constraint inference and minimum-input verified solutions (public method 30)
 
 - Added [Method 30](methods/30-latent-constraint-minimum-input-verified-solutions.md): LCR-G and MISA-G are user-authorized **method-level Full-Push / Not Frozen**; find decision-critical unknowns before requesting exhaustive inputs and validate concrete outcomes.
