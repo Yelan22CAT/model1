@@ -36,7 +36,7 @@ For hydraulic safety components, relevant future checks may include force–disp
 - AI coding and release: generated patch != verified change != observed production outcome.
 - Human collaboration: replace motive stories with reported behavior, evidence and alternative hypotheses.
 
-## Negative test designs (NOT executed field tests)
+## Negative test designs — DESIGN ONLY (NOT executed field tests)
 
 1. Rendered assembly only -> physical feasibility unverified.
 2. Single failed supplier trial -> no claim of universal impossibility.
