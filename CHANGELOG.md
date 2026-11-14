@@ -1,3 +1,9 @@
+## 2026-11-14 — Hidden-constraint inference and minimum-input verified solutions (public method 30)
+
+- Added [Method 30](methods/30-latent-constraint-minimum-input-verified-solutions.md): LCR-G and MISA-G are user-authorized **method-level Full-Push / Not Frozen**; find decision-critical unknowns before requesting exhaustive inputs and validate concrete outcomes.
+- Added [bounded continual-learning research note](docs/03-bounded-continual-learning-research-candidate.md): new Stage 4 learning/adaptation is **Candidate / Verification Pending**, not an autonomous service or a new method-level Full-Push.
+- Local synthetic prototype results and local learned-weight changes are **not** independent real-world validation or GPT foundation-weight training. No private cases, personal profiles, model artifacts, Bridge runtime changes, or security-HOLD exemptions published.
+
 ## 2026-11-14 — Proposal–Execution–Reality Verification Gap (public method 29)
 
 - Added [Method 29](methods/29-proposal-execution-reality-verification.md) to distinguish a generated/diagrammed proposal, instrumented physical feasibility, attempted field trial, independent replication, safe function, and repeatable economical production.
