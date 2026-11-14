@@ -44,4 +44,6 @@ This directory contains employer-readable, public-safe work methods. These are *
 
 | [31 — Archived Bridge Regression and Evidence-Bounded Integration](31-bridge-archived-regression-evidence-gates.md) | Re-run pinned candidate suites, keep typed evidence/authority/effect boundaries separate, and preserve production-blocking negative findings. |
 
+| [32 — Capability–Alignment Non-Entailment & Dual-Layer Assurance](32-capability-alignment-dual-layer-assurance.md) | Separate model capability and training alignment from independent authorization, containment, authentic evidence and verified effects. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.

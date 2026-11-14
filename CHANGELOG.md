@@ -1,3 +1,10 @@
+## 2026-11-14 — Capability–Alignment Non-Entailment and Dual-Layer Assurance (Method 32)
+
+- Added [Method 32](methods/32-capability-alignment-dual-layer-assurance.md) — CANA-G, method-level **Full-Push / Not Frozen**. Scaling/task competence does not by itself establish alignment; model-training behavior controls and independently enforced runtime authorization are complementary, not interchangeable.
+- Distinguished attributed public interview positions from secondary interpretations and unverified claims of unique/guaranteed safe architectures.
+- Local toy boundary checker **18/18 self-authored fixtures PASS**, not independent safety verification; Bridge-0 witness-forgery, external-authentication and stability blockers remain OPEN. **Training Hold / Production FAIL unchanged.**
+- Public-safe summary only. No private case, confidential source, model weights, formal Bridge grammar, external permissions, production deployment or version-bridge change.
+
 ## 2026-11-14 — Bridge archived regression and sparse-input evidence boundary (public method 31)
 
 - Added [Method 31](methods/31-bridge-archived-regression-evidence-gates.md) as a **method-level Full-Push / Not Frozen** for source-pinned local Bridge-0 candidate regressions, LCR/MISA typed-claim boundaries and negative-evidence preservation.
