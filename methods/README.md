@@ -46,5 +46,7 @@ This directory contains employer-readable, public-safe work methods. These are *
 
 | [32 — Capability–Alignment Non-Entailment & Dual-Layer Assurance](32-capability-alignment-dual-layer-assurance.md) | Separate model capability and training alignment from independent authorization, containment, authentic evidence and verified effects. |
 
+| [33 — Automation Irony & Human Takeover Readiness](33-automation-irony-human-takeover-readiness.md) | Require demonstrable human takeover readiness, independent state/effects, finite timing, and fail-closed evidence; local candidate tests do not confer execution rights. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
-| [32 — Automation Irony & Human Takeover Readiness](32-automation-irony-human-takeover-readiness.md) | Require demonstrable human takeover readiness, independent state/effects, finite timing, and fail-closed evidence; local candidate tests do not confer execution rights. |
+
