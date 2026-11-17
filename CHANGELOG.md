@@ -1,3 +1,10 @@
+## 2026-11-17 — AITR-G takeover readiness and fail-closed input assurance (public Method 33)
+
+- Method-level **Full-Push / Not Frozen**: human final authority is not proof the operator can understand, intervene or recover safely.
+- Added [Method 33](methods/33-automation-irony-human-takeover-readiness.md) on independent state/effect evidence, meaningful handoff, skill rehearsal, finite timing and fail-closed defaults.
+- Local **self-authored candidate** retests: AITR-G 29/29 directed checks including 1,500 randomized vectors; separate BRIDGE-HANDOFF candidate syntax 17/17 checks including 2,500 round trips. The previous 4/6 abnormal-input false-ready findings remain recorded.
+- Stage3 witness forgery, Stage11 independence/repeatability and other production holds remain open. No foundation-model weights, active runtime, formal production grammar or physical system changed.
+
 ## 2026-11-14 — Capability–Alignment Non-Entailment and Dual-Layer Assurance (Method 32)
 
 - Added [Method 32](methods/32-capability-alignment-dual-layer-assurance.md) — CANA-G, method-level **Full-Push / Not Frozen**. Scaling/task competence does not by itself establish alignment; model-training behavior controls and independently enforced runtime authorization are complementary, not interchangeable.
