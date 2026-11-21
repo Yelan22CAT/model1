@@ -1,3 +1,10 @@
+## 2026-11-21 — Selective Algorithm Selection & Decision-Metric Preservation (Method 34)
+
+- User-authorized method-level **Full-Push / Not Frozen**: registered a 25-algorithm *selection* catalog, not a 25-model implementation or production system.
+- Added [Method 34](methods/34-selective-algorithm-selection-decision-metric-preservation.md): 7 core baselines, 11 conditional candidates, 5 isolated RL simulation methods and 2 reference-only methods.
+- Prefer deterministic/physics/simple prediction baselines and decision-relevant IID/OOD evaluation; preserve provenance, human approval and separate execution authority.
+- Previous Bridge/HER trust-root and repeatability issues remain **OPEN / Production HOLD**. No foundation-weight change, grammar ratification or field certification; only generalized public-safe methodology.
+
 ## 2026-11-17 — AITR-G takeover readiness and fail-closed input assurance (public Method 33)
 
 - Method-level **Full-Push / Not Frozen**: human final authority is not proof the operator can understand, intervene or recover safely.
