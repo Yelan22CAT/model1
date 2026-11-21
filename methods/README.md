@@ -48,5 +48,7 @@ This directory contains employer-readable, public-safe work methods. These are *
 
 | [33 — Automation Irony & Human Takeover Readiness](33-automation-irony-human-takeover-readiness.md) | Require demonstrable human takeover readiness, independent state/effects, finite timing, and fail-closed evidence; local candidate tests do not confer execution rights. |
 
+| [34 — Selective Algorithm Selection & Decision-Metric Preservation](34-selective-algorithm-selection-decision-metric-preservation.md) | Match algorithms to task and trustworthy evidence; prefer simple baselines, check decision-relevant IID/OOD behavior, and isolate RL from real-world authority. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
 
