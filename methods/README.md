@@ -50,5 +50,7 @@ This directory contains employer-readable, public-safe work methods. These are *
 
 | [34 — Selective Algorithm Selection & Decision-Metric Preservation](34-selective-algorithm-selection-decision-metric-preservation.md) | Match algorithms to task and trustworthy evidence; prefer simple baselines, check decision-relevant IID/OOD behavior, and isolate RL from real-world authority. |
 
+| [35 — Knowledge Distillation vs. Structural Transfer Evidence Gate](35-knowledge-distillation-vs-structural-transfer-evidence-gate.md) | Distinguish teacher–student KD from method synthesis or local learning; require trainable teacher targets, dataset rights, measured student updates and independent validation. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
 
