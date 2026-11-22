@@ -1,3 +1,10 @@
+## 2026-11-22 — Distillation taxonomy and structural-transfer evidence gate (Method 35)
+
+- User-authorized **Method Full-Push / Not Frozen** clarifies that structural knowledge synthesis, deterministic program design, ordinary supervised learning and continual learning are **not automatically model knowledge distillation**.
+- Added [Method 35](methods/35-knowledge-distillation-vs-structural-transfer-evidence-gate.md): black-box teacher-output KD, teacher logit/representation KD and API-output-distribution gray-box cases require distinct evidence and permissions. A teacher distribution does not expose hidden reasoning or student gradients.
+- No completed teacher–student KD experiment, foundation-model weight change, authorized deployment, official Bridge grammar modification, new version-bridge confirmation or third-party benchmark is claimed.
+- Prior Bridge Stage3 witness-forgery, Stage11 independent issuer/repeatability and HER provenance blockers remain OPEN; **Training Hold / Production FAIL unchanged**.
+
 ## 2026-11-21 — Selective Algorithm Selection & Decision-Metric Preservation (Method 34)
 
 - User-authorized method-level **Full-Push / Not Frozen**: registered a 25-algorithm *selection* catalog, not a 25-model implementation or production system.
