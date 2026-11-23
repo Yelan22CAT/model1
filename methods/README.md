@@ -52,5 +52,7 @@ This directory contains employer-readable, public-safe work methods. These are *
 
 | [35 — Knowledge Distillation vs. Structural Transfer Evidence Gate](35-knowledge-distillation-vs-structural-transfer-evidence-gate.md) | Distinguish teacher–student KD from method synthesis or local learning; require trainable teacher targets, dataset rights, measured student updates and independent validation. |
 
+| [36 — Literary Communication-State & Evidence Separation](36-literary-communication-state-separation.md) | Distinguish narrator belief, figurative or dreamed events, commitment, reception, consent, action and verified effects; preserve negative transfer evidence from a bounded trained small-model trial. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
 
