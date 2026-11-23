@@ -1,3 +1,10 @@
+## 2026-11-22 — Learned-Signal Non-Promotion & Archived Bridge Regression Integrity (Method 37)
+
+- Explicitly authorized **Method Full-Push / Not Frozen**; added [Method 37](methods/37-learned-signal-nonpromotion-bridge-regression-evidence.md) to distinguish learned classification, narrative interpretation, typed protocol output, authenticated evidence, independent authority and real observed effects.
+- Actually restored and re-ran pinned archived Stage3/8/9/10/11, AITR-G/0.2 and BRIDGE-HANDOFF/0.2 candidate suites. **290/290 directed local unittests** across independently scoped suites (including 22 newly authored learned-signal negative tests), plus 16k+16k+10k+5.2k fuzz/stress and 6k valid/6k invalid BRIDGE-REASON grammar samples. These numbers are self-authored local tests, not independent security or real-world validation.
+- **Negative evidence retained:** Stage3 privileged forged-witness accepted; Stage11 same-host issuer not independently trusted; this run's Stage11 cross-process parallel test **TIMED OUT**, not passed. Prior Bridge/HER provenance and production-safety blockers remain OPEN / Training Hold / Production FAIL.
+- No GPT/JEPA training, real system effect, authorization grant, formal Bridge grammar ratification, production runtime, Frozen/Sealed unfreeze or version-bridge confirmation. Public repo contains generalized methodology only; private test logs and archived source remain private.
+
 ## 2026-11-22 — Literary narrative and communication-state evidence separation (Method 36)
 
 - Explicit user-authorized **Method Full-Push / Not Frozen** for selected 《楚辞》-inspired interpretive principles, with emphasis on 《九章·抽思》 and the boundary between speech, reception, understanding, consent, action and independently verified effects.
