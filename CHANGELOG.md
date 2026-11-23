@@ -1,3 +1,10 @@
+## 2026-11-22 — Literary narrative and communication-state evidence separation (Method 36)
+
+- Explicit user-authorized **Method Full-Push / Not Frozen** for selected 《楚辞》-inspired interpretive principles, with emphasis on 《九章·抽思》 and the boundary between speech, reception, understanding, consent, action and independently verified effects.
+- Added [Method 36](methods/36-literary-communication-state-separation.md), retaining genre, narrator perspective, metaphor/dream and multiple possible intent interpretations; literary analogy does not prove historical facts or modern AI algorithms.
+- A **real local, self-authored, seven-label supervised classifier** was fitted on 98 synthetic modern-Chinese training examples. IID holdout n=47 micro-F1 0.6506 vs simple keyword 0.6364; OOD cross-topic n=47 **0.7317 vs keyword 0.7778** (negative result preserved). The small model failed on most classical-text probes and remains **Candidate / Not Production Ready**.
+- No foundation/JEPA weights changed, no knowledge distillation or classical-understanding certification, no Bridge grammar change, no new version bridge; prior Bridge/HER trust-root issues and production HOLD persist. Public-safe generalized methodology only.
+
 ## 2026-11-22 — Distillation taxonomy and structural-transfer evidence gate (Method 35)
 
 - User-authorized **Method Full-Push / Not Frozen** clarifies that structural knowledge synthesis, deterministic program design, ordinary supervised learning and continual learning are **not automatically model knowledge distillation**.
