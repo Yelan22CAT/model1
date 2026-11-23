@@ -54,5 +54,7 @@ This directory contains employer-readable, public-safe work methods. These are *
 
 | [36 — Literary Communication-State & Evidence Separation](36-literary-communication-state-separation.md) | Distinguish narrator belief, figurative or dreamed events, commitment, reception, consent, action and verified effects; preserve negative transfer evidence from a bounded trained small-model trial. |
 
+| [37 — Learned-Signal Non-Promotion & Archived Bridge Regression Integrity](37-learned-signal-nonpromotion-bridge-regression-evidence.md) | Prevent model scores or typed statements from becoming authenticated facts or action rights; preserve source hashes, unsafe historical cases and timeout outcomes. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
 
