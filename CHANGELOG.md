@@ -1,3 +1,10 @@
+## 2026-11-25 — Risk-Tiered Selective Openness & Capability–Control Scaling (Method 40)
+
+- Explicit user-authorized **Method Full-Push / Not Frozen**; added [Method 40](methods/40-risk-tiered-selective-openness-capability-control-scaling.md) as an operational refinement of Open–Closed Complementary Ecology and CANA-G.
+- Replaced binary `open vs. closed` framing with release-level review across capability, risk, reversibility, monitorability, containment, evidence, replication value and irreversible externality.
+- Added the boundary `Capability Scaling != Control Scaling`, plus `Internal != Contained`; stronger capability does not automatically grant broader release authority.
+- Public method contains generalized governance only. No private thresholds, unrestricted execution logic, frontier-model release recommendation, foundation-weight change, formal Bridge runtime/grammar change or removal of existing Stage3/Stage11/HER and Production HOLD blockers.
+
 ## 2026-11-25 — Cross-Vertical Reinstantiation & Direct-Portability Boundary (Method 39)
 
 - Explicit user-authorized **Method Full-Push / Not Frozen**; added [Method 39](methods/39-cross-vertical-reinstantiation-direct-portability-boundary.md).
