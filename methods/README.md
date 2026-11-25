@@ -56,5 +56,5 @@ This directory contains employer-readable, public-safe work methods. These are *
 
 | [37 — Learned-Signal Non-Promotion & Archived Bridge Regression Integrity](37-learned-signal-nonpromotion-bridge-regression-evidence.md) | Prevent model scores or typed statements from becoming authenticated facts or action rights; preserve source hashes, unsafe historical cases and timeout outcomes. |
 
-**Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
+| [38 — Bidirectional Human–Automation Authority & Layered Assurance](38-bidirectional-human-automation-authority-layered-assurance.md) | Contain both human and automation error; make authority state-dependent and verify safety separately across design, build, operations and organization. |\n\n**Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
 
