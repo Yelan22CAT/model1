@@ -1,3 +1,10 @@
+## 2026-11-25 — Bidirectional Human–Automation Authority & Layered Assurance (Method 38)
+
+- Explicit user-authorized **Method Full-Push / Not Frozen**; added [Method 38](methods/38-bidirectional-human-automation-authority-layered-assurance.md) as an AITR-G reinforcement rather than a parallel governance stack.
+- Added bidirectional error containment: validated automation may catch predictable human error, while humans or independent assurance must be able to detect, stop, degrade, isolate or recover from automation error.
+- Added state-dependent authority and layered assurance: `Design Safe != Built Safe != Operated Safe != Organization Safe`; an override control alone is not proof of meaningful human takeover.
+- No Boeing/Airbus brand-safety ranking, flight-control deployment, foundation-weight change, formal Bridge grammar/runtime release or blocker removal. Existing Stage3/Stage11/HER and Production HOLD remain unchanged.
+
 ## 2026-11-22 — Learned-Signal Non-Promotion & Archived Bridge Regression Integrity (Method 37)
 
 - Explicitly authorized **Method Full-Push / Not Frozen**; added [Method 37](methods/37-learned-signal-nonpromotion-bridge-regression-evidence.md) to distinguish learned classification, narrative interpretation, typed protocol output, authenticated evidence, independent authority and real observed effects.
