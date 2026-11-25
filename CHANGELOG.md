@@ -1,3 +1,10 @@
+## 2026-11-25 — Cross-Vertical Reinstantiation & Direct-Portability Boundary (Method 39)
+
+- Explicit user-authorized **Method Full-Push / Not Frozen**; added [Method 39](methods/39-cross-vertical-reinstantiation-direct-portability-boundary.md).
+- Clarified the operational AI boundary: **judgment/abstraction may transfer across domains before execution semantics do**. Direct vertical-module portability is default-reject; the reusable object is the target-domain rebuild/reinstantiation procedure.
+- Added explicit target coordinate reconstruction: `STATE / ACTION / CONSTRAINT / TOOL / TOLERANCE / FAILURE / FEEDBACK / ACCEPTANCE`, plus negative-transfer detection and target-domain Reality Harness requirements.
+- Experienced-practitioner agreement is treated only as corroboration, not independent proof. No universal cross-domain executor, production deployment, foundation-weight change, formal Bridge runtime/grammar release or blocker removal. Existing Stage3/Stage11/HER, Training Hold and Production FAIL remain unchanged.
+
 ## 2026-11-25 — Bidirectional Human–Automation Authority & Layered Assurance (Method 38)
 
 - Explicit user-authorized **Method Full-Push / Not Frozen**; added [Method 38](methods/38-bidirectional-human-automation-authority-layered-assurance.md) as an AITR-G reinforcement rather than a parallel governance stack.
