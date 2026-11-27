@@ -1,3 +1,22 @@
+# 2026-11-27｜Agent data sovereignty, Human Catch-up and BER-G Full-Push
+
+### Added
+
+- Added `methods/41-agent-data-sovereignty-human-catchup-extraction-resistance.md`.
+- Integrated three public-safe control directions: least-privilege agent data/action permissions, external Pre-Stop/Human Catch-up authority, and behavioral extraction resistance (BER-G).
+- Clarified that anti-distillation is a subset of the broader black-box extraction problem and that repeated queries can expose behavioral structure even without source-code access.
+- Added minimum-disclosure, cross-query review, risk-proportional scope reduction and external escalation principles.
+
+### Boundaries
+
+- No claim of perfect anti-distillation or anti-extraction protection.
+- No destructive or retaliatory countermeasures.
+- No private thresholds, sealed interlock internals, hidden runtime packs or complete private engine logic are published.
+- External Meta/NIST/Anthropic references are evidence of convergent control directions, not evidence that those organizations adopted or were influenced by Model 1.
+- Human Final remains external; `Human Final != Manual Everything`.
+
+---
+
 ## 2026-11-25 — Risk-Tiered Selective Openness & Capability–Control Scaling (Method 40)
 
 - Explicit user-authorized **Method Full-Push / Not Frozen**; added [Method 40](methods/40-risk-tiered-selective-openness-capability-control-scaling.md) as an operational refinement of Open–Closed Complementary Ecology and CANA-G.

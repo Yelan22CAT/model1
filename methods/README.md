@@ -58,5 +58,9 @@ This directory contains employer-readable, public-safe work methods. These are *
 
 | [38 — Bidirectional Human–Automation Authority & Layered Assurance](38-bidirectional-human-automation-authority-layered-assurance.md) | Contain both human and automation error; make authority state-dependent and verify safety separately across design, build, operations and organization. |\n\n| [39 — Cross-Vertical Reinstantiation & Direct-Portability Boundary](39-cross-vertical-reinstantiation-direct-portability-boundary.md) | Reject direct portability across vertical domains; transfer the rebuild method, reconstruct target semantics, detect negative transfer, and require target-domain reality evidence. |
 
-| [40 — Risk-Tiered Selective Openness & Capability–Control Scaling](40-risk-tiered-selective-openness-capability-control-scaling.md) | Replace binary open/closed release choices with risk-, reversibility-, monitoring-, containment- and evidence-gated access levels. |\n\n**Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
+| [40 — Risk-Tiered Selective Openness & Capability–Control Scaling](40-risk-tiered-selective-openness-capability-control-scaling.md) | Replace binary open/closed release choices with risk-, reversibility-, monitoring-, containment- and evidence-gated access levels. |
+
+| [41 — Agent Data Sovereignty, Human Catch-up & Behavioral Extraction Resistance](41-agent-data-sovereignty-human-catchup-extraction-resistance.md) | Combine least-privilege agent permissions, external Pre-Stop/Human Final pacing, and cross-query resistance to behavioral extraction/distillation without publishing private internals. |
+
+**Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
 
