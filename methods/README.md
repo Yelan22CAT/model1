@@ -62,5 +62,7 @@ This directory contains employer-readable, public-safe work methods. These are *
 
 | [41 — Agent Data Sovereignty, Human Catch-up & Behavioral Extraction Resistance](41-agent-data-sovereignty-human-catchup-extraction-resistance.md) | Combine least-privilege agent permissions, external Pre-Stop/Human Final pacing, and cross-query resistance to behavioral extraction/distillation without publishing private internals. |
 
+| [42 — Horizontal Decision Core + Vertical Expertise Packs](42-horizontal-decision-core-vertical-expertise-packs.md) | Use a generalist judgment core to route, constrain, reconcile and verify detachable domain expertise packs through a stable interface and Human Final. |
+
 **Publication boundary:** No identifiable private incident narratives, proprietary configurations, internal thresholds, sensitive sources or unrestricted execution logic. Each method requires separate domain validation before consequential use.
 
